@@ -32,8 +32,10 @@ public class DetalleController extends OracleController {
 				   + " oa.COMUNA_PAC as COMUNA_PACIENTE, " 
 				   + " oa.TELEFONO_PAC as TELEFONO_PACIENTE, "
 				   + " (oa.APA_PACIENTE || ' '|| oa.AMA_PACIENTE || ' ' || oa.NOM_PACIENTE ) as NOMBRE_PACIENTE,"  
-				   + " oa.RUT_MED_DERIVADOR as RUT_MEDICO_DERIVADOR, " 
-				   + " (oa.NOM_MED_DERIVADOR || ' ' || oa.APA_MED_DERIVADOR || ' ' || oa.AMA_MED_DERIVADOR) as NOMBRE_MEDICO_DERIVADOR," 
+				   
+				   + " dt.RUT_PROF_RESERVA as RUT_MEDICO_DERIVADOR, " 
+				   + " (dt.NOM_PROF_RESERVA || ' ' || dt.APA_PROF_RESERVA || ' ' || dt.AMA_PROF_RESERVA) as NOMBRE_MEDICO_DERIVADOR," 
+				   
 				   + " oa.COD_PREVISION as COD_PREVISION, "
 				   + " oa.DES_PREVISION as DES_PREVISION, "
 				   + " TO_CHAR(oa.FECHA_NACIMIENTO, 'dd/mm/yyyy') as FECHA_NACIMIENTO, "
@@ -53,8 +55,10 @@ public class DetalleController extends OracleController {
 				   + " dt.VALOR_PAGO as MONTO_PAGADO," 
 				   + " dt.CANTIDAD_PRESTACION AS CANTIDAD_PRESTACION,"
 				   + " dt.FOLIO_RESERVA AS FOLIO_RESERVA,"
-				   + " dt.RUT_PROF_RESERVA as RUT_MEDICO, " 
-				   + " (dt.NOM_PROF_RESERVA || ' ' || dt.APA_PROF_RESERVA || ' ' || dt.AMA_PROF_RESERVA) as NOMBRE_MEDICO," 
+				   
+          		   + " oa.RUT_MED_DERIVADOR as RUT_MEDICO, " 
+ 				   + " (oa.NOM_MED_DERIVADOR || ' ' || oa.APA_MED_DERIVADOR || ' ' || oa.AMA_MED_DERIVADOR) as NOMBRE_MEDICO,"
+				   
 				   + " dt.ESPECIALIDAD as ESPECIALIDAD,"
 				   + " dt.TIPO_CONSULTA as TIPO_CONSULTA, "
 				   + " pf.COD_FONASA AS CODIGO_FONASA "
