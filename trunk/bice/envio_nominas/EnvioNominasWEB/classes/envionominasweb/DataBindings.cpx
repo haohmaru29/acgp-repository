@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="10.1.3.43.6" id="DataBindings" SeparateXMLFiles="false"
+             Package="envionominasweb" ClientType="Generic">
+  <pageMap>
+    <page path="/app/envionominas/archivosNominas.jspx"
+          usageId="app_envionominas_archivosNominasPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="app_envionominas_archivosNominasPageDef"
+          path="envionominasweb.pageDefs.app_envionominas_archivosNominasPageDef"/>
+  </pageDefinitionUsages>
+</Application>

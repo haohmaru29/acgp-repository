@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Enero 22, 2008
+    Servicio de Nominas BEL. Operaciones de carga y rendición empresa
+    Todos los derechos reservados por Banco de Credito e Inversiones.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types"
+    targetNamespace="http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types"
+    xmlns:rut="http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xsd:import namespace="http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut" schemaLocation="Rut-1.0.xsd"/>
+    <xsd:annotation>
+        <xsd:documentation xml:lang="es"> 
+            Schema que representa los tipos de datos declarados en el 
+            servicio prefix: serv version: 1.0 
+            Servicio de Carga se utiliza para enviar nominas de pago 
+            Servicio de Rendicion se utiliza para recuperar archivos publicados en la web de empresas 
+        </xsd:documentation> 
+    </xsd:annotation>
+
+    <xsd:complexType name="cargaPeticion">
+        <xsd:sequence>
+            <xsd:element name="rutEmpresa" type="rut:RutType"/>
+            <xsd:element name="rutUsuario" type="rut:RutType"/>
+            <xsd:element name="convenio" type="xsd:string"/>
+            <xsd:element name="canal" type="xsd:string"/>
+            <xsd:element name="pin" type="xsd:string"/>
+            <xsd:element name="archivo" type="tns:archivoType"/>
+            <xsd:element name="fecha" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[Fecha (si es una nómina será la “fecha de Pago o Cargo”, sino será la fecha de envío).]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <!--<xsd:attribute name="carga"/>-->
+    </xsd:complexType>
+
+    <xsd:complexType name="cargaRespuesta">
+        <xsd:sequence>
+            <xsd:element name="codigoRespuesta" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="rendicionPeticion">
+        <xsd:sequence>
+            <xsd:element name="rutEmpresa" type="rut:RutType"/>
+            <xsd:element name="rutUsuario" type="rut:RutType"/>
+            <xsd:element name="convenio" type="xsd:string"/>
+            <xsd:element name="canal" type="xsd:string"/>
+            <xsd:element name="pin" type="xsd:string"/>
+            <xsd:element name="servicio" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[Siempre debe contener el valor :  “ENV”]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="tipo" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[Tipo de archivo solicitado: 
+                            CPR = para solicitar rendición de carga
+                            PPR = para solicitar rendición de pagos]]>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="formato" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[Siempre debe contener el valor :  “PLA”]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="fecha" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[Fecha del archivo. Se puede rescatar archivos pasados, o fijar la fecha del pago en los envíos transfer.]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <!--<xsd:attribute name="rendicion"/>-->
+    </xsd:complexType>
+
+    <xsd:complexType name="rendicionRespuesta">
+        <xsd:sequence>
+            <xsd:element name="codigoRespuesta" type="xsd:string"/>
+            <xsd:element name="formato" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="archivos" type="tns:ArrayArchivoType" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="archivoType">
+        <xsd:sequence>
+            <xsd:element name="nombre" type="xsd:string"/>
+            <xsd:element name="tipo" type="xsd:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[Tipo de archivo, valores posibles: “TRF”, “PPR”]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="plantilla" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="cuerpo" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[Cuerpo del archivo en plano como CDATA]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ArrayArchivoType">
+        <xsd:sequence>
+            <xsd:element name="archivo" nillable="true" maxOccurs="unbounded" minOccurs="0"
+                type="tns:archivoType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+
+</xsd:schema>

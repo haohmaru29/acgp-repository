@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="WSClientesConsultaFaseTres_Service.java"/>
+      <url path="runtime/WSClientesConsultaFaseTres_Service_Impl.java"/>
+      <url path="WSClientesConsultaFaseTres_PortType.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ConsultaContratoCanalRemotoElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ConsultaContratoCanalRemotoResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/RetConsultaContratoCanalRemoto.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ConsultaDireccionElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ConsultaDireccionResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/RetDireccion.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/DireccionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/TipoCalleModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/RegionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ComunaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/TipoDireccionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/CodigoAreaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/TipoViviendaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ProvinciaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/TipoLocalidadModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ConsultaPersonaElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ConsultaPersonaResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/RetPersona.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/PersonaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/EstadoCivilModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/SexoModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/TipoPersonaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/GSEModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/NivelEducacionalModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ActividadModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/AFPModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/IsapreModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/NacionalidadModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/ProfesionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/OcupacionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/NivelIngresoModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ConsultaContratoCanalRemotoElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/RetConsultaContratoCanalRemoto_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ConsultaContratoCanalRemotoResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ConsultaDireccionElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/TipoCalleModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/RegionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ComunaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/TipoDireccionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/CodigoAreaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/TipoViviendaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ProvinciaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/TipoLocalidadModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/DireccionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/RetDireccion_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ConsultaDireccionResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ConsultaPersonaElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/EstadoCivilModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/SexoModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/TipoPersonaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/GSEModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/NivelEducacionalModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ActividadModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/AFPModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/IsapreModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/NacionalidadModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ProfesionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/OcupacionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/NivelIngresoModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/PersonaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/RetPersona_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/consulta/types/runtime/ConsultaPersonaResponseElement_LiteralSerializer.java"/>
+      <url path="runtime/WSClientesConsultaFaseTresSoapHttp_Stub.java"/>
+      <url path="runtime/WSClientesConsultaFaseTres_Service_SerializerRegistry.java"/>
+      <url path="runtime/WSClientesConsultaFaseTres_Service_SerializerRegistry12.java"/>
+      <url path="WSClientesConsultaFaseTresSoapHttpPortClient.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.bicevida.app.model.services.ws.proxy.bdclientes.consultas"/>
+            <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="true"/>
+         </hash>
+      </hash>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="WSClientesConsultaFaseTresSoapHttpPort">
+            <value n="CLASS_NAME" v="cl.bicevida.app.model.services.ws.proxy.bdclientes.consultas.WSClientesConsultaFaseTres_PortType"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="WSClientesConsultaFaseTresSoapHttpPort"/>
+            <hash n="OPERATIONS">
+               <hash n="consultaContratoCanalRemoto">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="consultaDireccion">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="consultaPersona">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS"/>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="serpens.bicevida.cl" path="/WSClientesConsultaFaseTres/WSClientesConsultaFaseTresSoapHttpPort"/>
+            <url n="PROXY_PORT_ENDPOINT" protocol="http" host="serpens.bicevida.cl" path="/WSClientesConsultaFaseTres/WSClientesConsultaFaseTresSoapHttpPort"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="WSClientesConsultaFaseTres"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://consulta.ws.fasetres.actualizadatos.bicevida.cl/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../../../../Model.jpr"/>
+      <url n="PROXY_WSDL_URL" path="../../../../../../../../../../resources/wsdl/WSClientesConsultaFaseTresSoapHttpPort.xml"/>
+   </hash>
+</jdevws:WebServiceProxy>

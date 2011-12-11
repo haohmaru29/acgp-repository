@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<service name="BCI" guid="15B9B9F139FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI" status="ENABLED" serviceType="ExternalService" typeDescription="Servicio Externo" isWSDLEditable="false" soapEndpointStatus="DISABLED">
+   <versionInfo>
+      <ID>1323301534671</ID>
+      <lastModifiedTime>Wed Dec 07 20:45:34 ART 2011</lastModifiedTime>
+      <lastModifiedUser>JDev_EnvioNominasBice_EnvioNominasESB</lastModifiedUser>
+   </versionInfo>
+   <parent guid="A7F47FD0190E11E0BF9FD5B49DC5D99D" qname="EnvioNominas" type="system"/>
+   <serviceDefinition>
+      <wsdlURL>nominasbel.wsdl</wsdlURL>
+      <portType xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel">tns:NominasBEL</portType>
+      <endpointDefinition>
+         <concreteWSDLURL>/esb/wsil/EnvioNominas/BCI?wsdl</concreteWSDLURL>
+         <soapEndpointURI>http://canis.bicevida.cl:7777/event/EnvioNominas/BCI</soapEndpointURI>
+      </endpointDefinition>
+   </serviceDefinition>
+   <operations>
+      <operationInfo guid="15B9B9F239FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.cargar" wsdlOperation="cargar" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault">
+         <request validate="false" xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" element="tns:cargaPeticion"/>
+         <reply validate="false" xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" element="tns:cargaRespuesta" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/nominasbel.wsdl"/>
+         <fault xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" element="tns:nominasBelFault" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/nominasbel.wsdl"/>
+      </operationInfo>
+      <operationInfo guid="15B9B9F339FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.rendir" wsdlOperation="rendir" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault">
+         <request validate="false" xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" element="tns:rendicionPeticion"/>
+         <reply validate="false" xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" element="tns:rendicionRespuesta" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/nominasbel.wsdl"/>
+         <fault xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" element="tns:nominasBelFault" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/nominasbel.wsdl"/>
+      </operationInfo>
+   </operations>
+   <endpointProperties>
+      <property name="HTTP_USERNAME" value="nombel"/>
+      <property name="HTTP_PASSWORD" value="nombel10"/>
+   </endpointProperties>
+   <trackableFields>
+      <trackableField name="BCI_tf0" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="15B9B9F239FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.cargar"/>
+         <expression>{/tns:cargaPeticion};{ namespace tns=http://bci.ws/infraestructuradenegocios/nominas/nominasbel namespace ns0=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut namespace serv=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types }</expression>
+      </trackableField>
+      <trackableField name="FECHA" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="15B9B9F239FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.cargar"/>
+         <expression>{/tns:cargaPeticion/serv:fecha};{ namespace tns=http://bci.ws/infraestructuradenegocios/nominas/nominasbel namespace ns0=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut namespace serv=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types }</expression>
+      </trackableField>
+      <trackableField name="TIPO_ARCHIVO" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="15B9B9F239FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.cargar"/>
+         <expression>{/tns:cargaPeticion/serv:archivo/serv:tipo};{ namespace tns=http://bci.ws/infraestructuradenegocios/nominas/nominasbel namespace ns0=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut namespace serv=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types }</expression>
+      </trackableField>
+      <trackableField name="BCI_tf1" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="15B9B9F339FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.rendir"/>
+         <expression>{/tns:rendicionPeticion};{ namespace tns=http://bci.ws/infraestructuradenegocios/nominas/nominasbel namespace ns0=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut namespace serv=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types }</expression>
+      </trackableField>
+      <trackableField name="BCI_tf2" status="ENABLED" bindTo="RESPONSE">
+         <operationRef guid="15B9B9F339FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.rendir"/>
+         <expression>{/tns:rendicionRespuesta};{ namespace tns=http://bci.ws/infraestructuradenegocios/nominas/nominasbel namespace ns0=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut namespace serv=http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types }</expression>
+      </trackableField>
+   </trackableFields>
+</service>

@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<service name="ArchivoNominas_BCI_RS" guid="75BEAC803F8711E0BF84A3E6EA80995B" qname="EnvioNominas.ArchivoNominas_BCI_RS" status="ENABLED" serviceType="RoutingService" typeDescription="Servicio de Direccionamiento" isWSDLEditable="false" soapEndpointStatus="DISABLED">
+   <versionInfo>
+      <ID>1323301534671</ID>
+      <lastModifiedTime>Wed Dec 07 20:45:34 ART 2011</lastModifiedTime>
+      <lastModifiedUser>JDev_EnvioNominasBice_EnvioNominasESB</lastModifiedUser>
+   </versionInfo>
+   <parent guid="A7F47FD0190E11E0BF9FD5B49DC5D99D" qname="EnvioNominas" type="system"/>
+   <serviceDefinition>
+      <wsdlURL>EnvioNominas_ArchivoNominas_BCI_RS.wsdl</wsdlURL>
+      <portType xmlns:tns="http://oracle.com/esb/namespaces/EnvioNominas">tns:execute_ppt</portType>
+      <endpointDefinition>
+         <concreteWSDLURL>/esb/wsil/EnvioNominas/ArchivoNominas_BCI_RS?wsdl</concreteWSDLURL>
+         <soapEndpointURI>http://canis.bicevida.cl:7777/event/EnvioNominas/ArchivoNominas_BCI_RS</soapEndpointURI>
+      </endpointDefinition>
+   </serviceDefinition>
+   <operations>
+      <operationInfo guid="13CCB5C03F8811E0BF84A3E6EA80995B" qname="EnvioNominas.ArchivoNominas_BCI_RS.generaArchivo" wsdlOperation="generaArchivo" mepDisplayName="Unidireccional" mep="OneWay">
+         <request validate="false" xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" element="tns:cargaPeticion"/>
+         <routingRules>
+            <routingRule guid="86A926011B8811E1BFDA29C3C1FDE650" subscriptionType="ANY" executionType="Immediate" status="ENABLED">
+               <targetOperation guid="2D3FE4D08AE911E0AF108D90013CD2BA" qname="EnvioNominas.ArchivosNomina_BD.insert" serviceGUID="2D3D73D08AE911E0AF108D90013CD2BA" serviceQName="EnvioNominas.ArchivosNomina_BD" mepDisplayName="Unidireccional" mep="OneWay"/>
+               <transformation>
+                  <xslFileURL>cargaPeticion_To_EvnmArchivosNominasCollection.xsl</xslFileURL>
+               </transformation>
+            </routingRule>
+         </routingRules>
+      </operationInfo>
+   </operations>
+</service>

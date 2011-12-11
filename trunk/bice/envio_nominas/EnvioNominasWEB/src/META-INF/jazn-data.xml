@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8' standalone = 'yes'?>
+<jazn-data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/jazn-data-10_0.xsd" schema-major-version="10" schema-minor-version="0">
+<!-- JAZN Realm Data -->
+<jazn-realm>
+	<realm>
+		<name>jazn.com</name>
+		<users>
+			<user>
+				<name>14391056-3</name>
+				<display-name>Rodrigo López</display-name>
+				<description>Usuario de BICE Vida Net</description>
+				<credentials>{903}mLDKePPHEwRa623y2FbV6czeNymxyZSI</credentials>
+			</user>
+			<user>
+				<name>143910563</name>
+				<display-name>Rodrigo López</display-name>
+				<description>Usuario de BICE Vida Net</description>
+				<credentials>{903}mLDKePPHEwRa623y2FbV6czeNymxyZSI</credentials>
+			</user>
+			<user>
+				<name>rodrigo.lopez</name>
+				<display-name>Rodrigo López</display-name>
+				<description>Usuario de Intranet</description>
+				<credentials>{903}P/YWJT3z/xIAseN1N2p6/1byzN93RTdy</credentials>
+			</user>
+			<user>
+				<name>12631155-9</name>
+				<display-name>Jose Arias</display-name>
+				<description>Usuario de BICE Vida Net</description>
+				<credentials>{903}mLDKePPHEwRa623y2FbV6czeNymxyZSI</credentials>
+			</user>
+			<user>
+				<name>jose.arias</name>
+				<display-name>Jose Arias</display-name>
+				<description>Usuario de Intranet</description>
+				<credentials>{903}mLDKePPHEwRa623y2FbV6czeNymxyZSI</credentials>
+			</user>
+                <user>
+                    <name>DataBase_User_Vls0f2mBaCYZFttttuct3v79isLWYuPFWBlqAoXWFIA=</name>
+                    <credentials>{903}Vls0f2mBaCYZFttttuct3v79isLWYuPFWBlqAoXWFIA=</credentials>
+                </user>
+                <user>
+                    <name>DataBase_User_ddP9FWmMWHWPEwtxYVWngaOKd-qFs5Qw1BmmGVLHNxU=</name>
+                    <credentials>{903}ddP9FWmMWHWPEwtxYVWngaOKd+qFs5Qw1BmmGVLHNxU=</credentials>
+                </user>
+   </users>
+		<roles>
+			<role>
+				<name>INTRANET</name>
+				<display-name>INTRANET</display-name>
+				<description>Grupo padre de Intranet BICE Vida.</description>
+				<members>
+					<member>
+						<type>user</type>
+						<name>rodrigo.lopez</name>
+					</member>
+					<member>
+						<type>user</type>
+						<name>jose.arias</name>
+					</member>
+				</members>
+			</role>
+			<role>
+				<name>BICEVIDANET</name>
+				<display-name>BICEVIDANET</display-name>
+				<description>Grupo padre de BICE Vida Net.</description>
+				<members>
+					<member>
+						<type>user</type>
+						<name>14391056-3</name>
+					</member>
+					<member>
+						<type>user</type>
+						<name>143910563</name>
+					</member>
+					<member>
+						<type>user</type>
+						<name>12631155-9</name>
+					</member>
+                                        
+				</members>
+			</role>
+			<role>
+				<name>BICEVIDA</name>
+				<display-name>BICE VIDA</display-name>
+				<description>BICE VIDA</description>
+				<members>
+					<member>
+						<type>role</type>
+						<name>INTRANET</name>
+					</member>
+					<member>
+						<type>role</type>
+						<name>BICEVIDANET</name>
+					</member>
+				</members>
+			</role>
+		</roles>
+	</realm>
+</jazn-realm>
+<!-- JACC Repository Data -->
+<jacc-repository>
+</jacc-repository>
+</jazn-data>

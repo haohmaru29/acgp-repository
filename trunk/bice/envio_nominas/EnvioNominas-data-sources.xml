@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<data-sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/data-sources-10_1.xsd" xmlns="http://xmlns.oracle.com/oracleas/schema">
+    <connection-pool name="jdev-connection-pool-liqconn">
+        <connection-factory factory-class="oracle.jdbc.pool.OracleDataSource" user="liquidacion" password="->DataBase_User_v5hfIrOT05SQfEAqkH1jgg3RVUiMq5DW" url="jdbc:oracle:thin:@192.168.1.37:1521:ORCL"/>
+    </connection-pool>
+    <managed-data-source name="jdev-connection-managed-liqconn" jndi-name="jdbc/liqconnDS" connection-pool-name="jdev-connection-pool-liqconn"/>
+    <native-data-source name="jdev-connection-native-liqconn" jndi-name="jdbc/liqconnCoreDS" url="jdbc:oracle:thin:@192.168.1.37:1521:ORCL" user="liquidacion" password="->DataBase_User_pqEq8oFSpbrnG0RWqMSzpiOpy7G7lSeQ" data-source-class="oracle.jdbc.pool.OracleDataSource"/>
+    <connection-pool name="jdev-connection-pool-XXBV_SEGPAG">
+
+        <connection-factory factory-class="oracle.jdbc.pool.OracleDataSource" user="XXBV_SEGPAG" password="->DataBase_User_Z7MUkhoKNG5mcj3ZQ_ts0TpRgfVOk7kFZdm5ZBEowi4=" url="jdbc:oracle:thin:@localhost:1521:XE"/>
+    </connection-pool>
+    <managed-data-source name="jdev-connection-managed-XXBV_SEGPAG" jndi-name="jdbc/XXBV_SEGPAGDS" connection-pool-name="jdev-connection-pool-XXBV_SEGPAG"/>
+    <native-data-source name="jdev-connection-native-XXBV_SEGPAG" jndi-name="JDBC/DESA_XXBV_SEGPAG" url="jdbc:oracle:thin:@localhost:1521:XE" user="XXBV_SEGPAG" password="XXBV_SEGPAG" data-source-class="oracle.jdbc.pool.OracleDataSource"/>
+    <connection-pool name="jdev-connection-pool-HR">
+        <connection-factory factory-class="oracle.jdbc.pool.OracleDataSource" user="HR" password="->DataBase_User_wggo4gwYXCfuhTQpN_Z9xR2hPlgcVHTs" url="jdbc:oracle:thin:@192.168.1.200:1521:XE"/>
+    </connection-pool>
+    <managed-data-source name="jdev-connection-managed-HR" jndi-name="jdbc/HRDS" connection-pool-name="jdev-connection-pool-HR"/>
+    <native-data-source name="jdev-connection-native-HR" jndi-name="jdbc/HRCoreDS" url="jdbc:oracle:thin:@192.168.1.200:1521:XE" user="HR" password="->DataBase_User_lYJipoAeAUT5ZTYJJE7-HCu289F1g4hC" data-source-class="oracle.jdbc.pool.OracleDataSource"/>
+    <connection-pool name="jdev-connection-pool-Olite">
+        <connection-factory factory-class="oracle.jdbc.pool.OracleDataSource" user="System" password="->DataBase_User_YCmodwjVuFZKxO7i2enbZIkeC4K1FQu0" url="jdbc:polite4@localhost:1531:OraESB"/>
+    </connection-pool>
+    <managed-data-source name="jdev-connection-managed-Olite" jndi-name="jdbc/OliteDS" connection-pool-name="jdev-connection-pool-Olite"/>
+    <native-data-source name="jdev-connection-native-Olite" jndi-name="jdbc/OliteCoreDS" url="jdbc:polite4@localhost:1531:OraESB" user="System" password="->DataBase_User_zadIMxfgxkcqTRQTNBijVgmfmDNeJ_oL" data-source-class="oracle.jdbc.pool.OracleDataSource"/>
+</data-sources>

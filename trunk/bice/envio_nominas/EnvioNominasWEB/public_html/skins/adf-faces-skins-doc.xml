@@ -1,0 +1,2999 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<skinMetadata xmlns="http://xmlns.oracle.com/adf/faces/view/skin/metadata"
+                     xmlns:html="http://www.w3.org/TR/REC-html40"
+                     id="simple-desktop"
+                     name="Simple Skin keys" >
+   <globalMetadata>
+     <styles>
+       <namedStyle id=".AFDefaultFontFamily:alias">
+         <description>
+           Specifies the default font family list ("font-family" property) for
+           the skin.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDefaultFont:alias">
+         <description>
+           Specifies the default font for the skin. This style defines
+           both the default font family (as specified by the AFDefaultFontFamily
+           named style), the default font size, and default font weight.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDefaultBoldFont:alias">
+         <description>
+           A bold version of the default font.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVerySmallFont:alias">
+         <description>
+           A very small version of the default font. This style is used for very
+           small text such as inline messages, and copyright and privacy messages.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFSmallFont:alias">
+         <description>
+           A small version of the default font. This style is used for text which
+           is slightly smaller than the default, such as af:menuPath links.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFMediumFont:alias">
+         <description>
+           A version of the default font which is slightly larger than the
+           default size. This is used for medium sized text, such as level 2
+           headers.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFLargeFont:alias">
+         <description>
+           A large version of the default font. This is used for large text, such
+           as level 1 headers.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVeryLargeFont:alias">
+         <description>
+           A very large version of the default font.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDarkBackground:alias">
+         <description>
+           The primary background color in the core color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVeryDarkBackground:alias">
+         <description>
+           The darkest background color in the core color ramp. This value is
+           computed relative to the .AFDarkBackground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFMediumBackground:alias">
+         <description>
+           A slightly lighter background color in the core color ramp. This value
+           is computed relative to the .AFDarkBackground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFLightBackground:alias">
+         <description>
+           The lightest background color in the core color ramp. This value is
+           computed relative to the .AFDarkBackground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDarkAccentBackground:alias">
+         <description>
+           The primary background color in the accent color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVeryDarkAccentBackground:alias">
+         <description>
+           The darkest background color in the accent color ramp. This value is
+           computed relative to the .AFDarkAccentBackground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFMediumAccentBackground:alias">
+         <description>
+           A slightly lighter background color in the accent color ramp. This
+           value is computed relative to the .AFDarkAccentBackground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFLightAccentBackground:alias">
+         <description>
+           The lightest background color in the accent color ramp. This value is
+           computed relative to the .AFDarkAccentBackground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFTextBackground:alias">
+         <description>
+           The default text background color (white).
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDarkForeground:alias">
+         <description>
+           The primary foreground color in the core color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVeryDarkForeground:alias">
+         <description>
+           The darkest foreground color in the core color ramp. This value is
+           computed relative to the .AFDarkForeground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFMediumForeground:alias">
+         <description>
+           A slightly lighter foreground color in the core color ramp. This value
+           is computed relative to the .AFDarkForeground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFLightForeground:alias">
+         <description>
+           The lightest foreground color in the core color ramp. This value is
+           computed relative to the .AFDarkForeground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDarkAccentForeground:alias">
+         <description>
+           The primary foreground color in the accent color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVeryDarkAccentForeground:alias">
+         <description>
+           The darkest foreground color in the accent color ramp. This value is
+           computed relative to the .AFDarkAccentForeground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFMediumAccentForeground:alias">
+         <description>
+           A slightly lighter foreground color in the accent color ramp. This
+           value is computed relative to the .AFDarkAccentForeground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFLightAccentForeground:alias">
+         <description>
+           The lightest foreground color in the accent color ramp. This value is
+           computed relative to the .AFDarkAccentForeground:alias color.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFTextForeground:alias">
+         <description>
+           The default text foreground color (black).
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFSelectedTextForeground:alias">
+         <description>
+           The foreground color for selected/highlighted text, or text which is
+           drawn on a dark background.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFErrorTextForeground:alias">
+         <description>
+           The foreground color for error text (red).
+         </description>
+       </namedStyle>
+       <!-- Link colors -->
+       <namedStyle id=".AFLinkForeground:alias">
+         <description>
+           The default foreground color for inactive, unvisited links.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFActiveLinkForeground:alias">
+         <description>
+           The default foreground color for active links.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVisitedLinkForeground:alias">
+         <description>
+           The default foreground color for visited links.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDisabledLinkForeground:alias">
+         <description>
+           The default foreground color for disabled links.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDarkBorder:alias">
+         <description>
+           The primary border color in the core color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVeryDarkBorder:alias">
+         <description>
+           The darkest border color in the core color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFMediumBorder:alias">
+         <description>
+           A slightly lighter border color in the core color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFLightBorder:alias">
+         <description>
+           The lightest border color in the core color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFDarkAccentBorder:alias">
+         <description>
+           The primary border color in the accent color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFVeryDarkAccentBorder:alias">
+         <description>
+           The darkest border color in the accent color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFMediumAccentBorder:alias">
+         <description>
+           A slightly lighter border color in the accent color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFLightAccentBorder:alias">
+         <description>
+           The lightest border color in the accent color ramp.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFStartTextAlign:alias">
+         <description>
+           Sets the text-align property to "left" for left-to-right reading
+           direction and "right" for right-to-left reading direction.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFEndTextAlign:alias">
+         <description>
+           Sets the text-align property to "right" for left-to-right reading
+           direction and "left" for right-to-left reading direction.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFLeftTextAlign:alias">
+         <description>
+           Sets the text-align property to "left" regardless of the reading
+           direction.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFRightTextAlign:alias">
+         <description>
+           Sets the text-align property to "right" regardless of the reading
+           direction.
+         </description>
+       </namedStyle>
+       <namedStyle id=".AFCenterTextAlign:alias">
+         <description>
+           Sets the text-align property to "center" regardless of the reading
+           direction.
+         </description>
+       </namedStyle>
+       <selector id=".AFFieldText">
+         <description>
+           Style class for text displayed in af:select* components and in inputText.
+         </description>
+       </selector>
+       <selector id=".AFFieldTextDisabled">
+         <description>
+           Style class for text displayed in disabled af:select* components and in inputText.
+         </description>
+       </selector>
+       <selector id=".AFPromptText">
+         <description>
+           Style class for text displayed in prompts.
+         </description>
+       </selector>
+       <selector id=".AFErrorIconStyle">
+         <description>
+           Styles the AFErrorIcon icons.
+         </description>
+       </selector>
+       <selector id=".AFWarningIconStyle">
+         <description>
+           Styles the AFWarningIcon icons.
+         </description>
+       </selector>
+       <selector id=".AFInfoIconStyle">
+         <description>
+           Styles the AFInfoIcon icons.
+         </description>
+       </selector>
+       <selector id=".AFRequiredIconStyle">
+         <description>
+           Styles the AFRequiredIcon icon.
+         </description>
+       </selector>
+     </styles>
+     <icons>
+       <icon id=".AFErrorIcon">
+         <description>
+           The error icon is used by the form components (eg. selectInputText,
+           selectBooleanCheckbox, etc...) to indicate that an error has occurred.
+         </description>
+       </icon>
+       <icon id=".AFErrorAnchorIcon">
+         <description>
+           The AFErrorAnchorIconicon is a version of the error icon that is
+           displayed when the icon is used as a link to additional information
+           about the error.
+         </description>
+       </icon>
+       <icon id=".AFInfoIcon">
+         <description>
+           The AFInfoIcon icon is used by the form components (eg.
+           selectInputText, selectBooleanCheckbox, etc...) to indicate that an
+           informational message is being displayed to the user.
+         </description>
+       </icon>
+       <icon id=".AFInfoAnchorIcon">
+         <description>
+           The AFInfoAnchorIcon icon is a version of the info icon that is
+           displayed when the icon is used as a link to additional information.
+         </description>
+       </icon>
+       <icon id=".AFRequiredIcon">
+         <description>
+           The AFRequiredIcon icon is used by the form components (eg.
+           selectInputText, selectBooleanCheckbox, etc...) to indicate that a
+           value must be specified.
+         </description>
+       </icon>
+       <icon id=".AFWarningIcon">
+         <description>
+           The AFWarningIcon icon is used by the form components (eg.
+           selectInputText, selectBooleanCheckbox, etc...) to indicate that an
+           warning message is being displayed to the user.
+         </description>
+       </icon>
+       <icon id=".AFWarningAnchorIcon">
+         <description>
+           The AFWarningAnchorIcon icon is a version of the warning icon that is
+           displayed when the icon is used as a link to additional information
+           about the warning.
+         </description>
+       </icon>
+     </icons>
+   </globalMetadata>
+   <componentMetadata>
+     <component name="button">
+       <description>
+         <html:p>
+           The simple skin supports two very different button
+           implementations. By default, standard browser buttons are used.
+           However, the simple skin also supports dynamic generation of
+           image-based buttons. In order to enable image-based buttons, the
+           following four button icon must be specified: .AFButtonStartIcon:alias, 
+           .AFButtonEndIcon:alias,.AFButtonTopBackgroundIcon:alias, .AFButtonBottomBackgroundIcon:alias. 
+           When these four icons are
+           specified, ADF Faces combines the images specified by these icons into a
+           single button image. (Note: These icons must be specified using either
+           context-image or resource-image icons. Text-based icons are not
+           allowed, and the other image icon types are not currently supported.)
+         </html:p>
+       </description>
+       <styles>
+         <namedStyle id=".AFButtonServerText:alias">
+           <description>
+             This aliased style is used to provide the foreground color, background
+             color, and font information for server-side generated buttons.
+             You can set attributes background-color, color, -ora-text-antialias, font-size,
+             font-family.
+            </description>
+         </namedStyle>
+         <namedStyle id=".AFButtonServerTextDisabled:alias">
+           <description>
+             This aliased style is used to provide the foreground color, background
+             color, and font information for server-side generated disabled
+             buttons. You can attributes background-color, color, -ora-text-antialias, font-size,
+             font-family.
+           </description>
+         </namedStyle>
+         <selector id="BUTTON">
+           <description>
+             The BUTTON selector is used to apply styles to browser-based buttons.
+           </description>
+         </selector>
+       </styles>
+       <icons>
+         <icon id=".AFButtonStartIcon:alias">
+           <description>
+             This icon is rendered at the starting side of the button. That is,
+             this image appears on the left side of the button when the reading
+             direction is right-to-left, and the right side of the button when
+             the reading direction is left-to-right.
+           </description>
+         </icon>
+         <icon id=".AFButtonEndIcon:alias">
+           <description>
+             This icon is rendered at the ending side of the button. That is,
+             this image appears on the right side of the button when the reading
+             direction is right-to-left, and the left side of the button when the
+             reading direction is left-to-right.
+           </description>
+         </icon>
+         <icon id=".AFButtonTopBackgroundIcon:alias">
+           <description>
+             This image is tiled horizontally along the top of the button,
+             providing the button's top border.
+           </description>
+         </icon>
+         <icon id=".AFButtonBottomBackgroundIcon:alias">
+           <description>
+             This image is tiled horizontally along the bottom of the button,
+             providing the button's bottom border.
+           </description>
+         </icon>
+         <icon id=".AFButtonDisabledStartIcon:alias">
+           <description>
+             This icon is rendered at the starting side of disabled buttons. If
+             this icon is not specified, the buttonStart icon will be used
+             instead.
+           </description>
+         </icon>
+         <icon id=".AFButtonDisabledEndIcon:alias">
+           <description>
+             This icon is rendered at the ending side of disabled button. If this
+             icon is not specified, the buttonEnd icon will be used instead.
+           </description>
+         </icon>
+         <icon id=".AFButtonDisabledTopBackgroundIcon:alias">
+           <description>
+             This icon is tiled horizontally along the top of disabled buttons.
+             If this icon is not specified, the buttonTopBackground icon will be
+             used instead.
+           </description>
+         </icon>
+         <icon id=".AFButtonDisabledBottomBackgroundIcon:alias">
+           <description>
+             This icon is tiled horizontally along the bottom of the disabled
+             buttons. If this icon is not specified, the buttonBottomBackground
+             icon will be used instead.
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component name="afh:body">
+       <styles>
+         <styleClass id="af|body">
+           <description>
+             Specifies the style information for the afh:body content.
+           </description>
+         </styleClass>
+       </styles>
+     </component>
+     <component name="af:chooseDate">
+       <styles>
+         <selector id="af|chooseDate::nav-link">
+           <description>
+             Style class for chooseDate's navigation icons.
+           </description>
+         </selector>
+         <selector id="af|chooseDate::title">
+           <description>
+             Style class for chooseDate title.
+           </description>
+         </selector>
+         <selector id="af|chooseDate::header">
+           <description>
+             Style class for chooseDate header.
+           </description>
+         </selector>
+         <selector id="af|chooseDate::content">
+           <description>
+             Style class for chooseDate content.
+           </description>
+         </selector>
+         <selector id="af|chooseDate::selected">
+           <description>
+             Style class for selected date.
+           </description>
+         </selector>
+       </styles>
+     </component> 
+     <component name="af:column">
+       <styles>
+         <styleClass id=".AFSortableHeaderSortIcon">
+           <description>
+             This style class is used to style the sortableHeader's sort icons.
+           </description>
+         </styleClass>
+         <selector id="af|column::cell-text">
+           <description>
+             Specifies properties for text cells.
+           </description>
+         </selector>
+         <selector id="af|column::cell-text-band">
+           <description>
+             Specifies properties for banded text cells.
+           </description>
+         </selector>
+         <selector id="af|column::cell-number">
+           <description>
+             Specifies properties for numeric cells.
+           </description>
+         </selector>
+         <selector id="af|column::cell-number-band">
+           <description>
+             Specifies properties for banded numeric cells.
+           </description>
+         </selector>
+         <selector id="af|column::cell-icon-format">
+           <description>
+             Specifies properties for icon cells.
+           </description>
+         </selector>
+         <selector id="af|column::cell-icon-format-band">
+           <description>
+             Specifies properties for banded icon cells.
+           </description>
+         </selector>
+         <selector id="af|column::header-text">
+           <description>
+             Specifies properties for column headers.
+           </description>
+         </selector>
+         <selector id="af|column::header-number">
+           <description>
+             Specifies properties for numeric column headers.
+           </description>
+         </selector>
+         <selector id="af|column::header-icon-format">
+           <description>
+             Specifies properties for icon column headers.
+           </description>
+         </selector>
+         <selector id="af|column::row-header-text">
+           <description>
+             Specifies properties for row headers.
+           </description>
+         </selector>
+         <selector id="af|column::total-text">
+           <description>
+             Specifies properties for text total row cells.
+           </description>
+         </selector>
+         <selector id="af|column::total-number">
+           <description>
+             Specifies properties for numeric total row cells.
+           </description>
+         </selector>
+         <selector id="af|column::sortable-header-text">
+           <description>
+             Specifies properties for sortable column headers.
+           </description>
+         </selector>
+         <selector id="af|column::sortable-header-number">
+           <description>
+             Specifies properties for numeric sortable column headers.
+           </description>
+         </selector>
+         <selector id="af|column::sortable-header-icon-format">
+           <description>
+             Specifies properties for icon sortable column headers.
+           </description>
+         </selector>
+       </styles>
+       <icons>
+         <icon id="af|column::sort-ascend-icon">
+           <description>
+             This icon is used to indicate that the column is sorted in ascending
+             order.
+           </description>
+         </icon>
+         <icon id="af|column::sort-descend-icon">
+           <description>
+             This icon is used to indicate that the column is sorted in
+             descending order.
+           </description>
+         </icon>
+         <icon id="af|column::unsorted-icon">
+           <description>
+             This icon is used to indicate that the column is unsorted. Used in
+             the oracle.adf.pda renderKit only.
+           </description>
+         </icon>
+       </icons>
+     </component>
+      <component name="af:menuBar">
+       <description>
+         <html:p>
+           The Simple Skin af:menuBar is implemented using an inner table nested
+           within an outer table. The outer table contains cells for the
+           af|menuBar::start-icon and af|menuBar::end-icon icons, as well as a
+           cell for the nested inner table. The inner table contains the actual
+           contents of the menuBar - which includes the af:menuBar items if any
+           items exist, or possibly the af:menuBar title if no items are
+           specified.
+         </html:p>
+         <html:p>
+           Style properties can be applied to either the outer table or the inner
+           table, depending on how the styles are meant to be used. The
+           af|menuBar style can be used to apply styles to the entire
+           menuBar - including the af|menuBar::start-icon/af|menuBar::end-icon
+           icons. Note, however, that if these icons are transparent, then
+           setting the background color or borders on the af|menuBar style class
+           itself is probably not desirable, since the background color will show
+           through any transparent pixels in the icons.
+         </html:p>
+         <html:p>
+           Three other styles can be used to apply styles to the inner contents
+           of the af:menuBar (not including the af|menuBar::start-icon and
+           af|menuBar::end-icon icons). If the af:menuBar contains any items, the
+           af|menuBar::body style class is used to style the inner table which
+           contains the items. This is a good choice for specifying a background
+           color for the af:menuBar, since this background color is not applied
+           to the af:menuBar's outer icons. If no af:menuBar items are present,
+           but the af:menuBar's text attribute is specified, the
+           af|menuBar::title style class is rendered on the inner table instead
+           of af|menuBar::body. If no children are present and there is no title,
+           the af|menuBar::empty title is used.
+         </html:p>
+       </description>
+       <styles>
+         <styleClass id="af|menuBar">
+           <description>
+             The af|menuBar style class is associated with the menuBar container
+             itself.
+           </description>
+         </styleClass>
+         <styleClass id="af|menuBar::body">
+           <description>
+             This style class is rendered on the menuBar's inner table when the
+             menuBar contains child items.
+           </description>
+         </styleClass>
+         <styleClass id="af|menuBar::title">
+           <description>
+             This style class is rendered on the menuBar's inner table when the
+             menuBar does not contain any child items but does have its text
+             attribute set.
+           </description>
+         </styleClass>
+         <styleClass id="af|menuBar::empty">
+           <description>
+             This style class is used to style empty menuBars - that is, menuBars
+             which do not have any children or a title.
+           </description>
+         </styleClass>
+
+         <styleClass id="af|menuBar::enabled">
+           <description>
+             The af|menuBar::enabled style class is associated with enabled items
+             in the menuBar.
+           </description>
+         </styleClass>
+         <styleClass id="af|menuBar::selected">
+           <description>
+             The af|menuBar::enabled style class is associated with selected
+             items in the menuBar.
+           </description>
+         </styleClass>
+         <styleClass id="af|menuBar::separator">
+           <description>
+             The af|menuBar::enabled style class is associated with the menuBar
+             separator items.
+           </description>
+         </styleClass>
+         <selector id="af|menuBar::enabled-link">
+           <description>
+             This selector is used to apply link-specific styles to enabled links
+             in the menuBar.
+           </description>
+         </selector>
+         <selector id="af|menuBar::selected-link">
+           <description>
+             This selector is used to apply link-specific styles to the selected
+             link in the menuBar.
+           </description>
+         </selector>
+         <namedStyle id=".AFMenuBarItem:alias">
+           <description>
+             The AFMenuBarItem:alias style defines style properties that are
+             shared by all menuBar items. This named styles is included by the
+             af|menuBar::enabled and af|menuBar::selected style classes.
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFMenuBarItem:alias">
+           <description>
+             The AFGlobalHeaderLink:alias style defines style properties that are
+             shared by all links within the menuBar. This named style is included
+             by the "af|menuBar::enabled-link" and "af|menuBar::selected-link"
+             selectors.
+           </description>
+         </namedStyle>        
+         
+       </styles>
+       <icons>
+         <icon id="af|menuBar::start-icon">
+           <description>
+             This icon is rendered at the start of the af|menuBar.
+           </description>
+         </icon>
+         <icon id="af|menuBar::end-icon">
+           <description>
+             This icon is rendered at the end of the af|menuBar.
+           </description>
+         </icon>
+         <icon id="af|menuBar::leading-separator-icon">
+           <description>
+             This icon is rendered before the first item in the af|menuBar.
+           </description>
+         </icon>
+         <icon id="af|menuBar::trailing-separator-icon">
+           <description>
+             This icon is rendered after the last item in the af|menuBar.
+           </description>
+         </icon>
+         <icon id="af|menuBar::background-icon">
+           <description>
+             This icon is rendered as the background of the af|menuBar.
+           </description>
+         </icon>
+         <icon id="af|menuBar::separator-icon">
+           <description>
+             The af:menuBar icon is rendered between items.
+           </description>
+         </icon>        
+       </icons>
+     </component>   
+ 
+     <component name="af:menuButtons">
+       <styles>
+         <styleClass id="af|menuButtons::text">
+           <description>
+             Style class used for enabled menu buttons item text.
+           </description>
+         </styleClass>
+         <styleClass id="af|menuButtons::text-selected">
+           <description>
+             Style class used for selected menu buttons text.
+           </description>
+         </styleClass>
+         <styleClass id="af|menuButtons::text-disabled">
+           <description>
+             Style class used for disabled menu buttons text.
+           </description>
+         </styleClass>
+         <namedStyle id=".AFMenuButtons:alias">
+           <description>
+             The AFMenuButtons:alias style defines style properties that are
+             shared by all menuButtons selectors: af|menuButtons::text,
+             af|menuButtons::text-selected, and af|menuButtons::text-disabled.
+           </description>
+         </namedStyle>
+       </styles>
+     </component>
+     
+     <component name="af:menuChoice">
+       <styles>
+         <selector id="af|menuChoice::label">
+           <description>
+             Specifies the style information for the af:menuChoice's label text.
+           </description>
+         </selector>
+       </styles>
+     </component>
+     
+     <component name="af:menuList">
+       <styles>
+         <selector id="af:menuList">
+           <description>
+             Style class for menuList.
+           </description>
+         </selector>
+         <selector id="af:menuList::selected">
+           <description>
+             Style class for selected menuList.
+           </description>
+         </selector>
+       </styles>
+     </component>
+    
+     
+     <component name="af:menuPath">
+       <styles>
+         <selector id="af|menuPath">
+           <description>
+             Specifies the style information for the af:menuPath content.
+           </description>
+         </selector>
+         <selector id="af|menuPath::selected-step">
+           <description>
+             Specifies the style information for the selected af:menuPath step.
+             This step may be hidden.
+           </description>
+         </selector>
+         <selector id="af|menuPath::step">
+           <description>
+             Specifies the style information for af:menuPath steps.
+           </description>
+         </selector>
+         <namedStyle id=".AFPath:alias">
+           <description>
+             This alias namedStyle is included in both af|menuPath and
+             af|treeTable::path
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFPathStep:alias">
+           <description>
+             This alias namedStyle is included in both af|menuPath::step and
+             af|treeTable::path-step
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFPathSelectedStep:alias">
+           <description>
+             This alias namedStyle is included in both af|menuPath::selected-step
+             and af|treeTable::path-selected-step
+           </description>
+         </namedStyle>
+       </styles>
+       <icons>
+         <icon id="af|menuPath::separator-icon">
+           <description>
+             The separator icon that is rendered between af:menuPath links. This
+             is typically a text icon.
+           </description>
+         </icon>
+         <icon id=".AFPathSeparatorIcon">
+           <description>
+             Changing this icon changes both af|menuPath::separator-icon and
+             af|treeTable::separator-icon
+           </description>
+         </icon>
+       </icons>
+       <properties>      
+         <property id="-ora-show-last-item">
+           <description>
+             Valid values are true or false. Determines whether the 
+             last item is displayed or not.
+           </description>
+         </property>        
+       </properties>       
+     </component>
+ 
+     <component name="af:menuTabs">
+       <description>
+         <html:p>
+           The tabBar can be customized via the styles described below.
+         </html:p>
+       </description>
+       <styles>
+         <selector id="af|menuTabs">
+           <description>
+             The af|menuTabs style class is associated with the tabBar container
+             itself.
+           </description>
+         </selector>
+         <selector id="af|menuTabs::enabled">
+           <description>
+             The af|menuTabs::enabled style class is associated with enabled
+             items in the tabBar.
+           </description>
+         </selector>
+         <selector id="af|menuTabs::selected">
+           <description>
+             The af|menuTabs::selected style class is associated with the
+             selected item in the tabBar.
+           </description>
+         </selector>
+         <selector id="af|menuTabs::disabled">
+           <description>
+             The af|menuTabs::disabled style class is associated with disabled
+             items in the tabBar.
+           </description>
+         </selector>
+         <selector id="af|menuTabs::enabled-link">
+           <description>
+             This selector is used to apply link-specific styles to enabled links
+             in the tabBar.
+           </description>
+         </selector>
+         <selector id="af|menuTabs::selected-link">
+           <description>
+             This selector is used to apply link-specific styles to the selected
+             link in the tabBar.
+           </description>
+         </selector>
+         <namedStyle id=".AFTabBarItem:alias">
+           <description>
+             The AFTabBarItem:alias named style defines style properties that are
+             shared by all menuTabs items. This alias style is included by the
+             af|menuTabs::enabled, af|menuTabs::selected and
+             af|menuTabs::disabled style classes.
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFTabBarLink:alias">
+           <description>
+             The AFTabBarLink:alias style defines style properties that are
+             shared by all links within the tabBar. This alias style is included
+             by the "af|menuTabs::enabled-link" and "af|menuTabs::selected-link"
+             selectors.
+           </description>
+         </namedStyle>
+       </styles>
+       <icons>
+         <icon id="af|menuTabs::enabled-start-icon">
+           <description>
+             The af|menuTabs::enabled-start icon is rendered at the start of each
+             enabled menuTab item.
+           </description>
+         </icon>
+         <icon id="af|menuTabs::enabled-end-icon">
+           <description>
+             The af|menuTabs::enabled-end icon is rendered at the end of each
+             enabled menuTab item.
+           </description>
+         </icon>
+         <icon id="af|menuTabs::enabled-background-icon">
+           <description>
+             The af|menuTabs::enabled-background icon is rendered in the
+             background each enabled menuTab item.
+           </description>
+         </icon>
+         <icon id="af|menuTabs::selected-start-icon">
+           <description>
+             The af|menuTabs::selected-start icon is rendered at the start of the
+             selected menuTab item.
+           </description>
+         </icon>
+         <icon id="af|menuTabs::selected-end-icon">
+           <description>
+             The af|menuTabs::selected-end icon is rendered at the end of the
+             selected menuTab item.
+           </description>
+         </icon>
+         <icon id="af|menuTabs::selected-background-icon">
+           <description>
+             The af|menuTabs::selected-background icon is rendered in the
+             background the selected menuTab item.
+           </description>
+         </icon>
+         <icon id="af|menuTabs::enabled-join-icon">
+           <description>
+             The af|menuTabs::enabled-join icon is rendered in between two
+             enabled menuTab items.
+           </description>
+         </icon>
+         <icon id="af|menuTabs::enabled-selected-join-icon">
+           <description>
+             The af|menuTabs::enabled-selected-join icon is rendered in between
+             an enabled tabBar item and the selected menuTab item. That is, when
+             the reading direction is left to right, the join connects an enabled
+             item with a selected item to the right of the enabled item.
+           </description>
+         </icon>
+         <icon id="af|menuTabs::selected-enabled-join-icon">
+           <description>
+             The af|menuTabs::selected-enabled-join icon is rendered in between
+             the selected menuTab item and an enabled menuTab item. That is, when
+             the reading direction is left to right, the join connects a selected
+             item with an enabled item to the right of the selected item.
+           </description>
+         </icon>
+       </icons>      
+     </component>
+ 
+     <component name="af:menuTree">
+       <description>
+         The af:menuTree component allows the disclosure indicator icon to be
+         customized.
+       </description>
+       <icons>
+         <icon id="af|menuTree::disclosed-icon">
+           <description>
+             The af|menuTree::disclosed-icon icon is displayed when the
+             af:menuTree component is rendered in its disclosed state.
+           </description>
+         </icon>
+         <icon id="af|menuTree::undisclosed-icon">
+           <description>
+             The af|menuTree::undisclosed-icon icon is displayed when the
+             af:menuTree component is rendered in its undisclosed state.
+           </description>
+         </icon>
+         <icon id=".AFDetailDisclosedIcon">
+           <description>
+             Customizes all of these icons at once: af|table::disclosed-icon,
+             af|showDetail::disclosed-icon, af|showDetailHeader::disclosed-icon,
+             af|menuTree::disclosed-icon
+           </description>
+         </icon>
+         <icon id=".AFDetailUndisclosedIcon">
+           <description>
+             Customizes all of these icons at once: af|table::undisclosed-icon,
+             af|showDetail::undisclosed-icon,
+             af|showDetailHeader::undisclosed-icon, af|menuTree::undisclosed-icon
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component name="af:messages">
+       <description>
+         <html:p>
+           This messages component is implemented using an inner table nested
+           within an outer table. The outer container is used to lay out the
+           messages' icons. The inner container contains the actual contents of
+           the messages. If any transparent icons are used, style properties such
+           as the background color should probably be set on the inner table via
+           the af|messages::body selector.
+         </html:p>
+       </description>
+       <styles>
+         <selector id=".AFHeaderLevelOne">
+           <description>
+             This named style is included by af|messages::header and
+             af|messages::error, as well as the af|*::level-one selectors and
+             af|panelHeader::error
+           </description>
+         </selector>
+         <selector id="af|messages">
+           <description>
+             This selector is rendered on the messages's outer table. Since the
+             messages's icons are rendered within the outer table, the
+             af|message::body selector is probably a better choice for specifying
+             the messages's background color, padding, etc...
+           </description>
+         </selector>
+         <selector id="af|messages::body">
+           <description>
+             This selector is rendered on the messages's inner table, which does
+             not include any outer icons.
+           </description>
+         </selector>
+       </styles>
+       <icons>
+         <icon id="af|messages::top-start-icon">
+           <description>
+             This icon is rendered at the top starting corner of the messages
+             (ie. at the top left corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|messages::top-end-icon">
+           <description>
+             This icon is rendered at the top ending corner of the messages (ie.
+             at the top right corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|messages::top-background-icon">
+           <description>
+             This icon is rendered in the background in between the
+             af|messages::top-start-icon and af|messages::top-end-icon icons.
+           </description>
+         </icon>
+         <icon id="af|messages::bottom-start-icon">
+           <description>
+             This icon is rendered at the bottom starting corner of the messages
+             (ie. at the bottom left corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|messages::bottom-end-icon">
+           <description>
+             This icon is rendered at the bottom ending corner of the messages
+             (ie. at the bottom right corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|messages::bottom-background-icon">
+           <description>
+             This icon is rendered in the background in between the
+             af|messages::bottom-start-icon and af|messages::bottom-end-icon
+             icons.
+           </description>
+         </icon>
+         <icon id="af|messages::start-background-icon">
+           <description>
+             This icon is rendered in the background at the start of the messages.
+           </description>
+         </icon>
+         <icon id="af|messages::end-background-icon">
+           <description>
+             This icon is rendered in the background at the end of the messages.
+           </description>
+         </icon>
+         <icon id="af|messages::error-icon">
+           <description>
+             The icon that is displayed for error messages.
+           </description>
+         </icon>
+         <icon id="af|messages::warning-icon">
+           <description>
+             The icon that is displayed for warning messages.
+           </description>
+         </icon>
+         <icon id="af|messages::info-icon">
+           <description>
+             The icon that is displayed for information messages.
+           </description>
+         </icon>
+         <icon id="af|messages::confirmation-icon">
+           <description>
+             The icon that is displayed for confirmation messages.
+           </description>
+         </icon>
+         <icon id=".AFHeaderErrorIcon">
+           <description>
+             The icon that is displayed for error messages or headers in
+             af:messages and af:panelHeader. Changing this icon changes both
+             af|panelHeader::error-icon and af|messages::error-icon
+           </description>
+         </icon>
+         <icon id=".AFHeaderWarningIcon">
+           <description>
+             The icon that is displayed for warning messages or headers in
+             af:messages and af:panelHeader. Changing this icon changes both
+             af|panelHeader::warning-icon and af|messages::warning-icon
+           </description>
+         </icon>
+         <icon id=".AFHeaderInfoIcon">
+           <description>
+             The icon that is displayed for information messages or headers in
+             af:messages and af:panelHeader. Changing this icon changes both
+             af|panelHeader::info-icon and af|messages::info-icon
+           </description>
+         </icon>
+         <icon id=".AFHeaderConfirmationIcon">
+           <description>
+             The icon that is displayed for confirmation messages or headers in
+             af:messages and af:panelHeader. Changing this icon changes both
+             af|panelHeader::confirmation-icon and af|messages::confirmation-icon
+           </description>
+         </icon>        
+         
+       </icons>
+     </component>
+     <component name="af:objectSeparator">
+       <styles>
+         <selector id="af|objectSeparator">
+           <description>
+             This selector is used to style the af:objectSeparator component.
+           </description>
+         </selector>
+       </styles>
+     </component>   
+     <component name="af:panelBox">
+       <description>
+         <html:p>
+           The panelBox contains two main regions: the body region, which
+           contains the panelBox contents, and the header region, which contains
+           the panelBox header text. Styles can be applied to the body region via
+           the af|panelBox::body style class. Similarly, styles for the header
+           region are specified via the af|panelBox::header style class.
+         </html:p>
+         <html:p>
+           These two regions are themselves rendered within an outer container
+           that can be styled as well. There are two different sets of style
+           classes for the outer region, depending on whether a header is
+           present. If a header is present, one of the following style classes is
+           used, depending on the panelBox background color (background color 
+           can be quickly configured to dark, medium, or light using the 
+           background attribute on panelBox). 
+         </html:p>
+         <html:ul>
+           <html:li>
+             af|panelBox::dark
+           </html:li>
+           <html:li>
+             af|panelBox::medium
+           </html:li>
+           <html:li>
+             af|panelBox::light
+           </html:li>
+           <html:li>
+             af|panelBox::transparent
+           </html:li>
+         </html:ul>
+         <html:p>
+           If no header is present, the outer container instead uses the
+           following style classes:
+         </html:p>
+         <html:ul>
+           <html:li>
+             af|panelBox::content-dark
+           </html:li>
+           <html:li>
+             af|panelBox::content-medium
+           </html:li>
+           <html:li>
+             af|panelBox::content-light
+           </html:li>
+           <html:li>
+             af|panelBox::content-transparent
+           </html:li>
+         </html:ul>
+         <html:p>
+           In order to apply a style to the panelBox body or header for a
+           particular background type, a contextual selector can be used. For
+           example, the following selectors can be used to change the properties
+           of dark panelBox header and body regions:
+         </html:p>
+         <html:pre>
+           &lt;style selector="af|panelBox::dark af|panelBox::header"&gt; &lt;!--
+           Style properties for dark panelBox header --&gt; &lt;/style&gt;
+           &lt;style selector="af|panelBox::dark af|panelBox::body"&gt; &lt;!--
+           Style properties for dark panelBox body --&gt; &lt;/style&gt;
+         </html:pre>
+         <html:p>
+           And the following selector can be used to change the properties of the
+           dark panelBox body for panelBox which do not have a header:
+         </html:p>
+         <html:pre>
+           &lt;style selector="af|panelBox::content-dark af|panelBox::body"&gt;
+           &lt;!-- Style properties for dark headerless panelBox body --&gt;
+           &lt;/style&gt;
+         </html:pre>
+         <html:p>
+           In order to make it easier to apply common style properties across
+           panelBox of different background types, several alias styles are
+           exposed. For example, the .AFPanelBoxDarkBackground:alias aliased style
+           provides a way to set the background color for all dark panelBox. This
+           aliased style is used regardless of whether the outer container uses the
+           af|panelBox::dark or af|panelBox::content-dark style class (ie.
+           whether or not a header is present). See the named style section below
+           for a list all of the available named styles.
+         </html:p>
+       </description>
+       <styles>
+         <styleClass id="af|panelBox::body">
+           <description>
+             This style class is associated with the body region of the panelBox.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::header">
+           <description>
+             This style class is associated with the header region of the
+             panelBox.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::dark">
+           <description>
+             This style class is associated with the outer container of dark
+             panelBox.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::medium">
+           <description>
+             This style class is associated with the outer container of medium
+             panelBox.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::light">
+           <description>
+             This style class is associated with the outer container of light
+             panelBox.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::transparent">
+           <description>
+             This style class is associated with the outer container of
+             transparent panelBox.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::content-dark">
+           <description>
+             This style class is used in place of the af|panelBox::dark style
+             class for panelBox which do not have a header.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::content-medium">
+           <description>
+             This style class is used in place of the af|panelBox::medium style
+             class for panelBox which do not have a header.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::content-light">
+           <description>
+             This style class is used in place of the af|panelBox::light style
+             class for panelBox which do not have a header.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelBox::content-transparent">
+           <description>
+             This style class is used in place of the af|panelBox::transparent
+             style class for panelBox which do not have a header.
+           </description>
+         </styleClass>
+         <namedStyle id=".AFPanelBox:alias">
+           <description>
+             This aliased style can be used to specify common properties that are
+             shared by the af|panelBox::dark, af|panelBox::medium,
+             af|panelBox::light and af|panelBox::transparent style classes
+             (classes when the panelBox has a header).
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFBoxContent:alias">
+           <description>
+             This aliased style can be used to specify common properties that are
+             shared by the af|panelBox::content-dark,
+             af|panelBox::content-medium, af|panelBox::content-light and
+             af|panelBox::content-transparent style classes.
+             AFShuttleBoxContent:alias includes this style.
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFPanelBoxBody:alias">
+           <description>
+             <html:p>
+               This aliased style class be used to specify common properties that
+               are shared by the four types of the panelBox&lt;Background&gt;
+               body regions. It is included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|panelBox::dark af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::medium af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::light af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::transparent af|panelBox::body
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFPanelBoxContentBody:alias">
+           <description>
+             <html:p>
+               This aliased style class be used to specify common properties that
+               are shared by the four types of the
+               af|panelBox::content&lt;Background&gt; body regions. It is
+               included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|panelBox::content-dark af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::content-medium af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::content-light af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::content-transparent af|panelBox::body
+               </html:li>
+               <html:li>
+                 AFShuttleBoxContentBody:alias
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFPanelBoxDarkBackground:alias">
+           <description>
+             <html:p>
+               This aliased style is used to set the background color for dark
+               panelBox. It is included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|panelBox::dark af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::content-dark af|panelBox::body
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFPanelBoxMediumBackground:alias">
+           <description>
+             <html:p>
+               This aliased style is used to set the background color for medium
+               panelBox. It is included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|panelBox::medium af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::content-medium af|panelBox::body
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFBoxBackground:alias">
+           <description>
+             <html:p>
+               This aliased style is used to set the background color for light
+               panelBox and for the seletMany/selectOrder shuttle's box. It is
+               included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|panelBox::light af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::content-light af|panelBox::body
+               </html:li>
+               <html:li>
+                 AFShuttleBoxBackground:alias
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+       </styles>
+       <icons>
+         <description>
+           The panelBox defines four sets of icons: one set for each background
+           type. Customizers are not required to specify icons for all of the
+           different icon names. If an icon is omitted, the panelBox will attempt
+           to expand to fill any empty space.
+         </description>
+         <icon id="af|panelBox::dark-header-start-icon">
+           <description>
+             This icon is rendered at the start of the header region for dark
+             panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-header-end-icon">
+           <description>
+             This icon is rendered at the end of the header region for dark
+             panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-header-background-icon">
+           <description>
+             This icon is rendered in the background of the header region for
+             dark panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-bottom-start-icon">
+           <description>
+             This icon is rendered in the body region of dark panelBoxes at the
+             bottom starting corner (ie. at the bottom left corner for left to
+             right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-bottom-end-icon">
+           <description>
+             This icon is rendered in the body region of dark panelBoxes at the
+             bottom ending corner (ie. at the bottom right corner for left to
+             right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-bottom-background-icon">
+           <description>
+             This icon is rendered in the body region of dark panelBoxes as the
+             background in between the af|panelBox::dark-bottom-start and
+             af|panelBox::dark-bottom-end icons.
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-top-start-icon">
+           <description>
+             This icon is rendered in the body region of dark panelBoxes at the
+             top starting corner (ie. at the top left corner for left to right
+             languages.) Note: the top icons are only rendered for panelBoxes
+             which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-top-end-icon">
+           <description>
+             This icon is rendered in the body region of dark panelBoxes at the
+             top ending corner (ie. at the top right corner for left to right
+             languages.) Note: the top icons are only rendered for panelBoxes
+             which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-top-background-icon">
+           <description>
+             This icon is rendered in the body region of dark panelBoxes as the
+             background in between the af|panelBox::dark-top-start and
+             af|panelBox::dark-top-end icons. Note: the top icons are only
+             rendered for contentContainers which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-start-background-icon">
+           <description>
+             This icon is rendered as the background image on the starting side
+             of the body region in dark panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::dark-end-background-icon">
+           <description>
+             This icon is rendered as the background image on the ending side of
+             the body region in dark panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-header-start-icon">
+           <description>
+             This icon is rendered at the start of the header region for medium
+             panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-header-end-icon">
+           <description>
+             This icon is rendered at the end of the header region for medium
+             panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-header-background-icon">
+           <description>
+             This icon is rendered in the background of the header region for
+             medium panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-bottom-start-icon">
+           <description>
+             This icon is rendered in the body region of medium panelBoxes at the
+             bottom starting corner (ie. at the bottom left corner for left to
+             right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-bottom-end-icon">
+           <description>
+             This icon is rendered in the body region of medium panelBoxes at the
+             bottom ending corner (ie. at the bottom right corner for left to
+             right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-bottom-background-icon">
+           <description>
+             This icon is rendered in the body region of medium panelBoxes as the
+             background in between the af|panelBox::medium-bottom-start and
+             af|panelBox::medium-bottom-end icons.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-top-start-icon">
+           <description>
+             This icon is rendered in the body region of medium panelBoxes at the
+             top starting corner (ie. at the top left corner for left to right
+             languages.) Note: the top icons are only rendered for panelBoxes
+             which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-top-end-icon">
+           <description>
+             This icon is rendered in the body region of medium panelBoxes at the
+             top ending corner (ie. at the top right corner for left to right
+             languages.) Note: the top icons are only rendered for panelBoxes
+             which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-top-background-icon">
+           <description>
+             This icon is rendered in the body region of medium panelBoxes as the
+             background in between the af|panelBox::medium-top-start and
+             af|panelBox::medium-top-end icons. Note: the top icons are only
+             rendered for contentContainers which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-start-background-icon">
+           <description>
+             This icon is rendered as the background image on the starting side
+             of the body region in medium panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::medium-end-background-icon">
+           <description>
+             This icon is rendered as the background image on the ending side of
+             the body region in medium panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-header-start-icon">
+           <description>
+             This icon is rendered at the start of the header region for light
+             panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-header-end-icon">
+           <description>
+             This icon is rendered at the end of the header region for light
+             panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-header-background-icon">
+           <description>
+             This icon is rendered in the background of the header region for
+             light panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-bottom-start-icon">
+           <description>
+             This icon is rendered in the body region of light panelBoxes at the
+             bottom starting corner (ie. at the bottom left corner for left to
+             right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-bottom-end-icon">
+           <description>
+             This icon is rendered in the body region of light panelBoxes at the
+             bottom ending corner (ie. at the bottom right corner for left to
+             right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-bottom-background-icon">
+           <description>
+             This icon is rendered in the body region of light panelBoxes as the
+             background in between the af|panelBox::light-bottom-start and
+             af|panelBox::light-bottom-end icons.
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-top-start-icon">
+           <description>
+             This icon is rendered in the body region of light panelBoxes at the
+             top starting corner (ie. at the top left corner for left to right
+             languages.) Note: the top icons are only rendered for panelBoxes
+             which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-top-end-icon">
+           <description>
+             This icon is rendered in the body region of light panelBoxes at the
+             top ending corner (ie. at the top right corner for left to right
+             languages.) Note: the top icons are only rendered for panelBoxes
+             which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-top-background-icon">
+           <description>
+             This icon is rendered in the body region of light panelBoxes as the
+             background in between the af|panelBox::light-top-start and
+             af|panelBox::light-top-end icons. Note: the top icons are only
+             rendered for panelBoxes which do not have headers.w
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-start-background-icon">
+           <description>
+             This icon is rendered as the background image on the starting side
+             of the body region in light panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::light-end-background-icon">
+           <description>
+             This icon is rendered as the background image on the ending side of
+             the body region in light panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-header-start-icon">
+           <description>
+             This icon is rendered at the start of the header region for
+             transparent panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-header-end-icon">
+           <description>
+             This icon is rendered at the end of the header region for
+             transparent panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-header-background-icon">
+           <description>
+             This icon is rendered in the background of the header region for
+             transparent panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-bottom-start-icon">
+           <description>
+             This icon is rendered in the body region of transparent panelBoxes
+             at the bottom starting corner (ie. at the bottom left corner for
+             left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-bottom-end-icon">
+           <description>
+             This icon is rendered in the body region of transparent panelBoxes
+             at the bottom ending corner (ie. at the bottom right corner for left
+             to right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-bottom-background-icon">
+           <description>
+             This icon is rendered in the body region of transparent panelBoxes
+             as the background in between the
+             af|panelBox::transparent-bottom-start and
+             af|panelBox::transparent-bottom-end icons.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-top-start-icon">
+           <description>
+             This icon is rendered in the body region of transparent panelBoxes
+             at the top starting corner (ie. at the top left corner for left to
+             right languages.) Note: the top icons are only rendered for
+             panelBoxes which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-top-end-icon">
+           <description>
+             This icon is rendered in the body region of transparent panelBoxes
+             at the top ending corner (ie. at the top right corner for left to
+             right languages.) Note: the top icons are only rendered for
+             panelBoxes which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-top-background-icon">
+           <description>
+             This icon is rendered in the body region of transparent panelBoxes
+             as the background in between the af|panelBox::transparent-top-start
+             and af|panelBox::transparent-top-end icons. Note: the top icons are
+             only rendered for panelBoxes which do not have headers.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-start-background-icon">
+           <description>
+             This icon is rendered as the background image on the starting side
+             of the body region in transparent panelBoxes.
+           </description>
+         </icon>
+         <icon id="af|panelBox::transparent-end-background-icon">
+           <description>
+             This icon is rendered as the background image on the ending side of
+             the body region in transparent panelBoxes.
+           </description>
+         </icon>
+       </icons>
+     </component>
+
+     <component name="af:panelForm">
+       <styles>
+         <styleClass id="af|panelForm::body">
+           <description>
+             Specifies the style information for body of the panelForm.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelForm::cell">
+           <description>
+             Specifies the style information for each cell of the panelForm.
+           </description>
+         </styleClass>         
+        </styles>
+      </component>
+     
+     <component name="af:panelList">
+       <styles>
+         <styleClass id="af|panelList">
+           <description>
+             Specifies the style information for the af:panelList content.
+           </description>
+         </styleClass>
+         <selector id="af:panelList::link">
+           <description>
+             Specifies the style information for af:panelList links.
+           </description>
+         </selector>
+       </styles>
+     </component>
+ 
+ 
+     <component name="af:panelHeader">
+       <styles>
+         <styleClass id="af|panelHeader">
+           <description>
+             This style class is rendered for each header and can be used to set
+             common properties that are shared across all header levels.
+           </description>
+         </styleClass>
+         <styleClass id="af|panelHeader::icon-style">
+           <description>
+             This style class is rendered on the header icon.
+           </description>
+         </styleClass>
+         <selector id="af|panelHeader::level-one">
+           <description>
+             This selector is used for applying styles to level one headers.
+           </description>
+         </selector>
+         <selector id="af|panelHeader::level-two">
+           <description>
+             This selector is used for applying styles to level two headers.
+           </description>
+         </selector>
+         <selector id="af|panelHeader::level-three">
+           <description>
+             This selector is used for applying styles to level three headers.
+           </description>
+         </selector>
+         <selector id="af|panelHeader::level-four">
+           <description>
+             This selector is used for applying styles to level four headers.
+           </description>
+         </selector>
+         <selector id="af|panelHeader::level-five">
+           <description>
+             This selector is used for applying styles to level five headers.
+           </description>
+         </selector>
+         <selector id="af|panelHeader::level-six">
+           <description>
+             This selector is used for applying styles to level six headers.
+           </description>
+         </selector>
+         <selector id="af|panelHeader::error">
+           <description>
+             This selector is used for applying styles to level one header when
+             messageType is error.
+           </description>
+         </selector>
+         <selector id=".AFHeaderText:alias">
+           <description>
+             This :alias style is included by all the HeaderLevel* named styles,
+             which in turn is included in all the af|panelHeader::level*
+             selectors.
+           </description>
+         </selector>
+         <selector id=".AFHeaderLevelOne">
+           <description>
+             This style is included by the af|*::level-one selectors and
+             af|messages::header, af|panelHeader::error and af|messages::error
+             (e.g., af|panelHeader::level-one, af|showDetailHeader::level-one)
+           </description>
+         </selector>
+         <selector id=".AFHeaderLevelTwo">
+           <description>
+             This style is included by the af|*::level-two selectors (e.g.,
+             af|panelHeader::level-two, af|showDetailHeader::level-two)
+           </description>
+         </selector>
+         <selector id=".AFHeaderLevelThreePlus">
+           <description>
+             This named style is included by all of the af|*::level-three,
+             af|*::level-four, af|*::level-five, and af|*::level-six selectors
+           </description>
+         </selector>
+       </styles>
+       <icons>
+         <icon id="af|panelHeader::error-icon">
+           <description>
+             The icon that is displayed for headers with messageType "error".
+           </description>
+         </icon>
+         <icon id="af|panelHeader::warning-icon">
+           <description>
+             The icon that is displayed for headers with messageType "warning".
+           </description>
+         </icon>
+         <icon id="af|panelHeader::info-icon">
+           <description>
+             The icon that is displayed for headers with messageType "info".
+           </description>
+         </icon>
+         <icon id="af|panelHeader::confirmation-icon">
+           <description>
+             The icon that is displayed for headers with messageType
+             "confirmation".
+           </description>
+         </icon>
+         <icon id="af|panelHeader::processing-icon">
+           <description>
+             The icon that is displayed for headers with messageType "processing".
+           </description>
+         </icon>
+         <icon id=".AFHeaderErrorIcon">
+           <description>
+             The icon that is displayed for error messages or headers in
+             af:messages and af:panelHeader. Changing this icon changes both
+             af|panelHeader::error-icon and af|messages::error-icon
+           </description>
+         </icon>
+         <icon id=".AFHeaderWarningIcon">
+           <description>
+             The icon that is displayed for warning messages or headers in
+             af:messages and af:panelHeader. Changing this icon changes both
+             af|panelHeader::warning-icon and af|messages::warning-icon
+           </description>
+         </icon>
+         <icon id=".AFHeaderInfoIcon">
+           <description>
+             The icon that is displayed for information messages or headers in
+             af:messages and af:panelHeader. Changing this icon changes both
+             af|panelHeader::info-icon and af|messages::info-icon
+           </description>
+         </icon>
+         <icon id=".AFHeaderConfirmationIcon">
+           <description>
+             The icon that is displayed for confirmation messages or headers in
+             af:messages and af:panelHeader. Changing this icon changes both
+             af|panelHeader::confirmation-icon and af|messages::confirmation-icon
+           </description>
+         </icon>
+       </icons>
+     </component>    
+     <component name="af:panelPage">
+       <styles>
+         <namedStyle id=".AFFooterMessageText:alias">
+           <description>
+             The AFFooterMessageText:alias style defines style properties that
+             are shared by af|panelPage::about, af|panelPage::copyright, and
+             af|panelPage::privacy style selectors.
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFFooterMessageLink:alias">
+           <description>
+             The AFFooterMessageLink:alias style defines style properties that
+             are shared by af|panelPage::about-link,
+             af|panelPage::copyright-link, and af|panelPage::privacy-link style
+             selectors.
+           </description>
+         </namedStyle>
+         <styleClass id="af|panelPage::about">
+           <description>
+             Selector for the "appAbout" facet.
+           </description>
+         </styleClass>
+         <selector id="af|panelPage::about-link">
+           <description>
+             Selector for applying styles to links within the "appAbout" facet.
+           </description>
+         </selector>
+         <styleClass id="af|panelPage::copyright">
+           <description>
+             Style class for the "appCopyright" facet.
+           </description>
+         </styleClass>
+         <selector id="af|panelPage::copyright-link">
+           <description>
+             Selector for applying styles to links within the "appCopyright"
+             facet.
+           </description>
+         </selector>
+         <styleClass id="af|panelPage::privacy">
+           <description>
+             Style class for the "appPrivacy" facet.
+           </description>
+         </styleClass>
+         <selector id="af|panelPage::privacy-link">
+           <description>
+             Selector for applying styles to links within the "privacy" facet.
+           </description>
+         </selector>
+       </styles>
+     </component>  
+        
+     <component name="af:panelSideBar">
+       <description>
+         <html:p>
+           This panelSideBar component is implemented using an inner table nested
+           within an outer table. The outer container is used to lay out the
+           panelSideBar's icons. The inner container contains the actual contents of
+           the panelSideBar. If any transparent icons are used, style properties such
+           as the background color should probably be set on the inner table via
+           the af|panelSideBar::body style class.
+         </html:p>
+       </description>
+       <styles>
+         <styleClass id="af|panelSideBar">
+           <description>
+             This style class is rendered on the panelSideBar's outer table. Since the
+             panelSideBar's icons are rendered within the outer table, the
+             af|panelSideBar::body style  is probably a better choice for
+             specifying the panelSideBar's background color, padding, etc...
+           </description>
+         </styleClass>
+         <styleClass id="af|panelSideBar::body">
+           <description>
+             This style class is rendered on the panelSideBar's inner table, which
+             does not include any outer icons.
+           </description>
+         </styleClass>
+       </styles>
+       <icons>
+         <icon id="af|panelSideBar::top-start">
+           <description>
+             This icon is rendered at the top starting corner of the panelSideBar (ie.
+             at the top left corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelSideBar::top-end-icon">
+           <description>
+             This icon is rendered at the top ending corner of the panelSideBar (ie.
+             at the top right corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelSideBar::top-background-icon">
+           <description>
+             This icon is rendered in the background in between the
+             af|panelSideBar::top-start and af|panelSideBar::top-end icons.
+           </description>
+         </icon>
+         <icon id="af|panelSideBar::bottom-start-icon">
+           <description>
+             This icon is rendered at the bottom starting corner of the panelSideBar
+             (ie. at the bottom left corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelSideBar::bottom-end-icon">
+           <description>
+             This icon is rendered at the bottom ending corner of the panelSideBar
+             (ie. at the bottom right corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|panelSideBar::bottom-background-icon">
+           <description>
+             This icon is rendered in the background in between the
+             af|panelSideBar::bottom-start and af|panelSideBar::bottom-end icons.
+           </description>
+         </icon>
+         <icon id="af|panelSideBar::start-background-icon">
+           <description>
+             This icon is rendered in the background at the start of the panelSideBar.
+           </description>
+         </icon>
+         <icon id="af|panelSideBar::end-background-icon">
+           <description>
+             This icon is rendered in the background at the end of the panelSideBar.
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component name="af:selectInputColor">
+       <icons>
+         <icon id="af|selectInputColor::launch-icon">
+           <description>
+             The button icon which is used to launch the secondary color picker
+             dialog. Note: This af|selectInputColor's color swatch is now used to
+             launch the secondary dialog on most browsers. The
+             af|selectInputColor::launch-icon icon is only displayed on browsers
+             which do not display the color swatch, such as Netscape 4.x.
+           </description>
+         </icon>
+         <icon id="af|selectInputColor::swatch-overlay-icon">
+           <description>
+             The icon that is overlayed on top of the selectInputColor's color
+             swatch to indicate that the color swatch is clickable.
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component name="af:selectInputDate">
+       <icons>
+         <icon id="af|selectInputDate::launch-icon">
+           <description>
+             The button icon which is used to launch the secondary date picker
+             dialog.
+           </description>
+         </icon>
+       </icons>
+     </component>    
+     
+ 
+     <component name="af:selectManyShuttle">
+       <styles>
+         <styleClass id="af|selectManyShuttle::box-body">
+           <description>
+             This style class is associated with the body region of the box
+             around the shuttle. This is inside of the
+             af|selectManyShuttle::box-content style.
+           </description>
+         </styleClass>
+         <styleClass id="af|selectManyShuttle::box-content">
+           <description>
+             This style class is associated with the outer container of box
+             around the shuttle.
+           </description>
+         </styleClass>
+         <namedStyle id=".AFShuttleBoxContent:alias">
+           <description>
+             This named style is included in af|selectOrderShuttle::box-content
+             and af|selectManyShuttle::box-content
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFShuttleBoxContentBody:alias">
+           <description>
+             <html:p>
+               It is included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|selectManyShuttle::box-content af|selectManyShuttle::box-body
+               </html:li>
+               <html:li>
+                 af|selectOrderShuttle::box-content
+                 af|selectOrderShuttle::box-body
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFShuttleBoxBackground:alias">
+           <description>
+             <html:p>
+               This named style is used to set the background color for shuttle's
+               box. It is included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|selectManyShuttle::box-content af|selectManyShuttle::box-body
+               </html:li>
+               <html:li>
+                 af|selectOrderShuttle::box-content
+                 af|selectOrderShuttle::panel-box-body
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFBoxBackground:alias">
+           <description>
+             <html:p>
+               This named style is used to set the background color for light
+               panelBox and for the selectMany/selectOrder shuttle's box. It is
+               included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|panelBox::light af|panelBox::body
+               </html:li>
+               <html:li>
+                 af|panelBox::content-light af|panelBox::body
+               </html:li>
+               <html:li>
+                 AFShuttleBoxLightBackground:alias
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+       </styles>
+       <icons>
+         <icon id=".AFShuttleMoveIcon:alias">
+           <description>
+             Customizes both af|selectManyShuttle::move-icon and a
+             af|selectOrderShuttle::move-icon.
+           </description>
+         </icon>
+         <icon id=".AFShuttleMoveAllIcon:alias">
+           <description>
+             Customizes both af|selectManyShuttle::move-all-icon and a
+             af|selectOrderShuttle::move-all-icon.
+           </description>
+         </icon>
+         <icon id=".AFShuttleRemoveIcon:alias">
+           <description>
+             Customizes both af|selectManyShuttle::remove-icon and a
+             af|selectOrderShuttle::remove-icon.
+           </description>
+         </icon>
+         <icon id=".AFShuttleRemoveAllIcon:alias">
+           <description>
+             Customizes both af|selectManyShuttle::remove-all-icon and a
+             af|selectOrderShuttle::remove-all-icon.
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::move-icon">
+           <description>
+             The icon for the af:selectManyShuttle's "Move" action.
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::move-all-icon">
+           <description>
+             The icon for the af:selectManyShuttle's "Move All" action.
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::remove-icon">
+           <description>
+             The icon for the af:selectManyShuttle's "Remove" action.
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::remove-all-icon">
+           <description>
+             The icon for the af:selectManyShuttle's "Remove All" action.
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::bottom-start-icon">
+           <description>
+             This icon is rendered in the body region at the bottom starting
+             corner (ie. at the bottom left corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::bottom-end-icon">
+           <description>
+             This icon is rendered in the body region at the bottom ending corner
+             (ie. at the bottom right corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::bottom-background-icon">
+           <description>
+             This icon is rendered in the body region as the background in
+             between the af|selectManyShuttle::bottom-start and
+             af|selectManyShuttle::bottom-end icons.
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::top-start-icon">
+           <description>
+             This icon is rendered in the body region at the top starting corner
+             (ie. at the top left corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::top-end-icon">
+           <description>
+             This icon is rendered in the body region at the top ending corner
+             (ie. at the top right corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::top-background-icon">
+           <description>
+             This icon is rendered in the body region as the background in
+             between the af|selectManyShuttle::top-start and
+             af|selectManyShuttle::top-end icons. This needs to be an icon with
+             an url.
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::start-background-icon">
+           <description>
+             This icon is rendered as the background image on the starting side
+             of the body region. This needs to be an icon with an url.
+           </description>
+         </icon>
+         <icon id="af|selectManyShuttle::end-background-icon">
+           <description>
+             This icon is rendered as the background image on the ending side of
+             the body region. This needs to be an icon with an url.
+           </description>
+         </icon>
+       </icons>      
+     </component>
+     
+     <component name="af:selectOrderShuttle">
+       <styles>
+         <styleClass id="af|selectOrderShuttle::box-body">
+           <description>
+             This style class is associated with the body region of the box
+             around the shuttle. This is inside of the
+             af|selectOrderShuttle::box-content style.
+           </description>
+         </styleClass>
+         <styleClass id="af|selectOrderShuttle::box-content">
+           <description>
+             This style class is associated with the outer container of box
+             around the shuttle.
+           </description>
+         </styleClass>
+         <namedStyle id=".AFShuttleBoxContent:alias">
+           <description>
+             This named style is included in af|selectOrderShuttle::box-content
+             and af|selectManyShuttle::box-content
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFShuttleBoxContentBody:alias">
+           <description>
+             <html:p>
+               It is included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|selectManyShuttle::box-content af|selectManyShuttle::box-body
+               </html:li>
+               <html:li>
+                 af|selectOrderShuttle::box-content
+                 af|selectOrderShuttle::box-body
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFShuttleBoxBackground:alias">
+           <description>
+             <html:p>
+               This named style is used to set the background color for shuttle's
+               box. It is included by the following selectors:
+             </html:p>
+             <html:ul>
+               <html:li>
+                 af|selectManyShuttle::box-content af|selectManyShuttle::box-body
+               </html:li>
+               <html:li>
+                 af|selectOrderShuttle::box-content
+                 af|selectOrderShuttle::box-body
+               </html:li>
+             </html:ul>
+           </description>
+         </namedStyle>
+       </styles>
+       <icons>
+         <icon id=".AFShuttleMoveIcon:alias">
+           <description>
+             Customizes both af|selectManyShuttle::move-icon and a
+             af|selectOrderShuttle::move-icon.
+           </description>
+         </icon>
+         <icon id=".AFShuttleMoveAllIcon:alias">
+           <description>
+             Customizes both af|selectManyShuttle::move-all-icon and a
+             af|selectOrderShuttle::move-all-icon.
+           </description>
+         </icon>
+         <icon id=".AFShuttleRemoveIcon:alias">
+           <description>
+             Customizes both af|selectManyShuttle::remove-icon and a
+             af|selectOrderShuttle::remove-icon.
+           </description>
+         </icon>
+         <icon id=".AFShuttleRemoveAllIcon:alias">
+           <description>
+             Customizes both af|selectManyShuttle::remove-all-icon and a
+             af|selectOrderShuttle::remove-all-icon.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::move-icon">
+           <description>
+             The icon for the af:selectOrderShuttle's "Move" action.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::move-all-icon">
+           <description>
+             The icon for the af:selectOrderShuttle's "Move All" action.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::remove-icon">
+           <description>
+             The icon for the af:selectOrderShuttle's "Remove" action.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::remove-all-icon">
+           <description>
+             The icon for the af:selectOrderShuttle's "Remove All" action.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::reorder-top-icon">
+           <description>
+             The icon for moving the currently selected item to the top.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::reorder-up-icon">
+           <description>
+             The icon for moving the currently selected item up by one item.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::reorder-down-icon">
+           <description>
+             The icon for moving the currently selected item down by one item.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::reorder-bottom-icon">
+           <description>
+             The icon for moving the currently selected item to the bottom.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::bottom-start-icon">
+           <description>
+             This icon is rendered in the body region at the bottom starting
+             corner (ie. at the bottom left corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::bottom-end-icon">
+           <description>
+             This icon is rendered in the body region at the bottom ending corner
+             (ie. at the bottom right corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::bottom-background-icon">
+           <description>
+             This icon is rendered in the body region as the background in
+             between the af|selectManyShuttle::bottom-start and
+             af|selectManyShuttle::bottom-end icons.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::top-start-icon">
+           <description>
+             This icon is rendered in the body region at the top starting corner
+             (ie. at the top left corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::top-end-icon">
+           <description>
+             This icon is rendered in the body region at the top ending corner
+             (ie. at the top right corner for left to right languages.)
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::top-background-icon">
+           <description>
+             This icon is rendered in the body region as the background in
+             between the af|selectManyShuttle::top-start and
+             af|selectManyShuttle::top-end icons. This needs to be an icon with
+             an url.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::start-background-icon">
+           <description>
+             This icon is rendered as the background image on the starting side
+             of the body region. This needs to be an icon with an url.
+           </description>
+         </icon>
+         <icon id="af|selectOrderShuttle::end-background-icon">
+           <description>
+             This icon is rendered as the background image on the ending side of
+             the body region. This needs to be an icon with an url.
+           </description>
+         </icon>
+       </icons>      
+     </component>
+     
+     <component name="af:showDetail">
+       <description>
+         The showDetail component allows the disclosure indicator icon to be
+         customized.
+       </description>
+       <icons>
+         <icon id="af|showDetail::disclosed-icon">
+           <description>
+             The af|showDetail::disclosed-icon icon is displayed when the
+             af:showDetail component is rendered in its disclosed state.
+           </description>
+         </icon>
+         <icon id="af|showDetail::undisclosed-icon">
+           <description>
+             The af|showDetail::disclosed-icon icon is displayed when the
+             af:showDetail component is rendered in its undisclosed state.
+           </description>
+         </icon>
+         <icon id=".AFDetailDisclosedIcon">
+           <description>
+             Customizes all of these icons at once: af|table::disclosed-icon,
+             af|showDetail::disclosed-icon, af|showDetailHeader::disclosed-icon,
+             af|menuTree::disclosed-icon
+           </description>
+         </icon>
+         <icon id=".AFDetailUndisclosedIcon">
+           <description>
+             Customizes all of these icons at once: af|table::undisclosed-icon,
+             af|showDetail::undisclosed-icon,
+             af|showDetailHeader::undisclosed-icon, af|menuTree::undisclosed-icon
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component name="af:showDetailHeader">
+       <description>
+         The af:showDetailHeader component allows the disclosure indicator icon
+         to be customized.
+       </description>
+       <styles>
+         <styleClass id="af|showDetailHeader">
+           <description>
+             This style class is rendered for each level header and can be used
+             to set common properties that are shared across all header levels.
+           </description>
+         </styleClass>
+         <selector id="af|showDetailHeader::level-one">
+           <description>
+             This selector is used for applying styles to level one headers.
+           </description>
+         </selector>
+         <selector id="af|showDetailHeader::level-two">
+           <description>
+             This selector is used for applying styles to level two headers.
+           </description>
+         </selector>
+         <selector id="af|showDetailHeader::level-three">
+           <description>
+             This selector is used for applying styles to level three headers.
+           </description>
+         </selector>
+         <selector id="af|showDetailHeader::level-four">
+           <description>
+             This selector is used for applying styles to level four headers.
+           </description>
+         </selector>
+         <selector id="af|showDetailHeader::level-five">
+           <description>
+             This selector is used for applying styles to level five headers.
+           </description>
+         </selector>
+         <selector id="af|showDetailHeader::level-six">
+           <description>
+             This selector is used for applying styles to level six headers.
+           </description>
+         </selector>
+         <namedStyle id=".AFHeaderText:alias">
+           <description>
+             This named style is included by all the HeaderLevel* named styles,
+             which in turn is included in all the af|panelHeader::level*
+             selectors.
+           </description>
+         </namedStyle>
+         <selector id=".AFHeaderLevelOne">
+           <description>
+             This style is included by the af|*::level-one selectors and
+             af|messages::header, af|panelHeader::error and af|messages::error
+             (e.g., af|panelHeader::level-one, af|showDetailHeader::level-one)
+           </description>
+         </selector>
+         <selector id=".AFHeaderLevelTwo">
+           <description>
+             This style is included by the af|*::level-two selectors (e.g.,
+             af|panelHeader::level-two, af|showDetailHeader::level-two)
+           </description>
+         </selector>
+         <selector id=".AFHeaderLevelThreePlus">
+           <description>
+             This style is included by all of the af|*::level-three,
+             af|*::level-four, af|*::level-five, and af|*::level-six selectors
+           </description>
+         </selector>
+       </styles>
+       <icons>
+         <icon id="af|showDetailHeader::disclosed-icon">
+           <description>
+             The af|showDetailHeader::disclosed-icon icon is displayed when the
+             af:showDetailHeader component is rendered in its disclosed state.
+           </description>
+         </icon>
+         <icon id="af|showDetailHeader::undisclosed-icon">
+           <description>
+             The af|showDetailHeader::undisclosed-icon icon is displayed when the
+             af:showDetailHeader component is rendered in its undisclosed state.
+           </description>
+         </icon>
+         <icon id=".AFDetailDisclosedIcon">
+           <description>
+             Customizes all of these icons at once: af|table::disclosed-icon,
+             af|showDetail::disclosed-icon, af|showDetailHeader::disclosed-icon,
+             af|menuTree::disclosed-icon
+           </description>
+         </icon>
+         <icon id=".AFDetailUndisclosedIcon">
+           <description>
+             Customizes all of these icons at once: af|table::undisclosed-icon,
+             af|showDetail::undisclosed-icon,
+             af|showDetailHeader::undisclosed-icon, af|menuTree::undisclosed-icon
+           </description>
+         </icon>
+       </icons>
+     </component>
+ 
+     <component name="af:selectInputText">
+       <icons>
+         <icon id="af|selectInputText::button-icon">
+           <description>
+             The button icon which is used to launch the secondary list of values
+             dialog.
+           </description>
+         </icon>
+       </icons>
+     </component>
+ 
+ 
+     <component name="af:showOneTab">
+       <styles>
+         <namedStyle id=".AFShowOneTab:alias">
+           <description>
+             This style is included in both af|showOneTab::orientation-top
+             and af|showOneTab::orientation-bottom.
+           </description>
+         </namedStyle>
+         <selector id="af|showOneTab::orientation-top">
+           <description>
+             This styles the top showOneTab. You can use this to add padding and
+             margins and borders, for example.
+           </description>
+         </selector>
+         <selector id="af|showOneTab::orientation-bottom">
+           <description>
+             This styles the bottom showOneTab. You can use this to add padding and
+             margins and borders, for example.
+           </description>
+         </selector>
+         <selector id="af|showOneTab::tab">
+           <description>
+             This styles each unselected tab.
+           </description>
+         </selector>
+         <selector id="af|showOneTab::tab-link">
+           <description>
+             This styles each unselected tab link.
+           </description>
+         </selector> 
+          <selector id="af|showOneTab::tab-selected">
+           <description>
+             This styles each selected tab.
+           </description>
+         </selector>
+         <selector id="af|showOneTab::tab-selected-link">
+           <description>
+             This styles each selected tab link.
+           </description>
+         </selector> 
+          <selector id="af|showOneTab::separator-before-selected">
+           <description>
+             This is a cell with no content that renders before the selected
+             cell. You can style this cell to highlight the selected cell,
+             if desired.
+           </description>
+         </selector>
+         <selector id="af|showOneTab::separator-after-selected">
+           <description>
+             This is a cell with no content that renders after the selected
+             cell. You can style this cell to highlight the selected cell,
+             if desired.
+           </description>
+         </selector>
+         <selector id="af|showOneTab::separator">
+           <description>
+             This style is on the cells between each unselected step.
+           </description>
+         </selector> 
+         <selector id="af|showOneTab::cell-start">
+           <description>
+             The style on the first cell. You can left-align by setting
+             width:0% on this, and width:100% on cell-end.
+           </description>
+         </selector>
+         <selector id="af|showOneTab::cell-end">
+           <description>
+              The style on the last cell.
+           </description>
+         </selector> 
+         <selector id="af|showOneTab::body">
+           <description>
+              The style on the body of the showOneTab; ie., the contents.
+           </description>
+         </selector>         
+        </styles>
+     </component> 
+ 
+ 
+     <component name="af:table">
+       <styles>
+         <namedStyle id=".AFTableCellDataText:alias">
+           <description>
+             Specifies the font family, font size and color for table data text.
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFTableCellDataBackgroundColor:alias">
+           <description>
+             Specifies the background color for data cells.
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFTableCellDataBandedBackgroundColor:alias">
+           <description>
+             Specifies the background color for banded data cells.
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFTableCellDataBorderColor:alias">
+           <description>
+             Specifies the border color for data cells.
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFTableCellDataVerticalAlign:alias">
+           <description>
+             Specifies the vertical alignment for data cells.
+           </description>
+         </namedStyle>
+         <selector id="af|table::content">
+           <description>
+             This style class is applied to the inner HTML table which contains
+             the table data (column headers, row headers, and data cells).
+           </description>
+         </selector>
+         <selector id="af|table::control-bar-top">
+           <description>
+             This style class is applied to the table's top control bar.
+           </description>
+         </selector>
+         <selector id="af|table::control-bar-bottom">
+           <description>
+             This style class is applied to the table's bottom control bar.
+           </description>
+         </selector>
+         <selector id="af|table::sub-control-bar">
+           <description>
+             This style class is applied to the table's sub control bar.
+           </description>
+         </selector>
+         <selector id="af|table::detail">
+           <description>
+             Specifies properties for detail disclosure cells.
+           </description>
+         </selector>
+         <selector id="af|table::column-footer">
+           <description>
+             Specifies properties for column footers.
+           </description>
+         </selector>
+       </styles>
+       <icons>
+         <icon id="af|table::disclosed-icon">
+           <description>
+             The af|table::disclosed-icon icon is displayed when the af:table's
+             showDetail is rendered in its disclosed state.
+           </description>
+         </icon>
+         <icon id="af|table::undisclosed-icon">
+           <description>
+             The af|table::undisclosed-icon icon is displayed when the af:table's
+             showDetail is rendered in its undisclosed state.
+           </description>
+         </icon>
+         <icon id=".AFDetailDisclosedIcon">
+           <description>
+             Customizes all of these icons at once: af|table::disclosed-icon,
+             af|showDetail::disclosed-icon, af|showDetailHeader::disclosed-icon,
+             af|menuTree::disclosed-icon
+           </description>
+         </icon>
+         <icon id=".AFDetailUndisclosedIcon">
+           <description>
+             Customizes all of these icons at once: af|table::undisclosed-icon,
+             af|showDetail::undisclosed-icon,
+             af|showDetailHeader::undisclosed-icon, af|menuTree::undisclosed-icon
+           </description>
+         </icon>
+         <icon id="af|selectRangeChoiceBar::prev-icon">
+           <description>
+             The previous icon which is used to go back to previous step.
+           </description>
+         </icon>
+         <icon id="af|selectRangeChoiceBar::next-icon">
+           <description>
+             The next icon which is used to go back to next step.
+           </description>
+         </icon>
+         <icon id="af|selectRangeChoiceBar::prev-disabled-icon">
+           <description>
+             The previous icon disabled.
+           </description>
+         </icon>
+         <icon id="af|selectRangeChoiceBar::next-disabled-icon">
+           <description>
+             The next icon disabled.
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component name="af:processTrain">
+       <styles>
+         <styleClass id="af|processTrain::active">
+           <description>
+             Style class for the active train station.
+           </description>
+         </styleClass>
+         <styleClass id="af|processTrain::visited">
+           <description>
+             Style class for visited train stations.
+           </description>
+         </styleClass>
+         <styleClass id="af|processTrain::disabled">
+           <description>
+             Style class for disabled train stations.
+           </description>
+         </styleClass>
+         <styleClass id="af|processTrain::unvisited">
+           <description>
+             Style class for unvisited train stations.
+           </description>
+         </styleClass>
+         <namedStyle id=".AFTrainStation:alias">
+           <description>
+             Named style that is included by all of the af|processTrain* style
+             classes.
+           </description>
+         </namedStyle>
+         <selector id="af|processTrain::visited-link">
+           <description>
+             Style class for visited train stations links.
+           </description>
+         </selector>
+         <selector id="af|processTrain::unvisited-link">
+           <description>
+             Style class for unvisited train stations links.
+           </description>
+         </selector>
+       </styles>
+     </component>
+ 
+     <component name="af:selectInputDate">
+       <styles>
+         <selector id="af|selectInputDate::nav">
+           <description>
+             Style class for selectInputDate's navigation icons.
+           </description>
+         </selector>
+         <selector id="af|selectInputDate::title">
+           <description>
+             Style class for selectInputDate title.
+           </description>
+         </selector>
+         <selector id="af|selectInputDate::header">
+           <description>
+             Style class for selectInputDate header.
+           </description>
+         </selector>
+         <selector id="af|selectInputDate::content">
+           <description>
+             Style class for selectInputDate content.
+           </description>
+         </selector>
+         <selector id="af|selectInputDate::selected">
+           <description>
+             Style class for selected date.
+           </description>
+         </selector>
+       </styles>
+     </component>
+     <component id="af:selectBooleanCheckbox">
+       <icons>
+         <icon id="af|selectBooleanCheckbox::disabled-checked-icon">
+           <description>
+             The icon that is displayed when the checkbox is readOnly, disabled, and checked.
+           </description>
+         </icon>
+         <icon id="af|selectBooleanCheckbox::disabled-unchecked-icon">
+           <description>
+             The icon that is displayed when the checkbox is readOnly, disabled, and unchecked.
+           </description>
+         </icon>
+         <icon id="af|selectBooleanCheckbox::read-only-checked-icon">
+           <description>
+             The icon that is displayed when the checkbox is read-only and checked.
+           </description>
+         </icon>
+         <icon id="af|selectBooleanCheckbox::read-only-unchecked-icon">
+           <description>
+             The icon that is displayed when the checkbox is read-only and unchecked.
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component id="af:selectBooleanRadio">
+       <icons>
+         <icon id="af|selectBooleanRadio::disabled-selected-icon">
+           <description>
+             The icon that is displayed when the radio is readOnly, disabled, and selected.
+           </description>
+         </icon>
+         <icon id="af|selectBooleanRadio::disabled-unselected-icon">
+           <description>
+             The icon that is displayed when the radio is readOnly, disabled, and not selected.
+           </description>
+         </icon>
+         <icon id="af|selectBooleanRadio::read-only-selected-icon">
+           <description>
+             The icon that is displayed when the radio is read-only and selected.
+           </description>
+         </icon>
+         <icon id="af|selectBooleanRadio::read-only-unselected-icon">
+           <description>
+             The icon that is displayed when the radio is read-only and not
+             selected.
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component name="af:selectRangeChoiceBar">
+       <icons>
+         <icon id="af|selectRangeChoiceBar::prev-icon">
+           <description>
+             The previous icon which is used to go back to previous step.
+           </description>
+         </icon>
+         <icon id="af|selectRangeChoiceBar::next-icon">
+           <description>
+             The next icon which is used to go back to next step.
+           </description>
+         </icon>
+         <icon id="af|selectRangeChoiceBar::prev-disabled-icon">
+           <description>
+             The previous icon disabled.
+           </description>
+         </icon>
+         <icon id="af|selectRangeChoiceBar::next-disabled-icon">
+           <description>
+             The next icon disabled.
+           </description>
+         </icon>
+       </icons>
+     </component>
+     <component name="af:tableSelectMany">
+       <styles>
+         <selector id="af|tableSelectMany::cell-icon-format">
+           <description>
+             Specifies properties for the tableSelectMany column.
+           </description>
+         </selector>
+         <selector id="af|tableSelectMany::cell-icon-format-band">
+           <description>
+             Specifies properties for the banded tableSelectMany column.
+           </description>
+         </selector>
+       </styles>
+     </component>    
+     
+     <component name="af:tableSelectOne">
+       <styles>
+         <selector id="af|tableSelectOne::cell-icon-format">
+           <description>
+             Specifies properties for the tableSelectOne column.
+           </description>
+         </selector>
+         <selector id="af|tableSelectOne::cell-icon-format-band">
+           <description>
+             Specifies properties for the banded tableSelectOne column.
+           </description>
+         </selector>
+       </styles>
+     </component>    
+     <component name="af:treeTable">
+       <styles>
+         <styleClass id="af|treeTable::expansion">
+           <description>
+             This style class is used to style the treeTable's expanded and
+             collapsed icons.
+           </description>
+         </styleClass>
+         <styleClass id="af|treeTable::focus">
+           <description>
+             This style class is used to style the treeTable's focus icon.
+           </description>
+         </styleClass>
+         <styleClass id="af|treeTable::locator">
+           <description>
+             This style class is used to style the treeTable's locator icon.
+           </description>
+         </styleClass>
+         <selector id="af|treeTable::path">
+           <description>
+             Specifies the style information for the path content.
+           </description>
+         </selector>
+         <selector id="af|treeTable::path-selected-step">
+           <description>
+             Specifies the style information for the selected path step. This
+             step may be hidden.
+           </description>
+         </selector>
+         <selector id="af|treeTable::path-step">
+           <description>
+             Specifies the style information for path steps.
+           </description>
+         </selector>
+         <selector id="af|treeTable::content">
+           <description>
+             This style class is applied to the inner HTML table which contains
+             the treeTable data (column headers, row headers, and data cells).
+           </description>
+         </selector>
+         <styleClass id="af|treeTable::control-bar-top">
+           <description>
+             This style class is applied to the treeTable's top control bar.
+           </description>
+         </styleClass>
+         <styleClass id="af|treeTable::control-bar-bottom">
+           <description>
+             This style class is applied to the treeTable's bottom control bar.
+           </description>
+         </styleClass>
+         <styleClass id="af|treeTable::sub-control-bar">
+           <description>
+             This style class is applied to the treeTable's sub control bar.
+           </description>
+         </styleClass>
+         <namedStyle id=".AFPath:alias">
+           <description>
+             This alias namedStyle is included in both af|menuPath and
+             af|treeTable::path
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFPathStep:alias">
+           <description>
+             This alias namedStyle is included in both af|menuPath::step and
+             af|treeTable::path-step
+           </description>
+         </namedStyle>
+         <namedStyle id=".AFPathSelectedStep:alias">
+           <description>
+             This alias namedStyle is included in both af|menuPath::selected-step
+             and af|treeTable::path-selected-step
+           </description>
+         </namedStyle>
+       </styles>
+       <icons>
+         <icon id="af|treeTable::expanded-icon">
+           <description>
+             This icon is displayed in expanded treeTable rows.
+           </description>
+         </icon>
+         <icon id="af|treeTable::collapsed-icon">
+           <description>
+             This icon is displayed in collapsed treeTable rows.
+           </description>
+         </icon>
+         <icon id="af|treeTable::focus-icon">
+           <description>
+             This icon is displayed in the focus column for focusable rows.
+           </description>
+         </icon>
+         <icon id="af|treeTable::locator-icon">
+           <description>
+             This icon is displayed next to the treeTable's locator bread crumbs
+             which display the treeTable's focus path.
+           </description>
+         </icon>
+         <icon id="af|treeTable::separator-icon">
+           <description>
+             The separator icon that is rendered between the path links. This is
+             typically a text icon.
+           </description>
+         </icon>
+         <icon id=".AFPathSeparatorIcon">
+           <description>
+             Changing this icon changes both af|menuPath::separator-icon and
+             af|treeTable::separator-icon
+           </description>
+         </icon>
+       </icons>
+     </component>         
+  </componentMetadata>
+</skinMetadata>

@@ -1,0 +1,59 @@
+<definitions
+     name="ArchivoNominaJMS"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/jms/ArchivoNominaJMS/"
+     xmlns="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/jms/ArchivoNominaJMS/"
+     xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/"
+     xmlns:imp1="http://bicevida.ws/services/envionominas"
+     xmlns:hdr="http://xmlns.oracle.com/pcbpel/adapter/jms/"
+    >
+    <import namespace="http://xmlns.oracle.com/pcbpel/adapter/jms/" location="jmsAdapterOutboundHeader.wsdl"/>
+    <types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://bicevida.ws/services/envionominas" schemaLocation="EnvioNominas.xsd" />
+      </schema>
+    </types>
+    <message name="ArchivoNominaOutput_msg">
+        <part name="ArchivoNominaOutput" element="imp1:ArchivoNominaOutput"/>
+    </message>
+    <portType name="Produce_Message_ptt">
+        <operation name="Produce_Message">
+            <input message="tns:ArchivoNominaOutput_msg"/>
+        </operation>
+    </portType>
+    <binding name="Produce_Message_binding" type="tns:Produce_Message_ptt">
+    <jca:binding  />
+        <operation name="Produce_Message">
+      <jca:operation
+          DestinationName="jms/ARCHIVOS_NOMINA_Q"
+          DeliveryMode="Persistent"
+          TimeToLive="0"
+          PayloadType="TextMessage"
+          InteractionSpec="oracle.tip.adapter.jms.outbound.JmsProduceInteractionSpec"
+          OpaqueSchema="false" >
+      </jca:operation>
+      <input>
+        <jca:header message="hdr:OutboundHeader_msg" part="outboundHeader"/>
+      </input>
+        </operation>
+    </binding>
+    <service name="ArchivoNominaJMS">
+        <port name="Produce_Message_pt" binding="tns:Produce_Message_binding">
+      <jca:address location="eis/Jms/QueueRemoteConnectionFactory" UIConnectionName="localApplicationServer"
+          ManagedConnectionFactory="oracle.tip.adapter.jms.JmsManagedConnectionFactory"
+          mcf.ConnectionFactoryLocation="jms/EnvioNominasQueueConnectionFactory"
+          mcf.IsTopic="false"
+          mcf.IsTransacted="false"
+          mcf.FactoryProperties=""
+          mcf.Username="oc4jadmin"
+          mcf.Password="7CC4D295E4DDDA915EE9CBCA343E55D2"
+          UIJmsProvider="OC4JJMS" />
+        </port>
+    </service>
+  <plt:partnerLinkType name="Produce_Message_plt" >
+    <plt:role name="Produce_Message_role" >
+      <plt:portType name="tns:Produce_Message_ptt" />
+    </plt:role>
+  </plt:partnerLinkType>
+</definitions>

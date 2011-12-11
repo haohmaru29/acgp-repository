@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adf-config xmlns:xsi=" http://www.w3.org/2001/XMLSchema-instance "
+            xsi:schemaLocation=" http://xmlns.oracle.com/adf/config ../../../../../bc4jrt/src/oracle/adf/share/config/schema/config.xsd"
+            xmlns=" http://xmlns.oracle.com/adf/config "
+            xmlns:sec=" http://xmlns.oracle.com/adf/security/config ">
+  <sec:adf-config-child xmlns=" http://xmlns.oracle.com/adf/security/config ">
+    <JaasSecurityContext initialContextFactoryClass="oracle.adf.share.security.JAASInitialContextFactory"
+                         authorizationEnforce="false"
+                         jaasProviderClass="oracle.adf.share.security.providers.jazn.JAZNSecurityContext"></JaasSecurityContext>
+  </sec:adf-config-child>
+</adf-config>

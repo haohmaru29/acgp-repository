@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/ArchivosNominaBD" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ArchivosNominaBD" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="EvnmArchivosNominasCollection" type="EvnmArchivosNominasCollection"/>
+   <xs:complexType name="EvnmArchivosNominasCollection">
+      <xs:sequence>
+         <xs:element name="EvnmArchivosNominas" type="EvnmArchivosNominas" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EvnmArchivosNominas">
+      <xs:sequence>
+         <xs:element name="nombreArchivo" minOccurs="0" nillable="true">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:maxLength value="50"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="referenciaBancoProceso" type="xs:decimal" minOccurs="0" nillable="true"/>
+         <xs:element name="fechaCreacion" type="xs:dateTime"/>
+         <xs:element name="cuerpo" minOccurs="0" nillable="true" type="xs:string"/>
+          
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

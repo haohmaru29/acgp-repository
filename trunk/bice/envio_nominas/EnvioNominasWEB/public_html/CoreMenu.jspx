@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+        
+ <!--   <f:subview id="header">-->
+          
+          <afh:tableLayout width="770px">
+    <afh:rowLayout>
+      <afh:cellFormat>
+        <af:menuTabs>
+          <af:commandMenuItem text="Varios" selected="false"/>
+          <af:commandMenuItem text="Configuración"/>
+          <af:commandMenuItem text="Envio Nominas" selected = "true">
+            <f:selectItem value="0" itemLabel="algo"/>
+          </af:commandMenuItem>
+        </af:menuTabs>
+        <af:menuBar>
+           <af:goMenuItem text="Inicio"
+                         destination="/faces/Bienvenida.jspx"/>
+           <af:goMenuItem text="Consulta Nominas"
+                         destination="/faces/app/envionominas/consultaNominasEstado.jspx"/>
+           <af:goMenuItem text="Extraccion Nomina"
+                         destination="/faces/app/envionominas/extraccionNomina.jspx"/>
+           <af:goMenuItem text="Consulta Gastos Nomina"
+                         destination="/faces/app/envionominas/consultaGastosNomina.jspx"/>
+           <af:goMenuItem text="Mantenedor Feriados"
+                         destination="/faces/app/envionominas/mantenedorFeriados.jspx"/>
+          <af:goMenuItem text="Mantenedor Correos"
+                         destination="/faces/app/envionominas/mantenedorCorreos.jspx"/>
+           
+        </af:menuBar>
+        <af:menuBar>
+            
+            <af:goMenuItem text="Registrar Folio"
+                         destination="/faces/app/envionominas/registrarFolioEnvio.jspx"/>
+            <af:goMenuItem text="Mantenedor Listas"
+                         destination="/faces/app/envionominas/mantenedorListasDistribucion.jspx"/>
+            <af:goMenuItem text="Mantenedor Bancos Proceso"
+                         destination="/faces/app/envionominas/mantenedorBancoProceso.jspx"/>
+            <af:goMenuItem text="Descarga de Archivos Nominas"
+                         destination="/faces/app/envionominas/archivosNominas.jspx"/>
+          <f:verbatim>
+               
+          </f:verbatim>
+          <af:goMenuItem text="Desconectar" targetFrame="CoreFramePaginas"
+                         destination="/faces/infraestructura/Logout.jspx"/>
+          <af:goMenuItem text="Ayuda" targetFrame="CoreFramePaginas"
+                         icon="skins/informatica/Propuesta1/skin_images/quick_help.jpg"
+                         destination="/faces/infraestructura/CoreVersion.jspx"/>
+                         
+         
+        </af:menuBar>
+      </afh:cellFormat>
+    </afh:rowLayout>
+    <afh:rowLayout>
+              <afh:cellFormat wrappingDisabled="true" halign="right">
+        <af:outputLabel value="Página Solicitada: #{facesContext.viewRoot.viewId} | "/>
+        <af:outputLabel value="Usuario: "/>
+                <af:outputLabel value="#{MbUserInfo.userName}"/>
+                <af:objectSpacer width="10" height="10"/>
+                <af:outputLabel value="RUT: "/>
+                <af:outputLabel value="#{MbUserInfo.rut}"/>
+              </afh:cellFormat>
+            </afh:rowLayout>
+          </afh:tableLayout>
+  <af:objectSpacer width="10" height="10"/>
+   
+  <!--    </f:subview> -->
+</jsp:root>

@@ -1,0 +1,11 @@
+################################################################################
+# Para el correcto funcionamiento de la aplicacion, se deben considerar las    #
+# siguientes configuraciones en el servidor OC4J de desarrollo que se          #
+# utilice para desplegar la aplicacion.                                        #
+################################################################################
+Configuracion JMS : 
+Editar el archivo "jms.xml" en el directorio "%JDEV_PATH%\jdev\system\oracle.j2ee.10.1.3.43.6\embedded-oc4j\config" e incluir las siguientes definiciones JMS: 
+<queue name="CARGA_NOMINA_Q" location="jms/CARGA_NOMINA_Q"></queue>
+<queue name="RINDE_CARGA_NOMINA_Q" location="jms/RINDE_CARGA_NOMINA_Q"></queue>
+<queue name="RINDE_NOMINA_Q" location="jms/RINDE_NOMINA_Q"></queue>
+<xa-queue-connection-factory location="jms/EnvioNominasQF"/>

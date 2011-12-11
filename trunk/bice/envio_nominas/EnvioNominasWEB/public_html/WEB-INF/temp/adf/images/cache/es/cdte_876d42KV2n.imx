@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImageMetadata version="2.0" xmlns="http://xmlns.oracle.com/uix/image">
+<compositeButton textAntialias="true" disabled="false" width="214" height="25" direction="ltr" lookAndFeelId="bicevida.BvNetLook_2009">
+<foreground red="60" green="116" blue="159"/>
+<background red="168" green="226" blue="244"/>
+<font>
+<name>Dialog</name>
+<size>11</size>
+<style>bold</style>
+</font>
+<text># {msgs['generales.cmdSiguinte']}</text>
+</compositeButton>
+</ImageMetadata>

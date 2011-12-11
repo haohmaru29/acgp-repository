@@ -1,0 +1,332 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jpr:project xmlns:jpr="http://xmlns.oracle.com/ide/project">
+   <hash n="component-versions">
+      <value n="oracle.adf.dt.migration.ProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.jsf.addin.JSFProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.struts.addin.db.ADFStrutsProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdt.controller.struts.addin.StrutsProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdtinternal.model.portlet.migration.WebCenterProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.adfdtinternal.view.faces.addin.ADFFacesLibraryMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.bm.commonIde.ProjectUpgrader" v="10.1.3.5.0"/>
+      <value n="oracle.ide.model.Project" v="10.1.3.5.0"/>
+      <value n="oracle.ide.model.ResourcePathsMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jbo.dt.jclient.migrator.JCProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jbo.dt.jdevx.ui.appnav.APProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdeveloper.dbmodeler.migration.ProjectMigratorHelper" v="10.1.3.5.0"/>
+      <value n="oracle.jdeveloper.ejb.EjbMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdeveloper.offlinedb.migration.OfflineDBProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.jsp.JsfLibraryMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.jsp.JspMigrator" v="10.1.3.1.0"/>
+      <value n="oracle.jdevimpl.runner.RunConfigurationsMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.jdevimpl.webservices.WebServicesMigratorHelper" v="10.1.3.5.0"/>
+      <value n="oracle.tip.tools.ide.pm.addin.PMProjectMigrator" v="10.1.3.5.0"/>
+      <value n="oracle.toplink.addin.migration.TopLinkProjectMigrator" v="10.1.3.1.0"/>
+   </hash>
+   <list n="contentSets">
+      <string v="oracle.jdeveloper.model.PathsConfiguration/javaContentSet"/>
+      <string v="oracle.ide.model.ResourcePaths/resourcesContentSet"/>
+      <string v="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings/offlineDBContentSet"/>
+      <string v="oracle.jdeveloper.model.J2eeSettings/webContentSet"/>
+      <string v="oracle.toplink.addin.TopLinkProjectSettings/toplinkContentSet"/>
+      <string v="oracle.bm.commonIde.data.project.ModelerProjectSettings/modelersContentSet"/>
+      <string v="oracle.tip.tools.ide.pm.addin.PMProjectSettings/Integration_Content"/>
+   </list>
+   <value n="defaultPackage" v="envionominascore"/>
+   <hash n="oracle.bm.commonIde.data.project.ModelerProjectSettings">
+      <hash n="modelersContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="model/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+*"/>
+               </list>
+               <list n="url-path">
+                  <url path="."/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+**"/>
+               </list>
+               <list n="url-path">
+                  <url path="src/cl/bicevida/envionominas/resources/"/>
+               </list>
+            </hash>
+         </list>
+         <list n="url-path"/>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.compiler.ant.AntConfiguration">
+      <value n="makeTarget" v="all"/>
+      <url n="projectBuildfile" path="build.xml"/>
+      <list n="targetList">
+         <string v="all"/>
+         <string v="clean"/>
+         <string v="compile"/>
+         <string v="copy"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.model.J2eeSettings">
+      <hash n="webContentSet">
+         <list n="url-path">
+            <url path="public_html/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="javaContentSet">
+         <list n="pattern-filters">
+            <string v="-cl/bicevida/envionominas/model/bo/RindeNominaOutput.java"/>
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings">
+      <hash n="offlineDBContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="database/"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.jdeveloper.runner.RunConfigurations">
+      <hash n="runConfigurationDefinitions">
+         <hash n="Default">
+            <value n="custom" v="false"/>
+            <value n="name" v="Default"/>
+         </hash>
+      </hash>
+      <list n="runConfigurationList">
+         <string v="Default"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdevimpl.config.JProjectLibraries">
+      <list n="exportedReferences">
+         <hash>
+            <value n="id" v="J2EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JAX-RPC Client"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="EJB 3.0"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Poi"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Log4j"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons Logging 1.0.3"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="XStream"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+      <hash n="internalDefinitions">
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url path="../../lib/Poi/ooxml-schemas-1.0.jar" jar-entry=""/>
+                  <url path="../../lib/Poi/poi-3.6-20091214.jar" jar-entry=""/>
+                  <url path="../../lib/Poi/poi-ooxml-3.6-20091214.jar" jar-entry=""/>
+               </list>
+               <value n="description" v="Poi"/>
+               <value n="id" v="Poi"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../lib/Log4j/log4j-1.2.15.jar" jar-entry=""/>
+               </list>
+               <value n="description" v="Log4j"/>
+               <value n="id" v="Log4j"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../lib/XStream/xpp3_min-1.1.4c.jar" jar-entry=""/>
+                  <url path="../../lib/XStream/xstream-1.3.1.jar" jar-entry=""/>
+               </list>
+               <value n="description" v="XStream"/>
+               <value n="id" v="XStream"/>
+            </hash>
+         </list>
+      </hash>
+      <list n="libraryReferences">
+         <hash>
+            <value n="id" v="J2EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="JAX-RPC Client"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Oracle XML Parser v2"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="EJB 3.0"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Poi"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Log4j"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons Logging 1.0.3"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="XStream"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+   </hash>
+   <hash n="oracle.jdevimpl.config.JProjectPaths">
+      <url n="outputDirectory" path="classes/"/>
+   </hash>
+   <hash n="oracle.tip.tools.ide.pm.addin.PMProjectSettings">
+      <hash n="Integration_Content">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+      </hash>
+   </hash>
+   <hash n="oracle.toplink.addin.TopLinkProjectSettings">
+      <hash n="toplinkContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="toplink/"/>
+         </list>
+      </hash>
+   </hash>
+   <list n="ownerMap">
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/ArchivoNominaType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/CamposVariables.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/CampoVariableType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/CargaNominaInputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/CargaNominaOutputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/DatosCabeceraType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/ErrorType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/NominaType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/RegistroNominaType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/RegistrosNomina.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/RindeNominaInputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/RindeNominaOutputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/ArchivoNominaType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/CamposVariables_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/CampoVariableType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/CargaNominaInputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/CargaNominaOutputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/DatosCabeceraType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/ErrorType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/NominaType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/RegistroNominaType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/RegistrosNomina_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/RindeNominaInputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/types/ws/bicevida/services/envionominas/runtime/RindeNominaOutputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/__soap_EnvioNominas_RS_envioNominasPortClient.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPort.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortService.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/__soap_EnvioNominas_RS_cargar_pptClient.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/__soap_EnvioNominas_RS_envioNominasPortClient.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_ppt.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptService.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPort.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortService.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/__soap_EnvioNominas_RS_cargar_ppt_Stub.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/__soap_EnvioNominas_RS_envioNominasPort_Stub.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/Cargar_ppt_cargar_Fault_SOAPSerializer.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/Cargar_pptService_Impl.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/Cargar_pptService_SerializerRegistry.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/Cargar_pptService_SerializerRegistry12.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/EnvioNominasPort_cargar_Fault_SOAPSerializer.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/EnvioNominasPort_generarArchivo_Fault_SOAPSerializer.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/EnvioNominasPort_rendir_Fault_SOAPSerializer.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/EnvioNominasPortService_Impl.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/EnvioNominasPortService_SerializerRegistry.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/runtime/EnvioNominasPortService_SerializerRegistry12.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/runtime/__soap_EnvioNominas_RS_envioNominasPort_Stub.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/runtime/EnvioNominasPort_cargar_Fault_SOAPSerializer.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/runtime/EnvioNominasPort_rendir_Fault_SOAPSerializer.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/runtime/EnvioNominasPortService_Impl.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/runtime/EnvioNominasPortService_SerializerRegistry.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/services/ws/runtime/EnvioNominasPortService_SerializerRegistry12.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/ArchivoNominaType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/CamposVariables.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/CampoVariableType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/CargaNominaInputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/CargaNominaOutputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/DatosCabeceraType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/ErrorType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/GeneraArchivoInputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/GeneraArchivoOutputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/Nominas.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/NominaType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/RegistroNominaType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/RegistrosNomina.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/RindeNominaInputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/RindeNominaOutputType.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/ArchivoNominaType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/ArchivoNominaType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/CamposVariables__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/CamposVariables_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/CampoVariableType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/CampoVariableType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/CargaNominaInputType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/CargaNominaInputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/CargaNominaOutputType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/CargaNominaOutputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/DatosCabeceraType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/DatosCabeceraType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/ErrorType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/ErrorType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/GeneraArchivoInputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/GeneraArchivoOutputType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/GeneraArchivoOutputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/Nominas__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/Nominas_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/NominaType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/NominaType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/RegistroNominaType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/RegistroNominaType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/RegistrosNomina__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/RegistrosNomina_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/RindeNominaInputType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/RindeNominaInputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/RindeNominaOutputType__LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/EnvioNominasPortServiceProxy.proxy"/></hash>
+      <hash><value n="nodeClass" v="oracle.jdeveloper.model.JavaSourceNode"/><url n="nodeURL" path="src/cl/bicevida/envionominas/model/types/ws/bicevida/services/envionominas/runtime/RindeNominaOutputType_LiteralSerializersrc.java"/><value n="ownerClass" v="oracle.jdeveloper.webservices.model.WebServiceProxyNode"/><url n="ownerURL" path="src/cl/bicevida/envionominas/model/services/ws/proxy/Cargar_pptServiceProxy.proxy"/></hash>
+   </list>
+</jpr:project>

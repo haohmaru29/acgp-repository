@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <afh:html>
+            <f:loadBundle basename="cl.bicevida.envionominas.view.resources.messages.general_es"
+                          var="msgs"/>
+            <afh:head title="#{msgs['bicevida.folio.titulo'] }">
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=windows-1252"/>
+            </afh:head>
+            <afh:body>
+                <af:form>
+                    <af:panelBox text="#{msgs['bicevida.folio.titulo'] }"
+                                 background="medium" width="770px"
+                                 icon="../../skins/informatica/CoreSkin/skin_images/boton_iso.gif">
+                        <afh:tableLayout width="98%" halign="center">
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:panelForm rows="2">
+                                        <af:inputText label="#{msgs['bicevida.folio.lbl.lotenomina'] }"
+                                                      value="#{mb_registrarFolio.loteNomina}">
+                                        </af:inputText>
+                                        <af:selectInputDate label="#{msgs['bicevida.folio.lbl.fechadesde'] }"
+                                                            value="#{mb_registrarFolio.fechaDesde}"
+                                                            id="sitFechaDesde"
+                                                            validator="#{mb_registrarFolio.validarFechas}"/>
+                                        <af:selectOneChoice value="#{mb_registrarFolio.tipoNominaSeleccionada}"
+                                                            label="#{msgs['bicevida.folio.lbl.tiponomina'] }"
+                                                            unselectedLabel="#{msgs['bicevida.generales.opt.seleccione'] }">
+                                            <f:selectItems value="#{mb_registrarFolio.tiposNomina}"
+                                                           id="sitTiposNomina"/>
+                                        </af:selectOneChoice>
+                                        <af:selectInputDate label="#{msgs['bicevida.folio.lbl.fechahasta'] }"
+                                                            value="#{mb_registrarFolio.fechaHasta}"
+                                                            id="sitFechaHasta"
+                                                            validator="#{mb_registrarFolio.validarFechas}"/>
+                                        <af:selectOneChoice value="#{mb_registrarFolio.bancoProcesoSeleccionado}"
+                                                            label="#{msgs['bicevida.folio.lbl.bancoproceso'] }"
+                                                            unselectedLabel="#{msgs['bicevida.generales.opt.seleccione'] }">
+                                            <f:selectItems value="#{mb_registrarFolio.bancosProceso}"
+                                                           id="sitBancoPago"/>
+                                        </af:selectOneChoice>
+                                   </af:panelForm>
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                        </afh:tableLayout>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:panelHorizontal halign="center">
+                            <af:commandButton text="#{msgs['bicevida.generales.btn.buscar'] }"
+                                              actionListener="#{mb_registrarFolio.ejecutarBusqueda}"
+                                              blocking="true"/>
+                            <af:commandButton text="#{msgs['bicevida.generales.btn.limpiar'] }"
+                                  action="#{mb_registrarFolio.limpiarFormulario}" 
+                                  blocking="true" immediate="true" >
+                                <af:resetActionListener  />     
+                            </af:commandButton>
+                        </af:panelHorizontal>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:table emptyText="#{msgs['bicevida.generales.lbl.listavacia'] }"
+                                  value="#{mb_registrarFolio.lista}" var="fila"
+                                  rows="#{mb_registrarFolio.registrosPagina}"
+                                  banding="row" bandingInterval="1" width="100%"
+                                  id="tblNominas">
+                            <af:column headerText="#{msgs['bicevida.folio.col.numnomina']}"
+                                       formatType="text" 
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.id}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.folio.col.lotenomina']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.lote}"/>
+                            </af:column>
+                            <af:column 
+                                       headerText="#{msgs['bicevida.folio.col.tiponomina']}"
+                                       formatType="text" 
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.tipo.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.folio.col.banco']}"
+                                       formatType="text" 
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.bancoProceso}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.folio.col.ingreso']}"
+                                       formatType="text" 
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.fechaInicioProceso}">
+                                    <f:convertDateTime pattern="dd-MM-yyyy" />
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.folio.col.envio']}"
+                                       formatType="text" 
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.fechaEnvio}">
+                                    <f:convertDateTime pattern="dd-MM-yyyy" />
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.folio.col.totalregistros']}"
+                                       formatType="text" 
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.totalRegistros}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.folio.col.totalmonto']}"
+                                       formatType="text" 
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.montoTotal}">
+                                    <af:convertNumber groupingUsed="true"/>
+                                </af:outputText>
+                            </af:column>
+                            <f:facet name="selection">
+                                <af:tableSelectOne>
+                                    <af:commandButton text="#{msgs['bicevida.folio.btn.registrar']}"
+                                                      action="#{mb_registrarFolio.onClickRegistrarFolio}"
+                                                      blocking="true"/>
+                                </af:tableSelectOne>
+                            </f:facet>
+                             <f:facet name="actions">
+                                <af:commandButton text="#{msgs['bicevida.generales.btn.descargaxls']}"
+                                                      actionListener="#{MbExcelVisor.onClickGenerarExcel}"
+                                                      blocking="true">
+                                    <f:attribute name="nombre" value="registrar_folio_envio"/>              
+                                    <f:attribute name="titulo" value="Número Nómina:Lote:Tipo de Nómina:Banco Proceso:Fecha Ingreso:Fecha Envío:Total Registros:Monto($)"/>
+                                </af:commandButton>
+                            </f:facet>
+                        </af:table>
+                        <!-- FORMULARIO INGRESO DE FOLIO -->
+                        <af:objectSpacer width="10" height="20"/>
+                        <afh:tableLayout width="98%" halign="center">
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:panelForm rows="5"
+                                                  rendered="#{mb_registrarFolio.showPfRegistrarFolio}">
+                                        <af:inputText label="#{msgs['bicevida.folio.lbl.etiquetabanco']}"
+                                                      value="#{mb_registrarFolio.bancoPagoMuestra}"
+                                                      disabled="true"/>
+                                        <af:objectSpacer width="10"
+                                                         height="10"/>
+                                        <af:inputText label="#{msgs['bicevida.folio.lbl.etiquetaseleccion']}"
+                                                      value="#{mb_registrarFolio.numeroNominaSeleccionado}"
+                                                      disabled="true"/>
+                                        <af:objectSpacer width="10"
+                                                         height="10"/>
+                                        <af:inputText label="#{msgs['bicevida.folio.lbl.numerofolio']}"
+                                                      value="#{mb_registrarFolio.numeroFolio}"
+                                                      disabled="#{mb_registrarFolio.enableInputRegistrarFolio}"/>
+                                        <af:outputText value="#{mb_registrarFolio.mensajeSalida}"/>
+                                        <af:objectSpacer width="10"
+                                                         height="10"/>
+                                        <af:panelHorizontal halign="center">
+                                            <af:commandButton text="#{msgs['bicevida.generales.btn.guardar']}"
+                                                              actionListener="#{mb_registrarFolio.ejecutarGuardarFolio}"
+                                                              blocking="true"
+                                                              rendered="#{mb_registrarFolio.showBtnGuardarFolio}"/>
+                                            <af:commandButton text="#{msgs['bicevida.generales.btn.continuar']}"
+                                                              actionListener="#{mb_registrarFolio.ejecutarContinuar}"
+                                                              blocking="true"
+                                                              rendered="#{mb_registrarFolio.showBtnContinuar}"/>
+                                        </af:panelHorizontal>
+                                    </af:panelForm>
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                            <!--  FORMULARIO INGRESO DE FOLIO -->
+                        </afh:tableLayout>
+                    </af:panelBox>
+                </af:form>
+            </afh:body>
+        </afh:html>
+    </f:view>
+</jsp:root>

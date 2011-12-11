@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<orion-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-application-10_0.xsd">
+    <ejb-module path="file:/C:/PROYECTOS/BICE/EnvioNominas/03-DESARROLLO/00-FUENTES/EnvioNominasBICE/src/EnvioNominasEJB/classes/" id="EnvioNominasBice_EnvioNominasEJB_0"/>
+    <web-module id="EnvioNominasCORE" path="file:/C:/PROYECTOS/BICE/EnvioNominas/03-DESARROLLO/00-FUENTES/EnvioNominasBICE/src/EnvioNominasCORE/public_html/"/>
+    <web-module id="EnvioNominasWEB" path="file:/C:/PROYECTOS/BICE/EnvioNominas/03-DESARROLLO/00-FUENTES/EnvioNominasBICE/src/EnvioNominasWEB/public_html/"/>
+    <library path="C:\PROYECTOS\BICE\EnvioNominas\03-DESARROLLO\00-FUENTES\EnvioNominasBICE\src\EnvioNominasCORE\classes">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\lib\activation.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\lib\ejb.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\lib\jms.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\lib\jta.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\lib\mail.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\lib\servlet.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\jaxrpc-api.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\wsclient.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\wsserver.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\wssecurity.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\wsdl.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\orasaaj.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\saaj-api.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\orawsdl.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\orawsrm.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\jaxr_api.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\orajaxr.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\relaxngDatatype.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\jaxb-impl.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\jaxb-libs.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\xsdlib.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\webservices\lib\mdds.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\jaxen.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\oraclepki.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\ojpse.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\osdt_core.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\osdt_cert.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\osdt_xmlsec.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\osdt_wss.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\osdt_saml.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\repository.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jlib\ojmisc.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\lib\http_client.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\jazncore.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\oc4jclient.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\rdbms\jlib\xdb.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\diagnostics\lib\ojdl2.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\lib\xmlparserv2.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\lib\xml.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\j2ee\home\lib\ejb30.jar">jdev-generated</library>
+    <library path="C:\PROYECTOS\BICE\EnvioNominas\03-DESARROLLO\00-FUENTES\EnvioNominasBICE\lib\Poi\ooxml-schemas-1.0.jar">jdev-generated</library>
+    <library path="C:\PROYECTOS\BICE\EnvioNominas\03-DESARROLLO\00-FUENTES\EnvioNominasBICE\lib\Poi\poi-3.6-20091214.jar">jdev-generated</library>
+    <library path="C:\PROYECTOS\BICE\EnvioNominas\03-DESARROLLO\00-FUENTES\EnvioNominasBICE\lib\Poi\poi-ooxml-3.6-20091214.jar">jdev-generated</library>
+    <library path="C:\PROYECTOS\BICE\EnvioNominas\03-DESARROLLO\00-FUENTES\EnvioNominasBICE\lib\Log4j\log4j-1.2.15.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jakarta-taglibs\commons-logging-1.0.3\commons-logging-api.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jakarta-taglibs\commons-logging-1.0.3\commons-logging.jar">jdev-generated</library>
+    <library path="C:\PROYECTOS\BICE\EnvioNominas\03-DESARROLLO\00-FUENTES\EnvioNominasBICE\lib\XStream\xpp3_min-1.1.4c.jar">jdev-generated</library>
+    <library path="C:\PROYECTOS\BICE\EnvioNominas\03-DESARROLLO\00-FUENTES\EnvioNominasBICE\lib\XStream\xstream-1.3.1.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jdev\system\oracle.j2ee.10.1.3.43.6\embedded-oc4j\.client">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jdbc\lib\ojdbc14dms.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jdbc\lib\orai18n.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\jdbc\lib\ocrs12.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\diagnostics\lib\ojdl.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\lib\dms.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\toplink\jlib\toplink-essentials.jar">jdev-generated</library>
+    <library path="E:\PROYECTOS\jdevstudio10135\rdbms\jlib\aqapi.jar">jdev-generated</library>
+    <log>
+        <file path="EnvioNominasBice-oc4j-app.log"/>
+    </log>
+    <jazn provider="XML" location="EnvioNominasWEB/src/META-INF/jazn-data.xml"/>
+    <data-sources path="EnvioNominasBice-data-sources.xml"/>
+</orion-application>

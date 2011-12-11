@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<skins xmlns="http://xmlns.oracle.com/adf/view/faces/skin">
+  
+  <skin>
+    <id>bicevida.CoreSkin</id>
+    <family>bicevida_CoreSkin</family>
+    <render-kit-id>oracle.adf.desktop</render-kit-id>
+    <!--<render-kit-id>oracle.adf.core</render-kit-id>-->
+    <style-sheet-name>skins/informatica/CoreSkin/CoreSkin.css</style-sheet-name>
+    <!--<style-sheet-name>file://tmp//CoreSkin//CoreSkin.css</style-sheet-name>-->
+  </skin>
+<skin>
+    <id>bicevida.BvNetLook_2009</id>
+    <family>bicevida_BvNetLook_2009</family>
+    <render-kit-id>oracle.adf.desktop</render-kit-id>
+    <!--<render-kit-id>oracle.adf.core</render-kit-id>-->
+    <style-sheet-name>skins/BvNetLook_2009/BvNetLook2009.css</style-sheet-name>
+    <!--<style-sheet-name>file://tmp//CoreSkin//CoreSkin.css</style-sheet-name>-->
+  </skin>  
+</skins>

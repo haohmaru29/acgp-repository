@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut"
+  targetNamespace="http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types/rut"
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <xsd:complexType name="RutType">
+    <xsd:sequence>
+      <xsd:element name="rut" type="tns:cuerpoRut"/>
+      <xsd:element name="digitoVerificador" type="tns:dv"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="cuerpoRut">
+    <xsd:annotation>
+      <xsd:documentation><![CDATA[Rut sin digito verificador]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:unsignedInt"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="dv">
+    <xsd:annotation>
+      <xsd:documentation><![CDATA[Digito verificador]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="1"/>
+      <xsd:pattern value="[0-9kK]"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <afh:html>
+            <afh:head title="#{msgs['bicevida.gastos_nominas.detalle.titulo']}">
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=windows-1252"/>
+            </afh:head>
+            <afh:body>
+                <f:verbatim>
+                        
+                </f:verbatim>
+                <f:loadBundle basename="cl.bicevida.envionominas.view.resources.messages.general_es"
+                              var="msgs"/>
+                <af:form>
+                    <af:panelBox text="#{msgs['bicevida.gastos_nominas.detalle.titulo']}"
+                                 background="medium" width="770px"
+                                 icon="../../skins/informatica/CoreSkin/skin_images/boton_iso.gif">
+                        <afh:tableLayout width="98%" halign="center">
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.gastos_nominas.lbl.tiponomina'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_consultaGastosNomina.gastoSeleccionado.nomina.tipo.nombre}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.gastos_nominas.lbl.numeronomina'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_consultaGastosNomina.gastoSeleccionado.nomina.id}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.gastos_nominas.lbl.banco'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_consultaGastosNomina.gastoSeleccionado.nomina.bancoProceso}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.gastos_nominas.lbl.fechaconciliacion'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_consultaGastosNomina.gastoSeleccionado.fechaConciliacionProceso}" styleClass="AFFieldText" />
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.gastos_nominas.lbl.fechainicioproceso'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_consultaGastosNomina.gastoSeleccionado.fechaInicioProceso}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                        </afh:tableLayout>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:panelHorizontal halign="center">
+                            <af:commandButton text="#{msgs['bicevida.generales.btn.volver'] }"
+                                              action="ConsultaGastosNomina"
+                                              blocking="true"/>
+                        </af:panelHorizontal>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:table emptyText="#{msgs['bicevida.generales.lbl.listavacia'] }"
+                                  value="#{mb_consultaGastosNomina.gastoSeleccionado.detalle}"
+                                  var="fila"
+                                  rows="#{mb_consultaGastosNomina.registrosPagina}"
+                                  banding="row" bandingInterval="1"
+                                  width="100%">
+                            <af:column sortProperty="banco" sortable="true"
+                                       headerText="#{msgs['bicevida.gastos_nominas.col.banco']}"
+                                       formatType="text">
+                                <af:outputText value="#{fila.banco.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.gastos_nominas.col.registros']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.cantidadProcesados}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.gastos_nominas.col.registrosnoprocesado']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.cantidadNoProcesados}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.gastos_nominas.col.montoprocesado']}"
+                                       formatType="text"
+                                        inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.montoTotalProcesados}">
+                                    <af:convertNumber groupingUsed="true"/>
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.gastos_nominas.col.montonoprocesado']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.montoTotalNoProcesados}">
+                                    <af:convertNumber groupingUsed="true"/>
+                                </af:outputText>
+                            </af:column>
+                            <f:facet name="actions">
+                                <af:panelHorizontal halign="center">
+                                    <af:commandButton text="#{msgs['bicevida.generales.btn.descargaxls']}"
+                                                      actionListener="#{MbExcelVisor.onClickGenerarExcel}"
+                                                      blocking="true">
+                                                      <f:attribute name="nombre" value="detalle_gastos_nomina"/>              
+                                                      <f:attribute name="titulo" value="Banco:Registros Procesados:Registros No Procesados:Monto Registros Procesados:Monto Registros No Procesados"/>
+                                    </af:commandButton>
+                                </af:panelHorizontal>
+                            </f:facet>
+                        </af:table>
+                    </af:panelBox>
+                </af:form>
+            </afh:body>
+        </afh:html>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,497 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns0="http://utils.oidservices.bicevida.cl/types/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://utils.oidservices.bicevida.cl/" xmlns:tns1="http://www.oracle.com/webservices/internal/literal" name="OidBasicWebService" targetNamespace="http://utils.oidservices.bicevida.cl/">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://utils.oidservices.bicevida.cl/" elementFormDefault="qualified"/>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.oracle.com/webservices/internal/literal" targetNamespace="http://www.oracle.com/webservices/internal/literal" elementFormDefault="qualified">
+            <import namespace="http://utils.oidservices.bicevida.cl/types/"/>
+            <complexType name="list">
+                <complexContent>
+                    <extension base="tns:collection">
+                        <sequence/>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="collection">
+                <sequence>
+                    <element name="item" type="anyType" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://utils.oidservices.bicevida.cl/types/" targetNamespace="http://utils.oidservices.bicevida.cl/types/" elementFormDefault="qualified">
+            <import namespace="http://www.oracle.com/webservices/internal/literal"/>
+            <complexType name="stringArray">
+                <sequence>
+                    <element name="String" type="string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+        </schema>
+    </types>
+    <message name="OidBasicWebService_allocateGroupToMainGroup">
+        <part name="groupMain" type="xsd:string"/>
+        <part name="groupChild" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_allocateGroupToMainGroupResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_allocateUserMembership">
+        <part name="user" type="xsd:string"/>
+        <part name="gruposCN" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_allocateUserMembershipResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_createGroup">
+        <part name="groupName" type="xsd:string"/>
+        <part name="description" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_createGroupResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_createUser">
+        <part name="uid" type="xsd:string"/>
+        <part name="cn" type="xsd:string"/>
+        <part name="sn" type="xsd:string"/>
+        <part name="mail" type="xsd:string"/>
+        <part name="givenname" type="xsd:string"/>
+        <part name="fechanacimiento" type="xsd:string"/>
+        <part name="accountname" type="xsd:string"/>
+        <part name="userpassword" type="xsd:string"/>
+        <part name="telefono" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_createUserResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_createUser2">
+        <part name="propertyNames" type="tns0:stringArray"/>
+        <part name="propertyValues" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_createUser2Response">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_deallocateGroupToMainGroup">
+        <part name="groupMain" type="xsd:string"/>
+        <part name="groupChild" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_deallocateGroupToMainGroupResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_deallocateUserMembership">
+        <part name="user" type="xsd:string"/>
+        <part name="gruposCN" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_deallocateUserMembershipResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_deleteGroup">
+        <part name="groupName" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_deleteGroupResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_deleteGroupsFromGroup">
+        <part name="group" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_deleteGroupsFromGroupResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_deleteUsersFromGroup">
+        <part name="group" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_deleteUsersFromGroupResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_existsUser">
+        <part name="user" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_existsUserResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_findGroupsCn"/>
+    <message name="OidBasicWebService_findGroupsCnResponse">
+        <part name="result" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_findGroupsCnByFilter">
+        <part name="filtro" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_findGroupsCnByFilterResponse">
+        <part name="result" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_findGroupsDN"/>
+    <message name="OidBasicWebService_findGroupsDNResponse">
+        <part name="result" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_findGroupsDnByFilter">
+        <part name="filtro" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_findGroupsDnByFilterResponse">
+        <part name="result" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_getUserGroupsCN">
+        <part name="user" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_getUserGroupsCNResponse">
+        <part name="result" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_getUserGroupsDN">
+        <part name="user" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_getUserGroupsDNResponse">
+        <part name="result" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_getUserPropertyValues">
+        <part name="user" type="xsd:string"/>
+        <part name="propertyName" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_getUserPropertyValuesResponse">
+        <part name="result" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_intelliActualizarUsuario">
+        <part name="pRut" type="xsd:string"/>
+        <part name="pNombres" type="xsd:string"/>
+        <part name="pApellidos" type="xsd:string"/>
+        <part name="pMail" type="xsd:string"/>
+        <part name="pFechaNacimiento" type="xsd:string"/>
+        <part name="pUserPassword" type="xsd:string"/>
+        <part name="pTelefono" type="xsd:string"/>
+        <part name="pGroups" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_intelliActualizarUsuarioResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_listGroupsInGroup">
+        <part name="String_1" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_listGroupsInGroupResponse">
+        <part name="result" type="tns1:list"/>
+    </message>
+    <message name="OidBasicWebService_listUsersInGroup">
+        <part name="String_1" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_listUsersInGroupResponse">
+        <part name="result" type="tns1:list"/>
+    </message>
+    <message name="OidBasicWebService_modifyUserProperty">
+        <part name="user" type="xsd:string"/>
+        <part name="propertyName" type="xsd:string"/>
+        <part name="values" type="tns0:stringArray"/>
+    </message>
+    <message name="OidBasicWebService_modifyUserPropertyResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <message name="OidBasicWebService_validateUserPassword">
+        <part name="cn" type="xsd:string"/>
+        <part name="password" type="xsd:string"/>
+    </message>
+    <message name="OidBasicWebService_validateUserPasswordResponse">
+        <part name="result" type="xsd:boolean"/>
+    </message>
+    <portType name="OidBasicWebService">
+        <operation name="allocateGroupToMainGroup" parameterOrder="groupMain groupChild">
+            <input message="tns:OidBasicWebService_allocateGroupToMainGroup"/>
+            <output message="tns:OidBasicWebService_allocateGroupToMainGroupResponse"/>
+        </operation>
+        <operation name="allocateUserMembership" parameterOrder="user gruposCN">
+            <input message="tns:OidBasicWebService_allocateUserMembership"/>
+            <output message="tns:OidBasicWebService_allocateUserMembershipResponse"/>
+        </operation>
+        <operation name="createGroup" parameterOrder="groupName description">
+            <input message="tns:OidBasicWebService_createGroup"/>
+            <output message="tns:OidBasicWebService_createGroupResponse"/>
+        </operation>
+        <operation name="createUser" parameterOrder="uid cn sn mail givenname fechanacimiento accountname userpassword telefono">
+            <input message="tns:OidBasicWebService_createUser"/>
+            <output message="tns:OidBasicWebService_createUserResponse"/>
+        </operation>
+        <operation name="createUser2" parameterOrder="propertyNames propertyValues">
+            <input message="tns:OidBasicWebService_createUser2"/>
+            <output message="tns:OidBasicWebService_createUser2Response"/>
+        </operation>
+        <operation name="deallocateGroupToMainGroup" parameterOrder="groupMain groupChild">
+            <input message="tns:OidBasicWebService_deallocateGroupToMainGroup"/>
+            <output message="tns:OidBasicWebService_deallocateGroupToMainGroupResponse"/>
+        </operation>
+        <operation name="deallocateUserMembership" parameterOrder="user gruposCN">
+            <input message="tns:OidBasicWebService_deallocateUserMembership"/>
+            <output message="tns:OidBasicWebService_deallocateUserMembershipResponse"/>
+        </operation>
+        <operation name="deleteGroup" parameterOrder="groupName">
+            <input message="tns:OidBasicWebService_deleteGroup"/>
+            <output message="tns:OidBasicWebService_deleteGroupResponse"/>
+        </operation>
+        <operation name="deleteGroupsFromGroup" parameterOrder="group">
+            <input message="tns:OidBasicWebService_deleteGroupsFromGroup"/>
+            <output message="tns:OidBasicWebService_deleteGroupsFromGroupResponse"/>
+        </operation>
+        <operation name="deleteUsersFromGroup" parameterOrder="group">
+            <input message="tns:OidBasicWebService_deleteUsersFromGroup"/>
+            <output message="tns:OidBasicWebService_deleteUsersFromGroupResponse"/>
+        </operation>
+        <operation name="existsUser" parameterOrder="user">
+            <input message="tns:OidBasicWebService_existsUser"/>
+            <output message="tns:OidBasicWebService_existsUserResponse"/>
+        </operation>
+        <operation name="findGroupsCn">
+            <input message="tns:OidBasicWebService_findGroupsCn"/>
+            <output message="tns:OidBasicWebService_findGroupsCnResponse"/>
+        </operation>
+        <operation name="findGroupsCnByFilter" parameterOrder="filtro">
+            <input message="tns:OidBasicWebService_findGroupsCnByFilter"/>
+            <output message="tns:OidBasicWebService_findGroupsCnByFilterResponse"/>
+        </operation>
+        <operation name="findGroupsDN">
+            <input message="tns:OidBasicWebService_findGroupsDN"/>
+            <output message="tns:OidBasicWebService_findGroupsDNResponse"/>
+        </operation>
+        <operation name="findGroupsDnByFilter" parameterOrder="filtro">
+            <input message="tns:OidBasicWebService_findGroupsDnByFilter"/>
+            <output message="tns:OidBasicWebService_findGroupsDnByFilterResponse"/>
+        </operation>
+        <operation name="getUserGroupsCN" parameterOrder="user">
+            <input message="tns:OidBasicWebService_getUserGroupsCN"/>
+            <output message="tns:OidBasicWebService_getUserGroupsCNResponse"/>
+        </operation>
+        <operation name="getUserGroupsDN" parameterOrder="user">
+            <input message="tns:OidBasicWebService_getUserGroupsDN"/>
+            <output message="tns:OidBasicWebService_getUserGroupsDNResponse"/>
+        </operation>
+        <operation name="getUserPropertyValues" parameterOrder="user propertyName">
+            <input message="tns:OidBasicWebService_getUserPropertyValues"/>
+            <output message="tns:OidBasicWebService_getUserPropertyValuesResponse"/>
+        </operation>
+        <operation name="intelliActualizarUsuario" parameterOrder="pRut pNombres pApellidos pMail pFechaNacimiento pUserPassword pTelefono pGroups">
+            <input message="tns:OidBasicWebService_intelliActualizarUsuario"/>
+            <output message="tns:OidBasicWebService_intelliActualizarUsuarioResponse"/>
+        </operation>
+        <operation name="listGroupsInGroup" parameterOrder="String_1">
+            <input message="tns:OidBasicWebService_listGroupsInGroup"/>
+            <output message="tns:OidBasicWebService_listGroupsInGroupResponse"/>
+        </operation>
+        <operation name="listUsersInGroup" parameterOrder="String_1">
+            <input message="tns:OidBasicWebService_listUsersInGroup"/>
+            <output message="tns:OidBasicWebService_listUsersInGroupResponse"/>
+        </operation>
+        <operation name="modifyUserProperty" parameterOrder="user propertyName values">
+            <input message="tns:OidBasicWebService_modifyUserProperty"/>
+            <output message="tns:OidBasicWebService_modifyUserPropertyResponse"/>
+        </operation>
+        <operation name="validateUserPassword" parameterOrder="cn password">
+            <input message="tns:OidBasicWebService_validateUserPassword"/>
+            <output message="tns:OidBasicWebService_validateUserPasswordResponse"/>
+        </operation>
+    </portType>
+    <binding name="OidBasicWebServiceSoapHttp" type="tns:OidBasicWebService">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="allocateGroupToMainGroup">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//allocateGroupToMainGroup"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="groupMain groupChild"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="allocateUserMembership">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//allocateUserMembership"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="user gruposCN"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="createGroup">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//createGroup"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="groupName description"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="createUser">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//createUser"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="uid cn sn mail givenname fechanacimiento accountname userpassword telefono"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="createUser2">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//createUser2"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="propertyNames propertyValues"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="deallocateGroupToMainGroup">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//deallocateGroupToMainGroup"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="groupMain groupChild"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="deallocateUserMembership">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//deallocateUserMembership"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="user gruposCN"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="deleteGroup">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//deleteGroup"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="groupName"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="deleteGroupsFromGroup">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//deleteGroupsFromGroup"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="group"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="deleteUsersFromGroup">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//deleteUsersFromGroup"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="group"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="existsUser">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//existsUser"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="user"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="findGroupsCn">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//findGroupsCn"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="findGroupsCnByFilter">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//findGroupsCnByFilter"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="filtro"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="findGroupsDN">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//findGroupsDN"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="findGroupsDnByFilter">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//findGroupsDnByFilter"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="filtro"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="getUserGroupsCN">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//getUserGroupsCN"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="user"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="getUserGroupsDN">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//getUserGroupsDN"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="user"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="getUserPropertyValues">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//getUserPropertyValues"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="user propertyName"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="intelliActualizarUsuario">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//intelliActualizarUsuario"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="pRut pNombres pApellidos pMail pFechaNacimiento pUserPassword pTelefono pGroups"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="listGroupsInGroup">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//listGroupsInGroup"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="String_1"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="listUsersInGroup">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//listUsersInGroup"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="String_1"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="modifyUserProperty">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//modifyUserProperty"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="user propertyName values"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+        <operation name="validateUserPassword">
+            <soap:operation soapAction="http://utils.oidservices.bicevida.cl//validateUserPassword"/>
+            <input>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="cn password"/>
+            </input>
+            <output>
+                <soap:body use="literal" namespace="http://utils.oidservices.bicevida.cl/" parts="result"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="OidBasicWebService">
+        <port name="OidBasicWebServiceSoapHttpPort" binding="tns:OidBasicWebServiceSoapHttp">
+            <soap:address location="http://app.bicevida.cl/OidServices/OidBasicWebServiceSoapHttpPort"/>
+        </port>
+    </service>
+</definitions>

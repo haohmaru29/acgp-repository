@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="EnvioNominasPortService.java"/>
+      <url path="runtime/EnvioNominasPortService_Impl.java"/>
+      <url path="EnvioNominasPort.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/ErrorType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/CargaNominaInputType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/DatosCabeceraType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/CamposVariables.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/CampoVariableType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/NominaType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/RegistrosNomina.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/RegistroNominaType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/CargaNominaOutputType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/RindeNominaInputType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/RindeNominaOutputType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/Nominas.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/ArchivoNominaType.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/CampoVariableType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/CamposVariables__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/DatosCabeceraType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/RegistroNominaType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/RegistrosNomina__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/NominaType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/CargaNominaInputType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/CargaNominaOutputType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/ErrorType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/RindeNominaInputType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/Nominas__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/RindeNominaOutputType__LiteralSerializersrc.java"/>
+      <url path="../../../types/ws/bicevida/services/envionominas/runtime/ArchivoNominaType__LiteralSerializersrc.java"/>
+      <url path="runtime/EnvioNominasPort_cargar_Fault_SOAPSerializer.java"/>
+      <url path="runtime/EnvioNominasPort_rendir_Fault_SOAPSerializer.java"/>
+      <url path="runtime/__soap_EnvioNominas_RS_envioNominasPort_Stub.java"/>
+      <url path="runtime/EnvioNominasPortService_SerializerRegistry.java"/>
+      <url path="runtime/EnvioNominasPortService_SerializerRegistry12.java"/>
+      <url path="__soap_EnvioNominas_RS_envioNominasPortClient.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="ATTACHMENT_MIME"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.bicevida.envionominas.model.services.ws.proxy"/>
+            <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="cl.bicevida.envionominas.model.types"/>
+            <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+         </hash>
+      </hash>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="__soap_EnvioNominas_RS_envioNominasPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="false"/>
+            <value n="CLASS_NAME" v="cl.bicevida.envionominas.model.services.ws.proxy.EnvioNominasPort"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="__soap_EnvioNominas_RS_envioNominasPort"/>
+            <hash n="OPERATIONS">
+               <hash n="cargar">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="generarArchivo">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="rendir">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS"/>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="canis.bicevida.cl" port="7777" path="/event/EnvioNominas/EnvioNominas_RS"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="envioNominasPortService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://oracle.com/esb/namespaces/EnvioNominas"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../../EnvioNominasCORE.jpr"/>
+      <url n="PROXY_WSDL_URL" protocol="http" host="192.168.1.102" port="8888" path="/esb/wsil/EnvioNominas/EnvioNominas_RS" query="wsdl"/>
+   </hash>
+</jdevws:WebServiceProxy>

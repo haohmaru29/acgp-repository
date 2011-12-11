@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<data-sources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/data-sources-10_1.xsd" xmlns="http://xmlns.oracle.com/oracleas/schema">
+    <connection-pool name="jdev-connection-pool-DESA_XXBV_SEGPAG">
+        <connection-factory factory-class="oracle.jdbc.pool.OracleDataSource" user="XXBV_SEGPAG" password="->DataBase_User_Vls0f2mBaCYZFttttuct3v79isLWYuPFWBlqAoXWFIA=" url="jdbc:oracle:thin:@192.168.1.46:1521:xe"/>
+    </connection-pool>
+    <managed-data-source name="jdev-connection-managed-DESA_XXBV_SEGPAG" jndi-name="jdbc/DESA_XXBV_SEGPAGDS" connection-pool-name="jdev-connection-pool-DESA_XXBV_SEGPAG"/>
+    <native-data-source name="jdev-connection-native-DESA_XXBV_SEGPAG" jndi-name="jdbc/DESA_XXBV_SEGPAGCoreDS" url="jdbc:oracle:thin:@192.168.1.46:1521:xe" user="XXBV_SEGPAG" password="->DataBase_User_ddP9FWmMWHWPEwtxYVWngaOKd-qFs5Qw1BmmGVLHNxU=" data-source-class="oracle.jdbc.pool.OracleDataSource"/>
+</data-sources>

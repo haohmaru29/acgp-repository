@@ -1,0 +1,221 @@
+/* CSS file generated on Fri Dec 09 10:57:13 GYT 2011 */
+.AFInstructionText,.x0,.PortletText1,.x6v,.PortletText2,.x6w,.PortletText3,.x6x,.PortletText4,.x6y,.portlet-form-field,.x7n {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#000000}
+.AFInstructionTextDisabled,.x1,.p_InContextBrandingText,.x3r,.OraHGridNavRowInactiveLink,.x51 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#999999}
+.AFDataText,.x2 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;color:#000000}
+.AFDataTextDisabled,.x3 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;color:#999999}
+.AFDataNumber,.x4 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;color:#000000;text-align:right}
+.AFDataNumberDisabled,.x5 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;color:#999999;text-align:right}
+.AFFieldText,.x6,.af_inputText_content,.x8,.AFFieldTextLTR,.x44,.AFPhoneFieldText,.x46,.AFPostalCodeFieldText,.x48,.AFAddressFieldText,.x4a,.portlet-form-input-field,.x7i {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;background-color:#F3F8FC;color:#666666;border:1px solid  #ABCBE4}
+.AFFieldTextDisabled,.x7,.af_inputText_content-disabled,.x9,.AFFieldTextLTRDisabled,.x45,.AFPhoneFieldTextDisabled,.x47,.AFPostalCodeFieldTextDisabled,.x49,.AFAddressFieldTextDisabled,.x4b,.portlet-font-dim,.x70 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;background-color:#F7F7F7;color:#999999;border:1px solid  #CDCDCD}
+.AFFieldNumber,.xa {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;text-align:right;color:#000000}
+.AFFieldNumberDisabled,.xb,.AFLabelTextDisabled,.xd {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;text-align:right;color:#999999}
+.AFLabelText,.xc,.portlet-form-label,.x7h,.portlet-icon-label,.x7k,.portlet-dlg-icon-label,.x7l,.portlet-form-field-label,.x7m {font-family:Arial, Helvetica, sans-serif;font-size:11px;font-weight:bold;text-align:left;color:rgb(25, 50, 95);border:0px}
+.AFLabelCell,.xe {text-align:right;font-size:10px;font-weight:normal}
+.AFErrorIconStyle,.xf {color:#cc0000;font-family:monospace;font-weight:bold}
+.AFInfoIconStyle,.xg,.AFWarningIconStyle,.xh,.AFQuickSelectIconStyle,.xj {color:#666666;font-family:monospace;font-weight:bold}
+.AFRequiredIconStyle,.xi {color:#666666;font-family:Courier,sans-serif}
+.AFQuickSelectDisabledIconStyle,.xk {color:#999999;font-family:monospace;font-weight:bold}
+.OraLink:link,.xl:link,.OraNavBarActiveLink,.x54 {font-family:Arial, Helvetica, sans-serif;color:#19325F;font-size:10px;font-weight:normal}
+.OraLink:active,.xl:active,.OraALinkText,.x43 {font-family:Arial, Helvetica, sans-serif;color:#196592;font-size:10px;font-weight:normal}
+.OraLink:visited,.xl:visited {font-family:Arial, Helvetica, sans-serif;color:#4c6592;font-size:10px;font-weight:normal}
+.OraLinkDisabled,.xm,.af_menuList,.xo,button,.af_panelBox_content-transparent,.x14,.af_panelBox_content-light,.x15,.af_selectManyShuttle_box-content,.x16,.af_selectOrderShuttle_box-content,.x17,.af_panelBox_content-medium,.x18,.af_panelBox_content-dark,.x19,.af_menuTabs,.x2a,.p_OraDisabled,.x4c,.OraNav3,.x5g,.OraTipText,.x6a,.p_OraTreeRow,.x6e,.portlet-form-button,.x7j {font-weight:normal;color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:small}
+.af_menuList_selected,.xn,.OraNav3Selected,.x5f {color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;background-color:#FFFFFF}
+.af_menuChoice_label,.xp,.portlet-font,.x6z {font-weight:normal;color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:67%}
+BODY {background-color:#ffffff;font-family:Arial,Helvetica,Geneva,sans-serif}
+.af_treeTable_path,.xq,.af_menuPath,.xs,.OraLinkText,.x41,.OraHGridNavRowActiveLink,.x50 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#19325F}
+.af_treeTable_path A,.xq A,.af_menuPath A,.xs A {color:#19325F;font-size:90%}
+.af_treeTable_path-selected A,.xr A,.af_menuPath_selected A,.xt A {color:#000000}
+.af_panelList A,.xu A {font-weight:normal;font-family:Arial, Helvetica, sans-serif;color:#19325F;font-size:11px}
+.af_panelList UL,.xu UL {margin-top:4px;margin-bottom:4px}
+.af_selectInputColor_swatch-overlay,.xv {position:relative;left:-7px;top:5px}
+.af_panelForm_body td,.xw td {padding:0px}
+.af_panelForm_label-cell,.xx {text-align:left}
+.af_panelBox_transparent img,.xy img,.af_panelBox_light img,.xz img,.af_panelBox_medium img,.x10 img,.af_panelBox_dark img,.x11 img,.af_selectManyShuttle_box-content img,.x16 img,.af_selectOrderShuttle_box-content img,.x17 img,.af_panelBox_content-transparent img,.x14 img,.af_panelBox_content-light img,.x15 img,.af_panelBox_content-medium img,.x18 img,.af_panelBox_content-dark img,.x19 img,.af_menuBar img,.x1j img,.af_messages img,.x25 img,.af_menuTabs img,.x2a img {vertical-align:bottom}
+.af_panelBox_header,.x12 {background-color:#FFFFFF;width:100%;background-repeat:repeat-x;color:#40759E;font-weight:bolder;font-size:14px}
+.af_panelBox_transparent .af_panelBox_body,.xy .x13,.af_panelBox_light .af_panelBox_body,.xz .x13,.af_panelBox_medium .af_panelBox_body,.x10 .x13,.af_panelBox_dark .af_panelBox_body,.x11 .x13,.PortletBodyColor,.x6j,.PortletSubHeaderColor,.x6s,.portlet-section-body,.x74,.portlet-table-body,.x7b,BODY {background-color:white}
+.af_panelBox_content-light .af_panelBox_body,.x15 .x13,.af_selectManyShuttle_box-content .af_selectManyShuttle_box-body,.x16 .x1a,.af_selectOrderShuttle_box-content .af_selectOrderShuttle_box-body,.x17 .x1b,.OraBGAccentLight,.x3q {background-color:#e9e8e8}
+.af_panelBox_content-medium .af_panelBox_body,.x18 .x13,.OraBGAccentMedium,.x3p {background-color:#ffffcc}
+.af_panelBox_content-dark .af_panelBox_body,.x19 .x13,.OraBGAccentDark,.x3o {background-color:#CCCCCC}
+.af_panelPage_copyright,.x1c,.af_panelPage_privacy,.x1d,.af_panelPage_about,.x1e {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:67%;color:#000000;white-space:nowrap}
+.af_panelPage_copyright A,.x1c A,.af_panelPage_privacy A,.x1d A,.af_panelPage_about A,.x1e A,.p_OraTreeRow A:link,.x6e A:link,.p_OraTreeRow A:active,.x6e A:active,.p_OraTreeRow A:visited,.x6e A:visited {color:#19325F}
+.af_menuButtons_text,.x1f,.af_menuButtons_text-selected,.x1h,.af_menuButtons_text-disabled,.x1i {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;padding:0px 2px 2px 4px;color:white}
+.af_menuBar,.x1j {font-weight:normal;color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:small;min-height:4px;background-color:#FFFFFF}
+.af_menuBar_enabled,.x1k {font-family:Arial, Helvetica, sans-serif;white-space:nowrap;font-size:10px;font-weight:normal;color:white}
+.af_menuBar_selected,.x1l {font-weight:normal;color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:small;white-space:nowrap}
+.af_menuBar_enabled A,.x1k A,.af_menuBar_enabled A:hover,.x1k A:hover {color:white;font-size:10px}
+.af_menuBar_selected A,.x1l A {font-size:10px;color:white;font-weight:bold}
+.af_menuBar_separator,.x1m {font-weight:normal;color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:small;padding:0px 2px 0px 2px}
+.af_treeTable_expansion,.x1n {color:#666666;position:absolute;top:0px;left:-18px}
+.af_treeTable_focus,.x1o {font-weight:normal;font-size:small;color:#666666;font-family:monospace}
+.af_treeTable_locator,.x1p {font-weight:normal;font-size:small;color:#999999;font-family:monospace}
+.af_showOnePanel_container,.x1q {border-color:#999999;border-width:0px 1px 1px 1px;border-style:solid}
+.af_showOnePanel_header-collapsed,.x1r {border-color:#999999;height:21px;text-decoration:none;white-space:nowrap;padding-right:5px;border-width:1px 0px 0px 0px;border-style:solid;cursor:pointer;padding-left:5px}
+.af_showOnePanel_header-expanded,.x1s {border-color:#999999;height:21px;text-decoration:none;white-space:nowrap;padding-right:5px;border-style:solid;border-width:1px 0px 1px 0px;padding-left:2px}
+.af_showOnePanel_header-disabled,.x1t {border-color:#999999;height:21px;text-decoration:none;white-space:nowrap;padding-right:5px;border-style:solid;border-width:1px 0px 0px 0px;padding-left:18px}
+.af_showOnePanel_content,.x1u {vertical-align:top;margin:5px}
+A.af_showOnePanel_title-link,A.x1v {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;background:transparent;color:#669966;display:block;padding-top:2px;text-decoration:none}
+A.af_showOnePanel_title-disabled-link,A.x1w {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#999999;display:block;padding-top:2px;text-decoration:none}
+.AFHeaderLevelOne,.x1x,H1.af_showDetailHeader,H1.x21,.af_messages_header,.x24,.PortletHeaderText,.x6n,.PortletHeading1,.x6o,.PortletSubHeaderText,.x6u,.portlet-section-header,.x73,.portlet-section-subheader,.x77,.portlet-table-header,.x7a,.portlet-table-subheader,.x7e {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:medium;color:#666666}
+.AFHeaderLevelTwo,.x1y,H2.af_panelHeader,H2.x20,H2.af_showDetailHeader,H2.x21,.PortletHeading2,.x6p {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:92%;color:#666666}
+.AFHeaderLevelThreePlus,.x1z,H3.af_panelHeader,H3.x20,H4.af_panelHeader,H4.x20,H5.af_panelHeader,H5.x20,H6.af_panelHeader,H6.x20,H3.af_showDetailHeader,H3.x21,H4.af_showDetailHeader,H4.x21,H5.af_showDetailHeader,H5.x21,H6.af_showDetailHeader,H6.x21,.OraPageStampText,.x3s,.OraNavBarViewOnly,.x56,.PortletHeading3,.x6q,.PortletHeading4,.x6r {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#666666}
+H1.af_panelHeader,H1.x20 {font-family:Arial, Helvetica, sans-serif;font-size:medium;color:#19325F;font-weight:bold;margin-bottom:0px;margin-top:0px}
+.af_panelHeader_error,.x22,.af_messages_error,.x23,.portlet-msg-error,.x72 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:medium;color:#cc0000}
+.af_messages,.x25 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#cccccc}
+.af_messages_message-text,.x26,.portlet-msg-info,.x71 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#666666;margin-left:25px}
+.af_panelSideBar,.x27 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#cccccc;border-color:#999999}
+.af_panelSideBar_body,.x28 {background-color:#D9EFAD;padding:1px 1px 1px 1px}
+.AFSortableHeaderSortIcon,.x29 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:75%;color:#666666}
+.af_menuTabs_enabled,.x2b {background-color:#e9e8e8;white-space:nowrap;line-height:100%}
+.af_menuTabs_selected,.x2c {background-color:#FFFFFF;white-space:nowrap;line-height:100%}
+.af_menuTabs_disabled,.x2d {background-color:#e9e8e8;color:#999999;white-space:nowrap;line-height:100%}
+.af_menuTabs_enabled A,.x2b A {font-weight:normal;font-size:10px;color:black;text-decoration:none}
+.af_menuTabs_selected A,.x2c A {font-weight:bold;font-size:10px;color:black;text-decoration:none}
+.af_menuTabs_separator,.x2e {width:0px}
+.af_table_content,.x2f {border-collapse:collapse;border-color:#999999;border-style:solid;border-width:1px;border:1px solid  #ABCBE4;padding:6px;font-size:11px}
+.af_treeTable_content,.x2g {border-collapse:collapse;border-color:#999999;border-style:solid;border-width:1px}
+.af_table_control-bar-top,.x2h {border-color:#999999;border-style:solid;border-width:1px 1px 0px;padding:1px 2px;border:1px solid  #BFD8EC;font-size:12px;height:25px;text-decoration:none;background-color:#DEECF6}
+.af_table_control-bar-bottom,.x2i {border-color:#999999;border-style:solid;border-width:0px 1px 1px;padding:1px 2px;border:1px solid  #BFD8EC;height:25px;background-color:#DEECF6}
+.af_treeTable_control-bar-top,.x2j {background-color:white;border-color:#999999;border-style:solid;border-width:1px 1px 0px;padding:1px 2px}
+.af_treeTable_control-bar-bottom,.x2k {background-color:white;border-color:#999999;border-style:solid;border-width:0px 1px 1px;padding:1px 2px}
+.af_table_sub-control-bar,.x2l {border-color:#999999;border-style:solid;border-width:1px 1px 0px;padding:1px 2px;border:1px solid  #BFD8EC;font-size:12px;height:25px;text-decoration:none}
+.af_treeTable_sub-control-bar,.x2m {border-color:#999999;border-style:solid;border-width:1px 1px 0px;padding:1px 2px}
+.af_column_cell-text,.x2n,.af_column_cell-text-band,.x2o,.portlet-section-alternate,.x75,.portlet-section-selected,.x76,.portlet-table-alternate,.x7c,.portlet-table-selected,.x7d {font-weight:normal;font-family:Arial, Helvetica, sans-serif;vertical-align:baseline;border-color:#999999;border:1px solid  #ABCBE4;font:bold;font-size:11px;color:#666666;background-color:white}
+.af_column_cell-number,.x2p,.af_column_cell-number-band,.x2q {font-weight:normal;font-family:Arial, Helvetica, sans-serif;vertical-align:baseline;border-color:#999999;text-align:right;padding-right:2px;border:1px solid  #ABCBE4;font:bold;font-size:11px;color:#666666;background-color:white}
+.af_column_cell-icon-format,.x2r,.af_tableSelectOne_cell-icon-format,.x2s,.af_tableSelectMany_cell-icon-format,.x2t,.af_column_cell-icon-format-band,.x2u,.af_tableSelectOne_cell-icon-format-band,.x2v,.af_tableSelectMany_cell-icon-format-band,.x2w,.portlet-section-text,.x79,.portlet-table-text,.x7g {font-weight:normal;font-family:Arial, Helvetica, sans-serif;vertical-align:baseline;border-color:#999999;text-align:center;border:1px solid  #ABCBE4;font:bold;font-size:11px;color:#666666;background-color:white}
+.af_column_header-text,.x2x {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-align:left;vertical-align:bottom;border:1px solid  #BFD8EC;font:bold;height:16px;font-size:11px;color:#40759D;background-color:#DEECF5}
+.af_column_header-number,.x2y {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-weight:bold;vertical-align:bottom;text-align:right;border:1px solid  #BFD8EC;font:bold;height:16px;font-size:11px;color:#40759D;background-color:#DEECF5}
+.af_column_header-icon-format,.x2z {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-weight:bold;vertical-align:bottom;border:1px solid  #BFD8EC;font:bold;height:16px;font-size:11px;color:#40759D;background-color:#DEECF5;text-align:center}
+.af_column_row-header-text,.x30 {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;text-align:right;background-color:#CCCCCC;color:#666666}
+.af_table_detail,.x31 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#000000;border-color:#999999;background-color:#ffffff}
+.af_table_column-footer,.x32,.portlet-section-footer,.x78,.portlet-table-footer,.x7f {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-align:left;background-color:#CCCCCC;BACKGROUND-COLOR:#DEECF5;color:#40759D;font:bold;font-size:11px}
+.OraTableTotal,.x33 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;text-align:right;background-color:#CCCCCC;color:#666666}
+.af_column_total-number,.x34 {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;text-align:right;background-color:#CCCCCC;color:#000000;vertical-align:baseline}
+.af_column_total-text,.x35 {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;text-align:left;background-color:#CCCCCC;color:#000000;vertical-align:baseline}
+.af_column_sortable-header-text,.x36 {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-weight:bold;text-align:left;vertical-align:bottom;border:1px solid  #BFD8EC;font:bold;height:16px;font-size:11px;color:#40759D;background-color:#DEECF5;cursor:hand}
+.af_column_sortable-header-number,.x37 {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-weight:bold;vertical-align:bottom;cursor:hand;text-align:right;border:1px solid  #BFD8EC;font:bold;height:16px;font-size:11px;color:#40759D;background-color:#DEECF5}
+.af_column_sortable-header-icon-format,.x38 {border-color:#999999;font-family:Arial, Helvetica, sans-serif;font-weight:bold;vertical-align:bottom;border:1px solid  #BFD8EC;font:bold;height:16px;font-size:11px;color:#40759D;background-color:#DEECF5;cursor:hand;text-align:center}
+.af_processTrain_active,.x39 {font-family:Arial, Helvetica, sans-serif;font-size:small;border-color:#FFFFFF;color:#666666;font-weight:bold}
+.af_processTrain_visited,.x3a {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#666666;border-color:#999999}
+.af_processTrain_visited A,.x3a A,.af_processTrain_unvisited A,.x3c A,.p_OraContentFooterRule,.x4s {color:#666666}
+.af_processTrain_disabled,.x3b {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#999999;border-color:#cccccc}
+.af_processTrain_unvisited,.x3c {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;border-color:#FFFFFF;color:#666666}
+.af_processTrain_sub-start,.x3d {border-color:#FFFFFF;border-style:solid;border-width:2px 2px 0px 0px;padding:0pt}
+.af_processTrain_sub-end,.x3e {border-color:#FFFFFF;border-style:solid;border-width:2px 0px 0px 2px;padding:0pt}
+.OraBGColorVeryDark,.x3f,.OraBGGrayLight,.x3m {background-color:#cccccc}
+.OraBGColorDark,.x3g,.OraBGColorMedium,.x3h,.OraBGColorLight,.x3i,.PortletHeaderColor,.x6k,.af_menuBar_title,.x8s,.af_menuBar_empty,.x8t {background-color:#FFFFFF}
+.OraBGGrayVeryDark,.x3j {background-color:#333333}
+.OraBGGrayDark,.x3k {background-color:#666666}
+.OraBGGrayMedium,.x3l,.OraBGAccentVeryDark,.x3n,.OraTable,.x65 {background-color:#999999}
+.OraPageStampLabel,.x3t,.OraTableControlBarText,.x63,.p_OraTreeRowSelected,.x6f {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;color:#666666}
+.OraInlineInfoText,.x3u {font-family:Arial, Helvetica, sans-serif;color:#666666;display:block;font-size:10px;font-weight:normal;text-align:left}
+.OraTextInline,.x3v {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:67%;color:#666666}
+.OraMessageBoxErrorText,.x3w,.AFErrorText,.x3x {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#cc0000}
+.OraErrorNameText,.x3y {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;color:#cc0000}
+.OraInlineErrorText,.x3z {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:67%;color:#cc0000}
+.OraGlobalPageTitle,.x40 {font-family:Arial, Helvetica, sans-serif;font-size:medium;color:#ffffff;font-weight:bold}
+.OraVLinkText,.x42 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#4c6592}
+.p_OraSelected,.x4d {color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;background-color:#FFFFFF;text-decoration:none}
+.p_OraHiddenLabel,.x4e {position:absolute;top:-999px;left:0px}
+.p_OraColorFieldSwatch,.x4f {border-color:#000000;border-style:solid;border-width:1px}
+.p_OraColorPalette,.x4g {background-color:#000000}
+.p_OraColorPaletteEmptyCell,.x4h {background-color:#ffffff}
+.af_selectInputDate_nav A,.x4i A,.af_chooseDate_nav A,.x4n A {color:#19325F;text-decoration:none}
+.af_selectInputDate_title,.x4j,.af_chooseDate_title,.x4o {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:medium;text-align:center;background-color:#ffffff;color:#666666;padding:2px}
+.af_selectInputDate_header,.x4k,.af_chooseDate_header,.x4p {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;text-align:center;color:#666666;padding:2px}
+.af_selectInputDate_content,.x4l,.af_chooseDate_content,.x4q {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;text-align:center;color:#999999;text-decoration:none;border-width:1px;border-style:solid;padding:2px}
+.af_selectInputDate_selected,.x4m,.af_chooseDate_selected,.x4r {font-weight:bold}
+.af_selectInputDate_content A,.x4l A,.af_chooseDate_content A,.x4q A {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;text-align:center;color:#19325F}
+.p_OraContentFooterStart,.x4t {float:left}
+.p_OraContentFooterChildren,.x4u {float:right}
+.p_OraContentFooterBottom,.x4v {clear:both;margin-bottom:5px}
+.p_OraFooter,.x4w {text-align:center}
+.p_OraFooterBottom,.x4x {padding-top:5px}
+.p_OraHeaderNest,.x4y {float:right;margin:5px 0px 0px 0px;width:97%;clear:both}
+.OraHGridLocatorHeader,.x4z {border-color:#999999;background-color:#e9e8e8}
+.p_OraHideShowDisclosedSymbol,.x52 {text-decoration:none;color:rgb(25, 50, 95)}
+.af_messages_list,.x53 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#666666;margin-left:25px;margin-top:5px}
+.OraNavBarInactiveLink,.x55 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;color:#999999;font-size:10px}
+.p_OraQuickSearchBox,.x57 {background-color:#e9e8e8;border-color:#CCCCCC;border-style:solid;padding:0pt 5pt 5pt 5pt;border-width:0px 0px 1px 1px}
+.p_OraGlobalQuick,.x58 {border-color:#CCCCCC;border-style:solid;border-width:0px 0px 0px 1px}
+.p_OraProcessingStatus,.x59 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;color:#666666;border-color:#FFFFFF;border-style:solid;border-width:1px}
+.p_OraProductBrandingText,.x5a {color:#FFFFFF;position:relative;font-family:Garamond, Times, Times New Roman, Serif;font-weight:normal;font-size:24pt;line-height:28.8pt;top:-4.8pt}
+.p_OraProductBrandingCompactText,.x5b {color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:medium;margin-bottom:0px;margin-top:0px;font-weight:bold}
+.OraShuttleHeader,.x5c {font-family:Arial, Helvetica, sans-serif;font-size:75%;color:#666666;font-weight:bold;padding:0px 0px 0px 18px}
+.OraShuttleLinkText,.x5d {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:90%;color:#19325F}
+.p_OraSideBarMinWidth,.x5e {width:140px}
+.OraStyledList,.x5h {list-style-position:inside;padding:0px;margin:0px}
+.OraStyledList .OraStyledList,.x5h .x5h {padding:0pt 0pt 0pt 10pt}
+.af_showOneTab_orientation-top,.x5i {background-color:#FFFFFF;text-align:center;white-space:nowrap;border-bottom:1px solid #808EA6}
+.af_showOneTab_orientation-bottom,.x5j {background-color:#FFFFFF;text-align:center;white-space:nowrap;border-top:1px solid #808EA6}
+.af_showOneTab_tab,.x5k {color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;padding:2px 8px;font-size:11px;background-color:rgb(230, 233, 238);border-left:solid 1pt #808EA6;border-top:solid 1pt #808EA6;border-right:solid 1pt #808EA6;font-weight:bold;white-space:nowrap}
+.af_showOneTab_tab A,.x5k A {color:#19325F;padding:8px 2px;font-size:11px;font-weight:bold;text-decoration:none}
+.af_showOneTab_tab .p_OraDisabled,.x5k .x4c {color:#999999}
+.af_showOneTab_tab-selected,.x5l {font-family:Arial, Helvetica, sans-serif;padding:2px 8px;font-size:11px;background-color:rgb(204, 210, 220);border-left:solid 1pt #808EA6;border-top:solid 1pt #808EA6;border-right:solid 1pt #808EA6;font-weight:bold;color:rgb(25, 50, 95);white-space:nowrap}
+.af_showOneTab_tab-selected A,.x5l A {padding:2px 8px;font-size:11px;font-weight:bold;color:rgb(25, 50, 95);text-decoration:none}
+.af_showOneTab_cell-start,.x5m {background-color:transparent;width:0%}
+.af_showOneTab_cell-end,.x5n {background-color:transparent;width:100%}
+.OraTableBorder0001,.x5o {border-style:solid;border-width:0px 0px 0px 1px}
+.OraTableBorder0010,.x5p {border-style:solid;border-width:0px 0px 1px}
+.OraTableBorder0011,.x5q {border-style:solid;border-width:0px 0px 1px 1px}
+.OraTableBorder0100,.x5r {border-style:solid;border-width:0px 1px 0px 0px}
+.OraTableBorder0101,.x5s {border-style:solid;border-width:0px 1px}
+.OraTableBorder0110,.x5t {border-style:solid;border-width:0px 1px 1px 0px}
+.OraTableBorder0111,.x5u {border-style:solid;border-width:0px 1px 1px}
+.OraTableBorder1000,.x5v {border-style:solid;border-width:1px 0px 0px}
+.OraTableBorder1001,.x5w {border-style:solid;border-width:1px 0px 0px 1px}
+.OraTableBorder1010,.x5x {border-style:solid;border-width:1px 0px}
+.OraTableBorder1011,.x5y {border-style:solid;border-width:1px 0px 1px 1px}
+.OraTableBorder1100,.x5z {border-style:solid;border-width:1px 1px 0px 0px}
+.OraTableBorder1101,.x60 {border-style:solid;border-width:1px 1px 0px}
+.OraTableBorder1110,.x61 {border-style:solid;border-width:1px 1px 1px 0px}
+.OraTableBorder1111,.x62 {border-style:solid;border-width:1px}
+.OraTableTitle,.x64 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:medium;background-color:#ffffff;color:#666666}
+.OraTableCellSelect,.x66,.OraTableCellSelectBand,.x67 {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#000000;vertical-align:baseline;background-color:white;border-color:#999999;text-align:center}
+.OraSortableHeaderBorder,.x68 {border-width:2px;border-style:outset}
+.OraTipLabel,.x69 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;color:rgb(25, 50, 95)}
+.p_OraTreeDisclosedSymbol,.x6b {font-weight:normal;color:rgb(25, 50, 95);font-family:Arial, Helvetica, sans-serif;font-size:small;text-align:right}
+.p_OraTreeDisclosedSymbol A:link,.x6b A:link,.p_OraTreeDisclosedSymbol A:active,.x6b A:active,.p_OraTreeDisclosedSymbol A:visited,.x6b A:visited,.p_OraTreeRowSelected A:link,.x6f A:link,.p_OraTreeRowSelected A:active,.x6f A:active,.p_OraTreeRowSelected A:visited,.x6f A:visited {color:#666666;text-decoration:none}
+.p_OraTreeIcon,.x6c,.af_panelGrid_body,.x91 {vertical-align:top}
+.p_OraTreeNodeAdjust,.x6d {padding-bottom:2px}
+.p_OraOnePixelLine,.x6g {background-color:#CCCCCC;font-size:0pt;overflow:hidden;height:1px;width:100%}
+.p_OraDisplayBlock,.x6h {display:block}
+.p_OraHideSkipNaviText,.x6i {font-size:0pt;margin-top:0px;margin-left:-999px}
+.PortletHeaderLink,.x6l,.PortletSubHeaderLink,.x6t {color:#ffffff;text-decoration:none}
+.af_showDetailFrame_header-top-border-light,.x7o,.af_panelCustomizable_header-top-border-light,.x7r {border-top:1px #6699CC solid;border-bottom:1px #6699CC solid;background-color:#F7F7E7;white-space:nowrap}
+.af_showDetailFrame_header-top-border-medium,.x7p,.af_panelCustomizable_header-top-border-medium,.x7s {border-top:1px #336699 solid;border-bottom:1px #336699 solid;background-color:#FFFFE3;white-space:nowrap}
+.af_showDetailFrame_header-top-border-dark,.x7q,.af_panelCustomizable_header-top-border-dark,.x7t {border-top:1px #336699 solid;border-bottom:1px #336699 solid;background-color:#6699CC;white-space:nowrap}
+.af_showDetailFrame_container,.x7u,.af_panelCustomizable_container,.x7v {position:relative}
+.af_showDetailFrame_header-light,.x7w,.af_showDetailFrame_header-medium,.x7x,.af_panelCustomizable_header-light,.x7z,.af_panelCustomizable_header-medium,.x80 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;white-space:nowrap;vertical-align:middle;width:100%;position:relative;color:#336699}
+.af_showDetailFrame_header-dark,.x7y,.af_panelCustomizable_header-dark,.x81 {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;white-space:nowrap;vertical-align:middle;width:100%;position:relative;color:#FFFFE3}
+.af_showDetailFrame_content-light,.x82,.af_panelCustomizable_content-light,.x85 {position:relative;width:100%;border-left:1px #6699CC solid;border-right:1px #6699CC solid;border-bottom:1px #6699CC solid}
+.af_showDetailFrame_content-medium,.x83,.af_showDetailFrame_content-dark,.x84,.af_panelCustomizable_content-medium,.x86,.af_panelCustomizable_content-dark,.x87 {position:relative;width:100%;border-left:1px #336699 solid;border-right:1px #336699 solid;border-bottom:1px #336699 solid}
+.af_showDetailFrame_main-menu-container,.x88,.af_panelCustomizable_main-menu-container,.x89,.af_showDetailFrame_sub-menu-container,.x8a,.af_panelCustomizable_sub-menu-container,.x8b {background:#FFFFFF;border-left:1px #969664 solid;border-right:1px #515151 solid;border-top:1px #969664 solid;border-bottom:1px #515151 solid}
+A.af_showDetailFrame_menu-item,A.x8d,A.af_panelCustomizable_menu-item,A.x8f,A.af_showDetailFrame_sub-menu-item,A.x8g,A.af_panelCustomizable_sub-menu-item,A.x8h {font-weight:normal;font-family:Arial, Helvetica, sans-serif;font-size:small;color:#000000;display:block;cursor:pointer;text-decoration:none;white-space:normal;background:#FFFFFF;padding-top:4px;padding-bottom:3px;padding-left:5px;padding-right:5px;word-wrap:break-word;width:100%}
+A:hover.af_showDetailFrame_menu-item,A:hover.x8d,A:hover.af_panelCustomizable_menu-item,A:hover.x8f,A:hover.af_showDetailFrame_sub-menu-item,A:hover.x8g,A:hover.af_panelCustomizable_sub-menu-item,A:hover.x8h {background-color:#CCCC99}
+.af_showDetailFrame_actions-image-separator,.x8i,.af_panelCustomizable_actions-image-separator,.x8j {padding-right:5px;padding-top:1px;padding-bottom:1px}
+A.af_showDetailFrame_title-clickable,A.x8k {font-family:Arial, Helvetica, sans-serif;font-size:small;font-weight:bold;text-decoration:none;display:block;color:#336699;margin-left:5px}
+.af_showDetailFrame_menu-item-separator,.x8l,.af_panelCustomizable_menu-item-separator,.x8m {border-top:1px solid #969664;border-bottom:1px solid #515151;margin:4px 2px}
+.af_showDetailFrame_no-header-content-light,.x8n {border-left:1px #6699CC solid;border-right:1px #6699CC solid;border-bottom:1px #6699CC solid;position:relative;width:100%;border-top:1px #6699CC solid}
+.af_showDetailFrame_no-header-content-medium,.x8o,.af_showDetailFrame_no-header-content-dark,.x8p {border-left:1px #336699 solid;border-right:1px #336699 solid;border-bottom:1px #336699 solid;position:relative;width:100%;border-top:1px #336699 solid}
+.af_panelCustomizable_no-header-content,.x8q {position:relative;width:100%}
+.af_menuBar_body,.x8r {background-color:#FFFFFF;color:white}
+.af_messages_body,.x8u {background-color:#F3F8FC;color:#666666;border:1px solid  #ABCBE4}
+.BvOutputText,.x8v {font-size:11px;font-weight:normal;text-align:left;color:rgb(25, 50, 95)}
+.AFFieldTextReadOnly,.x8w {font-size:11px;color:#666666;border:1px solid  #ABCBE4}
+.af_panelBox_body,.x13 {padding-top:0px;padding-left:6px;padding-right:6px}
+.x10,.x8x {vertical-align:center}
+.af_table_control-bar-top:link,.x2h:link {font-size:12px;height:25px;text-decoration:none;background-color:#E9E7D0}
+.af_table_sub-control-bar:link,.x2l:link {font-size:12px;height:25px;text-decoration:none}
+.af_panelList,.xu {font-size:11px}
+.OraLink,.xl {font-size:10px;font-weight:normal}
+.af_panelForm_body,.xw {padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;vertical-align:bottom}
+.af_showOneTab_separator,.x8y {margin-width:4px;border-top:#BB95BB;border-bottom:#BB95BB;BACKGROUND-COLOR:white;PADDING-LEFT:1px}
+.af_showOneTab_tab A:hover,.x5k A:hover,.af_showOneTab_tab-selected A:hover,.x5l A:hover {color:#808EA6;font-weight:bold}
+.af_showOneTab_body,.x8z {background-color:white;padding-left:0px;padding-right:0px;padding-top:5px}
+.af_menuTabs_enabled A:hover,.x2b A:hover {color:yellow}
+.af_panelHeader,.x20 {border-color:#CCCCCC;border-width:0px 0px 1px 0px;border-style:solid;vertical-align:bottom;margin-bottom:3px;padding:0px 3px;font-weight:bolder}
+.af_objectSeparator,.x90 {background-color:#B8D1DC;border:1px solid #B8D1DC}
+body {margin-top:8px}
+.p_OraNav2,.x92 {border-color:#FFFFFF}
+.af_showDetailFrame_main-menu-container,.x88,.af_panelCustomizable_main-menu-container,.x89 {width:110px}
+.af_showDetailFrame_sub-menu-container,.x8a,.af_panelCustomizable_sub-menu-container,.x8b {width:120px}

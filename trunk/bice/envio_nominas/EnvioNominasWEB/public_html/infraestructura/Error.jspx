@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <afh:html>
+      <afh:head title="index">
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+      </afh:head>
+      <afh:body>
+        <f:loadBundle basename="cl.bicevida.core.view.resources.messages.general"
+                      var="msgs"/>
+        <af:form>
+          <af:panelBox width="770px" background="medium" text="#{msgs['bicevida.error.titulo']}">
+              <af:panelHorizontal halign="center">
+                <af:objectImage source="/skins/informatica/CoreSkin/skin_images/exclamation.gif"/>
+              <af:outputLabel value="#{msgs['bicevida.error.text']}"/>
+            </af:panelHorizontal>
+            <af:objectSpacer width="10" height="10"/>
+            <af:showOneTab position="above">
+              <af:showDetailItem text="#{msgs['bicevida.error.tab.motivo']}" disclosed="true">
+                <af:panelHorizontal halign="center">
+                  <af:outputLabel value="#{MbError.mensajeAmigable}"/>
+                </af:panelHorizontal>
+                <af:panelHorizontal halign="center">
+                  <af:outputLabel value="#{MbError.exceptionMessage}"/>
+                </af:panelHorizontal>
+              </af:showDetailItem>
+              <af:showDetailItem text="#{msgs['bicevida.error.tab.detalles']}" disclosed="false"
+                                 rendered="#{MbError.showDetail}">
+                <af:panelHorizontal halign="center"
+                                    inlineStyle="background-color:rgb(200,200,200);">
+                  <af:outputLabel value="#{MbError.stackTrace}"
+                                  rendered="false"/>
+                  <af:outputFormatted value="#{MbError.stackTrace}"
+                                      styleClass="AFErrorText"/>
+                </af:panelHorizontal>
+              </af:showDetailItem>
+              <af:showDetailItem text="#{msgs['bicevida.error.tab.quehacer']}">
+                <af:panelHorizontal halign="center">
+                  <af:outputFormatted value="#{msgs['bicevida.error.text.quehacer']}"
+                                      styleUsage="instruction"
+                                      styleClass="AFLabelText"/>
+                </af:panelHorizontal>
+                <af:objectSpacer width="10" height="10"/>
+                <af:panelHorizontal halign="center"
+                                    rendered="#{MbError.hasSend}">
+                  <af:outputFormatted value="#{msgs['bicevida.error.text.errorenviado']}"
+                                      styleUsage="instruction"
+                                      styleClass="AFLabelText"/>
+                </af:panelHorizontal>
+              </af:showDetailItem>
+            </af:showOneTab>
+            <af:objectSeparator/>
+            <af:panelHorizontal halign="center">
+              <af:commandButton text="#{msgs['bicevida.error.cmd.volver']}" action="#{MbError.getOutcome}"
+                                blocking="true"/>
+              <af:objectSpacer width="10" height="10"/>
+              <af:commandButton text="#{msgs['bicevida.error.cmd.inicio']}"
+                                blocking="true" action="#{MbError.getInicio}"/>
+            </af:panelHorizontal>
+          </af:panelBox>
+        </af:form>
+      </afh:body>
+    </afh:html>
+  </f:view>
+</jsp:root>
