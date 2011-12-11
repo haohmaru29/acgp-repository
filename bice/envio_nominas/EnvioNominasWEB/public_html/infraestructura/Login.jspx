@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+    <title>login</title>
+    <style type="text/css">
+<!--
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+}
+.Estilo3 {font-size: 10px}
+.Estilo4 {color: #000066}
+-->
+    </style>
+  </head>
+  <body>
+  <h3 class="Estilo4">Ingreso de Usuarios a BICE CoreWebApp</h3>
+  <form action="j_security_check" method="post">
+<table cellspacing="3" cellpadding="2" border="0" width="770">
+
+        <tr valign="top">
+          <td colspan="3">
+		  <div>
+		    <table width="100%" border="0">
+              <tr>
+                <td> </td>
+                <td valign="top"><p><font color="#c60000"><span class="Estilo3"><strong>Importante: </strong> Esta página de login está pensada para ser utilizada en pruebas locales de
+                  aplicación (ejecutando la aplicación desde JDeloper). </span></font></p>
+                  <p><font color="#c60000"><span class="Estilo3">                Para despliegues en <a href="http://andromeda.bicevida.cl/wpmu/arquitectura/servidores-de-aplicaciones#appserv-desarrollo">servidores de aplicaciones de desarrollo</a> se recomienda utilizar integración con <a href="http://blog/appservers.html">Oracle SSO</a></span></font>.</p>
+                <p><font color="#c60000"><span class="Estilo3">Para despliegues en <a href="http://andromeda.bicevida.cl/wpmu/arquitectura/servidores-de-aplicaciones#appserv-produccion">servidores de aplicaciones de producción</a> se <strong>debe</strong> utilizar integración con <a href="http://blog/appservers.html">Oracle SSO</a></span></font>.</p></td>
+              </tr>
+            </table>
+		  </div>
+			  <div align="justify"></div></td>
+        </tr>
+
+        <tr>
+          <td width="76" class="Estilo3">
+            <b>Username:</b>          </td>
+          <td width="429" class="Estilo3">
+            <input type="text" name="j_username"/>          </td>
+          <td width="241"></td>
+        </tr>
+        <tr>
+          <td width="76" class="Estilo3">
+            <b>Password:</b>          </td>
+          <td width="429" class="Estilo3">
+            <input type="password" name="j_password"/>          </td>
+          <td width="241"></td>
+        </tr>
+        <tr>
+          <td width="76" class="Estilo3">&nbsp;</td>
+          <td width="429" class="Estilo3">
+            <input type="submit" name="logon" value="Ingresar"/>          </td>
+          <td width="241"></td>
+        </tr>
+          <tr>
+            <td colspan="3" class="Estilo3">Existen dos usuarios de ejemplo en el proveedor de seguridad  local de
+                CoreWebApp (archivo jazn-data.xml.xml):
+              <p>
+                1.- Usuario de grupo BICEVIDANET:              </p>
+              <ul>
+                <li>
+                  <p>
+                    Usuario: 12631155-9                  </p>
+                </li>
+                <li>
+                  <p>
+                    Password: 123456                  </p>
+                </li>
+              </ul>
+              <p>
+                2.- Usuario de grupo INTRANET:              </p>              <ul>
+                <li>
+                  <p>
+                    Usuario: jose.arias                  </p>
+                </li>
+                <li>
+                  <p>
+                    Password: 123456                  </p>
+                </li>
+            </ul></td>
+          </tr>
+        </table>
+    </form></body>
+</html>
+</jsp:root>

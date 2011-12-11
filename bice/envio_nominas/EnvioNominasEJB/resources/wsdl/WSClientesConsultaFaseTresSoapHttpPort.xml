@@ -1,0 +1,322 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns0="http://consulta.ws.fasetres.actualizadatos.bicevida.cl/types/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://consulta.ws.fasetres.actualizadatos.bicevida.cl/" name="WSClientesConsultaFaseTres" targetNamespace="http://consulta.ws.fasetres.actualizadatos.bicevida.cl/">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://consulta.ws.fasetres.actualizadatos.bicevida.cl/types/" targetNamespace="http://consulta.ws.fasetres.actualizadatos.bicevida.cl/types/" elementFormDefault="qualified">
+            <element name="consultaContratoCanalRemotoElement">
+                <complexType>
+                    <sequence>
+                        <element name="rut" type="string" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="consultaContratoCanalRemotoResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetConsultaContratoCanalRemoto" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetConsultaContratoCanalRemoto">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="tieneContrato" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="consultaDireccionElement">
+                <complexType>
+                    <sequence>
+                        <element name="idDireccion" type="string" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="consultaDireccionResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetDireccion" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetDireccion">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="direccionModel" type="tns:DireccionModel" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="DireccionModel">
+                <sequence>
+                    <element name="tipoCalle" type="tns:TipoCalleModel" nillable="true"/>
+                    <element name="direccionCompleta" type="string" nillable="true"/>
+                    <element name="region" type="tns:RegionModel" nillable="true"/>
+                    <element name="nombreLocalidad" type="string" nillable="true"/>
+                    <element name="comuna" type="tns:ComunaModel" nillable="true"/>
+                    <element name="fax" type="string" nillable="true"/>
+                    <element name="estadoDireccion" type="string" nillable="true"/>
+                    <element name="tipoDireccion" type="tns:TipoDireccionModel" nillable="true"/>
+                    <element name="codigoAreaFax" type="tns:CodigoAreaModel" nillable="true"/>
+                    <element name="tipoVivienda" type="tns:TipoViviendaModel" nillable="true"/>
+                    <element name="codigoAreaFono" type="tns:CodigoAreaModel" nillable="true"/>
+                    <element name="codCelular" type="string" nillable="true"/>
+                    <element name="telefono" type="string" nillable="true"/>
+                    <element name="numeroCelular" type="string" nillable="true"/>
+                    <element name="provincia" type="tns:ProvinciaModel" nillable="true"/>
+                    <element name="codigoPostal" type="string" nillable="true"/>
+                    <element name="block" type="string" nillable="true"/>
+                    <element name="idDireccion" type="string" nillable="true"/>
+                    <element name="fechaCreacion" type="string" nillable="true"/>
+                    <element name="correspondencia" type="string" nillable="true"/>
+                    <element name="numeracion" type="string" nillable="true"/>
+                    <element name="tipoLocalidad" type="tns:TipoLocalidadModel" nillable="true"/>
+                    <element name="usuarioCreacion" type="string" nillable="true"/>
+                    <element name="direccion" type="string" nillable="true"/>
+                    <element name="nroVivienda" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoCalleModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="RegionModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="ComunaModel">
+                <sequence>
+                    <element name="descripcionComuna" type="string" nillable="true"/>
+                    <element name="codigoProvincia" type="string" nillable="true"/>
+                    <element name="codigoRegion" type="string" nillable="true"/>
+                    <element name="codigoComuna" type="string" nillable="true"/>
+                    <element name="descripcionProvincia" type="string" nillable="true"/>
+                    <element name="descripcionRegion" type="string" nillable="true"/>
+                    <element name="codigoArea" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoDireccionModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="CodigoAreaModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoViviendaModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="ProvinciaModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoLocalidadModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="consultaPersonaElement">
+                <complexType>
+                    <sequence>
+                        <element name="rut" type="string" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="consultaPersonaResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetPersona" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetPersona">
+                <sequence>
+                    <element name="personaModel" type="tns:PersonaModel" nillable="true"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="PersonaModel">
+                <sequence>
+                    <element name="rut" type="string" nillable="true"/>
+                    <element name="dv" type="string" nillable="true"/>
+                    <element name="nombres" type="string" nillable="true"/>
+                    <element name="apellidoPaterno" type="string" nillable="true"/>
+                    <element name="apellidoMaterno" type="string" nillable="true"/>
+                    <element name="fechaNacimiento" type="string" nillable="true"/>
+                    <element name="estadoCivil" type="tns:EstadoCivilModel" nillable="true"/>
+                    <element name="sexo" type="tns:SexoModel" nillable="true"/>
+                    <element name="tipoPersona" type="tns:TipoPersonaModel" nillable="true"/>
+                    <element name="contratoFirmado" type="string" nillable="true"/>
+                    <element name="gse" type="tns:GSEModel" nillable="true"/>
+                    <element name="seEnviaMail" type="string" nillable="true"/>
+                    <element name="EMail" type="string" nillable="true"/>
+                    <element name="noTieneEMail" type="string" nillable="true"/>
+                    <element name="nivelEducacional" type="tns:NivelEducacionalModel" nillable="true"/>
+                    <element name="actividad" type="tns:ActividadModel" nillable="true"/>
+                    <element name="afp" type="tns:AFPModel" nillable="true"/>
+                    <element name="isapre" type="tns:IsapreModel" nillable="true"/>
+                    <element name="nacionalidad" type="tns:NacionalidadModel" nillable="true"/>
+                    <element name="fechaDefuncion" type="string" nillable="true"/>
+                    <element name="mensajeriaSms" type="string" nillable="true"/>                 
+                    <element name="profesion" type="tns:ProfesionModel" nillable="true"/>
+                    <element name="ocupacion" type="tns:OcupacionModel" nillable="true"/>   
+                    <element name="nivelIngreso" type="tns:NivelIngresoModel" nillable="true"/>
+                    <element name="usuarioCreacion" type="string" nillable="true"/>
+                    <element name="origenCliente" type="string" nillable="true"/>
+                    <element name="direcciones" type="tns:DireccionModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>                    
+                </sequence>
+            </complexType>
+            <complexType name="EstadoCivilModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="GSEModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="NivelEducacionalModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="ActividadModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="AFPModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="IsapreModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="NacionalidadModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="SexoModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="ProfesionModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="OcupacionModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoPersonaModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="NivelIngresoModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+        </schema>
+    </types>
+    <message name="WSClientesConsultaFaseTres_consultaContratoCanalRemoto">
+        <part name="parameters" element="tns0:consultaContratoCanalRemotoElement"/>
+    </message>
+    <message name="WSClientesConsultaFaseTres_consultaContratoCanalRemotoResponse">
+        <part name="parameters" element="tns0:consultaContratoCanalRemotoResponseElement"/>
+    </message>
+    <message name="WSClientesConsultaFaseTres_consultaDireccion">
+        <part name="parameters" element="tns0:consultaDireccionElement"/>
+    </message>
+    <message name="WSClientesConsultaFaseTres_consultaDireccionResponse">
+        <part name="parameters" element="tns0:consultaDireccionResponseElement"/>
+    </message>
+    <message name="WSClientesConsultaFaseTres_consultaPersona">
+        <part name="parameters" element="tns0:consultaPersonaElement"/>
+    </message>
+    <message name="WSClientesConsultaFaseTres_consultaPersonaResponse">
+        <part name="parameters" element="tns0:consultaPersonaResponseElement"/>
+    </message>
+    <portType name="WSClientesConsultaFaseTres">
+        <operation name="consultaContratoCanalRemoto">
+            <input message="tns:WSClientesConsultaFaseTres_consultaContratoCanalRemoto"/>
+            <output message="tns:WSClientesConsultaFaseTres_consultaContratoCanalRemotoResponse"/>
+        </operation>
+        <operation name="consultaDireccion">
+            <input message="tns:WSClientesConsultaFaseTres_consultaDireccion"/>
+            <output message="tns:WSClientesConsultaFaseTres_consultaDireccionResponse"/>
+        </operation>
+        <operation name="consultaPersona">
+            <input message="tns:WSClientesConsultaFaseTres_consultaPersona"/>
+            <output message="tns:WSClientesConsultaFaseTres_consultaPersonaResponse"/>
+        </operation>
+    </portType>
+    <binding name="WSClientesConsultaFaseTresSoapHttp" type="tns:WSClientesConsultaFaseTres">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="consultaContratoCanalRemoto">
+            <soap:operation soapAction="http://consulta.ws.fasetres.actualizadatos.bicevida.cl//consultaContratoCanalRemoto"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="consultaDireccion">
+            <soap:operation soapAction="http://consulta.ws.fasetres.actualizadatos.bicevida.cl//consultaDireccion"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="consultaPersona">
+            <soap:operation soapAction="http://consulta.ws.fasetres.actualizadatos.bicevida.cl//consultaPersona"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="WSClientesConsultaFaseTres">
+        <port name="WSClientesConsultaFaseTresSoapHttpPort" binding="tns:WSClientesConsultaFaseTresSoapHttp">
+            <soap:address location="http://serpens.bicevida.cl/WSClientesConsultaFaseTres/WSClientesConsultaFaseTresSoapHttpPort"/>
+        </port>
+    </service>
+</definitions>

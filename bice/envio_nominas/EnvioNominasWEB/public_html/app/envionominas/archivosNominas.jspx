@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <afh:html>
+            <afh:head title="#{msgs['bicevida. archivos_nominas.titulo']}">
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=windows-1252"/>
+            </afh:head>
+            <afh:body>
+                <f:loadBundle basename="cl.bicevida.envionominas.view.resources.messages.general_es" var="msgs"/>
+                <af:form>
+                    <af:panelBox text="#{msgs['bicevida.archivos_nominas.titulo']}"
+                                 background="medium" width="770px"
+                                 icon="../../skins/informatica/CoreSkin/skin_images/boton_iso.gif">
+                        <afh:tableLayout width="98%" halign="center">
+                            <afh:rowLayout>
+                                <afh:cellFormat/>
+                            </afh:rowLayout>
+                        </afh:tableLayout>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:table emptyText="#{msgs['bicevida.generales.lbl.listavacia'] }"
+                                  value="#{mb_archivosNominas.lista}" var="fila"
+                                  rows="#{mb_archivosNominas.registrosPagina}"
+                                  banding="row" bandingInterval="1" width="100%"
+                                  id="tblArchivosNominas"
+                                  binding="#{mb_archivosNominas.tblArchivosNominas}">
+                            <af:column sortProperty="nombre" sortable="true"
+                                       headerText="#{msgs['bicevida.archivos_nominas.col.nombre']}"
+                                       formatType="text">
+                                <af:outputText value="#{fila.nombre}"/>
+                            </af:column>
+                            <af:column sortProperty="fechaCreacion"
+                                       sortable="true"
+                                       headerText="#{msgs['bicevida.archivos_nominas.col.fechacreacion']}"
+                                       formatType="text">
+                                <af:outputText value="#{fila.fechaCreacion}">
+                                    <f:convertDateTime pattern="dd-MM-yyyy" />
+                                </af:outputText>
+                            </af:column>
+                            <af:column sortProperty="nombre" sortable="true"
+                                       headerText="#{msgs['bicevida.archivos_nominas.col.bancoproceso']}"
+                                       formatType="text">
+                                <af:outputText value="#{fila.bancoProceso.nombre}"/>
+                            </af:column>
+                            <f:facet name="selection">
+                                <af:tableSelectOne>
+                                    <af:commandButton text="#{msgs['bicevida.archivos_nominas.btn.descargar']}"
+                                                      actionListener="#{mb_archivosNominas.descargarNomina}"
+                                                      id="btnDescargaArchivo"/>
+                                </af:tableSelectOne>
+                            </f:facet>
+                            <f:facet name="actions">
+                                <af:commandButton text="#{msgs['bicevida.archivos_nominas.btn.actualizar']}"
+                                                  actionListener="#{mb_archivosNominas.actualizaTabla}"
+                                                  id="btnActualizar"/>
+                            </f:facet>
+                        </af:table>
+                    </af:panelBox>
+                </af:form>
+            </afh:body>
+        </afh:html>
+    </f:view>
+</jsp:root>

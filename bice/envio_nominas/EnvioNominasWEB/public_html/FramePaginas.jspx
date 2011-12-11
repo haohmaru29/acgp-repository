@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <afh:html>
+      <afh:frameBorderLayout id="ttt">
+        <f:facet name="top"/>      
+        <f:facet name="center">
+          <afh:frame source="#{backing_FramePaginas.url}" height="2000" width="770"
+                     marginHeight="1" marginWidth="1" name="CoreFramePaginas"/>
+        </f:facet>
+      </afh:frameBorderLayout>
+    </afh:html>
+  </f:view>
+</jsp:root>

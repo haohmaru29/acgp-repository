@@ -1,0 +1,176 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TABLE class="oracle.javatools.db.Table" xmlns="http://xmlns.oracle.com/jdeveloper/10130/offlinedb">
+   <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" id="0">
+      <ID>91ab6ba1-012e-1000-8001-c0a801faecaa</ID>
+      <parent/>
+      <type>TABLE</type>
+   </ID>
+   <columns>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID">
+            <ID>91ab6ba1-012e-1000-8002-c0a801faecaa</ID>
+            <parent idref="0"/>
+            <type>COLUMN</type>
+         </ID>
+         <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+            <attributeValues class="java.util.HashMap">
+               <Item>
+                  <Key>size</Key>
+                  <Value class="java.lang.Long">50</Value>
+               </Item>
+            </attributeValues>
+            <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+               <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+               <schemaName/>
+               <typeName>VARCHAR2</typeName>
+            </dataTypeID>
+         </dataTypeUsage>
+         <default/>
+         <name>NOMBRE_ARCHIVO</name>
+         <notNull>false</notNull>
+         <properties/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID">
+            <ID>91ab6ba1-012e-1000-8003-c0a801faecaa</ID>
+            <parent idref="0"/>
+            <type>COLUMN</type>
+         </ID>
+         <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+            <attributeValues class="java.util.HashMap">
+               <Item>
+                  <Key>precision</Key>
+                  <Value>15</Value>
+               </Item>
+               <Item>
+                  <Key>scale</Key>
+                  <Value class="java.lang.Long">5</Value>
+               </Item>
+            </attributeValues>
+            <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+               <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+               <schemaName/>
+               <typeName>NUMBER</typeName>
+            </dataTypeID>
+         </dataTypeUsage>
+         <default/>
+         <name>REFERENCIA_BANCO_PROCESO</name>
+         <notNull>false</notNull>
+         <properties/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID">
+            <ID>91ab837f-012e-1000-8009-c0a801faecaa</ID>
+            <parent idref="0"/>
+            <type>COLUMN</type>
+         </ID>
+         <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+            <attributeValues class="java.util.HashMap">
+               <Item>
+                  <Key>scale</Key>
+                  <Value class="java.lang.Long" id="2">1</Value>
+               </Item>
+            </attributeValues>
+            <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID" id="1">
+               <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+               <schemaName/>
+               <typeName>TIMESTAMP</typeName>
+            </dataTypeID>
+         </dataTypeUsage>
+         <default/>
+         <name>FECHA_CREACION</name>
+         <notNull>true</notNull>
+         <properties/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID">
+            <ID>91ab6ba1-012e-1000-8005-c0a801faecaa</ID>
+            <parent idref="0"/>
+            <type>COLUMN</type>
+         </ID>
+         <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+            <attributeValues class="java.util.HashMap"/>
+            <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+               <providerClass>oracle.javatools.db.ora.Oracle8</providerClass>
+               <schemaName/>
+               <typeName>CLOB</typeName>
+            </dataTypeID>
+         </dataTypeUsage>
+         <default/>
+         <name>CUERPO</name>
+         <notNull>false</notNull>
+         <properties/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID">
+            <ID>20752396-0132-1000-8001-c0a801fabcbc</ID>
+            <parent idref="0"/>
+            <type>COLUMN</type>
+         </ID>
+         <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+            <attributeValues class="java.util.HashMap">
+               <Item>
+                  <Key>scale</Key>
+                  <Value class="java.lang.Long">6</Value>
+               </Item>
+            </attributeValues>
+            <dataTypeID idref="1"/>
+         </dataTypeUsage>
+         <default/>
+         <name>FECHA_CREACION</name>
+         <notNull>true</notNull>
+         <properties/>
+      </Item>
+   </columns>
+   <constraints>
+      <Item class="oracle.javatools.db.PKConstraint">
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID">
+            <ID>91ab837f-012e-1000-800a-c0a801faecaa</ID>
+            <parent idref="0"/>
+            <type>CONSTRAINT</type>
+         </ID>
+         <columns>
+            <Item>
+               <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID">
+                  <ID>91ab6c0f-012e-1000-8007-c0a801faecaa</ID>
+                  <parent idref="0"/>
+                  <type>COLUMN</type>
+               </ID>
+               <dataTypeUsage class="oracle.javatools.db.datatypes.PredefinedDataTypeUsage">
+                  <attributeValues class="java.util.HashMap">
+                     <Item>
+                        <Key>scale</Key>
+                        <Value idref="2"/>
+                     </Item>
+                  </attributeValues>
+                  <dataTypeID idref="1"/>
+               </dataTypeUsage>
+               <default/>
+               <name>FECHA_CREACION</name>
+               <notNull>true</notNull>
+               <properties/>
+            </Item>
+         </columns>
+         <enabled>true</enabled>
+         <name>CONSTRAINT1</name>
+         <properties/>
+      </Item>
+   </constraints>
+   <indexes class="[Loracle.javatools.db.Index;"/>
+   <name>EVNM_ARCHIVOS_NOMINAS</name>
+   <properties class="java.util.HashMap">
+      <Item>
+         <Key>TableType</Key>
+         <Value>Normal</Value>
+      </Item>
+   </properties>
+   <schema>
+      <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID">
+         <ID>421fec55-0130-1000-8001-c0a801d8492a</ID>
+         <parent/>
+         <type>SCHEMA</type>
+      </ID>
+      <name>XXBV_SEGPAG</name>
+      <properties/>
+   </schema>
+</TABLE>

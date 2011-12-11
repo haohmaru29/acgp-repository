@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'windows-1252' standalone = 'yes'?>
+<jazn-data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/jazn-data-10_0.xsd" filepath="" OC4J_INSTANCE_ID="">
+    <jazn-realm>
+        <realm>
+            <name>jazn.com</name>
+            <users>
+				<user>
+                    <name>14391056-3</name>
+                    <display-name>Rodrigo López</display-name>
+                    <description>Usuario de BICE Vida Net</description>
+                    <credentials>{903}+QoEwacw/lSm2gqzWQjlFl1og8j9cr29</credentials>
+                </user>
+                <user>
+                    <name>rodrigo.lopez</name>
+                    <display-name>Rodrigo López</display-name>
+                    <description>Usuario de Intranet</description>
+                    <credentials>{903}P/YWJT3z/xIAseN1N2p6/1byzN93RTdy</credentials>
+                </user>
+                <user>
+                    <name>DataBase_User_ikAf8Xd6bZTnTnQzcaMn8-2GmfguCXMg</name>
+                    <credentials>{903}ikAf8Xd6bZTnTnQzcaMn8+2GmfguCXMg</credentials>
+                </user>
+                <user>
+                    <name>DataBase_User_dGF-NmhKh1qlEIf-Q2hG7U2Lpm-0nFu1</name>
+                    <credentials>{903}dGF+NmhKh1qlEIf+Q2hG7U2Lpm+0nFu1</credentials>
+                </user>
+                <user>
+                    <name>DataBase_User_Lcbizv15c-TcPABTsgMFDh5NvoMiAccnJ6PmrFT_S7o=</name>
+                    <credentials>{903}Lcbizv15c+TcPABTsgMFDh5NvoMiAccnJ6PmrFT/S7o=</credentials>
+                </user>
+                <user>
+                    <name>DataBase_User_jfb6SKiPAqy69fyy7Yw9I7cSIR_sTALmy_TH0e717sA=</name>
+                    <credentials>{903}jfb6SKiPAqy69fyy7Yw9I7cSIR/sTALmy/TH0e717sA=</credentials>
+                </user>
+            </users>
+            <roles>
+				<role>
+                    <name>INTRANET</name>
+                    <display-name>INTRANET</display-name>
+                    <description>Grupo padre de Intranet BICE Vida.</description>
+                    <members>
+                        <member>
+                            <type>user</type>
+                            <name>rodrigo.lopez</name>
+                        </member>
+                    </members>
+                </role>
+                <role>
+                    <name>BICEVIDANET</name>
+                    <display-name>BICEVIDANET</display-name>
+                    <description>Grupo padre de BICE Vida Net.</description>
+                    <members>
+                        <member>
+                            <type>user</type>
+                            <name>14391056-3</name>
+                        </member>
+                    </members>
+                </role>
+                <role>
+                    <name>BICEVIDA</name>
+                    <display-name>BICE VIDA</display-name>
+                    <description>BICE VIDA</description>
+                    <members>
+                        <member>
+                            <type>role</type>
+                            <name>INTRANET</name>
+                        </member>
+                        <member>
+                            <type>role</type>
+                            <name>BICEVIDANET</name>
+                        </member>
+                    </members>
+                </role>
+			</roles>
+        </realm>
+    </jazn-realm>
+</jazn-data>

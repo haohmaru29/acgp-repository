@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+  <jsp:scriptlet>
+    String initPage = session.getServletContext().getInitParameter("cl.bicevida.core.initPage");
+    response.sendRedirect("../faces/FramePaginas.jspx?pagina=" + initPage + "&amp;version=1");
+  </jsp:scriptlet>
+</jsp:root>

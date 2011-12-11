@@ -1,0 +1,1128 @@
+
+/** Change the colors to mycompany **/
+
+/** All these styles/icons/properties are overrides of the simple skin */
+
+/** :alias means that this class or icon is not used directly. It is included
+in other component's style selectors or other component's icons. It is 
+meant to be a fast way to change styles. The alternative is to style each 
+component. **/
+
+/* Custom alias class for hovering over menuTabs and menuBars */
+/* put the extension :alias so it won't get written out to the final css file,
+   cuz I know it won't be used directly. Instead it will be included in
+   other style definions using the -ora-rule-ref property. */
+.MyLinkHoverColor:alias { color:yellow; }
+
+.AFDarkForeground:alias {color:#2A518A;}
+.AFDarkBackground:alias {background-color:#003366;}
+/** In the base styles, AFDarkBorder uses the background-color of 
+    AFDarkBackground for its border color, so no need to set it directly. */
+
+/* a dark blue color */
+.AFLinkForeground:alias {color:#003366; font-size: 10px;}
+
+.AFDefaultFont:alias{
+  font-size: 11px;
+  font-weight: normal;
+  color: #2A518A;
+}
+
+.AFHeaderText:alias{
+  font-size: 12px;    
+}
+
+/***.AFRequiredIcon:alias{
+  content:url(/skins/informatica/CoreSkin/skin_images/required.png);    
+}***/
+
+/*** Aquí están los cambios ***/
+.AFLabelText{
+  font-size: 11px;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+  color: #2A518A;
+}
+
+.AFFieldText{
+  font-size: 11px;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: top;
+  color: #2A518A;
+}
+
+.AFFieldTextDisabled{
+  font-size: 11px;
+  font-weight: normal;
+  text-align: left;  
+  vertical-align: top;
+  color: #999999;
+}
+
+
+.OraInlineInfoText{
+  font-size: 10px;
+  font-weight: normal;
+  text-align: left;
+}
+
+
+af|panelForm::label-cell
+{
+  -ora-rule-ref: selector(".AFStartTextAlign:alias");
+}
+
+/*** Aquí terminan los cambios ***/
+
+.AFFieldTextDisabled{
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.AFLabelCell {
+  font-size: 10px;
+  font-weight: normal;    
+}
+
+
+/** Section where to add styles/selectors used in the ADF Faces Skin Sample  **/
+/** =======================================================================  **/
+
+/*
+.AFLargeFont:alias {
+    font-family:Arial,Helvetica,Geneva,sans-serif;
+    font-size:12px;
+    margin-bottom:0px;
+    margin-top:0px;
+    font-weight:bold;
+    color:#426c98
+}
+*/
+
+
+
+
+
+
+/** =================================================================  **/
+
+/** BUTTON STYLES. Notice the right to left icons are specified with the
+:rtl pseudo-class. If :rtl icons are not specified, we default to non-:rtl icons. **/
+
+/** use this to color the button background and text **/
+.AFButtonServerText:alias {background-color: #C9DF9D; color:#000066; -ora-text-antialias:true; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 11px}
+/* antialias the text for our disabled buttons */
+.AFButtonServerTextDisabled:alias {background-color:#DDDDDD; color:#999999;-ora-text-antialias:true; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 11px}
+
+/* Button start icons (left and right) depending on language settings */
+.AFButtonStartIcon:alias {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnLeft.gif); width:9px; height:16px}
+.AFButtonStartIcon:alias:rtl {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnRight.gif); width:9px; height:16px}
+
+/* Button end icons (left and right) depending on language settings */
+.AFButtonEndIcon:alias {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnRight.gif); width:9px; height:16px}
+.AFButtonEndIcon:alias:rtl {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnLeft.gif); width:9px; height:16px}
+
+/* Button top background icons (left and right) depending on language settings */
+.AFButtonTopBackgroundIcon:alias {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnTop.gif); width:1px; height:2px}
+.AFButtonTopBackgroundIcon:alias:rtl {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnTop.gif); width:1px; height:2px}
+
+/* Button bottom background icons (left and right) depending on language settings */
+.AFButtonBottomBackgroundIcon:alias {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnBottom.gif); width:1px; height:2px}
+.AFButtonBottomBackgroundIcon:alias:rtl {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnBottom.gif); width:1px; height:2px}
+
+/* Button icons for disabled buttons (left and right) depending on language settings */
+.AFButtonDisabledStartIcon:alias {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnLeft_Dis.gif); width:7px; height:18px}
+.AFButtonDisabledStartIcon:alias:rtl {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnRight_Dis.gif); width:7px; height:18px}
+
+.AFButtonDisabledEndIcon:alias {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnRight_Dis.gif); width:7px; height:18px}
+.AFButtonDisabledEndIcon:alias:rtl {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnLeft_Dis.gif); width:7px; height:18px}
+
+.AFButtonDisabledTopBackgroundIcon:alias {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnTop_Dis.gif); width:1px; height:2px}
+.AFButtonDisabledBottomBackgroundIcon:alias {content:url(/skins/informatica/CoreSkin/skin_images/MyBtnBottom_Dis.gif); width:1px; height:2px}
+
+/* The af:body component styles */
+/** Changing here has an impact on the body element in the page, 
+    which can be used for things like background color on the page. **/
+    /** #0B4A87; **/
+af|body
+{
+  background-color:white; 
+}
+
+/** showOneTab **/
+/** ---------- **/
+/** .AFShowOneTab:alias is included in af|showOneTab::orientation-top and 
+    af|showOneTab::orientation-bottom which are the styles on the table. **/
+.AFShowOneTab:alias {
+  background-color:#FFFFFF; 
+  text-align:center;
+}
+/** make the top tab bar have a solid border underneath **/
+af|showOneTab::orientation-top
+{
+  border-bottom: 3px solid #003366;
+}
+/** make the bottom tab bar have a solid border on top **/
+af|showOneTab::orientation-bottom
+{
+  border-top: 3px solid #003366;
+}
+
+af|showOneTab::separator {
+  margin-width:4px;
+  border-top: #BB95BB; solid 4pt ;
+  border-bottom: #BB95BB; solid 4pt ;
+  BACKGROUND-COLOR: white;
+  PADDING-LEFT: 1px;}
+
+af|showOneTab::tab {
+  background-color: white;
+  font-weight:bold;
+  font-family:Arial, Helvetica, sans-serif; 
+  padding:2px 8px;
+}
+
+af|showOneTab::tab-selected {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding:2px 8px; 
+  text-decoration: none; 
+  background-color: #B8D1DC;
+}  
+
+af|showOneTab::tab-link {
+  color: #B8D1DC;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  padding:8px 2px; 
+  text-decoration: none;
+}
+
+af|showOneTab::tab-link:hover
+{
+  color: #003366;
+  font-weight: bold;
+}
+
+/* put some space in the
+first cell */
+af|showOneTab::cell-start {
+  background-color:transparent; 
+  padding-left:10px
+}
+/** put some space between the tabs and the body */
+af|showOneTab::body
+{
+  background-color: white;
+  padding: 10px;
+}
+
+/** menuTabs **/
+/** -------- **/
+/** You can create borders, and have image-free tabs, or you can use the
+    icon keys (e.g., af|menuTabs::selected-start-icon)to create tabs with
+    rounded borders. The icons are used below,
+    but you can comment them out if you want. */
+/** this isn't needed when we are using icons for the tabs(but the padding helps!)
+.AFTabBarItem:alias
+{
+  border-style:solid; 
+  border-color:#5D025E;
+  border-width: 3px 2px 0px 2px;
+  padding:2px 6px;
+  background-color: Purple;
+}
+**/
+.AFTabBarItem:alias
+{
+  line-height:100%;
+}
+/* Remove the text decoration from all tabBar links  */
+.AFTabBarLink:alias
+{
+  text-decoration:none;
+}
+/* Make the selected tab bold */
+af|menuTabs::selected-link
+{
+  font-weight: bold;
+  font-size: 11px;
+  color: black;
+  text-decoration: none;
+
+}
+af|menuTabs::enabled-link
+{
+  font-weight: normal;
+  font-size: 11px;
+  color: black;
+  text-decoration: none;
+}
+
+af|menuTabs::enabled-link:hover
+{
+  -ora-rule-ref:selector(".MyLinkHoverColor:alias");
+}
+
+/** menuTabs that use icons are define like the following */
+af|menuTabs::enabled-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsEnabledStart.gif); 
+}
+af|menuTabs::enabled-start-icon:rtl
+{
+ content:url(/skins/informatica/CoreSkin/skin_images/menuTabsEnabledEnd.gif);  
+}
+af|menuTabs::enabled-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsEnabledEnd.gif);
+}
+af|menuTabs::enabled-end-icon:rtl
+{
+ content:url(/skins/informatica/CoreSkin/skin_images/menuTabsEnabledStart.gif); 
+}
+af|menuTabs::enabled-join-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsEnabledJoin.gif); 
+}
+af|menuTabs::enabled-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsEnabledBackground.gif); 
+}
+af|menuTabs::selected-enabled-join-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsSelectedEnabledJoin.gif); 
+}
+af|menuTabs::selected-enabled-join-icon:rtl
+{
+ content:url(/skins/informatica/CoreSkin/skin_images/menuTabsEnabledSelectedJoin.gif);  
+}
+af|menuTabs::enabled-selected-join-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsEnabledSelectedJoin.gif); 
+}
+af|menuTabs::enabled-selected-join-icon:rtl
+{
+ content:url(/skins/informatica/CoreSkin/skin_images/menuTabsSelectedEnabledJoin.gif);  
+}
+af|menuTabs::selected-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsSelectedStart.gif); 
+}
+af|menuTabs::selected-start-icon:rtl
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsSelectedEnd.gif); 
+}
+af|menuTabs::selected-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsSelectedEnd.gif); 
+}
+af|menuTabs::selected-end-icon:rtl
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsSelectedStart.gif);  
+}
+af|menuTabs::selected-join-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsSelectedJoin.gif); 
+}
+af|menuTabs::selected-join-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabSelectedJoin.gif);
+}
+af|menuTabs::selected-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuTabsSelectedBackground.gif);
+}
+/** menuBar **/
+/** ------- **/
+af|menuBar
+{
+  background-color: #FFFFFF;
+}
+
+af|menuBar::start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuBarStart.gif);
+  width: 17px;
+  height: 20px;
+}
+
+af|menuBar::end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuBarEnd.gif);
+  width: 38px;
+  height: 20px;
+}
+
+af|menuBar::background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/menuBarBackground.gif);
+  width: 115px;
+  height: 20px;
+}
+
+af|menuBar::body
+{
+  background-color: #FFFFFF;
+}
+
+af|menuBar::selected-link
+{
+  font-size: 11px;
+  color: black;
+  font-weight:bold;
+}
+
+af|menuBar::enabled{
+  font-size: 11px;
+  font-weight:normal;
+  color: black;
+}
+
+af|menuBar::enabled-link
+{
+  color: black;
+  font-size: 11px;
+}
+
+af|menuBar::enabled-link:hover
+{
+  font-size: 11px;
+ -ora-rule-ref:selector(".MyLinkHoverColor:alias");
+}
+
+af|menuBar::separator
+{
+    padding: 0px 2px 0px 2px;
+}
+
+/** menuButtons **/
+/** ----------- **/
+.AFMenuButtons:alias
+{
+  padding:0px 2px 2px 4px;
+}
+
+/** panelSideBar **/
+/*  ------------   */
+
+af|panelSideBar::body
+{
+    background-color: #D9EFAD;
+    padding: 1px 1px 1px 1px;
+}
+
+af|panelSideBar::top-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelSideBarTopStart.gif);       
+}
+
+af|panelSideBar::top-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelSideBarTopEnd.gif);            
+}
+
+af|panelSideBar::bottom-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelSideBarBottomStart.gif);            
+}
+
+af|panelSideBar::bottom-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelSideBarBottomEnd.gif);            
+}
+
+af|panelSideBar::top-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelSideBarTopBackground.gif);            
+}
+
+af|panelSideBar::bottom-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelSideBarBottomBackground.gif);            
+}
+
+af|panelSideBar::start-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelSideBarStartBackground.gif);            
+}
+
+af|panelSideBar::end-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelSideBarEndBackground.gif);            
+}
+
+
+/** panelBox **/
+/*  ------------   */
+
+/** generic background for light panelBox's or shuttles **/
+.AFBoxBackground:alias {background-color:#FFFFFF;}
+
+/** when the panelBox is dark, this is the background color */
+.AFPanelBoxDarkBackground:alias {background-color:#EBF0FE;}
+.AFMediumAccentBackground:alias {background-color: white;}
+
+.AFPanelBoxBody:alias
+{
+  background-color: white;
+  padding-top: 10px;
+}
+
+af|panelBox::header
+{
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+af|panelBox::body
+{
+  padding-top: 2px;
+}
+
+
+af|panelBox::medium-header-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderStartLight.gif);
+  width:11px;
+  height:20px;
+}
+
+af|panelBox::medium-header-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderEndLight.gif);    
+  width:11px;
+  height:20px;
+}
+
+af|panelBox::medium-header-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderBackgroundLight.gif);    
+  width:1px;
+  height:20px;
+}
+
+af|panelBox::medium-bottom-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomStartLight.gif);    
+  vertical-align: top;
+}
+
+af|panelBox::medium-bottom-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomEndLight.gif);    
+  vertical-align: top;
+}
+
+af|panelBox::medium-top-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxTopStartLight.gif);    
+  width:11px;
+  height:20px;
+}
+
+af|panelBox::medium-top-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxTopEndLight.gif);    
+  width:11px;
+  height:20px;
+}
+
+af|panelBox::medium-bottom-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomBackgroundLight.gif);        
+   vertical-align: top;
+}
+
+af|panelBox::medium-top-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxTopBackgroundLight.gif);    
+  width:1px;
+  height:20px;
+}
+
+af|panelBox::medium-start-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxStartBackgroundLight.gif);    
+  width:11px;
+  height:1px;
+}
+
+af|panelBox::medium-end-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxEndBackgroundLight.gif);        
+  width:11px;
+  height:1px;
+}
+
+
+
+
+
+
+/** Medium color **/
+af|panelBox::light-header-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderStartMedium.gif);    
+  width:11px;
+  height:20px;
+}
+
+af|panelBox::light-header-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderEndMedium.gif);    
+  width:11px;
+  height:20px;
+}
+
+af|panelBox::light-header-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderBackgroundMedium.gif);    
+  width:1px;
+  height:20px;
+}
+
+af|panelBox::light-bottom-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomStartMedium.gif);    
+  vertical-align: top;
+}
+
+af|panelBox::light-bottom-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomEndMedium.gif); 
+  vertical-align: top;
+}
+
+af|panelBox::light-bottom-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomBackgroundMedium.gif);        
+  vertical-align: top;
+}
+
+af|panelBox::light-top-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxTopStartMedium.gif);    
+  width:11px;
+  height:20px;
+}
+
+af|panelBox::light-top-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxTopEndMedium.gif);    
+  width:11px;
+  height:20px;
+}
+
+af|panelBox::light-top-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxTopBackgroundMedium.gif);    
+  width:1px;
+  height:20px;
+}
+
+af|panelBox::light-start-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxStartBackgroundMedium.gif);    
+  width:11px;
+  height:1px;
+}
+
+af|panelBox::light-end-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxEndBackgroundMedium.gif);        
+  width:11px;
+  height:1px;
+}
+
+
+
+
+/** Panl Box Dark **/
+
+af|panelBox::dark-header-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderStartDark.gif);
+  width:7px;
+  height:25px;
+}
+
+af|panelBox::dark-header-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderEndDark.gif);    
+  width:7px;
+  height:25px;
+}
+
+af|panelBox::dark-header-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderBackgroundDark.gif);    
+  width:140px;
+  height:25px;
+}
+
+
+af|panelBox::dark-bottom-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomStartDark.gif);    
+  vertical-align: top;
+  width:7px;
+}
+
+af|panelBox::dark-bottom-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomEndDark.gif); 
+  vertical-align: top;
+  width:7px;
+}
+
+af|panelBox::dark-bottom-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxBottomBackgroundDark.gif);        
+  vertical-align: top;
+}
+
+af|panelBox::dark-top-start-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderStartDark.gif);  
+  width:7px;
+  height:25px;
+}
+
+af|panelBox::dark-top-end-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxHeaderEndDark.gif);    
+  width:7px;
+  height:25px;
+}
+
+af|panelBox::dark-top-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxTopBackgroundMedium.gif);    
+  width:7px;
+  height:20px;
+}
+
+af|panelBox::dark-start-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxStartBackgroundDark.gif);    
+  width:7px;
+  height:1px;
+}
+
+af|panelBox::dark-end-background-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/panelBoxEndBackgroundDark.gif);        
+  width:7px;
+  height:1px;
+}
+
+/** End Panel Box Dark **/
+
+
+/** panelHeader **/
+/** ----------- **/
+af|panelHeader
+{
+  -ora-rule-ref:selector(".AFDarkAccentBorder:alias");
+   border-width:0px 0px 1px 0px;
+   border-style:solid;
+   vertical-align:bottom;
+   margin-bottom:3px;
+   padding:0px 3px;
+   font-weight:bolder;
+   font-size:12px;
+}
+
+af|panelHeader::level-one
+{
+    color: #0B3D73;
+    font-weight: bold;
+    font-size:12px;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+
+/** selectBooleanCheckbox **/
+/** ---------------------  **/
+af|selectBooleanCheckbox::read-only-unchecked-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/checkrn.gif);
+}
+af|selectBooleanCheckbox::read-only-checked-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/checkrc.gif);
+}
+
+af|selectBooleanCheckbox::disabled-only-unchecked-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/checkdn.gif);
+}
+af|selectBooleanCheckbox::disabled-only-checked-icon
+{
+  content:url(/skins/informatica/CoreSkin/skin_images/checkdc.gif);
+}
+
+/* use special properties to change the ui **/
+/* don't show the last item in menuPath (the default is to show it)*/
+af|menuPath {-ora-show-last-item:false}
+
+/** if, for some reason, you don't want an icon to show up, you
+    can hide it like this (this will be more useful when skins can
+    extends other skins besides simple)
+    */
+af|menuPath::separator-icon {content:inhibit}
+
+/** Table Settings **/
+.AFTableCellDataText:alias
+{
+  color: #2A518A;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.AFTableCellDataBackgroundColor:alias
+{
+  background-color: white;
+}
+
+.AFTableCellDataBandedBackgroundColor:alias
+{
+  background-color: #EAEAEA;
+}
+
+.AFTableCellDataBorderColor:alias
+{
+  border-color: #B3B6AD;
+}
+
+af|table::content
+{
+    BORDER-RIGHT: #6d92dc 1px solid; 
+    BORDER-TOP: #6d92dc 1px solid;     
+    BORDER-LEFT: #6d92dc 1px solid;     
+    BORDER-BOTTOM: #6d92dc 1px solid;     
+    PADDING-RIGHT: 4px; 
+    PADDING-LEFT: 4px; FONT-WEIGHT: normal; 
+    FONT-SIZE: 10px; PADDING-BOTTOM: 4px; 
+    MARGIN: 0px; 
+    PADDING-TOP: 4px; 
+    FONT-FAMILY: Arial, Helvetica, sans-serif; 
+    HEIGHT: 0px; 
+    BACKGROUND-COLOR: #ffffff;
+}
+
+af|table::control-bar-top{
+    BORDER-RIGHT: #6d92dc 1px solid; 
+    BORDER-TOP: #6d92dc 1px solid;     
+    BORDER-LEFT: #6d92dc 1px solid;     
+    BORDER-BOTTOM: #e3ecf9 1px solid;          
+    PADDING-RIGHT: 4px; 
+    PADDING-LEFT: 4px; FONT-WEIGHT: normal; 
+    FONT-SIZE: 10px; PADDING-BOTTOM: 4px; 
+    MARGIN: 0px; 
+    PADDING-TOP: 4px; 
+    FONT-FAMILY: Arial, Helvetica, sans-serif; 
+    HEIGHT: 0px; 
+    BACKGROUND-COLOR: #97C14B;
+}
+
+af|table::control-bar-top:link
+{
+  font-size: 10px;
+  text-decoration: none;
+  background-color: #97C14B;
+  color: #FFFFFF;
+}
+af|table::sub-control-bar
+{
+  font-size: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+af|table::sub-control-bar:link
+{
+  font-size: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+af|table::control-bar-bottom
+{
+  background-color: #97C14B;
+  color: #FFFFFF;
+}
+
+
+/** These are the styles on the actual navigation bar for a table **/
+af|selectRangeChoiceBar::prev-icon
+{
+  content: url(/skins/informatica/CoreSkin/skin_images/tablePrev.gif);
+}
+
+af|selectRangeChoiceBar::next-icon
+{
+  content: url(/skins/informatica/CoreSkin/skin_images/tableNext.gif);
+}
+
+af|selectRangeChoiceBar::prev-disabled-icon
+{
+  content: url(/skins/informatica/CoreSkin/skin_images/tablePrev.gif);
+}
+
+af|selectRangeChoiceBar::next-disabled-icon
+{
+  content: url(/skins/informatica/CoreSkin/skin_images/tableNext.gif);
+}
+
+/** Column Settings **/
+af|column::header-text
+{ 
+  BORDER-RIGHT: #e3ecf9 1px solid; 
+  BORDER-TOP: #e3ecf9 1px solid;     
+  BORDER-LEFT: #e3ecf9 1px solid;     
+  BORDER-BOTTOM: #e3ecf9 1px solid;        
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  MARGIN: 0px;
+  COLOR: #FFFFFF;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  BACKGROUND-COLOR: #97C14B;
+  PADDING-LEFT: 3px; 
+  PADDING-RIGHT: 3px; 
+  text-align: center;  
+  vertical-align: top     
+}
+
+af|column::header-number
+{ 
+  BORDER-RIGHT: #e3ecf9 1px solid; 
+  BORDER-TOP: #e3ecf9 1px solid;     
+  BORDER-LEFT: #e3ecf9 1px solid;     
+  BORDER-BOTTOM: #e3ecf9 1px solid;        
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  MARGIN: 0px;
+  COLOR: #FFFFFF;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  BACKGROUND-COLOR: #97C14B;
+  PADDING-LEFT: 3px; 
+  PADDING-RIGHT: 3px; 
+  text-align: center;  
+  vertical-align: top     
+}
+
+af|column::header-icon
+{
+  BORDER-RIGHT: #e3ecf9 1px solid; 
+  BORDER-TOP: #e3ecf9 1px solid;     
+  BORDER-LEFT: #e3ecf9 1px solid;     
+  BORDER-BOTTOM: #e3ecf9 1px solid;        
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  MARGIN: 0px;
+  COLOR: #FFFFFF;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  BACKGROUND-COLOR: #97C14B;
+  PADDING-LEFT: 3px; 
+  PADDING-RIGHT: 3px; 
+  text-align: center;  
+  vertical-align: top     
+}
+
+af|column::sortable-header-text
+{
+  BORDER-RIGHT: #e3ecf9 1px solid; 
+  BORDER-TOP: #e3ecf9 1px solid;     
+  BORDER-LEFT: #e3ecf9 1px solid;     
+  BORDER-BOTTOM: #e3ecf9 1px solid;        
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  MARGIN: 0px;
+  COLOR: #FFFFFF;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  BACKGROUND-COLOR: #97C14B;
+  PADDING-LEFT: 3px; 
+  PADDING-RIGHT: 3px; 
+  text-align: center;  
+  vertical-align: top     
+}
+
+af|column::sortable-header-number
+{
+  BORDER-RIGHT: #e3ecf9 1px solid; 
+  BORDER-TOP: #e3ecf9 1px solid;     
+  BORDER-LEFT: #e3ecf9 1px solid;     
+  BORDER-BOTTOM: #e3ecf9 1px solid;        
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  MARGIN: 0px;
+  COLOR: #FFFFFF;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  BACKGROUND-COLOR: #97C14B;
+  PADDING-LEFT: 3px; 
+  PADDING-RIGHT: 3px; 
+  text-align: center;  
+  vertical-align: top     
+}
+
+af|column::sortable-header-icon
+{
+  BORDER-RIGHT: #e3ecf9 1px solid; 
+  BORDER-TOP: #e3ecf9 1px solid;     
+  BORDER-LEFT: #e3ecf9 1px solid;     
+  BORDER-BOTTOM: #e3ecf9 1px solid;        
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 11px;
+  MARGIN: 0px;
+  COLOR: #FFFFFF;
+  FONT-FAMILY: Arial, Helvetica, sans-serif;
+  BACKGROUND-COLOR: #97C14B;
+  PADDING-LEFT: 3px; 
+  PADDING-RIGHT: 3px; 
+  text-align: center;  
+  vertical-align: top     
+}
+
+/** Column Settings - adding an icon to the sortable column**/
+af|column::sort-ascend-icon
+{
+  content: url(/skins/informatica/CoreSkin/skin_images/sort_asc_n.png);
+}
+
+af|column::sort-descend-icon
+{
+  content: url(/skins/informatica/CoreSkin/skin_images/sort_des_n.png); 
+}
+
+
+af|column::cell-number
+{
+    vertical-align:top;
+    BORDER-RIGHT: #e3ecf9 1px solid; 
+    BORDER-TOP: #e3ecf9 1px solid;     
+    BORDER-LEFT: #e3ecf9 1px solid;     
+    BORDER-BOTTOM: #e3ecf9 1px solid;          
+    BACKGROUND-POSITION: 50% top; 
+    FONT-SIZE: 10px; 
+    LEFT: 3px; 
+    COLOR: #2A518A; 
+    PADDING-BOTTOM: 2px; 
+    PADDING-TOP: 2px; 
+    PADDING-LEFT: 3px; 
+    PADDING-RIGHT: 3px; 
+    FONT-FAMILY: Arial, Helvetica, sans-serif; 
+}
+
+af|column::cell-number-band 
+{
+    vertical-align:top;
+    BORDER-RIGHT: #e3ecf9 1px solid; 
+    BORDER-TOP: #e3ecf9 1px solid;     
+    BORDER-LEFT: #e3ecf9 1px solid;     
+    BORDER-BOTTOM: #e3ecf9 1px solid;         
+    BACKGROUND-POSITION: 50% top; 
+    FONT-SIZE: 10px; 
+    LEFT: 3px; 
+    COLOR: #2A518A; 
+    PADDING-BOTTOM: 2px; 
+    PADDING-TOP: 2px; 
+    PADDING-LEFT: 3px; 
+    PADDING-RIGHT: 3px; 
+    FONT-FAMILY: Arial, Helvetica, sans-serif; 
+}
+
+af|column::cell-icon-format 
+{
+    vertical-align:top;
+    BORDER-RIGHT: #e3ecf9 1px solid; 
+    BORDER-TOP: #e3ecf9 1px solid;     
+    BORDER-LEFT: #e3ecf9 1px solid;     
+    BORDER-BOTTOM: #e3ecf9 1px solid;         
+    BACKGROUND-POSITION: 50% top; 
+    FONT-SIZE: 10px; 
+    LEFT: 3px;  
+    COLOR: #2A518A; 
+    PADDING-BOTTOM: 2px; 
+    PADDING-TOP: 2px; 
+    PADDING-LEFT: 3px; 
+    PADDING-RIGHT: 3px; 
+    FONT-FAMILY: Arial, Helvetica, sans-serif; 
+}
+
+af|column::cell-icon-format-band
+{
+    vertical-align:top;
+    BORDER-RIGHT: #e3ecf9 1px solid; 
+    BORDER-TOP: #e3ecf9 1px solid;     
+    BORDER-LEFT: #e3ecf9 1px solid;     
+    BORDER-BOTTOM: #e3ecf9 1px solid;         
+    BORDER-TOP: #e3ecf9 1px solid; 
+    FONT-SIZE: 10px; 
+    LEFT: 3px; 
+    COLOR: #2A518A; 
+    PADDING-BOTTOM: 2px; 
+    PADDING-TOP: 2px; 
+    PADDING-LEFT: 3px; 
+    PADDING-RIGHT: 3px; 
+    FONT-FAMILY: Arial, Helvetica, sans-serif; 
+}
+
+af|column::cell-text 
+{
+    vertical-align:top;
+    BORDER-RIGHT: #e3ecf9 1px solid; 
+    BORDER-TOP: #e3ecf9 1px solid;     
+    BORDER-LEFT: #e3ecf9 1px solid;     
+    BORDER-BOTTOM: #e3ecf9 1px solid;             
+    BACKGROUND-POSITION: 50% top; 
+    FONT-SIZE: 10px; 
+    LEFT: 3px; 
+    COLOR: #2A518A; 
+    PADDING-BOTTOM: 2px; 
+    PADDING-TOP: 2px; 
+    PADDING-LEFT: 3px; 
+    PADDING-RIGHT: 3px; 
+    FONT-FAMILY: Arial, Helvetica, sans-serif; 
+}
+
+af|column::cell-text-band 
+{
+    vertical-align:top;
+    BORDER-RIGHT: #e3ecf9 1px solid; 
+    BORDER-TOP: #e3ecf9 1px solid;     
+    BORDER-LEFT: #e3ecf9 1px solid;     
+    BORDER-BOTTOM: #e3ecf9 1px solid;     
+    BACKGROUND-POSITION: 50% top; 
+    FONT-SIZE: 10px; 
+    LEFT: 3px;  
+    COLOR: #2A518A; 
+    PADDING-BOTTOM: 2px; 
+    PADDING-TOP: 2px; 
+    PADDING-LEFT: 3px; 
+    PADDING-RIGHT: 3px; 
+    FONT-FAMILY: Arial, Helvetica, sans-serif; 
+}
+
+af|objectSeparator
+{
+    background-color: #CAD8E9;
+    border: 1px solid #CAD8E9;
+}
+
+
+/** panelGrid's body area **/
+/** ----------------------- **/
+af|panelGrid::body
+{
+  vertical-align: top;
+}

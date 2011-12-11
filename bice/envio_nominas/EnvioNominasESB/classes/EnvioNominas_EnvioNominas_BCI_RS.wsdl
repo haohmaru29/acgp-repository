@@ -1,0 +1,49 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<definitions
+     name="EnvioNominas_BCI_RS"
+     targetNamespace="http://oracle.com/esb/namespaces/EnvioNominas"
+     xmlns="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://oracle.com/esb/namespaces/EnvioNominas"
+     xmlns:flt1="http://bicevida.ws/services/envionominas"
+     xmlns:out1="http://bicevida.ws/services/envionominas"
+     xmlns:inp1="http://bicevida.ws/services/envionominas"
+    >
+    <types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://bicevida.ws/services/envionominas" schemaLocation="EnvioNominas.xsd" />
+      </schema>
+    </types>
+    <message name="CargaNominaInput_request">
+        <part name="CargaNominaInput" element="flt1:CargaNominaInput"/>
+    </message>
+    <message name="CargaNominaOutput_reply">
+        <part name="CargaNominaOutput" element="flt1:CargaNominaOutput"/>
+    </message>
+    <message name="RindeNominaInput_request">
+        <part name="RindeNominaInput" element="flt1:RindeNominaInput"/>
+    </message>
+    <message name="RindeNominaOutput_reply">
+        <part name="RindeNominaOutput" element="flt1:RindeNominaOutput"/>
+    </message>
+    <message name="GeneraArchivoOutput_reply">
+        <part name="GeneraArchivoOutput" element="flt1:GeneraArchivoOutput"/>
+    </message>
+    <message name="EnvioNominasFault_fault">
+        <part name="EnvioNominasFault" element="flt1:EnvioNominasFault"/>
+    </message>
+    <portType name="envioNominas_BCI_Port">
+        <operation name="cargar">
+            <input message="tns:CargaNominaInput_request"/>
+            <output message="tns:CargaNominaOutput_reply"/>
+            <fault name="cargar_fault" message="tns:EnvioNominasFault_fault"/>
+        </operation>
+        <operation name="rendir">
+            <input message="tns:RindeNominaInput_request"/>
+            <output message="tns:RindeNominaOutput_reply"/>
+            <fault name="rendir_fault" message="tns:EnvioNominasFault_fault"/>
+        </operation>
+        <operation name="generarArchivo">
+            <input message="tns:CargaNominaInput_request"/>
+        </operation>
+    </portType>
+</definitions>

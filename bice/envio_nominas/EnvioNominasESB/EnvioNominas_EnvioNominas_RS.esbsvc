@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<service name="EnvioNominas_RS" guid="9A0ECEC03ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS" status="ENABLED" serviceType="RoutingService" typeDescription="Servicio de Direccionamiento" isWSDLEditable="false" soapEndpointStatus="ENABLED">
+   <versionInfo>
+      <ID>1323301534671</ID>
+      <lastModifiedTime>Wed Dec 07 20:45:34 ART 2011</lastModifiedTime>
+      <lastModifiedUser>JDev_EnvioNominasBice_EnvioNominasESB</lastModifiedUser>
+   </versionInfo>
+   <parent guid="A7F47FD0190E11E0BF9FD5B49DC5D99D" qname="EnvioNominas" type="system"/>
+   <serviceDefinition>
+      <wsdlURL>EnvioNominas_EnvioNominas_RS.wsdl</wsdlURL>
+      <portType xmlns:tns="http://oracle.com/esb/namespaces/EnvioNominas">tns:envioNominasPort</portType>
+      <endpointDefinition>
+         <concreteWSDLURL>/esb/wsil/EnvioNominas/EnvioNominas_RS?wsdl</concreteWSDLURL>
+         <soapEndpointURI>http://canis.bicevida.cl:7777/event/EnvioNominas/EnvioNominas_RS</soapEndpointURI>
+      </endpointDefinition>
+   </serviceDefinition>
+   <operations>
+      <operationInfo guid="9A0ECEC13ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS.cargar" wsdlOperation="cargar" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault">
+         <request validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:CargaNominaInput"/>
+         <reply validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:CargaNominaOutput" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/EnvioNominas.xsd"/>
+         <fault xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:EnvioNominasFault" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/EnvioNominas.xsd"/>
+         <routingRules>
+            <routingRule guid="65FB6DE03DE011E09F0FABD997A97532" subscriptionType="ANY" executionType="Immediate" status="ENABLED">
+               <targetOperation guid="A57C39013ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS.cargar" serviceGUID="A57C39003ADD11E0BF898514F6D1BFC1" serviceQName="EnvioNominas.EnvioNominas_BCI_RS" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault"/>
+               <filterExpression>{/out1:CargaNominaInput/out1:datosCabecera/out1:bancoProceso='32'};{ namespace out1=http://bicevida.ws/services/envionominas }</filterExpression>
+            </routingRule>
+         </routingRules>
+      </operationInfo>
+      <operationInfo guid="9A0ECEC23ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS.rendir" wsdlOperation="rendir" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault">
+         <request validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:RindeNominaInput"/>
+         <reply validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:RindeNominaOutput" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/EnvioNominas.xsd"/>
+         <fault xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:EnvioNominasFault" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/EnvioNominas.xsd"/>
+         <routingRules>
+            <routingRule guid="65FB6DE13DE011E09F0FABD997A97532" subscriptionType="ANY" executionType="Immediate" status="ENABLED">
+               <targetOperation guid="A57C39023ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS.rendir" serviceGUID="A57C39003ADD11E0BF898514F6D1BFC1" serviceQName="EnvioNominas.EnvioNominas_BCI_RS" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault"/>
+               <filterExpression>{/out1:RindeNominaInput/out1:datosCabecera/out1:bancoProceso='32'};{ namespace out1=http://bicevida.ws/services/envionominas }</filterExpression>
+            </routingRule>
+         </routingRules>
+      </operationInfo>
+      <operationInfo guid="9A0ECEC33ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS.generarArchivo" wsdlOperation="generarArchivo" mepDisplayName="Unidireccional" mep="OneWay">
+         <request validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:CargaNominaInput"/>
+         <routingRules>
+            <routingRule guid="65FB6DE23DE011E09F0FABD997A97532" subscriptionType="ANY" executionType="Immediate" status="ENABLED">
+               <targetOperation guid="A57C39033ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS.generarArchivo" serviceGUID="A57C39003ADD11E0BF898514F6D1BFC1" serviceQName="EnvioNominas.EnvioNominas_BCI_RS" mepDisplayName="Unidireccional" mep="OneWay"/>
+               <filterExpression>{/out1:CargaNominaInput/out1:datosCabecera/out1:bancoProceso='32'};{ namespace out1=http://bicevida.ws/services/envionominas }</filterExpression>
+            </routingRule>
+         </routingRules>
+      </operationInfo>
+   </operations>
+   <trackableFields>
+      <trackableField name="EnvioNominas_RS_tf2" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="9A0ECEC13ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS.cargar"/>
+         <expression>{/ns0:CargaNominaInput/ns0:nomina/ns0:idProceso};{ namespace ns0=http://bicevida.ws/services/envionominas }</expression>
+      </trackableField>
+      <trackableField name="EnvioNominas_RS_tf5" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="9A0ECEC13ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS.cargar"/>
+         <expression>{/ns0:CargaNominaInput/ns0:nomina/ns0:registrosNomina};{ namespace ns0=http://bicevida.ws/services/envionominas }</expression>
+      </trackableField>
+      <trackableField name="EnvioNominas_RS_tf1" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="9A0ECEC13ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS.cargar"/>
+         <expression>{/ns0:CargaNominaInput/ns0:nomina/ns0:idNomina};{ namespace ns0=http://bicevida.ws/services/envionominas }</expression>
+      </trackableField>
+      <trackableField name="EnvioNominas_RS_tf3" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="9A0ECEC13ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS.cargar"/>
+         <expression>{/ns0:CargaNominaInput/ns0:nomina/ns0:fechaPago};{ namespace ns0=http://bicevida.ws/services/envionominas }</expression>
+      </trackableField>
+      <trackableField name="EnvioNominas_RS_tf0" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="9A0ECEC13ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_RS.cargar"/>
+         <expression>{/ns0:CargaNominaInput/ns0:datosCabecera};{ namespace ns0=http://bicevida.ws/services/envionominas }</expression>
+      </trackableField>
+   </trackableFields>
+</service>

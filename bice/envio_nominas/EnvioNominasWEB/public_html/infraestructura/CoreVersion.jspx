@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <afh:html>
+      <afh:head title="CoreVersion">
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+        <link type="text/css" rel="stylesheet" href="../css/myStyle.css"/>
+      </afh:head>
+      <afh:body>
+        <jsp:include page="/CoreMenu.jspx" />
+      
+        <af:form>
+          <afh:tableLayout width="770px">
+            <afh:rowLayout>
+              <afh:cellFormat halign="center">
+                <afh:tableLayout>
+                  <afh:rowLayout>
+                    <afh:cellFormat halign="left">
+                      <af:panelBox background="dark"
+                                   text=" Versión de Core Web App"
+                                   icon="../skins/informatica/CoreSkin/skin_images/boton_iso.gif"
+                                   width="500px" id="PanelBoxVersion">
+                        <afh:tableLayout width="100%">
+                          <afh:rowLayout>
+                            <afh:cellFormat width="40%">
+                              <af:outputLabel value="CoreWebApp"/>
+                            </afh:cellFormat>
+                            <afh:cellFormat>
+                              <af:outputText value="0.2"
+                                             styleClass="AFFieldText"/>
+                            </afh:cellFormat>
+                          </afh:rowLayout>
+                          <afh:rowLayout>
+                            <afh:cellFormat width="40%">
+                              <af:objectSpacer width="10" height="10"/>
+                              <af:outputLabel value="ViewController"/>
+                            </afh:cellFormat>
+                            <afh:cellFormat>
+                              <af:outputText value="0.2"
+                                             styleClass="AFFieldText"/>
+                            </afh:cellFormat>
+                          </afh:rowLayout>
+                          <afh:rowLayout>
+                            <afh:cellFormat width="40%">
+                              <af:objectSpacer width="10" height="10"/>
+                              <af:outputLabel value="Model"/>
+                            </afh:cellFormat>
+                            <afh:cellFormat>
+                              <af:outputText value="0.2"
+                                             styleClass="AFFieldText"/>
+                            </afh:cellFormat>
+                          </afh:rowLayout>
+                          <afh:rowLayout>
+                            <afh:cellFormat width="40%">
+                              <af:objectSpacer width="10" height="10"/>
+                              <af:outputLabel value="Utils"/>
+                            </afh:cellFormat>
+                            <afh:cellFormat>
+                              <af:outputText value="0.2"
+                                             styleClass="AFFieldText"/>
+                            </afh:cellFormat>
+                          </afh:rowLayout>
+                          <afh:rowLayout>
+                            <afh:cellFormat width="40%">
+                              <af:objectSpacer width="10" height="10"/>
+                              <af:outputLabel value="Deployment"/>
+                            </afh:cellFormat>
+                            <afh:cellFormat>
+                              <af:outputText value="0.1"
+                                             styleClass="AFFieldText"/>
+                            </afh:cellFormat>
+                          </afh:rowLayout>
+                        </afh:tableLayout>
+                      </af:panelBox>
+                    </afh:cellFormat>
+                  </afh:rowLayout>
+                </afh:tableLayout>
+              </afh:cellFormat>
+            </afh:rowLayout>
+          </afh:tableLayout>
+        </af:form>
+      </afh:body>
+    </afh:html>
+  </f:view>
+</jsp:root>

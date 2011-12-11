@@ -1,0 +1,814 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns0="http://param.ws.fasetres.actualizadatos.bicevida.cl/types/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://param.ws.fasetres.actualizadatos.bicevida.cl/" name="WSClientesParamFaseTres" targetNamespace="http://param.ws.fasetres.actualizadatos.bicevida.cl/">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://param.ws.fasetres.actualizadatos.bicevida.cl/types/" targetNamespace="http://param.ws.fasetres.actualizadatos.bicevida.cl/types/" elementFormDefault="qualified">
+            <element name="getListaAFPElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaAFPResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaAFP" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaAFP">
+                <sequence>
+                    <element name="listaAFP" type="tns:AFPModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="AFPModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaActividadElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaActividadResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaActividad" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaActividad">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="listaActividad" type="tns:ActividadModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="ActividadModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaCodigosAreaElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaCodigosAreaResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaCodigoArea" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaCodigoArea">
+                <sequence>
+                    <element name="listaCodigosArea" type="tns:CodigoAreaModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="CodigoAreaModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaComunaElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaComunaResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaComuna" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaComuna">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                    <element name="listaComuna" type="tns:ComunaModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+            <complexType name="ComunaModel">
+                <sequence>
+                    <element name="descripcionComuna" type="string" nillable="true"/>
+                    <element name="codigoProvincia" type="string" nillable="true"/>
+                    <element name="codigoRegion" type="string" nillable="true"/>
+                    <element name="codigoComuna" type="string" nillable="true"/>
+                    <element name="descripcionProvincia" type="string" nillable="true"/>
+                    <element name="descripcionRegion" type="string" nillable="true"/>
+                    <element name="codigoArea" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaEstadoCivilElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaEstadoCivilResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaEstadoCivil" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaEstadoCivil">
+                <sequence>
+                    <element name="listaEstadoCivil" type="tns:EstadoCivilModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="EstadoCivilModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaIsapreElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaIsapreResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaIsapre" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaIsapre">
+                <sequence>
+                    <element name="listaIsapre" type="tns:IsapreModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="IsapreModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaLocalidadElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaLocalidadResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaLocalidad" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaLocalidad">
+                <sequence>
+                    <element name="listaLocalidad" type="tns:TipoLocalidadModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoLocalidadModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaNacionalidadElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaNacionalidadResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaNacionalidad" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaNacionalidad">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                    <element name="listaNacionalidad" type="tns:NacionalidadModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+            <complexType name="NacionalidadModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaNivelEducacionalElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaNivelEducacionalResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaNivelEducacional" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaNivelEducacional">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="listaNivelEducacional" type="tns:NivelEducacionalModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="NivelEducacionalModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaNivelIngresoElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaNivelIngresoResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaNivelIngreso" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaNivelIngreso">
+                <sequence>
+                    <element name="listaNivelIngreso" type="tns:NivelIngresoModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="NivelIngresoModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaOcupacionElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaOcupacionResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaOcupacion" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaOcupacion">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                    <element name="listaOcupacion" type="tns:OcupacionModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+            <complexType name="OcupacionModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaProfesionElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaProfesionResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaProfesion" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaProfesion">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="listaProfesion" type="tns:ProfesionModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="ProfesionModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaRegionElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaRegionResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaRegion" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaRegion">
+                <sequence>
+                    <element name="listaRegion" type="tns:RegionModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="RegionModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaSexoElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaSexoResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaSexo" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaSexo">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="listaSexo" type="tns:SexoModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="SexoModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaTipoCalleElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaTipoCalleResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaTipoCalle" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaTipoCalle">
+                <sequence>
+                    <element name="listaTipoCalle" type="tns:TipoCalleModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoCalleModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaTipoDireccionElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaTipoDireccionResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaTipoDireccion" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaTipoDireccion">
+                <sequence>
+                    <element name="listaTipoDireccion" type="tns:TipoDireccionModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoDireccionModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaTipoPersonaElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaTipoPersonaResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaTipoPersona" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaTipoPersona">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                    <element name="listaTipoPersona" type="tns:TipoPersonaModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoPersonaModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+            <element name="getListaTipoViviendaElement">
+                <complexType>
+                    <sequence/>
+                </complexType>
+            </element>
+            <element name="getListaTipoViviendaResponseElement">
+                <complexType>
+                    <sequence>
+                        <element name="result" type="tns:RetListaTipoVivienda" nillable="true"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="RetListaTipoVivienda">
+                <sequence>
+                    <element name="mensajeRetorno" type="string" nillable="true"/>
+                    <element name="codigoRetorno" type="string" nillable="true"/>
+                    <element name="listaTipoVivienda" type="tns:TipoViviendaModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </complexType>
+            <complexType name="TipoViviendaModel">
+                <sequence>
+                    <element name="descripcion" type="string" nillable="true"/>
+                    <element name="codigo" type="string" nillable="true"/>
+                </sequence>
+            </complexType>
+        </schema>
+    </types>
+    <message name="WSClientesParamFaseTres_getListaAFP">
+        <part name="parameters" element="tns0:getListaAFPElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaAFPResponse">
+        <part name="parameters" element="tns0:getListaAFPResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaActividad">
+        <part name="parameters" element="tns0:getListaActividadElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaActividadResponse">
+        <part name="parameters" element="tns0:getListaActividadResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaCodigosArea">
+        <part name="parameters" element="tns0:getListaCodigosAreaElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaCodigosAreaResponse">
+        <part name="parameters" element="tns0:getListaCodigosAreaResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaComuna">
+        <part name="parameters" element="tns0:getListaComunaElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaComunaResponse">
+        <part name="parameters" element="tns0:getListaComunaResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaEstadoCivil">
+        <part name="parameters" element="tns0:getListaEstadoCivilElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaEstadoCivilResponse">
+        <part name="parameters" element="tns0:getListaEstadoCivilResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaIsapre">
+        <part name="parameters" element="tns0:getListaIsapreElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaIsapreResponse">
+        <part name="parameters" element="tns0:getListaIsapreResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaLocalidad">
+        <part name="parameters" element="tns0:getListaLocalidadElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaLocalidadResponse">
+        <part name="parameters" element="tns0:getListaLocalidadResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaNacionalidad">
+        <part name="parameters" element="tns0:getListaNacionalidadElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaNacionalidadResponse">
+        <part name="parameters" element="tns0:getListaNacionalidadResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaNivelEducacional">
+        <part name="parameters" element="tns0:getListaNivelEducacionalElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaNivelEducacionalResponse">
+        <part name="parameters" element="tns0:getListaNivelEducacionalResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaNivelIngreso">
+        <part name="parameters" element="tns0:getListaNivelIngresoElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaNivelIngresoResponse">
+        <part name="parameters" element="tns0:getListaNivelIngresoResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaOcupacion">
+        <part name="parameters" element="tns0:getListaOcupacionElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaOcupacionResponse">
+        <part name="parameters" element="tns0:getListaOcupacionResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaProfesion">
+        <part name="parameters" element="tns0:getListaProfesionElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaProfesionResponse">
+        <part name="parameters" element="tns0:getListaProfesionResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaRegion">
+        <part name="parameters" element="tns0:getListaRegionElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaRegionResponse">
+        <part name="parameters" element="tns0:getListaRegionResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaSexo">
+        <part name="parameters" element="tns0:getListaSexoElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaSexoResponse">
+        <part name="parameters" element="tns0:getListaSexoResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaTipoCalle">
+        <part name="parameters" element="tns0:getListaTipoCalleElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaTipoCalleResponse">
+        <part name="parameters" element="tns0:getListaTipoCalleResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaTipoDireccion">
+        <part name="parameters" element="tns0:getListaTipoDireccionElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaTipoDireccionResponse">
+        <part name="parameters" element="tns0:getListaTipoDireccionResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaTipoPersona">
+        <part name="parameters" element="tns0:getListaTipoPersonaElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaTipoPersonaResponse">
+        <part name="parameters" element="tns0:getListaTipoPersonaResponseElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaTipoVivienda">
+        <part name="parameters" element="tns0:getListaTipoViviendaElement"/>
+    </message>
+    <message name="WSClientesParamFaseTres_getListaTipoViviendaResponse">
+        <part name="parameters" element="tns0:getListaTipoViviendaResponseElement"/>
+    </message>
+    <portType name="WSClientesParamFaseTres">
+        <operation name="getListaAFP">
+            <input message="tns:WSClientesParamFaseTres_getListaAFP"/>
+            <output message="tns:WSClientesParamFaseTres_getListaAFPResponse"/>
+        </operation>
+        <operation name="getListaActividad">
+            <input message="tns:WSClientesParamFaseTres_getListaActividad"/>
+            <output message="tns:WSClientesParamFaseTres_getListaActividadResponse"/>
+        </operation>
+        <operation name="getListaCodigosArea">
+            <input message="tns:WSClientesParamFaseTres_getListaCodigosArea"/>
+            <output message="tns:WSClientesParamFaseTres_getListaCodigosAreaResponse"/>
+        </operation>
+        <operation name="getListaComuna">
+            <input message="tns:WSClientesParamFaseTres_getListaComuna"/>
+            <output message="tns:WSClientesParamFaseTres_getListaComunaResponse"/>
+        </operation>
+        <operation name="getListaEstadoCivil">
+            <input message="tns:WSClientesParamFaseTres_getListaEstadoCivil"/>
+            <output message="tns:WSClientesParamFaseTres_getListaEstadoCivilResponse"/>
+        </operation>
+        <operation name="getListaIsapre">
+            <input message="tns:WSClientesParamFaseTres_getListaIsapre"/>
+            <output message="tns:WSClientesParamFaseTres_getListaIsapreResponse"/>
+        </operation>
+        <operation name="getListaLocalidad">
+            <input message="tns:WSClientesParamFaseTres_getListaLocalidad"/>
+            <output message="tns:WSClientesParamFaseTres_getListaLocalidadResponse"/>
+        </operation>
+        <operation name="getListaNacionalidad">
+            <input message="tns:WSClientesParamFaseTres_getListaNacionalidad"/>
+            <output message="tns:WSClientesParamFaseTres_getListaNacionalidadResponse"/>
+        </operation>
+        <operation name="getListaNivelEducacional">
+            <input message="tns:WSClientesParamFaseTres_getListaNivelEducacional"/>
+            <output message="tns:WSClientesParamFaseTres_getListaNivelEducacionalResponse"/>
+        </operation>
+        <operation name="getListaNivelIngreso">
+            <input message="tns:WSClientesParamFaseTres_getListaNivelIngreso"/>
+            <output message="tns:WSClientesParamFaseTres_getListaNivelIngresoResponse"/>
+        </operation>
+        <operation name="getListaOcupacion">
+            <input message="tns:WSClientesParamFaseTres_getListaOcupacion"/>
+            <output message="tns:WSClientesParamFaseTres_getListaOcupacionResponse"/>
+        </operation>
+        <operation name="getListaProfesion">
+            <input message="tns:WSClientesParamFaseTres_getListaProfesion"/>
+            <output message="tns:WSClientesParamFaseTres_getListaProfesionResponse"/>
+        </operation>
+        <operation name="getListaRegion">
+            <input message="tns:WSClientesParamFaseTres_getListaRegion"/>
+            <output message="tns:WSClientesParamFaseTres_getListaRegionResponse"/>
+        </operation>
+        <operation name="getListaSexo">
+            <input message="tns:WSClientesParamFaseTres_getListaSexo"/>
+            <output message="tns:WSClientesParamFaseTres_getListaSexoResponse"/>
+        </operation>
+        <operation name="getListaTipoCalle">
+            <input message="tns:WSClientesParamFaseTres_getListaTipoCalle"/>
+            <output message="tns:WSClientesParamFaseTres_getListaTipoCalleResponse"/>
+        </operation>
+        <operation name="getListaTipoDireccion">
+            <input message="tns:WSClientesParamFaseTres_getListaTipoDireccion"/>
+            <output message="tns:WSClientesParamFaseTres_getListaTipoDireccionResponse"/>
+        </operation>
+        <operation name="getListaTipoPersona">
+            <input message="tns:WSClientesParamFaseTres_getListaTipoPersona"/>
+            <output message="tns:WSClientesParamFaseTres_getListaTipoPersonaResponse"/>
+        </operation>
+        <operation name="getListaTipoVivienda">
+            <input message="tns:WSClientesParamFaseTres_getListaTipoVivienda"/>
+            <output message="tns:WSClientesParamFaseTres_getListaTipoViviendaResponse"/>
+        </operation>
+    </portType>
+    <binding name="WSClientesParamFaseTresSoapHttp" type="tns:WSClientesParamFaseTres">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getListaAFP">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaAFP"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaActividad">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaActividad"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaCodigosArea">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaCodigosArea"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaComuna">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaComuna"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaEstadoCivil">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaEstadoCivil"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaIsapre">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaIsapre"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaLocalidad">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaLocalidad"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaNacionalidad">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaNacionalidad"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaNivelEducacional">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaNivelEducacional"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaNivelIngreso">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaNivelIngreso"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaOcupacion">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaOcupacion"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaProfesion">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaProfesion"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaRegion">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaRegion"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaSexo">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaSexo"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaTipoCalle">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaTipoCalle"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaTipoDireccion">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaTipoDireccion"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaTipoPersona">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaTipoPersona"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getListaTipoVivienda">
+            <soap:operation soapAction="http://param.ws.fasetres.actualizadatos.bicevida.cl//getListaTipoVivienda"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="WSClientesParamFaseTres">
+        <port name="WSClientesParamFaseTresSoapHttpPort" binding="tns:WSClientesParamFaseTresSoapHttp">
+            <soap:address location="http://serpens.bicevida.cl/WSClientesParamFaseTres/WSClientesParamFaseTresSoapHttpPort"/>
+        </port>
+    </service>
+</definitions>

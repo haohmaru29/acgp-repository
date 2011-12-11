@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+      <afh:html>
+            <f:loadBundle basename="cl.bicevida.envionominas.view.resources.messages.general_es"
+                          var="msgs"/>
+            <afh:head title="#{msgs['bicevida.consulta_nominas.titulo'] }">
+                <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+                <afh:script source="test.js" ></afh:script>
+                
+            </afh:head>
+            <afh:body>
+                <af:form id="formNominas" >
+                    <af:panelBox text="#{msgs['bicevida.consulta_nominas.titulo'] }"
+                                 background="medium" width="770px"
+                                 icon="../../skins/informatica/CoreSkin/skin_images/boton_iso.gif">
+                        <afh:tableLayout width="98%" halign="center">
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:panelForm rows="3">
+                                        <af:inputText label="#{msgs['bicevida.consulta_nominas.lbl.lote'] }"
+                                                      value="#{mb_consultaNominasEstado.loteNomina}"
+                                                      maximumLength="200">
+                                        </af:inputText>
+                                        <af:inputText label="#{msgs['bicevida.consulta_nominas.lbl.ruttitular'] }"
+                                                      value="#{mb_consultaNominasEstado.rutTitular}">
+                                            <af:validator validatorId="RutValidator"/>
+                                        </af:inputText>
+                                        <af:selectInputDate label="#{msgs['bicevida.consulta_nominas.lbl.fechadesde'] }"
+                                                            value="#{mb_consultaNominasEstado.fechaDesde}"
+                                                            id="sitFechaDesde"
+                                                            validator="#{mb_consultaNominasEstado.validarFechas}"></af:selectInputDate>
+                                        
+                                        <af:selectOneChoice value="#{mb_consultaNominasEstado.tipoNominaSeleccionada}"
+                                                            label="#{msgs['bicevida.consulta_nominas.lbl.tiponomina'] }"
+                                                            unselectedLabel="#{msgs['bicevida.generales.opt.seleccione'] }">
+                                            <f:selectItems value="#{mb_consultaNominasEstado.tiposNomina}"
+                                                           id="sitTiposNomina"/>
+                                        </af:selectOneChoice>
+                                        <af:selectOneChoice value="#{mb_consultaNominasEstado.bancoProcesoSeleccionado}"
+                                                            label="#{msgs['bicevida.consulta_nominas.lbl.bancoproceso'] }"
+                                                            unselectedLabel="#{msgs['bicevida.generales.opt.seleccione'] }">
+                                            <f:selectItems value="#{mb_consultaNominasEstado.bancosProceso}"
+                                                           id="sitBancoProceso"/>
+                                        </af:selectOneChoice>
+                                        <af:selectInputDate label="#{msgs['bicevida.consulta_nominas.lbl.fechahasta'] }"
+                                                            value="#{mb_consultaNominasEstado.fechaHasta}"
+                                                            id="sitFechaHasta"
+                                                            validator="#{mb_consultaNominasEstado.validarFechas}"></af:selectInputDate>
+                                        <af:selectOneChoice value="#{mb_consultaNominasEstado.estadoNominaSeleccionado}"
+                                                            label="#{msgs['bicevida.consulta_nominas.lbl.estadonomina'] }"
+                                                            unselectedLabel="#{msgs['bicevida.generales.opt.seleccione'] }">
+                                            <f:selectItems value="#{mb_consultaNominasEstado.estadosNomina}"
+                                                           id="sitEstadoNomina"/>
+                                        </af:selectOneChoice>
+                                        <af:selectOneChoice value="#{mb_consultaNominasEstado.estadoTransaccionSeleccionado}"
+                                                            label="#{msgs['bicevida.consulta_nominas.lbl.estadotransaccion'] }"
+                                                            unselectedLabel="#{msgs['bicevida.generales.opt.seleccione'] }">
+                                            <f:selectItems value="#{mb_consultaNominasEstado.estadosTransaccion}"
+                                                           id="sitEstadoTransaccion"/>
+                                        </af:selectOneChoice>
+                                        
+                                    </af:panelForm>
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                        </afh:tableLayout>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:panelHorizontal halign="center">
+                            <af:commandButton text="#{msgs['bicevida.generales.btn.buscar'] }"
+                                              actionListener="#{mb_consultaNominasEstado.ejecutarBusqueda}"
+                                              blocking="true"/>
+                           <af:commandButton text="#{msgs['bicevida.generales.btn.limpiar'] }"
+                                  action="#{mb_consultaNominasEstado.limpiarFormulario}" 
+                                  blocking="true" immediate="true" >
+                                <af:resetActionListener  />     
+                            </af:commandButton>    
+                        </af:panelHorizontal>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:table emptyText="#{msgs['bicevida.generales.lbl.listavacia'] }"
+                                  value="#{mb_consultaNominasEstado.lista}"
+                                  var="fila"
+                                  rows="#{mb_consultaNominasEstado.registrosPagina}"
+                                  banding="row" bandingInterval="1"
+                                  width="100%" id="tabla_nominas">
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.codigonomina'] }"
+                                       formatType="text" 
+                                       inlineStyle="text-align:right;"
+                                       gridVisible="false">
+                                <af:outputText value="#{fila.nomina.id}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.folioproceso'] }"
+                                       formatType="text"
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.proceso.folioProcesoExterno}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.lote'] }"
+                                       formatType="text">
+                                <af:outputText value="#{fila.nomina.lote}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.origen'] }"
+                                       formatType="text">
+                                <af:outputText value="#{fila.nomina.origen.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.tiponomina'] }"
+                                       formatType="text" >
+                                       
+                                <af:outputText value="#{fila.nomina.tipo.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.estadonomina'] }"
+                                       formatType="text">
+                                <af:outputText value="#{fila.nomina.estado.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.numerotransaccion'] }"
+                                       formatType="text" 
+                                       inlineStyle="text-align:right;"
+                                       width="105">
+                                <af:outputText value=" #{fila.id}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.estadotransaccion'] }"
+                                       formatType="text">
+                                <af:outputText value="#{fila.estado.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.ruttitular'] }"
+                                       formatType="text" 
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.rut}-#{fila.dv}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.nombretitular'] }"
+                                       formatType="text">
+                                <af:outputText value="#{fila.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.tipocuenta'] }"
+                                       formatType="text">
+                                <af:outputText value="#{fila.tipoCuenta.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.numerocuenta'] }"
+                                       formatType="text"
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.cuenta}"/>
+                            </af:column>
+                            <af:column  headerText="#{msgs['bicevida.consulta_nominas.col.bancocuenta'] }"
+                                       formatType="text">
+                                <af:outputText value="#{fila.banco.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.monto'] }"
+                                       formatType="text" 
+                                       inlineStyle="text-align:left;">
+                                <af:outputText value="#{fila.monto}">
+                                    <af:convertNumber groupingUsed="true"/>
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.bancoproceso'] }"
+                                       formatType="text">
+                                <af:outputText value="#{fila.proceso.bancoProceso.banco.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.fechainicioproceso'] }"
+                                       formatType="text"
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.proceso.fechaCreacion}">
+                                    <f:convertDateTime pattern="dd-MM-yyyy" />
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.consulta_nominas.col.fechaestado'] }"
+                                       formatType="text"
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.fechaEstado}">
+                                    <f:convertDateTime pattern="dd-MM-yyyy" />
+                                </af:outputText>
+                            </af:column>
+                            <f:facet name="actions">
+                                <af:commandButton text="#{msgs['bicevida.generales.btn.descargaxls'] }"
+                                                  actionListener="#{MbExcelVisor.onClickGenerarExcel}"
+                                                  blocking="true">
+                                    <f:attribute name="nombre" value="consulta_estado_nominas"/>              
+                                    <f:attribute name="titulo" value="Número Nómina:Folio Proceso Externo:Lote:Origen:Tipo Nómina:Estado Nómina:Número Transacción:Estado Transacción:Rut Beneficiario:Nombre Beneficiario:Tipo Cuenta Beneficiario:Número Cuenta Beneficiario:Banco Beneficiario:Monto($):Banco Proceso:Fecha Inicio Proceso:Fecha Estado"/>
+                                </af:commandButton>
+                            </f:facet>
+                        </af:table>
+                    </af:panelBox>
+                </af:form>
+            </afh:body>
+        </afh:html>
+    </f:view>
+</jsp:root>

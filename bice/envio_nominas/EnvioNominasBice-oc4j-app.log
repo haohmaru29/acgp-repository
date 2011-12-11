@@ -1,0 +1,180 @@
+11/12/05 18:39:40.607 10.1.3.5.0 Started
+11/12/05 18:40:58.12 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/05 18:41:58.716 10.1.3.5.0 Started
+11/12/05 18:42:23.139 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/05 18:43:46.781 10.1.3.5.0 Started
+11/12/05 18:44:22.330 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/05 18:44:28.956 EnvioNominasWEB: Se ha forzado la interrupción de una conexión existente por el host remoto
+11/12/05 18:44:28.956 EnvioNominasWEB: Se ha forzado la interrupción de una conexión existente por el host remoto
+11/12/05 18:44:28.956 EnvioNominasWEB: Servlet error
+javax.servlet.jsp.JspException: Se ha forzado la interrupción de una conexión existente por el host remoto
+	at com.sun.faces.taglib.jsf_core.ViewTag.doEndTag(ViewTag.java:235)
+	at _app._envionominas._mantenedorCorreos_jspx._jspService(_mantenedorCorreos_jspx.java:428)
+	at com.orionserver[Oracle Containers for J2EE 10g (10.1.3.5.0) ].http.OrionHttpJspPage.service(OrionHttpJspPage.java:59)
+	at oracle.jsp.runtimev2.JspPageTable.service(JspPageTable.java:473)
+	at oracle.jsp.runtimev2.JspServlet.internalService(JspServlet.java:594)
+	at oracle.jsp.runtimev2.JspServlet.service(JspServlet.java:518)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:856)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.invoke(ServletRequestDispatcher.java:734)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.forwardInternal(ServletRequestDispatcher.java:391)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.unprivileged_forward(ServletRequestDispatcher.java:308)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.access$100(ServletRequestDispatcher.java:68)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher$2.oc4jRun(ServletRequestDispatcher.java:214)
+	at oracle.oc4j.security.OC4JSecurity.doPrivileged(OC4JSecurity.java:284)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.forward(ServletRequestDispatcher.java:219)
+	at com.sun.faces.context.ExternalContextImpl.dispatch(ExternalContextImpl.java:346)
+	at com.sun.faces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:152)
+	at oracle.adfinternal.view.faces.application.ViewHandlerImpl.renderView(ViewHandlerImpl.java:157)
+	at com.sun.faces.lifecycle.RenderResponsePhase.execute(RenderResponsePhase.java:107)
+	at com.sun.faces.lifecycle.LifecycleImpl.phase(LifecycleImpl.java:245)
+	at com.sun.faces.lifecycle.LifecycleImpl.render(LifecycleImpl.java:137)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:214)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ResourceFilterChain.doFilter(ResourceFilterChain.java:64)
+	at oracle.adfinternal.view.faces.webapp.AdfFacesFilterImpl._invokeDoFilter(AdfFacesFilterImpl.java:233)
+	at oracle.adfinternal.view.faces.webapp.AdfFacesFilterImpl._doFilterImpl(AdfFacesFilterImpl.java:202)
+	at oracle.adfinternal.view.faces.webapp.AdfFacesFilterImpl.doFilter(AdfFacesFilterImpl.java:123)
+	at oracle.adf.view.faces.webapp.AdfFacesFilter.doFilter(AdfFacesFilter.java:103)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.EvermindFilterChain.doFilter(EvermindFilterChain.java:15)
+	at oracle.adf.model.servlet.ADFBindingFilter.doFilter(ADFBindingFilter.java:162)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.invoke(ServletRequestDispatcher.java:642)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.forwardInternal(ServletRequestDispatcher.java:391)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.doProcessRequest(HttpRequestHandler.java:908)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:458)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.serveOneRequest(HttpRequestHandler.java:226)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:127)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:116)
+	at oracle.oc4j.network.ServerSocketReadHandler$SafeRunnable.run(ServerSocketReadHandler.java:260)
+	at oracle.oc4j.network.ServerSocketAcceptHandler.procClientSocket(ServerSocketAcceptHandler.java:234)
+	at oracle.oc4j.network.ServerSocketAcceptHandler.access$700(ServerSocketAcceptHandler.java:29)
+	at oracle.oc4j.network.ServerSocketAcceptHandler$AcceptHandlerHorse.run(ServerSocketAcceptHandler.java:879)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].util.ReleasableResourcePooledExecutor$MyWorker.run(ReleasableResourcePooledExecutor.java:298)
+	at java.lang.Thread.run(Thread.java:595)
+11/12/05 18:44:28.987 EnvioNominasWEB: Se ha forzado la interrupción de una conexión existente por el host remoto
+11/12/05 18:46:50.598 10.1.3.5.0 Started
+11/12/05 18:49:52.804 10.1.3.5.0 Started
+11/12/05 18:50:52.383 10.1.3.5.0 Started
+11/12/05 18:51:36.871 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/05 18:53:10.549 10.1.3.5.0 Started
+11/12/05 18:53:42.720 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/05 18:56:08.633 10.1.3.5.0 Started
+11/12/05 18:56:49.961 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/05 18:57:25.460 10.1.3.5.0 Started
+11/12/05 18:59:08.804 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/06 15:32:14.582 10.1.3.5.0 Started
+11/12/06 15:33:34.126 10.1.3.5.0 Started
+11/12/09 10:01:03.243 10.1.3.5.0 Started
+11/12/09 10:05:18.800 10.1.3.5.0 Started
+11/12/09 10:05:57.776 10.1.3.5.0 Started
+11/12/09 10:13:12.114 10.1.3.5.0 Started
+11/12/09 10:17:50.488 10.1.3.5.0 Started
+11/12/09 10:22:16.943 10.1.3.5.0 Started
+11/12/09 10:25:07.20 10.1.3.5.0 Started
+11/12/09 10:28:43.655 10.1.3.5.0 Started
+11/12/09 10:31:31.720 10.1.3.5.0 Started
+11/12/09 10:37:51.845 10.1.3.5.0 Started
+11/12/09 10:39:47.343 10.1.3.5.0 Started
+11/12/09 10:45:00.436 10.1.3.5.0 Started
+11/12/09 10:57:55.382 10.1.3.5.0 Started
+11/12/09 11:13:39.879 10.1.3.5.0 Started
+11/12/09 11:20:04.946 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 11:24:33.841 10.1.3.5.0 Started
+11/12/09 11:25:31.91 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 11:26:34.389 10.1.3.5.0 Started
+11/12/09 11:30:47.429 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 12:00:31.255 10.1.3.5.0 Started
+11/12/09 12:01:23.726 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 12:12:20.993 10.1.3.5.0 Started
+11/12/09 12:21:55.858 10.1.3.5.0 Started
+11/12/09 12:28:52.753 10.1.3.5.0 Started
+11/12/09 12:38:22.256 10.1.3.5.0 Started
+11/12/09 14:15:18.25 10.1.3.5.0 Started
+11/12/09 14:17:06.670 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 14:18:36.75 10.1.3.5.0 Started
+11/12/09 14:22:04.767 10.1.3.5.0 Started
+11/12/09 14:23:35.192 10.1.3.5.0 Started
+11/12/09 14:25:49.120 10.1.3.5.0 Started
+11/12/09 14:34:40.555 10.1.3.5.0 Started
+11/12/09 14:35:12.601 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 14:36:45.446 10.1.3.5.0 Started
+11/12/09 14:38:29.422 10.1.3.5.0 Started
+11/12/09 14:40:01.606 10.1.3.5.0 Started
+11/12/09 14:43:31.472 10.1.3.5.0 Started
+11/12/09 14:49:14.247 10.1.3.5.0 Started
+11/12/09 14:50:34.828 10.1.3.5.0 Started
+11/12/09 14:58:51.918 10.1.3.5.0 Started
+11/12/09 15:01:22.812 10.1.3.5.0 Started
+11/12/09 15:09:40.652 10.1.3.5.0 Started
+11/12/09 15:13:22.284 10.1.3.5.0 Started
+11/12/09 15:16:27.605 10.1.3.5.0 Started
+11/12/09 15:16:44.277 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 15:18:43.170 10.1.3.5.0 Started
+11/12/09 15:22:56.610 10.1.3.5.0 Started
+11/12/09 15:24:27.736 10.1.3.5.0 Started
+11/12/09 15:28:29.510 10.1.3.5.0 Started
+11/12/09 15:29:26.761 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 15:30:23.402 10.1.3.5.0 Started
+11/12/09 15:30:43.794 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 15:33:36.970 10.1.3.5.0 Started
+11/12/09 15:34:35.644 10.1.3.5.0 Started
+11/12/09 15:36:10.319 10.1.3.5.0 Started
+11/12/09 15:37:30.529 10.1.3.5.0 Started
+11/12/09 15:47:30.903 10.1.3.5.0 Started
+11/12/09 15:49:46.761 10.1.3.5.0 Started
+11/12/09 15:55:21.930 10.1.3.5.0 Started
+11/12/09 15:56:56.463 10.1.3.5.0 Started
+11/12/09 16:02:53.252 10.1.3.5.0 Started
+11/12/09 16:04:25.945 10.1.3.5.0 Started
+11/12/09 16:05:17.869 10.1.3.5.0 Started
+11/12/09 16:06:12.72 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/09 16:07:51.367 10.1.3.5.0 Started
+11/12/10 15:45:59.62 10.1.3.5.0 Started
+11/12/10 15:49:03.504 10.1.3.5.0 Started
+11/12/10 15:53:40.576 10.1.3.5.0 Started
+11/12/10 15:54:36.264 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 15:55:58.893 10.1.3.5.0 Started
+11/12/10 15:57:10.803 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 15:59:48.837 10.1.3.5.0 Started
+11/12/10 16:00:48.388 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 16:01:33.785 10.1.3.5.0 Started
+11/12/10 16:02:06.9 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 16:03:24.129 10.1.3.5.0 Started
+11/12/10 16:08:24.868 10.1.3.5.0 Started
+11/12/10 16:09:11.167 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 16:09:11.870 EnvioNominasWEB: Servlet error
+javax.servlet.jsp.JspException: Cannot find FacesContext
+	at javax.faces.webapp.UIComponentTag.doStartTag(UIComponentTag.java:427)
+	at oracle.adf.view.faces.webapp.UIXComponentTag.doStartTag(UIXComponentTag.java:85)
+	at _CoreMenu_jspx._jspService(_CoreMenu_jspx.java:47)
+	at com.orionserver[Oracle Containers for J2EE 10g (10.1.3.5.0) ].http.OrionHttpJspPage.service(OrionHttpJspPage.java:59)
+	at oracle.jsp.runtimev2.JspPageTable.service(JspPageTable.java:473)
+	at oracle.jsp.runtimev2.JspServlet.internalService(JspServlet.java:594)
+	at oracle.jsp.runtimev2.JspServlet.service(JspServlet.java:518)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:856)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ResourceFilterChain.doFilter(ResourceFilterChain.java:64)
+	at oracle.adf.model.servlet.ADFBindingFilter.doFilter(ADFBindingFilter.java:162)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.invoke(ServletRequestDispatcher.java:644)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.ServletRequestDispatcher.forwardInternal(ServletRequestDispatcher.java:391)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.doProcessRequest(HttpRequestHandler.java:908)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:458)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.serveOneRequest(HttpRequestHandler.java:226)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:127)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].server.http.HttpRequestHandler.run(HttpRequestHandler.java:116)
+	at oracle.oc4j.network.ServerSocketReadHandler$SafeRunnable.run(ServerSocketReadHandler.java:260)
+	at oracle.oc4j.network.ServerSocketAcceptHandler.procClientSocket(ServerSocketAcceptHandler.java:234)
+	at oracle.oc4j.network.ServerSocketAcceptHandler.access$700(ServerSocketAcceptHandler.java:29)
+	at oracle.oc4j.network.ServerSocketAcceptHandler$AcceptHandlerHorse.run(ServerSocketAcceptHandler.java:879)
+	at com.evermind[Oracle Containers for J2EE 10g (10.1.3.5.0) ].util.ReleasableResourcePooledExecutor$MyWorker.run(ReleasableResourcePooledExecutor.java:298)
+	at java.lang.Thread.run(Thread.java:595)
+11/12/10 16:10:38.482 10.1.3.5.0 Started
+11/12/10 16:11:01.186 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 16:11:48.870 10.1.3.5.0 Started
+11/12/10 16:14:17.390 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 16:14:57.464 10.1.3.5.0 Started
+11/12/10 16:15:37.810 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 16:16:36.443 10.1.3.5.0 Started
+11/12/10 16:17:20.571 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 16:19:48.994 10.1.3.5.0 Started
+11/12/10 16:21:23.145 10.1.3.5.0 Started
+11/12/10 16:22:01.383 EnvioNominasWEB: 10.1.3.5.0 Started
+11/12/10 16:23:58.344 10.1.3.5.0 Started
+11/12/10 16:27:20.754 10.1.3.5.0 Started

@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<service name="ArchivosNomina_BD" guid="2D3D73D08AE911E0AF108D90013CD2BA" qname="EnvioNominas.ArchivosNomina_BD" status="ENABLED" serviceType="OutboundAdapterService" serviceSubType="DB" typeDescription="oracle.tip.esb.console.servicetype.outbounddbadapterservice" isWSDLEditable="false" soapEndpointStatus="DISABLED">
+   <versionInfo>
+      <ID>1323301534671</ID>
+      <lastModifiedTime>Wed Dec 07 20:45:34 ART 2011</lastModifiedTime>
+      <lastModifiedUser>JDev_EnvioNominasBice_EnvioNominasESB</lastModifiedUser>
+   </versionInfo>
+   <parent guid="A7F47FD0190E11E0BF9FD5B49DC5D99D" qname="EnvioNominas" type="system"/>
+   <serviceDefinition>
+      <wsdlURL>ArchivosNomina_BD.wsdl</wsdlURL>
+      <portType xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/ArchivosNomina_BD/">tns:ArchivosNomina_BD_ptt</portType>
+      <endpointDefinition>
+         <concreteWSDLURL>/esb/wsil/EnvioNominas/ArchivosNomina_BD?wsdl</concreteWSDLURL>
+         <soapEndpointURI>http://canis.bicevida.cl:7777/event/EnvioNominas/ArchivosNomina_BD</soapEndpointURI>
+      </endpointDefinition>
+   </serviceDefinition>
+   <operations>
+      <operationInfo guid="2D3FE4D08AE911E0AF108D90013CD2BA" qname="EnvioNominas.ArchivosNomina_BD.insert" wsdlOperation="insert" mepDisplayName="Unidireccional" mep="OneWay">
+         <request validate="false" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ArchivosNominaBD" element="tns:EvnmArchivosNominasCollection"/>
+      </operationInfo>
+   </operations>
+</service>

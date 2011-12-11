@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html">
+  <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+              doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+              doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <afh:html>
+      <afh:head title="bienvenida">
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=windows-1252"/>
+      </afh:head>
+      <afh:body>
+        <f:loadBundle basename="cl.bicevida.core.view.resources.messages.general"
+                      var="msgs"/>
+        <af:form>
+
+          <jsp:include page="/CoreMenu.jspx" />
+
+          <af:panelBox background="medium" text="#{msgs['bienvenida.titulo']}"
+                       width="770px">
+            <af:panelForm>
+              <f:facet name="footer">
+                <h:panelGroup>
+                  <af:commandButton text="#{msgs['generales.cmdSiguinte']}"
+                                    action="firstPage" blocking="true"/>
+                  <af:commandButton text="Generar Excepción"
+                                    actionListener="#{backing_Bienvenida.onClickGenerarExcepcion}"/>
+                </h:panelGroup>
+              </f:facet>
+              <h:outputFormat value="#{msgs['bienvenida.texto']}"
+                              styleClass="AFLabelText">
+                <f:param value="#{msgs['generales.cmdSiguinte']}"
+                         name="buttonName"/>
+              </h:outputFormat>
+            </af:panelForm>
+          </af:panelBox>
+          <f:verbatim>
+            <p>
+               
+            </p>
+          </f:verbatim>
+        </af:form>
+      </afh:body>
+    </afh:html>
+  </f:view>
+</jsp:root>

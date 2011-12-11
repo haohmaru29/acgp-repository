@@ -1,0 +1,1102 @@
+af|body {
+  background-color:white; 
+}
+
+.AFDarkForeground:alias {color:#666666;}
+.AFMediumForeground:alias {color:#666666;}
+.AFLightForeground:alias {color:#666666;}
+
+.AFDefaultFont:alias {
+  font-size: 11px;
+  font-weight: normal;
+  color: rgb(25, 50, 95);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.AFSmallFont:alias {
+  font-size: 10px;
+  font-weight: normal;
+  color: rgb(25, 50, 95);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/** inicio - OutputText  */
+.BvOutputText {
+  font-size: 11px;
+  font-weight: normal;
+  text-align: left;
+  color: rgb(25, 50, 95);
+}
+
+/** fino - OutputText  */
+
+AFHeaderText:alias {
+  font-size: 12px;    
+}
+
+/** inicio - Color, texto y diseño para controles de ingreso FieldText */
+
+.AFLabelText {
+  font-size: 11px;
+  font-weight: bold;
+  text-align: left;
+  color: rgb(25, 50, 95);
+  border: 0px;
+}
+
+/** controles de ingreso de informacion */
+.AFFieldText {
+    background-color:#F3F8FC; 
+    color:#666666 ;     
+    border: 1px solid  #ABCBE4;
+}
+
+.AFFieldTextReadOnly {
+    font-size: 11px;
+    color:#666666 ;     
+    border: 1px solid  #ABCBE4;
+}
+
+.AFFieldTextDisabled {
+    background-color:#F7F7F7; 
+    color:#999999 ;     
+    border: 1px solid  #CDCDCD;
+}
+/** fin - Color, texto y diseño para controles de ingreso FieldText */
+
+
+/** checkbox 
+af|selectBooleanCheckbox::read-only-unchecked-icon {
+   content: url(/skins/BvNetLook_2009/skin_images/icons/checkrn.png);
+}
+af|selectBooleanCheckbox::read-only-checked-icon {
+    content: url(/skins/BvNetLook_2009/skin_images/icons/checkrc.png);
+}
+af|selectBooleanCheckbox::disabled-only-unchecked-icon {
+    content: url(/skins/BvNetLook_2009/skin_images/icons/checkdn.png);
+}
+af|selectBooleanCheckbox::disabled-only-checked-icon {
+    content: url(/skins/BvNetLook_2009/skin_images/icons/checkdc.png);
+}
+*/
+
+/** controles de fecha */
+af|selectInputDate::launch-icon {
+     content: url(/skins/BvNetLook_2009/skin_images/icons/calc.png);
+}
+
+af|selectInputDate::launch-icon:rtl {
+     content: url(/skins/BvNetLook_2009/skin_images/icons/calc.png);
+}
+
+af|chooseDate::prev-icon {
+  content: url(/skins/BvNetLook_2009/skin_images/icons/tnavp.gif);
+}
+
+af|chooseDate::next-icon {
+  content: url(/skins/BvNetLook_2009/skin_images/icons/tnavn.gif);
+}
+
+af|chooseDate::prev-disabled-icon {
+  content: url(/skins/BvNetLook_2009/skin_images/icons/tnavpd.gif);
+}
+
+af|chooseDate::next-disabled-icon {
+  content: url(/skins/BvNetLook_2009/skin_images/icons/tnavnd.gif);
+}
+
+
+.OraInlineInfoText{
+  font-size: 10px;
+  font-weight: normal;
+  text-align: left;
+}
+
+
+
+/** Begin PanelBox */
+/** generic background for light panelBox's or shuttles **/
+    
+    .AFPanelBoxBody:alias {
+      background-color: white;
+    }
+    af|panelBox::header {
+      color: #40759E;
+      font-weight: bolder;
+      font-size: 14px;
+    }    
+    af|panelBox::body{
+      padding-top: 0px;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+    
+    .x10{
+         vertical-align: center;
+    }
+
+        /*** Begin PanelBox Medium ***/
+
+        /* Begin Encabezado del Panel */
+        af|panelBox::medium-header-start-icon {
+          content: url(/skins/BvNetLook_2009/skin_images/panelBox/medium/headerStart.png);
+          width:12px;
+          height:47px;            
+        }
+        
+        af|panelBox::medium-header-end-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/headerEnd.png);
+          width:12px;
+          height:47px;
+        }
+        
+        af|panelBox::medium-header-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/headerBackground.png);
+          width:1px;
+          height:47px;
+        }
+        /* End Encabezado del Panel */
+        
+        /* Begin Header Right-Left del Panel */
+        af|panelBox::medium-top-start-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/headerStart.png);
+          width:18px;
+          height:53px;
+        }
+        
+        af|panelBox::medium-top-end-icon {
+         content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/headerEnd.png);
+          width:12px;
+          height:47px;
+        }
+        
+        af|panelBox::medium-top-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/headerBackground.png);
+          width:1px;
+          height:47px;
+        }
+        /* End Header Right-Left del Panel */
+    
+        /* Begin Inferior del Panel */
+        af|panelBox::medium-bottom-start-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/bottomStart.png);    
+          vertical-align: top;
+          width:12px;
+          height:17px;
+        }
+        
+        af|panelBox::medium-bottom-end-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/bottomEnd.png);    
+          vertical-align: top;
+          width:12px;
+          height:17px;
+        }
+        
+        af|panelBox::medium-bottom-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/bottomBackground.png);
+          vertical-align: top;
+          width:1px;
+          height:17px;
+        }
+        /* End Inferior del Panel */
+        
+        /* Begin Lateral del Panel */
+        af|panelBox::medium-start-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/startBackground.png);
+          vertical-align: top;
+          width:12px;
+          height:1px;
+        }
+        
+        af|panelBox::medium-end-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/medium/endBackground.png);
+          vertical-align: top;
+          width:12px;
+          height:1px;
+        }
+        /* End Lateral del Panel */
+        /*** End PanelBox Medium ***/
+        
+        
+        /*** Begin PanelBox Dark ***/
+        AFPanelBoxDarkBackground:alias {
+           
+        }
+        
+        af|panelBox::dark {
+           
+        }
+        /* Begin Encabezado del Panel */
+        af|panelBox::dark-header-start-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/headerStart.png);
+          width:12px;
+          height:47px; 
+        }
+        
+        af|panelBox::dark-header-end-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/headerEnd.png);
+          width:12px;
+          height:47px;
+        }
+        
+        af|panelBox::dark-header-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/headerBackground.png);
+          width:1px;
+          height:47px;
+        }
+        /* End Encabezado del Panel */
+        /* Begin Header Right-Left del Panel */
+        af|panelBox::dark-top-start-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/headerStart.png);
+          width:12px;
+          height:47px;
+        }
+        
+        af|panelBox::dark-top-end-icon {
+         content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/headerEnd.png);
+          width:12px;
+          height:47px;
+        }
+        
+        af|panelBox::dark-top-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/headerBackground.png);
+          width:1px;
+          height:47px;
+        }
+        /* End Header Right-Left del Panel */
+    
+        /* Begin Inferior del Panel */
+        af|panelBox::dark-bottom-start-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/bottomStart.png);    
+          vertical-align: top;
+          width:12px;
+          height:17px;
+        }
+        
+        af|panelBox::dark-bottom-end-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/bottomEnd.png);    
+          vertical-align: top;
+          width:12px;
+          height:17px;
+        }
+        
+        af|panelBox::dark-bottom-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/bottomBackground.png);
+          vertical-align: top;
+          width:1px;
+          height:17px;
+        }
+        /* End Inferior del Panel */
+        
+        /* Begin Lateral del Panel */
+        af|panelBox::dark-start-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/startBackground.png);
+          vertical-align: top;
+          width:12px;
+          height:1px;
+        }
+        
+        af|panelBox::dark-end-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/dark/endBackground.png);
+          vertical-align: top;
+          width:12px;
+          height:1px;
+        }
+        /* End Lateral del Panel */    
+        /*** End PanelBox Dark ***/        
+        
+        
+        /*** Panel Box Light ***/
+        /* Begin Encabezado del Panel */
+        af|panelBox::light-header-start-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/headerStart.png);
+          width:12px;
+          height:47px; 
+        }
+        
+        af|panelBox::light-header-end-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/headerEnd.png);
+          width:12px;
+          height:47px;
+        }
+        
+        af|panelBox::light-header-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/headerBackground.png);
+          width:1px;
+          height:47px;
+        }
+        /* End Encabezado del Panel */
+        
+        /* Begin Header Right-Left del Panel */
+        af|panelBox::light-top-start-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/headerStart.png);
+          vertical-align: top;
+          width:12px;
+          height:47px;
+        }
+        
+        af|panelBox::light-top-end-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/headerEnd.png);
+          vertical-align: top;
+          width:12px;
+          height:47px;
+        }
+        
+        af|panelBox::light-top-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/headerBackground.png);
+          vertical-align: top;
+          width:1px;
+          height:47px;
+        }
+        /* End Header Right-Left del Panel */
+    
+        /* Begin Inferior del Panel */
+        af|panelBox::light-bottom-start-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/bottomStart.png);    
+          vertical-align: top;
+          width:12px;
+          height:17px;
+        }
+        
+        af|panelBox::light-bottom-end-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/bottomEnd.png);    
+          vertical-align: top;
+          width:12px;
+          height:17px;
+        }
+        
+        af|panelBox::light-bottom-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/bottomBackground.png);
+          vertical-align: top;
+          width:1px;
+          height:17px;
+        }
+        /* End Inferior del Panel */
+        
+        /* Begin Lateral del Panel */
+        af|panelBox::light-start-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/startBackground.png);
+          vertical-align: top;
+          width:12px;
+          height:1px;
+        }
+        
+        af|panelBox::light-end-background-icon {
+          content:url(/skins/BvNetLook_2009/skin_images/panelBox/light/endBackground.png);
+          vertical-align: top;
+          width:12px;
+          height:1px;
+        }
+        /* End Lateral del Panel */
+        
+        
+        
+/** End PanelBox */
+
+
+/** Begin Table **/
+
+    
+    .AFTableCellDataBackgroundColor:alias {
+      background-color: white;
+    }
+    
+    .AFTableCellDataBandedBackgroundColor:alias {
+      background-color: white;
+    }
+
+    
+    /** Tabla contenido **/
+    af|table::content {
+        border: 1px solid  #ABCBE4;
+    	padding: 6px;
+        font-size: 11px;
+    }
+    
+    /** Iconos de navegacion de datos **/
+    af|selectRangeChoiceBar::prev-icon    {
+      content: url(/skins/BvNetLook_2009/skin_images/table/tablePrev.gif);
+    }
+    
+    af|selectRangeChoiceBar::next-icon    {
+      content: url(/skins/BvNetLook_2009/skin_images/table/tableNext.gif);
+    }
+    
+    af|selectRangeChoiceBar::prev-disabled-icon    {
+      content: url(/skins/BvNetLook_2009/skin_images/table/tablePrevD.gif);
+    }
+    
+    af|selectRangeChoiceBar::next-disabled-icon    {
+       content: url(/skins/BvNetLook_2009/skin_images/table/tableNextD.gif);
+    }
+    
+    
+    /** Tabla Barra de control de navegacion **/
+     af|table::control-bar-top    {
+      border: 1px solid  #BFD8EC;
+      font-size: 12px;
+      height:25px;
+      text-decoration: none;
+      background-color: #DEECF6;
+    }
+    
+    af|table::control-bar-top:link    {
+      font-size: 12px;
+      height:25px;
+      text-decoration: none;
+      background-color: #E9E7D0;
+    }
+    
+    af|table::sub-control-bar   {
+       border: 1px solid  #BFD8EC;
+      font-size: 12px;
+      height:25px;
+      text-decoration: none;
+    }
+    
+    af|table::sub-control-bar:link   {
+      font-size: 12px;
+      height:25px;
+      text-decoration: none;
+    }
+    
+    af|table::control-bar-bottom    {
+       border: 1px solid  #BFD8EC;
+      height:25px;
+      background-color: #DEECF6;
+    }
+    
+    /** Cabecera **/
+    af|column::header-text { 
+      border: 1px solid  #BFD8EC;
+      font:  bold;
+      height:16px;
+      font-size: 11px;
+      color: #40759D;
+      background-color: #DEECF5;
+    }
+
+    af|column::header-number { 
+      border: 1px solid  #BFD8EC;
+      font:  bold;
+      height:16px;
+      font-size: 11px;
+      color: #40759D;
+      background-color: #DEECF5;
+    }
+
+    af|column::header-icon {
+      border: 1px solid  #BFD8EC;
+      font:  bold;
+      height:16px;
+      font-size: 11px;
+      color: #40759D;
+      background-color: #DEECF5;
+    }
+
+    /** Cabecera Ordenable **/
+    af|column::sortable-header-text {
+      border: 1px solid  #BFD8EC;
+      font:  bold;
+      height:16px;
+      font-size: 11px;
+      color: #40759D;
+      background-color: #DEECF5;
+    }
+
+    af|column::sortable-header-number {
+      border: 1px solid  #BFD8EC;
+      font:  bold;
+      height:16px;
+      font-size: 11px;
+      color: #40759D;
+      background-color: #DEECF5;
+    }
+
+    af|column::sortable-header-icon {
+      border: 1px solid  #BFD8EC;
+      font:  bold;
+      height:16px;
+      font-size: 11px;
+      color: #40759D;
+      background-color: #DEECF5;
+    }
+    
+     /** Cabecera Iconos de Ordenamiento **/
+    af|column::sort-ascend-icon {
+        content: url(/skins/BvNetLook_2009/skin_images/table/asort.gif);
+    }
+    
+    af|column::sort-descend-icon {
+        content: url(/skins/BvNetLook_2009/skin_images/table/dsort.gif); 
+    }
+    
+     /** Celdas de contenido **/
+    af|column::cell-number {
+      border: 1px solid  #ABCBE4;
+      font:  bold;
+      font-size: 11px;
+      color: #666666;
+      background-color: white;
+    }
+
+    af|column::cell-number-band {
+      border: 1px solid  #ABCBE4;
+      font:  bold;
+      font-size: 11px;
+      color: #666666;
+      background-color: white;
+    }
+
+    af|column::cell-icon-format {
+      border: 1px solid  #ABCBE4;
+      font:  bold;
+      font-size: 11px;
+      color: #666666;
+      background-color: white;
+    }
+
+    af|column::cell-icon-format-band {
+      border: 1px solid  #ABCBE4;
+      font:  bold;
+      font-size: 11px;
+      color: #666666;
+      background-color: white;
+    }
+
+    af|column::cell-text {
+      border: 1px solid  #ABCBE4;
+      font:  bold;
+      font-size: 11px;
+      color: #666666;
+      background-color: white;
+    }
+
+    af|column::cell-text-band {
+      border: 1px solid  #ABCBE4;
+      font:  bold;
+      font-size: 11px;
+      color: #666666;
+      background-color: white;
+    }
+
+    /** Footer de la tabla **/    
+    af|table::column-footer {
+        BACKGROUND-COLOR: #DEECF5;
+        color: #40759D;
+        font:  bold;
+        font-size: 11px;
+    }    
+    
+    
+
+/** End Table **/
+
+
+.MyLinkHoverColor:alias { color:yellow; }
+
+.AFDarkBackground:alias { background-color:#FFFFFF; }
+.AFMediumBackground:alias { background-color:#FFFFFF; }
+.AFLightBackground:alias { background-color:#FFFFFF; }
+
+.AFLinkForeground:alias {color:#19325F;}
+
+
+/*** Begin panelList ***/
+    af|panelList{
+      font-size: 11px;
+    }
+    
+    af|panelList::link {
+      font-size: 11px;
+    }
+/*** End panelList ***/
+
+.OraInlineInfoText {
+  font-size: 10px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.OraLink {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.OraLink:link{
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.OraLink:active{
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.OraLink:visited{
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.OraALinkText{
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.OraNavBarActiveLink{
+ font-size: 10px;
+}
+
+.OraNavBarInactiveLink{
+ font-size: 10px;
+}
+
+.OraTipLabel{
+    color: rgb(25, 50, 95);
+}
+
+.p_OraHideShowDisclosedSymbol{
+    color: rgb(25, 50, 95);
+}
+
+.OraTipText{
+    color: rgb(25, 50, 95);
+}
+
+
+af|panelForm::label-cell {
+  -ora-rule-ref: selector(".AFStartTextAlign:alias");
+}
+
+af|panelForm::body {
+     padding-left: 0px;
+     padding-right: 0px;
+     margin-left: 0px;
+     margin-right: 0px;
+     vertical-align: bottom;
+}
+
+.AFLabelCell {
+  font-size: 10px;
+  font-weight: normal;    
+}
+
+
+/** =================================================================  **/
+
+/** BUTTON STYLES. Notice the right to left icons are specified with the
+:rtl pseudo-class. If :rtl icons are not specified, we default to non-:rtl icons. **/
+
+    /** colores y textos para botones activos **/
+    .AFButtonServerText:alias {background-color: #A8E2F4; color: #3C749F; font-weight: bold; font-size: 11px}
+    
+    
+    /* colores y textos para botones desabilitados */
+    .AFButtonServerTextDisabled:alias {background-color: #DDDDDD; color: #9A9A9A; font-weight: bold; font-size: 11px}
+    
+    /* Button start icons (left and right) depending on language settings */
+    .AFButtonStartIcon:alias {content:url(/skins/BvNetLook_2009/skin_images/button/start.png); width:9px; height:25px}
+    .AFButtonStartIcon:alias:rtl {content:url(/skins/BvNetLook_2009/skin_images/button/start.png); width:9px; height:25px}
+    
+    /* Button end icons (left and right) depending on language settings */
+    .AFButtonEndIcon:alias {content:url(/skins/BvNetLook_2009/skin_images/button/end.png); width:9px; height:25px}
+    .AFButtonEndIcon:alias:rtl {content:url(/skins/BvNetLook_2009/skin_images/button/end.png); width:9px; height:25px}
+    
+    /* Button top background icons (left and right) depending on language settings */
+    .AFButtonTopBackgroundIcon:alias {content:url(/skins/BvNetLook_2009/skin_images/button/topBackground.png); width:1px; height:4px}
+    .AFButtonTopBackgroundIcon:alias:rtl {content:url(/skins/BvNetLook_2009/skin_images/button/topBackground.png); width:1px; height:4px}
+    
+    /* Button bottom background icons (left and right) depending on language settings */
+    .AFButtonBottomBackgroundIcon:alias {content:url(/skins/BvNetLook_2009/skin_images/button/bottomBackground.png); width:1px; height:4px}
+    .AFButtonBottomBackgroundIcon:alias:rtl {content:url(/skins/BvNetLook_2009/skin_images/button/bottomBackground.png); width:1px; height:4px}
+    
+    
+    /* Button icons for disabled buttons (left and right) depending on language settings */
+    .AFButtonDisabledStartIcon:alias {content:url(/skins/BvNetLook_2009/skin_images/button/disStart.png); width:9px; height:25px}
+    .AFButtonDisabledStartIcon:alias:rtl {content:url(/skins/BvNetLook_2009/skin_images/button/disStart.png); width:9px; height:25px}
+    
+    .AFButtonDisabledEndIcon:alias {content:url(/skins/BvNetLook_2009/skin_images/button/disEnd.png); width:9px; height:25px}
+    .AFButtonDisabledEndIcon:alias:rtl {content:url(/skins/BvNetLook_2009/skin_images/button/disEnd.png); width:9px; height:25px}
+    
+    .AFButtonDisabledTopBackgroundIcon:alias {content:url(/skins/BvNetLook_2009/skin_images/button/disTopBackground.png); width:1px; height:4px}
+    .AFButtonDisabledBottomBackgroundIcon:alias {content:url(/skins/BvNetLook_2009/skin_images/button/disBottomBackground.png); width:1px; height:4px}
+/*** End Button ***/
+
+
+
+/** showOneTab **/
+/** ---------- **/
+/** .AFShowOneTab:alias is included in af|showOneTab::orientation-top and 
+    af|showOneTab::orientation-bottom which are the styles on the table. **/
+    .AFShowOneTab:alias {
+      background-color:#FFFFFF; 
+      text-align:center;
+      white-space: nowrap; 
+    }
+    /** make the top tab bar have a solid border underneath **/
+    af|showOneTab::orientation-top {
+      border-bottom: 1px solid #808EA6;
+    }
+    /** make the bottom tab bar have a solid border on top **/
+    af|showOneTab::orientation-bottom {
+      border-top: 1px solid #808EA6;
+    }
+    
+    af|showOneTab::separator {
+      margin-width:4px;
+      border-top: #BB95BB; solid 2pt ;
+      border-bottom: #BB95BB; solid 2pt ;
+      BACKGROUND-COLOR: white;
+      PADDING-LEFT: 1px;
+    }
+    
+    af|showOneTab::tab {
+      padding:2px 8px;
+      font-size: 11px;
+      background-color: rgb(230, 233, 238);
+      border-left: solid 1pt #808EA6;
+      border-top: solid 1pt #808EA6;
+      border-right: solid 1pt #808EA6;
+      font-weight: bold;
+      white-space: nowrap; 
+    }
+    
+    af|showOneTab::tab-link {
+      padding:8px 2px; 
+      font-size: 11px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    af|showOneTab::tab-selected {
+      padding:2px 8px; 
+      font-size: 11px;
+      background-color: rgb(204, 210, 220);
+      border-left: solid 1pt #808EA6;
+      border-top: solid 1pt #808EA6;
+      border-right: solid 1pt #808EA6;
+      font-weight: bold;
+      color: rgb(25, 50, 95);
+      white-space: nowrap; 
+    }      
+    
+    af|showOneTab::tab-selected-link  {
+      padding:2px 8px; 
+      font-size: 11px;
+      font-weight: bold;
+      color: rgb(25, 50, 95);
+      text-decoration: none;
+    }          
+    
+    af|showOneTab::tab-link:hover {
+      color: #808EA6;
+      font-weight: bold;
+    }
+    
+    af|showOneTab::tab-selected-link:hover  {
+      color: #808EA6;
+      font-weight: bold;
+    }
+    
+    /* put some space in the
+    first cell */
+    af|showOneTab::cell-start {
+      background-color:transparent; 
+      width:0%;
+    }
+    
+    af|showOneTab::cell-end {
+       background-color:transparent; 
+       width:100%;
+    }
+    /** put some space between the tabs and the body */
+    af|showOneTab::body {
+      background-color: white;
+      padding-left: 0px;
+      padding-right: 0px; 
+      padding-top: 5px;
+    }
+/*** End showOneTab ***/
+
+/** menuTabs **/
+/** -------- **/
+/** You can create borders, and have image-free tabs, or you can use the
+    icon keys (e.g., af|menuTabs::selected-start-icon)to create tabs with
+    rounded borders. The icons are used below,
+    but you can comment them out if you want. */
+/** this isn't needed when we are using icons for the tabs(but the padding helps!)
+    .AFTabBarItem:alias
+    {
+      border-style:solid; 
+      border-color:#5D025E;
+      border-width: 3px 2px 0px 2px;
+      padding:2px 6px;
+      background-color: Purple;
+    }
+    **/
+    .AFTabBarItem:alias {
+      line-height:100%;
+    }
+    /* Remove the text decoration from all tabBar links  */
+    .AFTabBarLink:alias {
+      text-decoration:none;
+    }
+    /* Make the selected tab bold */
+    af|menuTabs::selected-link {
+      font-weight: bold;
+      font-size: 10px;
+      color: black;
+      text-decoration: none;
+    
+    }
+    af|menuTabs::enabled-link {
+      font-weight: normal;
+      font-size: 10px;
+      color: black;
+      text-decoration: none;
+    }
+    
+    af|menuTabs::enabled-link:hover {
+      -ora-rule-ref:selector(".MyLinkHoverColor:alias");
+    }
+    
+    /** menuTabs that use icons are define like the following */
+    af|menuTabs::enabled-start-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsEnabledStart.gif); 
+    }
+    
+    af|menuTabs::enabled-start-icon:rtl {
+     content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsEnabledEnd.gif);  
+    }
+    
+    af|menuTabs::enabled-end-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsEnabledEnd.gif);
+    }
+    
+    af|menuTabs::enabled-end-icon:rtl {
+     content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsEnabledStart.gif); 
+    }
+    
+    af|menuTabs::enabled-join-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsEnabledJoin.gif); 
+    }
+    
+    af|menuTabs::enabled-background-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsEnabledBackground.gif); 
+    }
+    
+    af|menuTabs::selected-enabled-join-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsSelectedEnabledJoin.gif); 
+    }
+    
+    af|menuTabs::selected-enabled-join-icon:rtl {
+     content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsEnabledSelectedJoin.gif);  
+    }
+    
+    af|menuTabs::enabled-selected-join-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsEnabledSelectedJoin.gif); 
+    }
+    
+    af|menuTabs::enabled-selected-join-icon:rtl {
+     content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsSelectedEnabledJoin.gif);  
+    }
+    af|menuTabs::selected-start-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsSelectedStart.gif); 
+    }
+    af|menuTabs::selected-start-icon:rtl {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsSelectedEnd.gif); 
+    }
+    
+    af|menuTabs::selected-end-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsSelectedEnd.gif); 
+    }
+    
+    af|menuTabs::selected-end-icon:rtl {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsSelectedStart.gif);  
+    }
+    
+    af|menuTabs::selected-join-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsSelectedJoin.gif); 
+    }
+    
+    af|menuTabs::selected-join-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabSelectedJoin.gif);
+    }
+    
+    af|menuTabs::selected-background-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuTabsSelectedBackground.gif);
+    }
+    /** menuBar **/
+    /** ------- **/
+    af|menuBar {
+      background-color: #FFFFFF;
+    }
+    
+    af|menuBar::start-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuBarStart.gif);
+      width: 17px;
+      height: 20px;
+    }
+    
+    af|menuBar::end-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuBarEnd.gif);
+      width: 38px;
+      height: 20px;
+    }
+    
+    af|menuBar::background-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/menu/menuBarBackground.gif);
+      width: 115px;
+      height: 20px;
+    }
+    
+    af|menuBar::body {
+      background-color: #FFFFFF;
+      color: white;
+    }
+    
+    af|menuBar::selected-link {
+      font-size: 10px;
+      color: white;
+      font-weight:bold;
+    }
+    
+    af|menuBar::enabled {
+      font-size: 10px;
+      font-weight:normal;
+      color: white;
+    }
+    
+    af|menuBar::enabled-link {
+      color: white;
+      font-size: 10px;
+    }
+    
+    af|menuBar::enabled-link:hover {
+      color: white;
+      font-size: 10px;
+     -ora-rule-ref:selector(".MyLinkHoverColor:alias");
+    }
+    
+    af|menuBar::separator {
+        padding: 0px 2px 0px 2px;
+    }
+    
+    /** menuButtons **/
+    /** ----------- **/
+    .AFMenuButtons:alias {
+      padding:0px 2px 2px 4px;
+      color: white;
+    }
+    
+/*** End Menu ***/
+    
+
+
+/** panelSideBar **/
+
+    af|panelSideBar::body {
+        background-color: #D9EFAD;
+        padding: 1px 1px 1px 1px;
+    }
+    
+    af|panelSideBar::top-start-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/panelSide/panelSideBarTopStart.gif);       
+    }
+    
+    af|panelSideBar::top-end-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/panelSide/panelSideBarTopEnd.gif);            
+    }
+    
+    af|panelSideBar::bottom-start-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/panelSide/panelSideBarBottomStart.gif);            
+    }
+    
+    af|panelSideBar::bottom-end-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/panelSide/panelSideBarBottomEnd.gif);            
+    }
+    
+    af|panelSideBar::top-background-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/panelSide/panelSideBarTopBackground.gif);            
+    }
+    
+    af|panelSideBar::bottom-background-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/panelSide/panelSideBarBottomBackground.gif);            
+    }
+    
+    af|panelSideBar::start-background-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/panelSide/panelSideBarStartBackground.gif);            
+    }
+    
+    af|panelSideBar::end-background-icon {
+      content:url(/skins/BvNetLook_2009/skin_images/panelSide/panelSideBarEndBackground.gif);            
+    }
+/*** End panelSlide ***/
+
+
+
+/** Begin panelHeader **/
+    af|panelHeader {
+      -ora-rule-ref:selector(".AFDarkAccentBorder:alias");
+       border-width:0px 0px 1px 0px;
+       border-style:solid;
+       vertical-align:bottom;
+       margin-bottom:3px;
+       padding:0px 3px;
+       font-weight:bolder;
+    }
+    
+    af|panelHeader::level-one {
+        color: #19325F;
+        font-weight: bold;
+        margin-bottom:0px;
+        margin-top:0px;
+    }
+/** End panelHeader **/
+
+
+
+
+/* use special properties to change the ui **/
+/* don't show the last item in menuPath (the default is to show it)*/
+af|menuPath {-ora-show-last-item:false}
+
+/** if, for some reason, you don't want an icon to show up, you
+    can hide it like this (this will be more useful when skins can
+    extends other skins besides simple)
+    */
+af|menuPath::separator-icon {content:inhibit}
+
+
+af|objectSeparator {
+    background-color: #B8D1DC;
+    border: 1px solid #B8D1DC;
+}
+
+
+/** panelGrid's body area **/
+/** ----------------------- **/
+af|panelGrid::body {
+  vertical-align: top;
+}
+
+
+/** mensajes */
+af|messages::body {
+    background-color:#F3F8FC; 
+    color:#666666 ;     
+    border: 1px solid  #ABCBE4;       
+}
+
+af|messages::error-icon {
+  content:url(/skins/BvNetLook_2009/skin_images/icons/errorl.gif);       
+}
+
+af|messages::warning-icon {
+  content:url(/skins/BvNetLook_2009/skin_images/icons/warnl.gif);            
+}
+
+af|messages::info-icon {
+  content:url(/skins/BvNetLook_2009/skin_images/icons/infol.gif);          
+}
+

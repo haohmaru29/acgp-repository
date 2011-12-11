@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+          xmlns:af="http://xmlns.oracle.com/adf/faces"
+          xmlns:afh="http://xmlns.oracle.com/adf/faces/html"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:output omit-xml-declaration="true" doctype-root-element="HTML"
+                doctype-system="http://www.w3.org/TR/html4/loose.dtd"
+                doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+    <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+    <f:view>
+        <afh:html>
+            <afh:head title="#{msgs['bicevida.extraccion_nominas.detalle.titulo']}">
+                <meta http-equiv="Content-Type"
+                      content="text/html; charset=windows-1252"/>
+            </afh:head>
+            <afh:body>
+                <f:loadBundle basename="cl.bicevida.envionominas.view.resources.messages.general_es"
+                              var="msgs"/>
+                <af:form>
+                    <af:panelBox text="#{msgs['bicevida.extraccion_nominas.detalle.titulo']}"
+                                 background="medium" width="770px"
+                                 icon="../../skins/informatica/CoreSkin/skin_images/boton_iso.gif">
+                        <afh:tableLayout width="98%" halign="center">
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.extraccion_nominas.lbl.numeronomina'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_extraccionNomina.nominaSeleccionada.id}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.extraccion_nominas.lbl.tiponomina'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_extraccionNomina.nominaSeleccionada.tipo.nombre}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.extraccion_nominas.lbl.bancoproceso'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_extraccionNomina.nominaSeleccionada.bancoProceso}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.extraccion_nominas.lbl.fechapago'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_extraccionNomina.nominaSeleccionada.fechaPago}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                            <afh:rowLayout>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.extraccion_nominas.lbl.totalregistros'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_extraccionNomina.nominaSeleccionada.totalRegistros}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value="#{msgs['bicevida.extraccion_nominas.lbl.montototal'] }"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputLabel value=":"/>
+                                </afh:cellFormat>
+                                <afh:cellFormat>
+                                    <af:outputText value="#{mb_extraccionNomina.nominaSeleccionada.montoTotal}" styleClass="AFFieldText"/>
+                                </afh:cellFormat>
+                            </afh:rowLayout>
+                        </afh:tableLayout>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:panelHorizontal halign="center">
+                            <af:commandButton text="#{msgs['bicevida.extraccion_nominas.btn.extraer'] }"
+                                              action="dialog:PopupExtraerNomina"
+                                              launchListener="#{mb_extraccionNomina.launchListener}"
+                                              returnListener="#{mb_extraccionNomina.returnListener}"
+                                              partialSubmit="true"
+                                              useWindow="true"
+                                              windowHeight="220"
+                                              windowWidth="520"
+                                              id="btnExtraerNomina"/>
+                            <af:commandButton text="#{msgs['bicevida.generales.btn.volver'] }"
+                                              action="ExtraccionNomina"
+                                              blocking="true"/>
+                        </af:panelHorizontal>
+                        <af:objectSpacer width="10" height="10"/>
+                        <af:table emptyText="#{msgs['bicevida.generales.lbl.listavacia'] }"
+                                  value="#{mb_extraccionNomina.nominaSeleccionada.registros}"
+                                  var="fila"
+                                  rows="#{mb_extraccionNomina.registrosPagina}"
+                                  banding="row" bandingInterval="1"
+                                  width="100%">
+                            <af:column headerText="#{msgs['bicevida.extraccion_nominas.col.numerotransaccion']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.id}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.extraccion_nominas.col.rut']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.rut}-#{fila.dv}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.extraccion_nominas.col.nombre']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.extraccion_nominas.col.tipocuenta']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.tipoCuenta.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.extraccion_nominas.col.numerocuenta']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.cuenta}"/>
+                            </af:column>
+                            <af:column sortProperty="banco" sortable="true"
+                                       headerText="#{msgs['bicevida.extraccion_nominas.col.bancopago']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:center;">
+                                <af:outputText value="#{fila.banco.nombre}"/>
+                            </af:column>
+                            <af:column headerText="#{msgs['bicevida.extraccion_nominas.col.totalmonto']}"
+                                       formatType="text"
+                                       inlineStyle="text-align:right;">
+                                <af:outputText value="#{fila.monto}">
+                                    <af:convertNumber groupingUsed="true"/>
+                                </af:outputText>
+                            </af:column>
+                            <f:facet name="actions">
+                                <af:panelHorizontal halign="center">
+                                    <af:commandButton text="#{msgs['bicevida.generales.btn.descargaxls']}"
+                                                      actionListener="#{MbExcelVisor.onClickGenerarExcel}"
+                                                      blocking="true">
+                                                      <f:attribute name="nombre" value="detalle_extraccion_nomina"/>              
+                                                      <f:attribute name="titulo" value="Codigo Registro:Rut Beneficiario:Nombre Beneficiario:Tipo Cuenta:Nro. Cuenta Beneficiario:Banco Beneficiario:Monto($)"/>
+                                    </af:commandButton>
+                                </af:panelHorizontal>
+                            </f:facet>
+                        </af:table>
+                    </af:panelBox>
+                </af:form>
+            </afh:body>
+        </afh:html>
+    </f:view>
+</jsp:root>

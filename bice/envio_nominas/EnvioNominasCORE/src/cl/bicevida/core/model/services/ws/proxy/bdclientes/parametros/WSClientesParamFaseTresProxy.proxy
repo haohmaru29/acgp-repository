@@ -1,0 +1,254 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="WSClientesParamFaseTres_Service.java"/>
+      <url path="runtime/WSClientesParamFaseTres_Service_Impl.java"/>
+      <url path="WSClientesParamFaseTres_PortType.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaAFPElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaAFPResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaAFP.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/AFPModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaActividadElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaActividadResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaActividad.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/ActividadModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaCodigosAreaElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaCodigosAreaResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaCodigoArea.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/CodigoAreaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaComunaElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaComunaResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaComuna.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/ComunaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaEstadoCivilElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaEstadoCivilResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaEstadoCivil.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/EstadoCivilModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaIsapreElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaIsapreResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaIsapre.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/IsapreModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaLocalidadElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaLocalidadResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaLocalidad.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/TipoLocalidadModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaNacionalidadElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaNacionalidadResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaNacionalidad.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/NacionalidadModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaNivelEducacionalElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaNivelEducacionalResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaNivelEducacional.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/NivelEducacionalModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaNivelIngresoElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaNivelIngresoResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaNivelIngreso.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/NivelIngresoModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaOcupacionElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaOcupacionResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaOcupacion.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/OcupacionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaProfesionElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaProfesionResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaProfesion.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/ProfesionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaRegionElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaRegionResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaRegion.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RegionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaSexoElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaSexoResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaSexo.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/SexoModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaTipoCalleElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaTipoCalleResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaTipoCalle.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/TipoCalleModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaTipoDireccionElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaTipoDireccionResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaTipoDireccion.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/TipoDireccionModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaTipoPersonaElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaTipoPersonaResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaTipoPersona.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/TipoPersonaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaTipoViviendaElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/GetListaTipoViviendaResponseElement.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/RetListaTipoVivienda.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/TipoViviendaModel.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaAFPElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/AFPModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaAFP_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaAFPResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaActividadElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/ActividadModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaActividad_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaActividadResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaCodigosAreaElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/CodigoAreaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaCodigoArea_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaCodigosAreaResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaComunaElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/ComunaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaComuna_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaComunaResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaEstadoCivilElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/EstadoCivilModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaEstadoCivil_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaEstadoCivilResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaIsapreElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/IsapreModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaIsapre_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaIsapreResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaLocalidadElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/TipoLocalidadModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaLocalidad_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaLocalidadResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaNacionalidadElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/NacionalidadModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaNacionalidad_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaNacionalidadResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaNivelEducacionalElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/NivelEducacionalModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaNivelEducacional_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaNivelEducacionalResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaNivelIngresoElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/NivelIngresoModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaNivelIngreso_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaNivelIngresoResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaOcupacionElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/OcupacionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaOcupacion_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaOcupacionResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaProfesionElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/ProfesionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaProfesion_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaProfesionResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaRegionElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RegionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaRegion_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaRegionResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaSexoElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/SexoModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaSexo_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaSexoResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaTipoCalleElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/TipoCalleModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaTipoCalle_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaTipoCalleResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaTipoDireccionElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/TipoDireccionModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaTipoDireccion_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaTipoDireccionResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaTipoPersonaElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/TipoPersonaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaTipoPersona_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaTipoPersonaResponseElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaTipoViviendaElement_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/TipoViviendaModel_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/RetListaTipoVivienda_LiteralSerializer.java"/>
+      <url path="../../../../../../../actualizadatos/fasetres/ws/param/types/runtime/GetListaTipoViviendaResponseElement_LiteralSerializer.java"/>
+      <url path="runtime/WSClientesParamFaseTresSoapHttp_Stub.java"/>
+      <url path="runtime/WSClientesParamFaseTres_Service_SerializerRegistry.java"/>
+      <url path="runtime/WSClientesParamFaseTres_Service_SerializerRegistry12.java"/>
+      <url path="WSClientesParamFaseTresSoapHttpPortClient.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.bicevida.app.model.services.ws.proxy.bdclientes.parametros"/>
+         </hash>
+      </hash>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="WSClientesParamFaseTresSoapHttpPort">
+            <value n="CLASS_NAME" v="cl.bicevida.app.model.services.ws.proxy.bdclientes.parametros.WSClientesParamFaseTres_PortType"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="WSClientesParamFaseTresSoapHttpPort"/>
+            <hash n="OPERATIONS">
+               <hash n="getListaActividad">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaAFP">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaCodigosArea">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaComuna">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaEstadoCivil">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaIsapre">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaLocalidad">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaNacionalidad">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaNivelEducacional">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaNivelIngreso">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaOcupacion">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaProfesion">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaRegion">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaSexo">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaTipoCalle">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaTipoDireccion">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaTipoPersona">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getListaTipoVivienda">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS"/>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="serpens.bicevida.cl" path="/WSClientesParamFaseTres/WSClientesParamFaseTresSoapHttpPort"/>
+            <url n="PROXY_PORT_ENDPOINT" protocol="http" host="serpens.bicevida.cl" path="/WSClientesParamFaseTres/WSClientesParamFaseTresSoapHttpPort"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="WSClientesParamFaseTres"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://param.ws.fasetres.actualizadatos.bicevida.cl/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../../../../Model.jpr"/>
+      <url n="PROXY_WSDL_URL" path="../../../../../../../../../../resources/wsdl/WSClientesParamFaseTresSoapHttpPort.xml"/>
+   </hash>
+</jdevws:WebServiceProxy>

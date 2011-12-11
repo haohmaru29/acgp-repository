@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<service name="EnvioNominas_BCI_RS" guid="A57C39003ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS" status="ENABLED" serviceType="RoutingService" typeDescription="Servicio de Direccionamiento" isWSDLEditable="false" soapEndpointStatus="DISABLED">
+   <versionInfo>
+      <ID>1323301534671</ID>
+      <lastModifiedTime>Wed Dec 07 20:45:34 ART 2011</lastModifiedTime>
+      <lastModifiedUser>JDev_EnvioNominasBice_EnvioNominasESB</lastModifiedUser>
+   </versionInfo>
+   <parent guid="A7F47FD0190E11E0BF9FD5B49DC5D99D" qname="EnvioNominas" type="system"/>
+   <serviceDefinition>
+      <wsdlURL>EnvioNominas_EnvioNominas_BCI_RS.wsdl</wsdlURL>
+      <portType xmlns:tns="http://oracle.com/esb/namespaces/EnvioNominas">tns:envioNominas_BCI_Port</portType>
+      <endpointDefinition>
+         <concreteWSDLURL>/esb/wsil/EnvioNominas/EnvioNominas_BCI_RS?wsdl</concreteWSDLURL>
+         <soapEndpointURI>http://canis.bicevida.cl:7777/event/EnvioNominas/EnvioNominas_BCI_RS</soapEndpointURI>
+      </endpointDefinition>
+   </serviceDefinition>
+   <operations>
+      <operationInfo guid="A57C39013ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS.cargar" wsdlOperation="cargar" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault">
+         <request validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:CargaNominaInput"/>
+         <reply validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:CargaNominaOutput" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/EnvioNominas.xsd"/>
+         <fault xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:EnvioNominasFault" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/EnvioNominas.xsd"/>
+         <routingRules>
+            <routingRule guid="6B677640BD5411E0BFF5A916580EAE72" subscriptionType="ANY" executionType="Immediate" status="ENABLED">
+               <targetOperation guid="15B9B9F239FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.cargar" serviceGUID="15B9B9F139FC11E0AF6FCF506A4A0DA0" serviceQName="EnvioNominas.BCI" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault"/>
+               <transformation>
+                  <xslFileURL>CargaNominaInput_To_cargaPeticion.xsl</xslFileURL>
+               </transformation>
+               <replyHandler>
+                  <transformation attachRequestPayload="false">
+                     <xslFileURL>cargaRespuesta_To_CargaNominaOutput.xsl</xslFileURL>
+                  </transformation>
+               </replyHandler>
+            </routingRule>
+         </routingRules>
+      </operationInfo>
+      <operationInfo guid="A57C39023ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS.rendir" wsdlOperation="rendir" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault">
+         <request validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:RindeNominaInput"/>
+         <reply validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:RindeNominaOutput" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/EnvioNominas.xsd"/>
+         <fault xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:EnvioNominasFault" schemaLocation="esb:///ESB_Projects/EnvioNominasBice_EnvioNominasESB/EnvioNominas.xsd"/>
+         <routingRules>
+            <routingRule guid="6B677641BD5411E0BFF5A916580EAE72" subscriptionType="ANY" executionType="Immediate" status="ENABLED">
+               <targetOperation guid="15B9B9F339FC11E0AF6FCF506A4A0DA0" qname="EnvioNominas.BCI.rendir" serviceGUID="15B9B9F139FC11E0AF6FCF506A4A0DA0" serviceQName="EnvioNominas.BCI" mepDisplayName="Fallo de Respuesta de la Solicitud" mep="RequestResponseFault"/>
+               <transformation>
+                  <xslFileURL>RindeNominaInput_To_rendicionPeticion.xsl</xslFileURL>
+               </transformation>
+               <replyHandler>
+                  <transformation attachRequestPayload="false">
+                     <xslFileURL>rendicionRespuesta_To_RindeNominaOutput.xsl</xslFileURL>
+                  </transformation>
+               </replyHandler>
+            </routingRule>
+         </routingRules>
+      </operationInfo>
+      <operationInfo guid="A57C39033ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS.generarArchivo" wsdlOperation="generarArchivo" mepDisplayName="Unidireccional" mep="OneWay">
+         <request validate="false" xmlns:tns="http://bicevida.ws/services/envionominas" element="tns:CargaNominaInput"/>
+         <routingRules>
+            <routingRule guid="6B677642BD5411E0BFF5A916580EAE72" subscriptionType="ANY" executionType="Immediate" status="ENABLED">
+               <targetOperation guid="13CCB5C03F8811E0BF84A3E6EA80995B" qname="EnvioNominas.ArchivoNominas_BCI_RS.generaArchivo" serviceGUID="75BEAC803F8711E0BF84A3E6EA80995B" serviceQName="EnvioNominas.ArchivoNominas_BCI_RS" mepDisplayName="Unidireccional" mep="OneWay"/>
+               <transformation>
+                  <xslFileURL>CargaNominaInput_To_cargaPeticion.xsl</xslFileURL>
+               </transformation>
+            </routingRule>
+         </routingRules>
+      </operationInfo>
+   </operations>
+   <trackableFields>
+      <trackableField name="EnvioNominas_BCI_RS_tf0" status="ENABLED" bindTo="REQUEST">
+         <operationRef guid="A57C39023ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS.rendir"/>
+         <expression>{/ns0:RindeNominaInput};{ namespace ns0=http://bicevida.ws/services/envionominas }</expression>
+      </trackableField>
+      <trackableField name="EnvioNominas_BCI_RS_tf1" status="ENABLED" bindTo="RESPONSE">
+         <operationRef guid="A57C39023ADD11E0BF898514F6D1BFC1" qname="EnvioNominas.EnvioNominas_BCI_RS.rendir"/>
+         <expression>{/ns0:RindeNominaOutput};{ namespace ns0=http://bicevida.ws/services/envionominas }</expression>
+      </trackableField>
+   </trackableFields>
+</service>

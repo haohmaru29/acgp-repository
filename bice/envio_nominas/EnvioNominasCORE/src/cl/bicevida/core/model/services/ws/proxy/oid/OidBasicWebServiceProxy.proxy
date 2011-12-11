@@ -1,0 +1,225 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="OidBasicWebService_Service.java"/>
+      <url path="runtime/OidBasicWebService_Service_Impl.java"/>
+      <url path="OidBasicWebService_PortType.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_allocateGroupToMainGroup_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_allocateGroupToMainGroup_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_allocateUserMembership_ReqS.java"/>
+      <url path="../../../../../oidservices/utils/types/StringArray.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_allocateUserMembership_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createGroup_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createGroup_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createUser_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createUser_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createUser2_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createUser2_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deallocateGroupToMainGroup_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deallocateGroupToMainGroup_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deallocateUserMembership_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deallocateUserMembership_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteGroup_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteGroup_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteGroupsFromGroup_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteGroupsFromGroup_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteUsersFromGroup_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteUsersFromGroup_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_existsUser_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_existsUser_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsCn_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsCn_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsCnByFilter_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsCnByFilter_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsDN_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsDN_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsDnByFilter_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsDnByFilter_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserGroupsCN_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserGroupsCN_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserGroupsDN_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserGroupsDN_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserPropertyValues_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserPropertyValues_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_intelliActualizarUsuario_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_intelliActualizarUsuario_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_listGroupsInGroup_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_listGroupsInGroup_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_listUsersInGroup_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_listUsersInGroup_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_modifyUserProperty_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_modifyUserProperty_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_validateUserPassword_ReqS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_validateUserPassword_RespS.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_allocateGroupToMainGroup_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_allocateGroupToMainGroup_RespS_LiteralSerializer.java"/>
+      <url path="../../../../../oidservices/utils/types/runtime/StringArray_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_allocateUserMembership_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_allocateUserMembership_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createGroup_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createGroup_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createUser_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createUser_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createUser2_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_createUser2_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deallocateGroupToMainGroup_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deallocateGroupToMainGroup_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deallocateUserMembership_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deallocateUserMembership_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteGroup_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteGroup_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteGroupsFromGroup_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteGroupsFromGroup_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteUsersFromGroup_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_deleteUsersFromGroup_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_existsUser_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_existsUser_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsCn_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsCn_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsCnByFilter_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsCnByFilter_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsDN_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsDN_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsDnByFilter_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_findGroupsDnByFilter_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserGroupsCN_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserGroupsCN_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserGroupsDN_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserGroupsDN_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserPropertyValues_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_getUserPropertyValues_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_intelliActualizarUsuario_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_intelliActualizarUsuario_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_listGroupsInGroup_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_listGroupsInGroup_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_listUsersInGroup_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_listUsersInGroup_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_modifyUserProperty_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_modifyUserProperty_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_validateUserPassword_ReqS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_validateUserPassword_RespS_LiteralSerializer.java"/>
+      <url path="runtime/OidBasicWebServiceSoapHttp_Stub.java"/>
+      <url path="runtime/OidBasicWebService_Service_SerializerRegistry.java"/>
+      <url path="runtime/OidBasicWebService_Service_SerializerRegistry12.java"/>
+      <url path="OidBasicWebServiceSoapHttpPortClient.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="cl.bicevida.app.model.services.ws.proxy.oid"/>
+            <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+         </hash>
+      </hash>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="OidBasicWebServiceSoapHttpPort">
+            <value n="CLASS_NAME" v="cl.bicevida.app.model.services.ws.proxy.oid.OidBasicWebService_PortType"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="OidBasicWebServiceSoapHttpPort"/>
+            <hash n="OPERATIONS">
+               <hash n="allocateGroupToMainGroup">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="allocateUserMembership">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createGroup">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createUser">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createUser2">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deallocateGroupToMainGroup">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deallocateUserMembership">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteGroup">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteGroupsFromGroup">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteUsersFromGroup">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="existsUser">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findGroupsCn">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findGroupsCnByFilter">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findGroupsDN">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findGroupsDnByFilter">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getUserGroupsCN">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getUserGroupsDN">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getUserPropertyValues">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="intelliActualizarUsuario">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="listGroupsInGroup">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="listUsersInGroup">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="modifyUserProperty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="validateUserPassword">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS"/>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="app.bicevida.cl" path="/OidServices/OidBasicWebServiceSoapHttpPort"/>
+            <url n="PROXY_PORT_ENDPOINT" protocol="http" host="10.140.67.167" port="8988" path="/OidServices/OidBasicWebServiceSoapHttpPort"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="OidBasicWebService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://utils.oidservices.bicevida.cl/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../../Model.jpr"/>
+      <url n="PROXY_WSDL_URL" path="../../../../../../../../resources/wsdl/OidBasicWebServiceSoapHttpPort.xml"/>
+   </hash>
+</jdevws:WebServiceProxy>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<service name="ArchivoRendicionBICE" guid="988DF331162B11E1BF93A992EB98C813" qname="EnvioNominas.ArchivoRendicionBICE" status="ENABLED" serviceType="InboundAdapterService" serviceSubType="File" typeDescription="Servicio de Adaptador de Archivo Entrante" isWSDLEditable="false">
+   <versionInfo>
+      <ID>1323301534671</ID>
+      <lastModifiedTime>Wed Dec 07 20:45:34 ART 2011</lastModifiedTime>
+      <lastModifiedUser>JDev_EnvioNominasBice_EnvioNominasESB</lastModifiedUser>
+   </versionInfo>
+   <parent guid="A7F47FD0190E11E0BF9FD5B49DC5D99D" qname="EnvioNominas" type="system"/>
+   <invocation>
+      <targetService guid="988F79D0162B11E1BF93A992EB98C813" qname="EnvioNominas.ArchivoRendicionBICE_RS"/>
+      <interface>
+         <wsdlURL>ArchivoRendicionBICE.wsdl</wsdlURL>
+         <portType xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/file/ArchivoRendicionBICE/">tns:Read_ptt</portType>
+      </interface>
+   </invocation>
+</service>

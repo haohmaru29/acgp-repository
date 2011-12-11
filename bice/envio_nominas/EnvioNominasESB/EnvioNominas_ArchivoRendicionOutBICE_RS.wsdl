@@ -1,0 +1,22 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<definitions
+     name="ArchivoRendicionOutBICE_RS"
+     targetNamespace="http://oracle.com/esb/namespaces/EnvioNominas"
+     xmlns="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://oracle.com/esb/namespaces/EnvioNominas"
+     xmlns:inp1="http://bicevida.ws/services/envionominas"
+    >
+    <types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://bicevida.ws/services/envionominas" schemaLocation="EnvioNominas.xsd" />
+      </schema>
+    </types>
+    <message name="RindeNominaOutput_request">
+        <part name="RindeNominaOutput" element="inp1:RindeNominaOutput"/>
+    </message>
+    <portType name="execute_ppt">
+        <operation name="execute">
+            <input message="tns:RindeNominaOutput_request"/>
+        </operation>
+    </portType>
+</definitions>

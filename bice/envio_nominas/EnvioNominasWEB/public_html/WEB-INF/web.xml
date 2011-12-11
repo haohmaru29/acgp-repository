@@ -1,0 +1,269 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee">
+    <description>Archivo web.xml de EnvioNominas</description>
+    <context-param>
+        <param-name>CpxFileName</param-name>
+        <param-value>envionominasweb.DataBindings</param-value>
+    </context-param>
+    <filter>
+        <filter-name>FechaValidator</filter-name>
+        <filter-class>validators.Filter1FechaValidator</filter-class>
+    </filter>
+    <filter>
+        <filter-name>adfBindings</filter-name>
+        <filter-class>oracle.adf.model.servlet.ADFBindingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FechaValidator</filter-name>
+        <servlet-name>Log4jConfigLoader</servlet-name>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>adfBindings</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>adfBindings</filter-name>
+        <url-pattern>*.jspx</url-pattern>
+    </filter-mapping>
+    <listener>
+        <listener-class>cl.bicevida.envionominas.view.servlet.EnvioNominasListener</listener-class>
+    </listener>
+    
+    <filter>
+        <filter-name>adfFaces</filter-name>
+        <filter-class>oracle.adf.view.faces.webapp.AdfFacesFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>adfFaces</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>sessionExpiredFilter</filter-name>
+        <filter-class>cl.bicevida.core.view.filters.SessionExpiredFilter</filter-class>
+    </filter>
+
+    <servlet>
+        <servlet-name>Log4jConfigLoader</servlet-name>
+        <servlet-class>cl.bicevida.core.view.servlets.Log4jConfigLoader</servlet-class>
+        <load-on-startup>1</load-on-startup>   
+    </servlet>
+
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>resources</servlet-name>
+        <servlet-class>oracle.adf.view.faces.webapp.ResourceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adfAuthentication</servlet-name>
+        <servlet-class>oracle.adf.share.security.authentication.AuthenticationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AFCStatsServlet</servlet-name>
+        <servlet-class>oracle.webcache.adf.servlet.AFCStatsServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>resources</servlet-name>
+        <url-pattern>/adf/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adfAuthentication</servlet-name>
+        <url-pattern>/adfAuthentication/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Log4jConfigLoader</servlet-name>
+        <url-pattern>/log4jconfigloader</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>txt</extension>
+        <mime-type>text/plain</mime-type>
+    </mime-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>faces/infraestructura/StartHere.jspx</welcome-file>
+    </welcome-file-list>
+    
+    
+    <jsp-config/>
+
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/faces-config-mb.xml,/WEB-INF/faces-config-cv.xml,/WEB-INF/faces-config-advanced.xml</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>cl.bicevida.core.initPage</param-name>
+        <param-value>Bienvenida.jspx</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>cl.bicevida.core.session_expired_page</param-name>
+        <param-value>/faces/infraestructura/SessionExpired.jsp</param-value>
+    </context-param>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>infraestructura/Login.jspx</form-login-page>
+            <form-error-page>infraestructura/LoginError.jspx</form-error-page>
+        </form-login-config>
+    </login-config>
+
+<!-- PERFILAMIENTO DE PAGINAS 
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Consulta Nominas</web-resource-name>
+            <url-pattern>faces/app/envionominas/consultaNominasEstado.jspx</url-pattern>
+            <http-method>*</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TES_NOMINA_CONSULTA</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name></web-resource-name>
+            <url-pattern>faces/app/envionominas/*GastosNomina*</url-pattern>
+            <http-method>*</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TES_NOMINA_CONSULTA_GASTOS</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Extraccion de nominas</web-resource-name>
+            <url-pattern>faces/app/envionominas/popupExtraerNomina.jspx</url-pattern>
+            <http-method>*</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TES_NOMINA_EXTRAER</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Extraccion de nominas</web-resource-name>
+            <url-pattern>faces/app/envionominas/registrarFolioEnvio.jspx</url-pattern>
+            <http-method>*</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TES_NOMINA_EXTRAER</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Extraccion de nominas</web-resource-name>
+            <url-pattern>faces/app/envionominas/archivosNominas.jspx</url-pattern>
+            <http-method>*</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TES_NOMINA_EXTRAER</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Extraccion de nominas</web-resource-name>
+            <url-pattern>faces/app/envionominas/extraccionNomina.jspx</url-pattern>
+            <http-method>*</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TES_NOMINA_EXTRAER</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Extraccion de nominas</web-resource-name>
+            <url-pattern>faces/app/envionominas/detalleExtraccionNomina.jspx</url-pattern>
+            <http-method>*</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TES_NOMINA_EXTRAER</role-name>
+        </auth-constraint>
+    </security-constraint>
+FIN PERFILAMIENTO DE PAGINAS -->
+    <!-- A continuación se definen los roles de seguridad que utilizará la aplicación para definir restricciones de acceso (autorización).  Los nombres de roles de seguridad deben coincidir con el nombre de los roles o grupos del proveedor de seguridad (por ejemplo, archivo jazn-data.xml o servidor LDAP). Si se utiliza un mapeo de roles, entonces los nombres de los roles de seguridad deben coincidir con los roles definidos en el elemento <security-role-mapping> del archivo de configuración orion-web.xml. -->
+    <security-role>
+        <description>NOMINA TESORERIA CONSULTA</description>
+        <role-name>TES_NOMINA_CONSULTA</role-name>
+    </security-role>
+    <security-role>
+        <description>NOMINA TESORERIA EXTRAE</description>
+        <role-name>TES_NOMINA_EXTRAER</role-name>
+    </security-role>
+    <security-role>
+        <description>NOMINA TESORERIA CONSULTA GASTOS</description>
+        <role-name>TES_NOMINA_CONSULTA_GASTOS</role-name>
+    </security-role>
+    <security-role>
+        <description>NOMINA TESORERIA ADMINISTRACION</description>
+        <role-name>TES_NOMINA_ADMIN</role-name>
+    </security-role>
+    
+    <!-- *** INICIO: Parámetros de Optimización JSF y ADF Faces *** -->
+    
+    <!-- El parámetro DISABLE_CONTENT_COMPRESSION controla la compresión de nombres de estilos que el runtime genera
+        en forma automática para los skins ADF Faces.
+        Al setear el parámetro a false NO se desabilita la compresión de nombres de estilos; esto
+        implica que estos nombres se envían al browser cliente en un formato comprimido (formato corto)
+        lo cual optimiza el uso de red.  
+        En ambiente de producción este parámetro DEBE dejarse en false.
+        En ambiente de desarrollo este parámetro puede manejarse como true para facilitar el desarrollo de archivos 
+        de skin personalizados. 
+        Documentación de referencia: http://www.oracle.com/webapps/online-help/jdeveloper/10.1.2/state/content/navId.4/navSetId._/vtAnchor.DISABLE_CONTENT_COMPRESSION/vtTopicFile.uix2-javadoc%7Coracle%7Ccabo%7Cshare%7Cconfig%7CConfiguration~html/-->
+    <context-param>
+        <param-name>oracle.adfinternal.view.faces.DISABLE_CONTENT_COMPRESSION</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>oracle.adf.view.faces.CHECK_FILE_MODIFICATION</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    
+    <!-- A continuación se configuran los parámetros JSF para que el estado visual 
+        se lleve por completamente en el lado del cliente.
+        Documentación de referencia: ***
+        -->
+    <context-param>
+        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>client</param-value>
+    </context-param>     
+    
+    <context-param>
+        <param-name>oracle.adf.view.faces.CLIENT_STATE_METHOD</param-name>
+        <param-value>all</param-value>
+    </context-param>
+    
+    <!-- *** FIN: Parámetros de Optimización JSF y ADF Faces *** -->
+    <ejb-local-ref>
+        <description>Fachada de Servicios EJB para Envio de Nominas.</description>
+        <ejb-ref-name>ejb/local/EnvioNominasEJB</ejb-ref-name>
+        <ejb-ref-type>Session</ejb-ref-type>
+        <local>cl.bicevida.envionominas.model.services.ejb.EnvioNominasEJBLocal</local>
+        <ejb-link>EnvioNominasEJB</ejb-link>
+    </ejb-local-ref>
+</web-app>

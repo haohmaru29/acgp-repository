@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
+            targetNamespace="http://TargetNamespace.com/ArchivoRendicionBICE"
+            xmlns:tns="http://TargetNamespace.com/ArchivoRendicionBICE"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified" nxsd:encoding="ASCII" nxsd:hasHeader="true" nxsd:headerLines="1" nxsd:headerLinesTerminatedBy="${eol}" nxsd:stream="chars" nxsd:version="NXSD">
+  <xsd:element name="Nomina">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="TransaccionPago" minOccurs="1" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="COD_IODATA" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="COD_SERVICIO" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="COD_TIPCTA" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="MTO_MONTO" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="COD_BANCO" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NUM_CTATIT" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NUM_NOMINA" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="RUT_TITULAR" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NOM_TITULAR" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="COD_MONEDA" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NOM_OFICINA_ORIGEN" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NOM_OFICINA_DESTINO" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NOM_LLASER" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="FEC_FECHA" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="RUT_ORIGEN" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NOM_ORIGEN" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NUM_CUENTAORI" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="GLS_GLOSA" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="COD_ESTADO_REN" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="GLS_ESTADO_CARGO" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="GLS_ESTADO_ABONO" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy=";">
+              </xsd:element>
+              <xsd:element name="NOM_ARCHIVO" type="xsd:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}">
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<!--NXSDWIZ:C:\IntegracionBICE\03-DESARROLLO\Proveedores\Rendicion\PRO_32_101_20110929_SVI_270911_BICE_Rendicion.csv:-->
+<!--USE-HEADER:true:-->

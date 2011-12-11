@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions targetNamespace="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s1="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <s0:documentation>
+         Este documento WSDL contiene referencias a la implementacion del Servicio NominasBEL, El servicio esta construido en conformidad con el WS-I Basic Profile 1.0. Version 1.0 
+    </s0:documentation>
+  <s0:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" xmlns:serv="http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://bci.ws/infraestructuradenegocios/nominas/nominasbel" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://bci.ws/infraestructuradenegocios/nominas/nominasbel/types" schemaLocation="NominasBEL-1.0.xsd"/>
+      <xsd:element name="cargaPeticion" type="serv:cargaPeticion"/>
+      <xsd:element name="cargaRespuesta" type="serv:cargaRespuesta"/>
+      <xsd:element name="rendicionPeticion" type="serv:rendicionPeticion"/>
+      <xsd:element name="rendicionRespuesta" type="serv:rendicionRespuesta"/>
+      <xsd:element name="nominasBelFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigo" type="xsd:string"/>
+            <xsd:element name="causa" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </s0:types>
+  <s0:message name="cargaPeticionMessage">
+    <s0:part element="s1:cargaPeticion" name="cargaPeticionMessage"/>
+  </s0:message>
+  <s0:message name="cargaRespuestaMessage">
+    <s0:part element="s1:cargaRespuesta" name="cargaRespuestaMessage"/>
+  </s0:message>
+  <s0:message name="rendicionPeticionMessage">
+    <s0:part element="s1:rendicionPeticion" name="rendicionPeticionMessage"/>
+  </s0:message>
+  <s0:message name="rendicionRespuestaMessage">
+    <s0:part element="s1:rendicionRespuesta" name="rendicionRespuestaMessage"/>
+  </s0:message>
+  <s0:message name="nominasBelFaultMessage">
+    <s0:part element="s1:nominasBelFault" name="nominasBelFaultMessage"/>
+  </s0:message>
+  <s0:portType name="NominasBEL">
+    <s0:operation name="cargar">
+      <s0:input message="s1:cargaPeticionMessage"/>
+      <s0:output message="s1:cargaRespuestaMessage"/>
+      <s0:fault message="s1:nominasBelFaultMessage" name="nominasBelFault"/>
+    </s0:operation>
+    <s0:operation name="rendir">
+      <s0:input message="s1:rendicionPeticionMessage"/>
+      <s0:output message="s1:rendicionRespuestaMessage"/>
+      <s0:fault message="s1:nominasBelFaultMessage" name="nominasBelFault"/>
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="NominasBELBinding" type="s1:NominasBEL">
+    <s2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <s0:operation name="cargar">
+      <s2:operation soapAction="http://bci.ws/infraestructuradenegocios/nominas/nominasbel#cargar"/>
+      <s0:input>
+        <s2:body use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal"/>
+      </s0:output>
+      <s0:fault name="nominasBelFault">
+        <s2:fault name="nominasBelFault" use="literal"/>
+      </s0:fault>
+    </s0:operation>
+    <s0:operation name="rendir">
+      <s2:operation soapAction="http://bci.ws/infraestructuradenegocios/nominas/nominasbel#rendir"/>
+      <s0:input>
+        <s2:body use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal"/>
+      </s0:output>
+      <s0:fault name="nominasBelFault">
+        <s2:fault name="nominasBelFault" use="literal"/>
+      </s0:fault>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="NominasBELBindingQSService">
+    <s0:port binding="s1:NominasBELBinding" name="NominasBELBindingQSPort">
+      <s2:address location="https://b2b.bci.cl/servicios/infraestructuradenegocios/nominas/nominasBELService"/>
+    </s0:port>
+  </s0:service>
+  
+</s0:definitions>

@@ -1,0 +1,17 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<definitions name="ArchivoNomina_BCI_RS"
+             targetNamespace="http://oracle.com/esb/namespaces/EnvioNominas"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:tns="http://oracle.com/esb/namespaces/EnvioNominas"
+             xmlns:inp1="http://bci.ws/infraestructuradenegocios/nominas/nominasbel">
+    <import namespace="http://bci.ws/infraestructuradenegocios/nominas/nominasbel"
+            location="nominasbel.wsdl"/>
+    <message name="cargaPeticion_request">
+        <part name="cargaPeticion" element="inp1:cargaPeticion"/>
+    </message>
+    <portType name="execute_ppt">
+        <operation name="generaArchivo">
+            <input message="tns:cargaPeticion_request"/>
+        </operation>
+    </portType>
+</definitions>

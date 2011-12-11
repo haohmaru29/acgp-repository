@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<system name="EnvioNominas" guid="A7F47FD0190E11E0BF9FD5B49DC5D99D" qname="EnvioNominas" status="ENABLED">
+   <versionInfo>
+      <ID>1323301534671</ID>
+      <lastModifiedTime>Wed Dec 07 20:45:34 ART 2011</lastModifiedTime>
+      <lastModifiedUser>JDev_EnvioNominasBice_EnvioNominasESB</lastModifiedUser>
+   </versionInfo>
+   <description/>
+   <parameters>
+      <parameter name="Mobile"/>
+      <parameter name="Fax"/>
+      <parameter name="Host">canis.bicevida.cl</parameter>
+      <parameter name="Pager"/>
+      <parameter name="Phone"/>
+      <parameter name="Email">ggortaire@acgp.cl</parameter>
+      <parameter name="Port">7777</parameter>
+   </parameters>
+   <clusterName>esb</clusterName>
+   <deferredQueueName numberOfListeners="1" topicConnectionFactory="OracleASjms/MyXATCF">OracleASjms/ESBDeferredTopic</deferredQueueName>
+</system>

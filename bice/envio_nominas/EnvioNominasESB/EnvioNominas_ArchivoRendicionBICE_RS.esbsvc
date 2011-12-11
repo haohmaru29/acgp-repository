@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<service name="ArchivoRendicionBICE_RS" guid="988F79D0162B11E1BF93A992EB98C813" qname="EnvioNominas.ArchivoRendicionBICE_RS" status="ENABLED" serviceType="RoutingService" typeDescription="Servicio de Direccionamiento" isWSDLEditable="false" soapEndpointStatus="ENABLED">
+   <description>This is the Routing Service for Adapter Service ArchivoRendicionBICE</description>
+   <versionInfo>
+      <ID>1323301534671</ID>
+      <lastModifiedTime>Wed Dec 07 20:45:34 ART 2011</lastModifiedTime>
+      <lastModifiedUser>JDev_EnvioNominasBice_EnvioNominasESB</lastModifiedUser>
+   </versionInfo>
+   <parent guid="A7F47FD0190E11E0BF9FD5B49DC5D99D" qname="EnvioNominas" type="system"/>
+   <serviceDefinition>
+      <wsdlURL>ArchivoRendicionBICE.wsdl</wsdlURL>
+      <portType xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/file/ArchivoRendicionBICE/">tns:Read_ptt</portType>
+      <endpointDefinition>
+         <concreteWSDLURL>/esb/wsil/EnvioNominas/ArchivoRendicionBICE_RS?wsdl</concreteWSDLURL>
+         <soapEndpointURI>http://canis.bicevida.cl:7777/event/EnvioNominas/ArchivoRendicionBICE_RS</soapEndpointURI>
+      </endpointDefinition>
+   </serviceDefinition>
+   <operations>
+      <operationInfo guid="98910070162B11E1BF93A992EB98C813" qname="EnvioNominas.ArchivoRendicionBICE_RS.Read" wsdlOperation="Read" mepDisplayName="Unidireccional" mep="OneWay">
+         <request validate="false" xmlns:tns="http://TargetNamespace.com/ArchivoRendicionBICE" element="tns:Nomina"/>
+         <routingRules>
+            <routingRule guid="61F75661201F11E1BF1C7BA8280BD0EF" subscriptionType="ANY" executionType="Immediate" status="ENABLED">
+               <targetOperation guid="2D3FE4D08AE911E0AF108D90013CD2BA" qname="EnvioNominas.ArchivosNomina_BD.insert" serviceGUID="2D3D73D08AE911E0AF108D90013CD2BA" serviceQName="EnvioNominas.ArchivosNomina_BD" mepDisplayName="Unidireccional" mep="OneWay"/>
+               <transformation>
+                  <xslFileURL>Nomina_To_EvnmArchivosNominasCollection.xsl</xslFileURL>
+               </transformation>
+            </routingRule>
+         </routingRules>
+      </operationInfo>
+   </operations>
+</service>
