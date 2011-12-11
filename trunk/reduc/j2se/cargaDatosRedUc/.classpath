@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/redUCCommons"/>
+	<classpathentry kind="lib" path="D:/apps/LIBRARY/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="D:/apps/LIBRARY/jxl.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
