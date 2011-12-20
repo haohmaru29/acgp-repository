@@ -673,22 +673,30 @@ public class General {
 	        return ret;
 	      }
 	 	
-	 public String Interleaved2of5( String DataToEncode ) {
-	        String Printable_string = "";
+	public String Interleaved2of5( String DataToEncode ) {
+		 String Printable_string = "";
 	        String DataToPrint = "";
 	        int CurrentChar;
 	        int i=0;
-	        DataToEncode = DataToEncode.trim();	
-	        for( i = 1; i <= DataToEncode.length(); i += 2 ) {
+	       
+	        DataToEncode = DataToEncode.trim();
+	        
+	        //System.out.println("DataToEncode:" + DataToEncode );
+	        			
+	        for( i = 1; i <= DataToEncode.length(); i += 2 )
+	        {
 	           //Get the value of each number pair (ex: 5 and 6 = 5*10+6 =56)
 	           CurrentChar = ((((int)DataToEncode.charAt(i-1))-48)*10) + (((int)DataToEncode.charAt(i))-48);
 	           //Get the ASCII value of CurrentChar according to chart by adding to the value
+	           // (old process) DataToPrint = DataToPrint + (char)(CurrentChar + 130);
+	           //System.out.println("CurrentChar:" + CurrentChar );
 	           if( CurrentChar < 50 )
 	              DataToPrint = DataToPrint + (char)(CurrentChar + 48);
 	           else
 	         	  DataToPrint = DataToPrint + (char)(CurrentChar + 142); 
-	           
+	           //System.out.println("DataToPrint:" + DataToPrint );
 	         }
+
 	         //Get PrintableString
 	         Printable_string = (char)(40) + DataToPrint + (char)(41);
 	         //System.out.println("Printable_string:" + DataToPrint );	
