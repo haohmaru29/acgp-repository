@@ -475,8 +475,8 @@
   		{ 
   			f.RESPBD.value=flag;
   			f.TxtMensajeError.value="";
-  			f.target = "printInforme"
-			f.action = "RemesaImprimeCupon.jsp"				
+  			f.target = "printInforme";
+			f.action = "RemesaImprimeCupon.jsp";				
 			f.submit();								
 		}
 		
@@ -484,10 +484,31 @@
   		{ 
 			f.RESPBD.value=flag;
 			f.TxtMensajeError.value="";
-	  		f.target = "printInforme"
-			f.action = "RemesaImprimeTarjeta.jsp"			
+	  		f.target = "printInforme";
+			f.action = "RemesaImprimeTarjeta.jsp";			
 			f.submit();		
 		}
+		
+		function printPageCuponPDF(ifr) {
+  			if (ifr.location.href != "about:blank") {
+	   		 	ifr.focus(); 
+	   		 	var content = ifr.document.getElementById("remesaCupon").innerHTML;
+	   		 	var obj = content.replace(new RegExp("\\n","g"),"").replace(new RegExp("\\r","g"),"");
+	   		 	var url = "pdf/open.jsp?content=" + obj;
+				var result=window.showModalDialog(url, "", "dialogWidth:900px;dialogHeight:800px;resizable:no;toolbar:no;menubar:no;scrollbars:yes;help:no");
+			}
+			if (f.RESPBD.value=="1") {
+				if (confirm("Desea Imprimir Remesa?"))
+					ImprimirDetalle(1);  
+				else {
+					f.action = "RemesaCheqIngreso.jsp";
+					f.target = "_self";
+					f.HDDORIGEN.value="";
+					f.HDDENTRADA.value="GRABAREMESA";
+					f.submit();
+				}
+			} 
+  		}
   		
   		function printPageCupon(ifr) 
  		{
@@ -500,7 +521,7 @@
 			if (f.RESPBD.value=="1")
 			{
 				if (confirm("Desea Imprimir Remesa?"))
-					ImprimirDetalle(1)  
+					ImprimirDetalle(1);  
 				else
 				{
 					f.action = "RemesaCheqIngreso.jsp";
@@ -511,6 +532,9 @@
 				}
 			}				
   		}
+  		
+  		
+  		
   		function printPageDetalle(ifr) 
  		{
 			if (ifr.location.href != "about:blank")
