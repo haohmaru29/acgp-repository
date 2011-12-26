@@ -10,7 +10,11 @@ Sigma.tipoCosta = '';
 Sigma.difCosta = 0;
 Sigma.GridCache ={};
 Sigma.GridNum=0;
-Sigma.activeGrid = null;
+Sigma.sRut='';
+Sigma.sAbo='';
+Sigma.dataCuentas='';
+Sigma.sSubProd='';
+;Sigma.activeGrid = null;
 
 Sigma.$widget =function(wid){
 	return Sigma.$type(wid, 'string')?Sigma.WidgetCache[wid]:wid;
@@ -1781,7 +1785,7 @@ GrabaRemesaEncHost : function (susuario,sfecharemesa,snuminterno,sabogado,smonto
 			try {
 				smonto = smonto.replace(/\.|-/ig,'');
 				sfecharemesa=valJS.quitaMask3(sfecharemesa);	
-				sfecharemesa=sfecharemesa.substring(4,8) + sfecharemesa.substring(2,4) + sfecharemesa.substring(0,2)
+				sfecharemesa=sfecharemesa.substring(4,8) + sfecharemesa.substring(2,4) + sfecharemesa.substring(0,2);
 				datastring= "USUARIO=" + susuario + "&FECHAREMESA=" + sfecharemesa + "&NUMINTERNO=" + snuminterno + "&ABO=" + sabogado + "&MONTO=" + smonto + "&MONEDA=" + smoneda + "&TIPOPROD=" + sTipoProd + "&GRUPO=" + sGrupo;	
 				//alert(datastring);	
 				jQuery.ajax({ 								
@@ -2104,13 +2108,16 @@ ValidarNumeroCheque : function(event,sIndice,sNumCheque) {
 	return true;
 },
 
-ColocarDataSelectOperacion : function (Posicion)
-		{
+ColocarDataSelectOperacion : function (Posicion) {
+			var grid=this;
 			var i=0;
 			var j=0;
 			var salida="";	
 			var primerelemento="";
 			var strrespbd =document.getElementById("RESPBD").value;
+			//alert("---->" + strrespbd);
+			var recordN = grid.getRecordByRow(this.activeRow);
+			recordN[8]=strrespbd;
 			while (strrespbd.indexOf(",") >=0)
 			{
 				i=strrespbd.indexOf(",");
@@ -2431,10 +2438,12 @@ while ((new Date().getTime() - inicio) < millisegundos);
 						case Sigma.Const.Key.LEFT :
 						if (document.getElementById("TipoGrilla").value=="EDITABLE")
 						{
-							Sigma.U.stopEvent(event);
 							
+							var editar = 0;
+							Sigma.U.stopEvent(event);
 							var colObj= this.getColumn(this.activeCell);	
 							var TipoProd=document.getElementById("TIPOPROD");			
+							
 							if ((colObj.id=='ValCosta' || colObj.id=='Capital') && (TipoProd.value=="1" || TipoProd.value=="3" || TipoProd.value=="5"))//solo para tarjeta
 							{
 								//alert("LEFT->colObj.id=" + colObj.id);
@@ -2442,7 +2451,11 @@ while ((new Date().getTime() - inicio) < millisegundos);
 								var recordN=grid.getRecordByRow(this.activeRow);
 								if (TipoProd.value=="1" || TipoProd.value=="3") {
 									if(document.getElementById('TIPOPRODFORMULARIO').value==1 ) {
-										mygrid.NroCuentasClienteCostasX(recordN[1],document.getElementById("ABOGADO").value,document.getElementById("HDDGRUPO").value);
+										if(recordN[8] == null || recordN[8] == undefined) {
+											mygrid.NroCuentasClienteCostasX(recordN[1],document.getElementById("ABOGADO").value,document.getElementById("HDDGRUPO").value);
+										} else {
+											mygrid.NroCuentasClienteCostasLOCAL(recordN[8]);
+										}
 									} else {
 										mygrid.NroCuentasCliente(recordN[1],document.getElementById("ABOGADO").value,document.getElementById("HDDGRUPO").value);
 									}
@@ -2464,8 +2477,7 @@ while ((new Date().getTime() - inicio) < millisegundos);
 									f.HDDENTRADA.value="ERRORSESION";
 									f.submit();
 								}
-								else
-								{
+								else {
 									grid.ColocarDataSelectOperacion("L");		
 									document.getElementById("RESPBD").value="";
 								}
@@ -2477,8 +2489,9 @@ while ((new Date().getTime() - inicio) < millisegundos);
 									
 							   } else {
 								  if (!newCell) return;		
-								  editCell(newCell);	
-								
+								  editCell(newCell);
+								  editar=0;
+								  
 								  while (!grid.editing && newCell)  //loop para las que no son editables
 								  {							
 								  	  var initCell=newCell;	 						 
@@ -2604,49 +2617,61 @@ NroCuentasCliente : function (sRut, sAbo, sSubProd) {
 			},
 
 NroCuentasClienteCostasX : function (sRut, sAbo, sSubProd) {
-			try {
-				sRut = sRut.toUpperCase();
-				sRut = sRut.replace(/\.|-/ig,'');				
-				datastring= "RUT=" + sRut + "&CODABO=" + sAbo + "&SUBPROD=" + sSubProd;	
-				//alert(datastring);	
-				jQuery.ajax({ 								
-						timeout: 60000,
-						dataType: 'JSON',					
-			            //url: "../jsp/AJAX_NroCuentasClienteCostas.jsp",
-			            url: "../jsp/AJAX_NroCuentasCliente.jsp",
-			            data: datastring,	
-			            async:false,		          
-			            beforeSend:function(xhr){}, 
-			            success:function(data){	   			            	
-			              try {    
-			              		var objMen=document.getElementById("TxtMensajeError");  
-			              		var objMenError=document.getElementById("ErrorMen");
-			              		var objRESPBD=document.getElementById("RESPBD"); 
-			              		var obj = jQuery.parseJSON(data);				              	
-			              		//alert("obj.total.length=" + obj.total.length);	
-			            	    if (obj.total.length<=0) 
-			            	    {			            	    	
-			            	    	validResult=[].concat(objMenError.value);   
-			            	    	objMen.value=validResult.join('\n');   
-			            	    	objRESPBD.value="";	
-			            	    	return false;
-			            	    } 
-			            	    else
-			            	    {			 
-			            	    	objRESPBD.value=obj.total ;	
-			            	    	objMen.value="";
-			            	    	return true;
-			                  	}
-			                  } catch(ex) {return false;
-				               }		
-				               
-			            }, 
-			            error:function (xhr, ajaxOptions, thrownError){},
-			            cache:false,
-			            complete:function(xhr, status) { }
-			        });
-			} catch(ex) {return false;}			
-			},
+try {
+	sRut = sRut.toUpperCase();
+	sRut = sRut.replace(/\.|-/ig,'');				
+	datastring= "RUT=" + sRut + "&CODABO=" + sAbo + "&SUBPROD=" + sSubProd;	
+	jQuery.ajax({ 								
+			timeout: 60000,
+			dataType: 'JSON',					
+            //url: "../jsp/AJAX_NroCuentasClienteCostas.jsp",
+            url: "../jsp/AJAX_NroCuentasCliente.jsp",
+            data: datastring,	
+            async:false,		          
+            beforeSend:function(xhr){}, 
+            success:function(data){	   			            	
+	              try {    
+	              		var objMen=document.getElementById("TxtMensajeError");  
+	              		var objMenError=document.getElementById("ErrorMen");
+	              		var objRESPBD=document.getElementById("RESPBD"); 
+	              		var obj = jQuery.parseJSON(data);
+	            	    if (obj.total.length<=0) {			            	    	
+	            	    	validResult=[].concat(objMenError.value);   
+	            	    	objMen.value=validResult.join('\n');   
+	            	    	objRESPBD.value="";	
+	            	    	Sigma.dataCuentas="";
+	            	    	return false;
+	            	    } else {			 
+	            	    	objRESPBD.value=obj.total ;	
+	            	    	Sigma.dataCuentas = obj.total;
+	            	    	objMen.value="";
+	            	    	return true;
+	                  	}
+	              } catch(ex) {return false; }		
+	               
+            }, 
+            error:function (xhr, ajaxOptions, thrownError){},
+            cache:false,
+            complete:function(xhr, status) { }
+        });
+	} catch(ex) {return false;}			
+},
+
+NroCuentasClienteCostasLOCAL : function (value) {
+	if(value==null || value == '') {
+		var objMen=document.getElementById("TxtMensajeError");  
+  		var objMenError=document.getElementById("ErrorMen");
+  		var objRESPBD=document.getElementById("RESPBD"); 
+  		validResult=[].concat(objMenError.value);   
+    	objMen.value=validResult.join('\n');   
+    	objRESPBD.value="";	
+		return false;
+	} else {
+		document.getElementById("RESPBD").value =value;
+		return true;
+		
+	}
+},
 
 
 NroCuentasClientePreAbo : function (sRut, sSubProd) {
@@ -2667,8 +2692,7 @@ NroCuentasClientePreAbo : function (sRut, sSubProd) {
 			              		var objMen=document.getElementById("TxtMensajeError");  
 			              		var objMenError=document.getElementById("ErrorMen");
 			              		var objRESPBD=document.getElementById("RESPBD"); 
-			              		var obj = jQuery.parseJSON(data);				              	
-			              		//alert("obj.total.length=" + obj.total.length);	
+			              		var obj = jQuery.parseJSON(data);				    
 			            	    if (obj.total.length<=0) 
 			            	    {			            	    	
 			            	    	validResult=[].concat(objMenError.value);   
