@@ -604,9 +604,9 @@
 		
 		
 		var colsOption = [
-				 {id: 'ide' , header: "Id" , width :1, sortable:false,editable:false, editor:{type:"text"}},	
+				 {id: 'ide' , header: "Id" , width :30, sortable:false,editable:false, editor:{type:"text"}},	
 			     {id: 'rut' , header: "Rut Cliente" , width :150, sortable:false, editable:false, editor:{type:"text"} },
-			     {id: 'cheque' , header: "N° Único" , width :250, sortable:false, editable:false, editor : { type :"text"}},
+			     {id: 'cheque' , header: "N° Único" , width :220, sortable:false, editable:false, editor : { type :"text"}},
 	  	    	 {id: 'Capital' , header: "Capital" , width :110, sortable:false, editable:false, editor:{type:"text"} },
 				 {id: 'Interes' , header: "Interés" , width :110, sortable:false, editable:false, editor:{type:"text"} },
 				 {id: 'Costa' , header: "Costas Procesales" , width :150, sortable:false, editable:false, editor:{type:"text"} },
@@ -710,7 +710,7 @@
 		}
 
 		colsOption = [
-				 {id: 'ide' , header: "Id" , width :1, sortable:false,editable:false, editor:{type:"text"}},	
+				 {id: 'ide' , header: "Id" , width :30, sortable:false,editable:false, editor:{type:"text"}},	
 			     {id: 'rut' , header: "Rut Cliente" , width :150, sortable:false, editable:true, editor:{type:"text",
 			     	validator : function(value,record,colObj,grid)
 			     	{ 	
@@ -741,7 +741,7 @@
 					  }		
 			     	} },
 			     	
-			     {id: 'cheque' , header: "N° Único" , width :250, sortable:false, editable:true,editor : { type :"text" ,
+			     {id: 'cheque' , header: "N° Único" , width :220, sortable:false, editable:true,editor : { type :"text" ,
 			      validator : function(value,record,colObj,grid)
 			      {	
 			        if (event.keyCode!=Sigma.Const.Key.LEFT)

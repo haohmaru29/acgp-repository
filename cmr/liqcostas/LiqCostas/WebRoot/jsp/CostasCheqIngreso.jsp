@@ -482,13 +482,13 @@
 		
 		
 		var colsOption = [
-			 {id: 'ide' , header: "Id" , width :1, sortable:false,editable:false, editor:{type:"text"}},	
+			 {id: 'ide' , header: "Id" , width :30, sortable:false,editable:false, editor:{type:"text"}},	
 		     {id: 'rut' , header: "Rut Cliente" , width :200, sortable:false, editable:false, editor:{type:"text"} },
 		     {id: 'cheque' , header: "N° Unico" , width :300, sortable:false, editable:false, editor : { type :"text"}},
 	 	     	 {id: 'ValCosta' , header: "Valor Costa" , width :200, sortable:false, editable:false, editor:{type:"text"} },
 			 {id: 'TipCargo' , header: "Tipo Cargo" , width :150, sortable:false, editable:false, 
 			 	editor:{type:"text"} },
-			 {id: 'SubTipCargo' , header: "Descripción Costa" , width :335, sortable:false, editable:false, 
+			 {id: 'SubTipCargo' , header: "Descripción Costa" , width :305, sortable:false, editable:false, 
 			   	editor:{type:"text"}},
 			 {id: 'NumJuicio' , header: "N° Juicio" , width :1, sortable:false, editable:false, 
 			   	editor:{type:"text"}},
@@ -559,7 +559,7 @@
 		
 		
 		colsOption = [
-				 {id: 'ide' , header: "Id" , width :1, sortable:false,editable:false, editor:{type:"text"}},	
+				 {id: 'ide' , header: "Id" , width :30, sortable:false,editable:false, editor:{type:"text"}},	
 			     {id: 'rut' , header: "Rut Cliente" , width :200, sortable:false, editable:true, editor:{type:"text",
 			     	validator : function(value,record,colObj,grid) { 	
 			     		if (event.keyCode!=Sigma.Const.Key.UP && event.keyCode!=0) {		
@@ -732,7 +732,7 @@
 					 }					
 					}
 				   	} },
-				   {id: 'SubTipCargo' , header: "Descripción Costa" , width :335, sortable:false, editable:false, 
+				   {id: 'SubTipCargo' , header: "Descripción Costa" , width :305, sortable:false, editable:false, 
 				   	editor:{type:"text"}},
 				   	{id: 'NumJuicio' , header: "N° Juicio" , width :1, sortable:false, editable:false, 
 				   	editor:{type:"text"}},

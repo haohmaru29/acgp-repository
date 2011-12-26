@@ -471,8 +471,8 @@
 	    function ImprimirDetalle(flag) { 
 			f.RESPBD.value=flag;
 			f.TxtMensajeError.value="";
-	  		f.target = "printInforme"
-			f.action = "CostasImprimeCosta.jsp"			
+	  		f.target = "printInforme";
+			f.action = "CostasImprimeCosta.jsp";			
 			f.submit();		
 		}
   		
@@ -516,7 +516,6 @@
 		var grid_demo_id = "myGrid11" ;
 		
 		var dsOption= {
-			
 			uniqueField : 'ide' ,	
 			fields :[
 				{name : 'ide'  , type: 'int' },
@@ -526,8 +525,8 @@
 				{name : 'TipCargo' },
 				{name : 'SubTipCargo' },
 				{name : 'NumJuicio' },
-				{name : 'TipoJuicio' }
-				
+				{name : 'TipoJuicio' },
+				{name : 'respaldoSelect' }
 			],
 	
 			recordType : 'array',
@@ -536,14 +535,14 @@
 		
 		
 		var colsOption = [
-				 {id: 'ide' , header: "Id" , width :1, sortable:false,editable:false, editor:{type:"text"}},	
+				 {id: 'ide' , header: "Id" , width :30, sortable:false,editable:false, editor:{type:"text"}},	
 			     {id: 'rut' , header: "Rut Cliente" , width :200, sortable:false, editable:false, editor:{type:"text"} },
 			     {id: 'operacion' , header: "Numero Operacion" , width :300, sortable:false, editable:false,
 			      editor : { type :"select" , options : opciones, defaultText : ''}},
 	  	     {id: 'ValCosta' , header: "Valor Costa" , width :200, sortable:false, editable:false, editor:{type:"text"} },
 				   {id: 'TipCargo' , header: "Tipo Cargo" , width :150, sortable:false, editable:false, 
 				   	editor:{type:"text"} },
-				   {id: 'SubTipCargo' , header: "Descripción Costa" , width :335, sortable:false, editable:false, 
+				   {id: 'SubTipCargo' , header: "Descripción Costa" , width :305, sortable:false, editable:false, 
 				   	editor:{type:"text"}},
 				   {id: 'NumJuicio' , header: "N° Juicio" , width :1, sortable:false, editable:false, 
 				   	editor:{type:"text"}},
@@ -586,7 +585,8 @@
 						TipCargo : '',
 						SubTipCargo : '',
 						NumJuicio:'',	
-						TipoJuicio:''					
+						TipoJuicio:'',
+						respaldoSelect: ''					
 				}				
 			};
 			
@@ -616,7 +616,8 @@
 				{name : 'TipCargo' },
 				{name : 'SubTipCargo' },
 				{name : 'NumJuicio' },
-				{name : 'TipoJuicio' }
+				{name : 'TipoJuicio' },
+				{name : 'respaldoSelect' }
 			],
 	
 			recordType : 'array',
@@ -625,33 +626,32 @@
 		
 		
 		colsOption = [
-				 {id: 'ide' , header: "Id" , width :1, sortable:false,editable:false, editor:{type:"text"}},	
+				 {id: 'ide' , header: "Id" , width :30, sortable:false,editable:false, editor:{type:"text"}},	
 			     {id: 'rut' , header: "Rut Cliente" , width :200, sortable:false, editable:true, editor:{type:"text",
 			     	validator : function(value,record,colObj,grid)
 			     	{
-			     	
-			     	if (event.keyCode!=Sigma.Const.Key.UP && event.keyCode!=0)
-			     	{					     		
+			     	if (event.keyCode!=Sigma.Const.Key.UP && event.keyCode!=0) {					     		
 			     			var obj=document.getElementById("TxtMensajeError");			     		
 			     			var flag=true;
-			     		    if (valJS.isRutValido(value)==false)
-			     			{		
+			     		    if (valJS.isRutValido(value)==false) {		
 									validResult=[].concat("Rut no válido, favor digite nuevamente."); 
 									obj.value=validResult.join('\n');	
-									//record[1]="";
-									//record[6]="";
-									//record[7]="";
 									f.NOMBREOBJETO.value="";
 									flag=false;							
-							}
-							else {
+							} else {
+								if(event.keyCode==Sigma.Const.Key.LEFT || event.keyCode==Sigma.Const.Key.DOWN ) {
+									mygrid.CambiaValor(value);
+									return true;
+								} else if(event.keyCode==Sigma.Const.Key.RIGHT) {
+									mygrid.CambiaValor(value);
+									mygrid.NroCuentasClienteCostasLOCAL(record[8]);
+									mygrid.ColocarDataSelectOperacion("R");		
+									document.getElementById("RESPBD").value="";
+									return true;
+								} 
 								//validar que tenga juicio asignado el rut ingresado
 								mygrid.ObtenerJuicio(value);
-								if (obj.value!="")
-								{
-									//record[1]="";
-									//record[6]="";
-									//record[7]="";	
+								if (obj.value!="") {
 									f.NOMBREOBJETO.value="";
 									flag=false;	
 								}
@@ -728,6 +728,9 @@
 				  				 f.NOMBREOBJETO.value="";
 				  				 return false;
 				  			} else {
+				  				  if(event.keyCode==Sigma.Const.Key.LEFT || event.keyCode==Sigma.Const.Key.DOWN || event.keyCode==Sigma.Const.Key.RIGHT) {
+									return true;
+								  }
 					    		  var datastring = 'rutCliente=' + record[1] + "&codAbogado=" + document.getElementById("ABOGADO").value;
 					    		  datastring = datastring + "&codProducto="+value;
 					    		  flag=false;
@@ -739,7 +742,7 @@
 									   beforeSend:function(){},
 									   cache: false,
 									   success: function(data) {
-									    	var objCaseAcct = jQuery.parseJSON(data)
+									    	var objCaseAcct = jQuery.parseJSON(data);
 									    	record[7]=objCaseAcct.total;
 									    	if(objCaseAcct.total == '-2') {
 									    		 validResult=[].concat("Relación Cuenta Juicio no existe, validar con Sistemas");
@@ -848,7 +851,6 @@
 				  	  		 	return true;
 				  	  		}			
 						}		
-			     	
 			     	} },
 				   {id: 'TipCargo' , header: "Tipo Cargo" , width :150, sortable:false, editable:true, 
 				   	editor:{type:"text",
@@ -898,7 +900,7 @@
 					 }					
 					}
 				   	} },
-				   {id: 'SubTipCargo' , header: "Descripción Costa" , width :335, sortable:false, editable:false, 
+				   {id: 'SubTipCargo' , header: "Descripción Costa" , width :305, sortable:false, editable:false, 
 				   	editor:{type:"text"}},
 				   	{id: 'NumJuicio' , header: "N° Juicio" , width :1, sortable:false, editable:false, 
 				   	editor:{type:"text"}},
@@ -923,7 +925,7 @@
 				autoEditNext: true,
 				//cambio realizado 01/12/2011
 				// false por true
-				showIndexColumn: true,
+				showIndexColumn: false,
 				showPageState : false ,
 				allowResizeColumn : false,
 				resizable : false,
@@ -1252,7 +1254,7 @@
 				jQuery("#TxtRutPrestador").bind($.browser.opera ? "keypress" : "keydown" , function(event){
 					if (event.keyCode==Sigma.Const.Key.ENTER || event.keyCode==Sigma.Const.Key.RIGHT || event.keyCode==Sigma.Const.Key.DOWN || event.keyCode==Sigma.Const.Key.TAB ) 
 					{
-						ValidarRutPrestador(f,true)						
+						ValidarRutPrestador(f,true);						
 						event.preventDefault();
 					}
 				});
