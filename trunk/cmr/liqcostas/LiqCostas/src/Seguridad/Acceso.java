@@ -25,7 +25,7 @@ public class Acceso {
 	    this.request = request;
 	    try {
 	    	obtieneMenuUsuario(arrMenu);
-	    } catch(Exception ex) {};	    
+	    } catch(Exception ex) {}	    
     }
 	
 	private String getNameUri(String sName) {
