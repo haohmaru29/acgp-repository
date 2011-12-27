@@ -745,7 +745,7 @@
 									    	var objCaseAcct = jQuery.parseJSON(data);
 									    	record[7]=objCaseAcct.total;
 									    	if(objCaseAcct.total == '-2') {
-									    		 validResult=[].concat("Relación Cuenta Juicio no existe, validar con Sistemas");
+									    		 validResult=[].concat("Relación Cuenta Juicio no existe ( " + value  +" ), validar con Sistemas");
 								  				 obj.value=validResult.join('\n');
 								  				 var option2 = record[0];
 							     				 record[1] = "";

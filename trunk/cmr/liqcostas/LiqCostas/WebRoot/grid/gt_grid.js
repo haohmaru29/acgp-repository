@@ -3286,7 +3286,7 @@ startEdit : function(){
 						}
 						else
 						{
-							this.ColocarDataSelectOperacion("");	
+							this.ColocarDataSelectOperacion("");
 							document.getElementById("RESPBD").value="";
 							this.initActiveObj_startEdit(event,cell,dbl);			
 						}
