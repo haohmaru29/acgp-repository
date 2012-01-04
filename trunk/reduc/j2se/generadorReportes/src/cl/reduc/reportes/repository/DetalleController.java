@@ -31,10 +31,10 @@ public class DetalleController extends OracleController {
 				   + " oa.DIRECCION_PAC as DIRECCION_PACIENTE, "
 				   + " oa.COMUNA_PAC as COMUNA_PACIENTE, " 
 				   + " oa.TELEFONO_PAC as TELEFONO_PACIENTE, "
-				   + " (oa.APA_PACIENTE || ' '|| oa.AMA_PACIENTE || ' ' || oa.NOM_PACIENTE ) as NOMBRE_PACIENTE,"  
+				   + " (oa.APA_PACIENTE || ' '|| oa.AMA_PACIENTE || ' ' || oa.NOM_PACIENTE ) as NOMBRE_PACIENTE, "  
 				   
 				   + " dt.RUT_PROF_RESERVA as RUT_MEDICO_DERIVADOR, " 
-				   + " (dt.NOM_PROF_RESERVA || ' ' || dt.APA_PROF_RESERVA || ' ' || dt.AMA_PROF_RESERVA) as NOMBRE_MEDICO_DERIVADOR," 
+				   + " (dt.NOM_PROF_RESERVA || ' ' || dt.APA_PROF_RESERVA || ' ' || dt.AMA_PROF_RESERVA) as NOMBRE_MEDICO_DERIVADOR, " 
 				   
 				   + " oa.COD_PREVISION as COD_PREVISION, "
 				   + " oa.DES_PREVISION as DES_PREVISION, "
@@ -49,24 +49,24 @@ public class DetalleController extends OracleController {
 				   + " dt.TIPO_PRESTACION_ORIGEN as TIPO_PRESTACION_ORIGEN , "
 				   + " dt.COD_CENTRO_RESULTADO AS CODIGO_CENTRO_RESULTADO," 
 				   + " dt.DES_CENTRO_RESULTADO as DESCRIPCION_CENTRO_RESULTADO," 
-				   + " dt.COD_AGRUPADOR as CODIGO_AGRUPADOR," 
-				   + " dt.VALOR_CONVENIO as VALOR_CONVENIO,"  
-				   + " dt.VALOR_LISTA as VALOR_LISTA," 
-				   + " dt.VALOR_PAGO as MONTO_PAGADO," 
-				   + " dt.CANTIDAD_PRESTACION AS CANTIDAD_PRESTACION,"
-				   + " dt.FOLIO_RESERVA AS FOLIO_RESERVA,"
+				   + " dt.COD_AGRUPADOR as CODIGO_AGRUPADOR, " 
+				   + " dt.VALOR_CONVENIO as VALOR_CONVENIO, "  
+				   + " dt.VALOR_LISTA as VALOR_LISTA, " 
+				   + " dt.VALOR_PAGO as MONTO_PAGADO, " 
+				   + " dt.CANTIDAD_PRESTACION AS CANTIDAD_PRESTACION, "
+				   + " dt.FOLIO_RESERVA AS FOLIO_RESERVA, "
 				   
           		   + " oa.RUT_MED_DERIVADOR as RUT_MEDICO, " 
- 				   + " (oa.NOM_MED_DERIVADOR || ' ' || oa.APA_MED_DERIVADOR || ' ' || oa.AMA_MED_DERIVADOR) as NOMBRE_MEDICO,"
+ 				   + " (oa.NOM_MED_DERIVADOR || ' ' || oa.APA_MED_DERIVADOR || ' ' || oa.AMA_MED_DERIVADOR) as NOMBRE_MEDICO, "
 				   
-				   + " dt.ESPECIALIDAD as ESPECIALIDAD,"
+				   + " dt.ESPECIALIDAD as ESPECIALIDAD, "
 				   + " dt.TIPO_CONSULTA as TIPO_CONSULTA, "
 				   + " pf.COD_FONASA AS CODIGO_FONASA "
 				   + " from ORDEN_ATENCION_AMB oa, DET_ORDEN_ATENCION_AMB dt, PRESTACIONES_FONASA_AMB pf "
 				   + " WHERE oa.NUM_ORDEN_ATENCION = dt.NUM_ORDEN_ATENCION(+) "
-				   + " AND oa.NUM_ORDEN_ATENCION=pf.NUM_ORDEN_ATENCION(+) " 
+				   + " AND dt.NUM_ORDEN_ATENCION=pf.NUM_ORDEN_ATENCION(+) "
+				   + " AND dt.id_prestacion = pf.id_prestacion(+) "
 				   + " AND dt.COD_PRESTACION IS NOT NULL ";
-					//+ "-- AND dt.ID_PRESTACION=PF.ID_PRESTACION ";
 		
 			if(cr.indexOf("TODOS") == -1) {
 		       sql += " AND dt.DES_CENTRO_RESULTADO in (" + cr + ") " ;
