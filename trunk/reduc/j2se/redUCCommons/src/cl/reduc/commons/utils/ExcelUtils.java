@@ -226,8 +226,6 @@ public class ExcelUtils {
 			excel.setFormatArialNoBold();
 			
 			int cont2= 1;
-			String cod ="";
-			int contCampos = numberOfColumns;
 			String numPrestacion = "";
 			String prestCod = "";
 			String prestFonasa = "";
@@ -251,9 +249,6 @@ public class ExcelUtils {
 				numPrestacion = rs.getString("NUMERO_ORDEN_ATENCION");
 				prestCod =  rs.getString("CODIGO_PRESTACION");
 				prestFonasa = rs.getString("CODIGO_FONASA");
-				if("17405883".equals(numPrestacion)) {
-					System.out.println("yo");
-				}
 				System.out.println("Cantidad de Registros :" + cont2);
 				int v = 1;
 				if(sw==0){
@@ -271,6 +266,7 @@ public class ExcelUtils {
 					oldCodPrestacion = prestCod;
 					sw=1;
 				} else {
+					System.out.println(prestCod + " - " + oldCodPrestacion);
 					if(oldNumPrestacion.equals(numPrestacion) && oldCodPrestacion.equals(prestCod)) {
 						codigosFonasaArray.add(prestFonasa);
 					} else {
@@ -295,98 +291,10 @@ public class ExcelUtils {
 					}
 				}
 				
-				
-				
-				/*
-				if(!"".equals(oldNumPrestacion) || !"".equals(oldCodFonasa)) {
-					if(oldNumPrestacion != null && oldCodFonasa != null) {
-						if(!numPrestacion.equals(oldNumPrestacion) && !oldCodPrestacion.equals(prestCod)) {
-							cont++;
-							contCampos = numberOfColumns;
-							int v = 1;
-							codigosFonasaArray=new ArrayList();
-							for(int x=1;x<=numberOfColumns;x++) {
-								if(v != 1) {
-									excel.addCell(x-2, cont-1, rs.getString(x));
-								} else if(x != filter) {
-									excel.addCell(x-1, cont-1, rs.getString(x));
-								} else if(x == filter) {
-									v=x;
-								}
-			                }
-						} else {
-							if(oldCodPrestacion.equals(prestCod) ) {
-								if(!oldCodFonasa.equals(prestFonasa)) {
-									contCampos = contCampos++;
-									if(cont -1==0) cont++;
-									if(!prestFonasa.equals(cod)) {
-										/*
-										if(validaPrestFonasa(codigosFonasaArray, prestFonasa))
-											excel.addCell(contCampos++ -1, cont-1, prestFonasa);
-										*//*
-										if("".equals(oldOldCondFonasa))
-											//if(validaPrestFonasa(codigosFonasaArray, prestFonasa))
-											excel.addCell(contCampos++ - 1, cont-1, prestFonasa);
-										else if(!oldOldCondFonasa.equals(prestFonasa)) 
-											if(validaPrestFonasa(codigosFonasaArray, prestFonasa))
-												excel.addCell(contCampos++ -1, cont-1, prestFonasa);
-												
-										else System.out.println(prestFonasa + " - " + oldOldCondFonasa);
-									}
-								}
-							} else {
-								cont++;
-								contCampos = numberOfColumns;
-								int v = 1;
-								codigosFonasaArray=new ArrayList();
-								for(int x=1;x<=numberOfColumns;x++) {
-									if(v != 1) {
-										excel.addCell(x-2, cont-1, rs.getString(x));
-									} else if(x != filter) {
-										excel.addCell(x-1, cont-1, rs.getString(x));
-									} else if(x == filter) {
-										v=x;
-									}
-				                }
-							}
-						}
-					} else {
-						int v = 1;
-						codigosFonasaArray=new ArrayList();
-						for(int x=1;x<=numberOfColumns;x++) {
-							if(v != 1) {
-								excel.addCell(x-2, cont-1, rs.getString(x));
-							} else if(x != filter) {
-								excel.addCell(x-1, cont-1, rs.getString(x));
-							} else if(x == filter) {
-								v=x;
-							}
-		                }
-						contCampos = numberOfColumns;
-						cont++;
-					}
-				} else {
-					contCampos = numberOfColumns;
-					int v = 1;
-					codigosFonasaArray=new ArrayList();
-					for(int x=1;x<=numberOfColumns;x++) {
-						if(v != 1) {
-							excel.addCell(x-2, cont, rs.getString(x));
-						} else if(x != filter) {
-							excel.addCell(x-1, cont, rs.getString(x));
-						} else if(x == filter) {
-							v=x;
-						}
-	                }
-				}*/
-				
 				if(cont>=2) {
 					oldOldCondFonasa = oldCodFonasa;
 				}
-				/*
-				oldCodFonasa = prestFonasa;
-				codigosFonasaArray.add(prestFonasa);
-				*/
+				
 				if(cont>65530) {
 					filter=-1;
 					excel.createSheet(paginas, fecha + " a " + hasta + " " + paginas);
@@ -402,8 +310,9 @@ public class ExcelUtils {
 				    }
 					paginas++;
 					cont=1;
-					//cont++;
-					contCampos = 0;	
+					oldNumPrestacion = "";
+					oldCodPrestacion = "";
+					codigosFonasaArray=new ArrayList();
 				} 
 				if(contWriter>15000) {
 					excel.flushFOS();
