@@ -66,7 +66,7 @@ public class Inicio extends JFrame {
 					Inicio frame = new Inicio();
 					frame.setVisible(true);
 				} catch (Exception e) {
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(null, "Se ha producido en error: " + e.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE );
 				}
 			}
 		});
@@ -129,7 +129,7 @@ public class Inicio extends JFrame {
 		
 		cb_sucursal = new JComboBox();
 		cb_sucursal.setBounds(85, 65, 178, 17);
-		ArrayUtils.recorreArray(cbManager.getSucursales(),cb_sucursal);
+		//ArrayUtils.recorreArray(cbManager.getSucursales(),cb_sucursal);
 		panel.add(cb_sucursal);
 		
 		JPanel panel_2 = new JPanel();
@@ -311,7 +311,6 @@ public class Inicio extends JFrame {
 			public void windowClosing(WindowEvent e) {
 				System.out.println("Cerrando ventana");
 				ODBCOracle.getInstance().closeConnection();
-				
 			}
 			
 			public void windowClosed(WindowEvent e) {

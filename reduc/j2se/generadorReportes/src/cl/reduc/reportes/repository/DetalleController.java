@@ -33,7 +33,14 @@ public class DetalleController extends OracleController {
 				   + " dt.VALOR_PAGO as MONTO_PAGADO, " 
 				   + " dt.CANTIDAD_PRESTACION AS CANTIDAD_PRESTACION, "
 				   + " oa.COD_SECCION_ORIGEN as COD_SECCION_ORIGEN, "
-				   + " oa.COD_SECCION_INT as CENTRO_ATENCION_RED, "
+				   
+				   /* CAMBIAR  */
+				   
+				   + " dt.SECCION as CENTRO_ATENCION_RED, "
+				   
+				   /* FIN CAMBIAR  */
+				   
+				   
 				   + " oa.DES_LUGAR_PAGO as DES_LUGAR_PAGO, "
 				   + " oa.TIPO_PACIENTE as TIPO_PACIENTE, " 
 				   + " oa.TIPO_ATENCION as TIPO_ATENCION, "

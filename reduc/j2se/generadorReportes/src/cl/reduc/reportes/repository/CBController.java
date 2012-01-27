@@ -34,13 +34,15 @@ public class CBController extends OracleController {
 	
 	public List getSucursales() {
 		response = new ArrayList();
-        ResultSet rs = select("SELECT DISTINCT DES_FLEX FROM SECCION ORDER BY DES_FLEX ASC");
+        ResultSet rs = select("SELECT DISTINCT SECCION FROM ESPECIALIDAD_RECLASIF ORDER BY SECCION ASC");
         try {
             response.add("TODOS");
             String seccion="";
             while(rs.next()) {
-                seccion = rs.getString("DES_FLEX");
-                if(!seccion.equals("") || seccion!=null ) {
+                seccion = rs.getString("SECCION");
+                if(seccion == null ) {
+                	response.add("No hay datos");
+                } else if(!seccion.equals("") ) {
                     response.add(seccion);
                 }
             }
