@@ -7,7 +7,7 @@ public class Controller extends OracleController {
 
 	public void loadData() {
 		String anio = "2011";
-		for (int x = 1; x <= 11; x++) {
+		for (int x =1; x <= 11; x++) {
 			System.out.println(DateUtils.validaMont(x + "") + anio);
 			String query = "INSERT INTO DET_ORDEN_ATENCION_AMB ( "
 					+ " ID_PRESTACION,  " + " CORRELATIVO_PRESTACION, "
