@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<menu nombre="root">
+	
+	<menu nombre="ID1" descripcion="Remesa Abogado" final="no" funcion="" editable="no">
+		<menu nombre="ID2" descripcion="Remesa Abogado Crédito y TC" pagina="../jsp/RemesaTarjIngreso.jsp" final="yes" funcion="2500" editable="no"/>
+		<menu nombre="ID3" descripcion="Remesa Abogado Cheque Protestado" pagina="../jsp/RemesaCheqIngreso.jsp" final="yes" funcion="2501" editable="no"/>
+		<menu nombre="ID3" descripcion="Remesa ECE (Pre-Abogado)" pagina="../jsp/RemesaPreAboIngreso.jsp" final="yes" funcion="2502" editable="no"/>
+		
+		<menu nombre="ID4" descripcion="Consultar Remesas" final="no" funcion="" editable="no">
+				<menu nombre="ID5" descripcion="Crédito y TC" pagina="../jsp/RemesaConsultar.jsp?TIPOPROD=1" final="yes" funcion="2503" editable="no"/>
+				<menu nombre="ID6" descripcion="Cheque Protestado" pagina="../jsp/RemesaConsultar.jsp?TIPOPROD=2" final="yes" funcion="2503" editable="no"/>
+				<menu nombre="ID7" descripcion="ECE (Pre-Abogado)" pagina="../jsp/RemesaConsultar.jsp?TIPOPROD=5" final="yes" funcion="2503" editable="no"/>
+		</menu>
+		
+		<menu nombre="ID8" descripcion="Informes" final="no" funcion="" editable="no">
+				<menu nombre="ID9" descripcion="Estado de Remesas" pagina="../jsp/RemesaInfEstado.jsp" final="yes" funcion="2504" editable="no"/>
+				<menu nombre="ID10" descripcion="Consulta Contable Remesa" pagina="../jsp/RemesaInfContable.jsp" final="yes" funcion="2505" editable="no"/>
+		</menu>
+		
+	</menu>	
+			
+	<menu nombre="ID11" descripcion="Costas Procesales" final="no" funcion="" editable="no">
+	
+		<menu nombre="ID12" descripcion="Costas Procesales Tarjeta" pagina="../jsp/CostasTarjIngreso.jsp" final="yes" funcion="2506" editable="no"/>
+		<menu nombre="ID13" descripcion="Costas Procesales Cheque" pagina="../jsp/CostasCheqIngreso.jsp" final="yes" funcion="2508" editable="no"/>
+	
+		<menu nombre="ID14" descripcion="Consultar Costas" final="no" funcion="" editable="no">
+				<menu nombre="ID15" descripcion="Tarjeta" pagina="../jsp/CostasConsultar.jsp?TIPOPROD=3" final="yes" funcion="2509" editable="no"/>
+				<menu nombre="ID16" descripcion="Cheque Protestado" pagina="../jsp/CostasConsultar.jsp?TIPOPROD=4" final="yes" funcion="2509" editable="no"/>
+		</menu>
+		<menu nombre="ID17" descripcion="Resumen Costas Procesales" pagina="../jsp/CostasResumen.jsp" final="yes" funcion="2510" editable="no"/>
+		<menu nombre="ID18" descripcion="Detalle Costas Procesales" pagina="../jsp/CostasDetalle.jsp" final="yes" funcion="2511" editable="no"/>
+	</menu>	
+	
+	<menu nombre="ID19" descripcion="Salir" final="yes" pagina="../jsp/cerrar.jsp" funcion="0" editable="no"/>
+</menu>
