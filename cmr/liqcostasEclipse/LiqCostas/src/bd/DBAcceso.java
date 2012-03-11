@@ -36,6 +36,7 @@ public class DBAcceso {
 
     public Connection connect() throws SQLException, IOException, NamingException {
   		try {
+  			logger.info("GET CONNECTION");
   			conn = ds.getConnection();
   		} catch (Exception e){
   			//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
