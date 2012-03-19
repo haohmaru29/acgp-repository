@@ -1,0 +1,1 @@
+<script type="text/javascript" src="public/pages/atencion/js/atencion_tipo.js"></script>

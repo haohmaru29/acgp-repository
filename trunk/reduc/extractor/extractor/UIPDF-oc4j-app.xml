@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE orion-application PUBLIC "-//Evermind//DTD J2EE Application runtime 1.2//EN" "http://xmlns.oracle.com/ias/dtds/orion-application.dtd">
+<orion-application>
+  <web-module id="UIPDF-commonsApp-webapp" path="/home/haoh/Documentos/PROYECTOS/REDUC/EXTRACTOR SELECTIVO/fuentes/extractor/commonsApp/public_html"/>
+  <web-module id="extractor" path="/home/haoh/Documentos/PROYECTOS/REDUC/EXTRACTOR SELECTIVO/fuentes/extractor/reportes/public_html"/>
+  <log>
+    <file path="UIPDF-oc4j-app.log"/>
+  </log>
+  <jazn provider="XML" location="UIPDF-jazn-data.xml" default-realm="jazn.com"/>
+  <data-sources path="UIPDF-data-sources.xml"/>
+</orion-application>

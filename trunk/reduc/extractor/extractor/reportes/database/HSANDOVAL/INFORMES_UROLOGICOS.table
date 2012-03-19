@@ -1,0 +1,267 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TABLE class="oracle.jdeveloper.cm.ds.db.Table">
+   <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-800b-c0a80a80a724" type="TABLE"/>
+   <columns>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-800c-c0a80a80a724" type="Column"/>
+         <dataType identifier="oracle.jdeveloper.cm.ds.db.ora.OracleDatabase.ORA_NUMBER" id="3"/>
+         <default/>
+         <name>IU_TIPOINFORME</name>
+         <notNull>true</notNull>
+         <precision id="4">15</precision>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_TIPOINFORME</name>
+                  <schemaName/>
+                  <type>Column</type>
+               </Value>
+            </Item>
+         </properties>
+         <scale id="5">5</scale>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-800d-c0a80a80a724" type="Column"/>
+         <dataType identifier="oracle.jdeveloper.cm.ds.db.ora.OracleDatabase.ORA_VARCHAR2" id="0"/>
+         <default/>
+         <name>IU_RUT</name>
+         <notNull>false</notNull>
+         <precision id="2">10</precision>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_RUT</name>
+                  <schemaName/>
+                  <type>Column</type>
+               </Value>
+            </Item>
+         </properties>
+         <scale/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-800e-c0a80a80a724" type="Column"/>
+         <dataType idref="0"/>
+         <default/>
+         <name>IU_NOMBRE</name>
+         <notNull>false</notNull>
+         <precision>200</precision>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_NOMBRE</name>
+                  <schemaName/>
+                  <type>Column</type>
+               </Value>
+            </Item>
+         </properties>
+         <scale/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-800f-c0a80a80a724" type="Column"/>
+         <dataType idref="0"/>
+         <default/>
+         <name>IU_ARCHIVO</name>
+         <notNull>true</notNull>
+         <precision>30</precision>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_ARCHIVO</name>
+                  <schemaName/>
+                  <type>Column</type>
+               </Value>
+            </Item>
+         </properties>
+         <scale/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-8010-c0a80a80a724" type="Column"/>
+         <dataType identifier="oracle.jdeveloper.cm.ds.db.JdbcDatabase.ANSI_DATE" id="1"/>
+         <default/>
+         <name>IU_FECHAINFORME</name>
+         <notNull>true</notNull>
+         <precision/>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_FECHAINFORME</name>
+                  <schemaName/>
+                  <type>Column</type>
+               </Value>
+            </Item>
+         </properties>
+         <scale/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-8011-c0a80a80a724" type="Column"/>
+         <dataType idref="0"/>
+         <default/>
+         <name>IU_USUARIO</name>
+         <notNull>true</notNull>
+         <precision>20</precision>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_USUARIO</name>
+                  <schemaName/>
+                  <type>Column</type>
+               </Value>
+            </Item>
+         </properties>
+         <scale/>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-8012-c0a80a80a724" type="Column"/>
+         <dataType idref="1"/>
+         <default/>
+         <name>IU_FECHAINGRESO</name>
+         <notNull>true</notNull>
+         <precision/>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_FECHAINGRESO</name>
+                  <schemaName/>
+                  <type>Column</type>
+               </Value>
+            </Item>
+         </properties>
+         <scale/>
+      </Item>
+   </columns>
+   <constraints class="[Loracle.jdeveloper.cm.ds.db.Constraint;"/>
+   <indexes>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-8013-c0a80a80a724" type="Index"/>
+         <columns>
+            <Item>
+               <ID/>
+               <dataType idref="1"/>
+               <default/>
+               <name>IU_FECHAINFORME</name>
+               <notNull>true</notNull>
+               <precision/>
+               <properties class="java.util.HashMap"/>
+               <scale/>
+            </Item>
+            <Item id="6">
+               <ID/>
+               <dataType idref="0"/>
+               <default/>
+               <name>IU_RUT</name>
+               <notNull>false</notNull>
+               <precision idref="2"/>
+               <properties class="java.util.HashMap"/>
+               <scale/>
+            </Item>
+            <Item id="7">
+               <ID/>
+               <dataType idref="3"/>
+               <default/>
+               <name>IU_TIPOINFORME</name>
+               <notNull>true</notNull>
+               <precision idref="4"/>
+               <properties class="java.util.HashMap"/>
+               <scale idref="5"/>
+            </Item>
+         </columns>
+         <name>IU_INDEX1</name>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_INDEX1</name>
+                  <schemaName>HSANDOVAL</schemaName>
+                  <type>Index</type>
+               </Value>
+            </Item>
+         </properties>
+         <schema id="8">
+            <ID/>
+            <name>HSANDOVAL</name>
+            <properties class="java.util.HashMap"/>
+         </schema>
+      </Item>
+      <Item>
+         <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b2612af-0132-1000-8014-c0a80a80a724" type="Index"/>
+         <columns>
+            <Item idref="6"/>
+            <Item idref="7"/>
+         </columns>
+         <name>IU_INDEX2</name>
+         <properties class="java.util.HashMap">
+            <Item>
+               <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+               <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+                  <ID/>
+                  <name>IU_INDEX2</name>
+                  <schemaName>HSANDOVAL</schemaName>
+                  <type>Index</type>
+               </Value>
+            </Item>
+         </properties>
+         <schema idref="8"/>
+      </Item>
+   </indexes>
+   <name>INFORMES_UROLOGICOS</name>
+   <properties class="java.util.HashMap">
+      <Item>
+         <Key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</Key>
+         <Value>ACGP</Value>
+      </Item>
+      <Item>
+         <Key>OfflineDBConstants.IMPORT_SOURCE_ID</Key>
+         <Value class="oracle.jdeveloper.offlinedb.marshal.DummyDBObjectID">
+            <ID>TABLE(35301)</ID>
+            <name>INFORMES_UROLOGICOS</name>
+            <schemaName>HSANDOVAL</schemaName>
+            <type>TABLE</type>
+         </Value>
+      </Item>
+      <Item>
+         <Key>OfflineDBConstants.IMPORT_SOURCE_NAME</Key>
+         <Value>INFORMES_UROLOGICOS</Value>
+      </Item>
+      <Item>
+         <Key>OfflineDBConstants.IMPORT_SOURCE_SCHEMA</Key>
+         <Value>HSANDOVAL</Value>
+      </Item>
+      <Item>
+         <Key>TableType</Key>
+         <Value>Normal</Value>
+      </Item>
+      <Item>
+         <Key>Timestamp</Key>
+         <Value class="java.lang.Long">1313163549000</Value>
+      </Item>
+   </properties>
+   <schema>
+      <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b25fc1a-0132-1000-800a-c0a80a80a724" type="SCHEMA"/>
+      <name>HSANDOVAL</name>
+      <properties class="java.util.HashMap">
+         <Item>
+            <Key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</Key>
+            <Value>ACGP</Value>
+         </Item>
+         <Item>
+            <Key>OfflineDBConstants.IMPORT_SOURCE_SCHEMA</Key>
+            <Value>HSANDOVAL</Value>
+         </Item>
+      </properties>
+   </schema>
+</TABLE>

@@ -1,0 +1,109 @@
+/* ALGUNOS ESTILOS FICHA CLINICA */
+
+.edad {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;
+	width: 25px;
+}
+
+.anio {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;
+	width: 40px;
+}
+
+.fecha {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;
+	width: 62px;
+}
+/* Elementos de formulario Enf. Crónico */
+.select135 {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;
+	width: 135px;
+}
+
+.select190 {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;
+	width: 190px;
+}
+
+.cifra {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #999;
+	border: 1px ridge #CCC;
+	width: 25px;
+	background-color:#F5f5f5;
+}
+
+
+/* Lengueta GES, nenfermo */	
+.verde12 {  font: bold 12px Arial, Helvetica, sans-serif;
+color: #008000;}
+
+	a.verde12:link, a.verde12:visited { text-decoration: underline}
+	a.verde12:hover{  color: #C00; text-decoration: underline}
+
+
+/* Lengüetas Enf. Crónicas*/
+.textoazulino10 {
+ 	font: bold 10px/12px Verdana, Arial, sans-serif;
+	color: #035BC4;}
+	
+	a.textoazulino10:link, a.textoazulino10:visited{ text-decoration: underline}
+	a.textoazulino10:hover{  color: #C00; text-decoration: underline}	
+	a.textoazulino10:active{ text-decoration: underline}
+	
+.textobco10 {
+ 	font: bold 10px/12px Verdana, Arial, sans-serif;
+	color: #FFF;}
+
+/* Título Alerta*/
+.titulos {
+font: bold 14px Arial, Helvetica, sans-serif;
+color: #035BC4;}
+
+/* Links en botones*/
+.user_botones {
+font: 10px/10px Arial, Helvetica, sans-serif;
+color: #333;}
+	
+	a.user_botones:link, a.user_botones:visited {text-decoration: none;}
+	a.user_botones:hover {color: #035BC4; text-decoration: underline;}
+
+/* Centros en Pacientes citados menú izq */
+.user_bco{
+font: 10px/10px Arial, Helvetica, sans-serif;
+color: #FFF;}
+
+/* Buscador de diagnósticos*/
+.lista_menu {font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	width: 270px;
+	border: 1px ridge #CCC;}
+	
+.anomalias {background-color: #a6a6ff; 
+color: #000; 
+}
+.infecciones {background-color: #ffff99; 
+color: #000; 
+}
+.lesiones {background-color: #ff9f9f; 
+color: #000; 
+}
+.neoplasias {background-color: #bfffff; 
+color: #000; 
+}
+.otros {background-color: #cf9fcf; 
+color: #000; 
+}
+.sintomas {background-color: #bfffbf; 
+color: #000; 
+}
