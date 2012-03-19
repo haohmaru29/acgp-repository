@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SCHEMA class="oracle.jdeveloper.cm.ds.db.Schema">
+   <ID class="oracle.jdeveloper.offlinedb.OfflineDBObjectID" uid="6b25fc1a-0132-1000-800a-c0a80a80a724" type="SCHEMA"/>
+   <name>HSANDOVAL</name>
+   <properties class="java.util.HashMap">
+      <Item>
+         <Key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</Key>
+         <Value>ACGP</Value>
+      </Item>
+      <Item>
+         <Key>OfflineDBConstants.IMPORT_SOURCE_SCHEMA</Key>
+         <Value>HSANDOVAL</Value>
+      </Item>
+   </properties>
+</SCHEMA>

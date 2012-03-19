@@ -1,0 +1,312 @@
+/* HOJA DE ESTILOS COMUNES SALUD UC */
+
+/* Scrollbar gris*/
+BODY {
+scrollbar-face-color: #F4F4F4;
+scrollbar-highlight-color: #CCC;
+scrollbar-3dlight-color: #FAFAFA;
+scrollbar-darkshadow-color: #000;
+scrollbar-shadow-color: #687384;
+scrollbar-arrow-color: #CCC;
+scrollbar-track-color: #FAFAFA;
+}
+
+/* Divs diagramación*/
+html, body { 
+    height: 100%; 
+	margin: 0;
+} 
+ 
+.footer { /* Sticky Footer, ubica el pie de página en el área inferior*/
+    height: 1.5em;
+	clear: both; /*(el elemento no permite flotantes a ninguno de sus lados*/
+	/*border:solid 1px #00FF00;*/
+}
+
+.push { 
+    height: 1.5em;
+	clear: both; 
+	/*border:solid 1px #0000FF;*/		
+}
+
+#wrapper { /*contenedor general*/
+   overflow: hidden;	
+   min-height: 100%; 
+    height: auto !important; 
+    height: 100%; 
+    margin: 0 auto -1.5em;
+	/*border:solid 1px #FF0000;*/
+	}
+
+
+#menu { /*columna izquierda*/
+	width: 150px;
+	float: left;
+	background: #F2F3F4;
+	padding-bottom: 32768px;	
+	margin-bottom: -32768px;
+	padding-top:10px;
+	padding-left:3px;
+	padding-right: 3px;
+	margin-right: 0px;
+	text-align: left;
+	overflow: hidden;
+	/*border:solid 1px #C1C4D0;*/
+}
+
+#contenido { /*columna derecha*/ 
+	width:83%; /*para visualizar mejor en Chrome y FF, para IE no es necesario*/
+	float: left;
+	margin-top:10px;
+	margin-right: 0px;
+	padding-right: 0px;
+	padding-left:10px;
+	padding-bottom: 32768px;
+	margin-bottom: -32768px;/* se lo restamos y quedamos en lo mismo pero con el fondo en 100%*/
+	overflow: hidden; /* antes auto*/
+	/*border:solid 1px #C1C4D0;*/
+}
+
+#contenido2 { /*columna derecha en plantilla con menú abatible*/
+	width:84%; /*para visualizar mejor en Chrome y FF, para IE no es necesario*/
+	float: left;
+	margin-top:0px;
+	margin-right: 0px;
+	padding-right: 0px;
+	padding-left:1px;
+	padding-bottom: 32768px;
+	margin-bottom: -32768px;/* se lo restamos y quedamos en lo mismo pero con el fondo en 100%*/
+	overflow:hidden; /* antes auto*/
+	/*border:solid 1px #C1C4D0;*/
+}
+
+#contenido3 {  
+	margin:10px;
+	/*border:solid 1px #C1C4D0;*/
+}
+
+/* Elementos de formulario */
+.boton {
+	font: 10px Arial, sans-serif; 
+	height:18px;}
+
+.boton11 {
+	font: 11px Arial, sans-serif; }
+	
+.boton11_azul {
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	color: #FFF; 
+	background-color: #035BC4; 
+	border-color: #FFF #999 #CCC #CCC}
+
+.campos {
+	font: 10px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;}
+	
+.campos11 {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;}
+
+.campos12 {/* antes llamado complemento */
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;}
+
+.cifras {/* utilizado para ingreso de números cortos*/
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;
+	border: 1px ridge #CCC;
+	width: 55px;}
+
+/* Cuerpos de texto principales 11px */
+.texto {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000270;
+	text-decoration: none;}
+	
+	a.texto:link, a.texto:visited {  font-weight: bold}
+	a.texto:hover{  color: #035BC4; font-weight: bold}
+	a.texto:active{  font-weight: bold}
+
+.textonegro { 
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #000;}
+	
+	a.textonegro:link, a.textonegro:visited, a.textonegro:hover{ 
+	font-weight: bold; text-decoration: underline}
+	
+.textorojo {  
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #F00;}
+
+.textogris { 
+ 	font: 11px Arial, Helvetica, sans-serif;
+	color: #333;}
+	
+.textoverde {
+	font: bold 11px Arial, Helvetica, sans-serif;
+	color: #008000;}
+
+	a.textoverde:link, a.textoverde:visited, a.textoverde:hover {text-decoration: underline;}
+	
+/* Títulos blancos, lenguetas, links de avance en resultados de búsqueda */
+.textobco {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #FFF;}
+
+	a.textobco:link, a.textobco:visited, a.textobco:hover { 
+	font-weight: bold; text-decoration: underline}
+
+.texto12 {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #FFF;}
+
+	a.texto12:link, a.texto12:visited, a.texto12:hover {  
+	font-weight: bold;text-decoration: underline;}
+
+/* Links principales, avance en resultados de búsqueda */		
+.textoazulino {
+ 	font: bold 11px/16px Arial, Helvetica, sans-serif;
+	color: #035BC4;}
+	
+	a.textoazulino:link, a.textoazulino:visited{ text-decoration: underline}
+	a.textoazulino:hover{  color: #C00; text-decoration: underline}	
+	a.textoazulino:active{ text-decoration: underline}
+	
+/* Encabezados de tabla y lenguetas */	
+.lenbco {/* ex .piebco */
+	font: bold 9px Verdana, Arial, sans-serif; 
+	color: #FFF;
+	text-decoration: none;}
+	
+	a.lenbco:link, a.lenbco:visited, a.lenbco:hover{  
+	text-decoration: underline}
+
+.lenazul {/* ex .azules*/
+	font: bold 9px Verdana, Arial, sans-serif; 
+	color: #000270;
+	text-decoration: none;}
+	
+	a.lenazul:link, a.lenazul:visited{  text-decoration: underline}
+	a.lenazul:hover{  color: #035BC4; text-decoration: underline}
+	a.lenazul:active{  text-decoration: underline}
+	
+/* Textos pequeños 9-10px */
+.pie {
+	font: bold 10px Arial, Helvetica, sans-serif;
+	color: #000270;}
+
+	a.pie:link, a.pie:visited {color: #035BC4;text-decoration: underline;}
+	a.pie:hover {color: #C00;text-decoration: underline;}
+	
+.piegris {font: bold 10px Arial, Helvetica, sans-serif;
+	color: #333;}
+	
+	a.piegris:link, a.piegris:visited {text-decoration: underline;}
+	a.piegris:hover {color: #035BC4;text-decoration: underline;}
+
+.rojo {
+	font: 10px Arial, Helvetica, sans-serif;
+	color: #F00;}
+
+	a.rojo:link, a.rojo:visited, a.rojo:hover {
+	color: #F00;
+	text-decoration: underline;}
+	
+/* Elementos calendario */
+.pieverde {
+	font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #008000;text-decoration: none;}
+	
+.pieamarillo{
+	font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #FF0;
+	text-decoration: none;}
+
+.negro{
+	font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	text-decoration: none;}
+	
+.pierojo{
+	font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #F00;
+	text-decoration: none;}
+
+.pieazul{
+	font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #00F; text-decoration: none;}
+	
+
+	
+/* Links de avance en Resultados de búsqueda */
+.topItem5 {
+	height:20px; padding-left:3px; padding-right:3px; background: #7399D2; 
+	font: bold 11px/20px Arial, Helvetica, sans-serif;
+	color: #FFF; text-decoration: none;}
+	
+.topItem6 {
+	height:20px; padding-left:3px; padding-right:3px; background: #E0E0E0;
+	font: bold 11px/20px Arial, Helvetica, sans-serif;
+	color: #EA0000;}
+
+/* Nombre usuario top */	
+.azul12 {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #091F85;}
+	
+	a.azul12:link, a.azul12:visited { text-decoration: underline}
+	a.azul12:hover{  color: #C00; text-decoration: underline}
+	
+/* Créditos al pie de página */
+.user{
+	font: 10px Arial, Helvetica, sans-serif;
+	color: #333;}
+	
+	a.user:link, a.user:visited {text-decoration: none;}
+	a.user:hover {color: #035BC4; text-decoration: underline;}
+	
+/* Líneas: se debe incluir en la celda un pixel transparente (punto.gif) */
+.celdagris {
+	background-color: #CCC;
+	height: 1px;
+	}
+	
+.celdazul {
+	background-color: #36649B;
+	height: 1px;
+	}	
+
+.linea {
+	border-top: 1px solid #36649B;
+	margin: 0px;
+	padding: 0px;
+	height:1px;
+	} 
+
+.linea_dotted {
+	border-top: 2px dotted #c1c1c3;
+	}
+.gris {
+	border-top: 1px dotted #c1c1c3;
+}
+
+/* Tablacebra*/
+
+tr.impar { background-color: #F5F5F5; font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000270;}
+tr.par { background-color: #FFFFFF; font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000270;}
+	
+/* Títulos */
+.titulos_gris {
+	font: 12px Verdana, Arial, sans-serif;
+	color: #333;}
+	
+.titulos_azulino { /* ex títulos*/
+font: bold 14px Arial, Helvetica, sans-serif;
+color: #035BC4;}

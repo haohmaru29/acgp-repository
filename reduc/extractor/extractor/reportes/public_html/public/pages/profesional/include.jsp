@@ -1,0 +1,1 @@
+<script type="text/javascript" src="public/pages/profesional/js/profesional.js"></script>

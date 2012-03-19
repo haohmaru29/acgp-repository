@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE data-sources PUBLIC "Orion data-sources" "http://xmlns.oracle.com/ias/dtds/data-sources.dtd">
+<data-sources>
+<!-- SERVIDOR 192.168.1.44 -->
+  <data-source name="jdbc/REPORTESCoreDS" class="com.evermind.sql.DriverManagerDataSource" location="jdbc/REPORTESCoreDS" xa-location="jdbc/xa/REPORTESCoreDSXADS" ejb-location="jdbc/REPORTESCoreDS" pooled-location="jdbc/REPORTESCoreDSPooledDS" connection-driver="oracle.jdbc.driver.OracleDriver" username="ADMAMED" password="acgpcl" url="jdbc:oracle:thin:@192.168.1.44:1521:xe" inactivity-timeout="30"/>
+
+<!-- SERVIDOR MAQUINA VIRTUAL 
+  <data-source name="jdbc/REPORTESCoreDS" class="com.evermind.sql.DriverManagerDataSource" location="jdbc/REPORTESCoreDS" xa-location="jdbc/REPORTESCoreDS" ejb-location="jdbc/REPORTESCoreDSDS" pooled-location="jdbc/REPORTESCoreDSDS" connection-driver="oracle.jdbc.driver.OracleDriver" username="ADMAMED" password="acgpcl" url="jdbc:oracle:thin:@192.168.181.128:1521:xe" inactivity-timeout="30"/>-->
+
+
+  <data-source name="jdev-connection-reportes-VM" class="com.evermind.sql.DriverManagerDataSource" location="jdbc/reportes-VMCoreDS" xa-location="jdbc/xa/reportes-VMXADS" ejb-location="jdbc/reportes-VMDS" pooled-location="jdbc/reportes-VMPooledDS" connection-driver="oracle.jdbc.driver.OracleDriver" username="ADMAMED" password="acgpcl" url="jdbc:oracle:thin:@192.168.181.128:1521:xe" inactivity-timeout="30"/>
+ 
+  <data-source name="jdev-connection-REPORTESCoreDS" class="com.evermind.sql.DriverManagerDataSource" location="jdbc/REPORTESCoreDSCoreDS" xa-location="jdbc/xa/REPORTESCoreDSXADS" ejb-location="jdbc/REPORTESCoreDSDS" pooled-location="jdbc/REPORTESCoreDSPooledDS" connection-driver="oracle.jdbc.driver.OracleDriver" username="ADMAMED" password="acgpcl" url="jdbc:oracle:thin:@192.168.181.128:1521:xe" inactivity-timeout="30"/>
+  <data-source name="jdev-connection-REPORTES" class="com.evermind.sql.DriverManagerDataSource" location="jdbc/REPORTESCoreDS" xa-location="jdbc/xa/REPORTESXADS" ejb-location="jdbc/REPORTESDS" pooled-location="jdbc/REPORTESPooledDS" connection-driver="oracle.jdbc.driver.OracleDriver" username="ADMAMED" password="acgpcl" url="jdbc:oracle:thin:@192.168.1.44:1521:xe" inactivity-timeout="30"/>
+</data-sources>

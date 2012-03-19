@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<descriptor>
+   <unique-filename>cl.reduc.reportes.domain.InformesUrologicos.ClassDescriptor</unique-filename>
+   <active>true</active>
+   <bldr-class>cl.reduc.reportes.domain.InformesUrologicos</bldr-class>
+   <mappings>
+      <mapping>
+         <inherited>false</inherited>
+         <instance-variable-name>iuArchivo</instance-variable-name>
+         <default-field-names>
+            <default-field-name>direct field=</default-field-name>
+         </default-field-names>
+         <uses-method-accessing>false</uses-method-accessing>
+         <read-only>false</read-only>
+         <get-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </get-method-handle>
+         <set-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </set-method-handle>
+         <direct-mapping-field-handle>
+            <field-handle>
+               <field-table>HSANDOVAL.INFORMES_UROLOGICOS</field-table>
+               <field-name>IU_ARCHIVO</field-name>
+            </field-handle>
+         </direct-mapping-field-handle>
+         <mapping-class>MWDirectToFieldMapping</mapping-class>
+      </mapping>
+      <mapping>
+         <inherited>false</inherited>
+         <instance-variable-name>iuFechainforme</instance-variable-name>
+         <default-field-names>
+            <default-field-name>direct field=</default-field-name>
+         </default-field-names>
+         <uses-method-accessing>false</uses-method-accessing>
+         <read-only>false</read-only>
+         <get-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </get-method-handle>
+         <set-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </set-method-handle>
+         <direct-mapping-field-handle>
+            <field-handle>
+               <field-table>HSANDOVAL.INFORMES_UROLOGICOS</field-table>
+               <field-name>IU_FECHAINFORME</field-name>
+            </field-handle>
+         </direct-mapping-field-handle>
+         <mapping-class>MWDirectToFieldMapping</mapping-class>
+      </mapping>
+      <mapping>
+         <inherited>false</inherited>
+         <instance-variable-name>iuFechaingreso</instance-variable-name>
+         <default-field-names>
+            <default-field-name>direct field=</default-field-name>
+         </default-field-names>
+         <uses-method-accessing>false</uses-method-accessing>
+         <read-only>false</read-only>
+         <get-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </get-method-handle>
+         <set-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </set-method-handle>
+         <direct-mapping-field-handle>
+            <field-handle>
+               <field-table>HSANDOVAL.INFORMES_UROLOGICOS</field-table>
+               <field-name>IU_FECHAINGRESO</field-name>
+            </field-handle>
+         </direct-mapping-field-handle>
+         <mapping-class>MWDirectToFieldMapping</mapping-class>
+      </mapping>
+      <mapping>
+         <inherited>false</inherited>
+         <instance-variable-name>iuNombre</instance-variable-name>
+         <default-field-names>
+            <default-field-name>direct field=</default-field-name>
+         </default-field-names>
+         <uses-method-accessing>false</uses-method-accessing>
+         <read-only>false</read-only>
+         <get-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </get-method-handle>
+         <set-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </set-method-handle>
+         <direct-mapping-field-handle>
+            <field-handle>
+               <field-table>HSANDOVAL.INFORMES_UROLOGICOS</field-table>
+               <field-name>IU_NOMBRE</field-name>
+            </field-handle>
+         </direct-mapping-field-handle>
+         <mapping-class>MWDirectToFieldMapping</mapping-class>
+      </mapping>
+      <mapping>
+         <inherited>false</inherited>
+         <instance-variable-name>iuRut</instance-variable-name>
+         <default-field-names>
+            <default-field-name>direct field=</default-field-name>
+         </default-field-names>
+         <uses-method-accessing>false</uses-method-accessing>
+         <read-only>false</read-only>
+         <get-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </get-method-handle>
+         <set-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </set-method-handle>
+         <direct-mapping-field-handle>
+            <field-handle>
+               <field-table>HSANDOVAL.INFORMES_UROLOGICOS</field-table>
+               <field-name>IU_RUT</field-name>
+            </field-handle>
+         </direct-mapping-field-handle>
+         <mapping-class>MWDirectToFieldMapping</mapping-class>
+      </mapping>
+      <mapping>
+         <inherited>false</inherited>
+         <instance-variable-name>iuTipoinforme</instance-variable-name>
+         <default-field-names>
+            <default-field-name>direct field=</default-field-name>
+         </default-field-names>
+         <uses-method-accessing>false</uses-method-accessing>
+         <read-only>false</read-only>
+         <get-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </get-method-handle>
+         <set-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </set-method-handle>
+         <direct-mapping-field-handle>
+            <field-handle>
+               <field-table>HSANDOVAL.INFORMES_UROLOGICOS</field-table>
+               <field-name>IU_TIPOINFORME</field-name>
+            </field-handle>
+         </direct-mapping-field-handle>
+         <mapping-class>MWDirectToFieldMapping</mapping-class>
+      </mapping>
+      <mapping>
+         <inherited>false</inherited>
+         <instance-variable-name>iuUsuario</instance-variable-name>
+         <default-field-names>
+            <default-field-name>direct field=</default-field-name>
+         </default-field-names>
+         <uses-method-accessing>false</uses-method-accessing>
+         <read-only>false</read-only>
+         <get-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </get-method-handle>
+         <set-method-handle>
+            <method-handle empty-aggregate="true"/>
+         </set-method-handle>
+         <direct-mapping-field-handle>
+            <field-handle>
+               <field-table>HSANDOVAL.INFORMES_UROLOGICOS</field-table>
+               <field-name>IU_USUARIO</field-name>
+            </field-handle>
+         </direct-mapping-field-handle>
+         <mapping-class>MWDirectToFieldMapping</mapping-class>
+      </mapping>
+   </mappings>
+   <uses-sequencing>false</uses-sequencing>
+   <primary-table>HSANDOVAL.INFORMES_UROLOGICOS</primary-table>
+   <associated-tables>
+      <associated-table>
+         <name>HSANDOVAL.INFORMES_UROLOGICOS</name>
+      </associated-table>
+   </associated-tables>
+   <sequence-number-field-handle>
+      <field-handle empty-aggregate="true"/>
+   </sequence-number-field-handle>
+   <class-descriptor-query-manager>
+      <query-manager>
+         <descriptor-alias>InformesUrologicos</descriptor-alias>
+      </query-manager>
+   </class-descriptor-query-manager>
+   <descriptor-class>MWClassDescriptor</descriptor-class>
+</descriptor>

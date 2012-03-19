@@ -1,0 +1,1 @@
+<script type="text/javascript" src="public/pages/especialidad/js/especialidad.js"></script>
