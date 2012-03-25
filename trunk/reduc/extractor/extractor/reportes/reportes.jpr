@@ -10502,7 +10502,7 @@
                      <Value class="oracle.jdevimpl.config.JProjectLibraries">
                         <jdkName>1.4.2_19</jdkName>
                         <jdkVersionNumber>1.4.2_19</jdkVersionNumber>
-                        <libraries>JSP Runtime;Oracle JDBC 1.4;urlrewriter;log4j;JExcel;SaludUC;commosApp</libraries>
+                        <libraries>JSP Runtime;Oracle JDBC 1.4;urlrewriter;log4j;JExcel;SaludUC</libraries>
                      </Value>
                   </Item>
                   <Item>
@@ -10645,10 +10645,10 @@
          <Key>technologyScope</Key>
          <Value class="oracle.ide.model.TechnologyScope">
             <technologyKeys>
-               <Item>HTML</Item>
-               <Item>Database</Item>
                <Item>JSP</Item>
                <Item>Java</Item>
+               <Item>Database</Item>
+               <Item>HTML</Item>
                <Item>General</Item>
             </technologyKeys>
          </Value>

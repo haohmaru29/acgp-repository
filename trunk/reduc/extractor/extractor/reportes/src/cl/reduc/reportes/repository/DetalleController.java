@@ -166,8 +166,9 @@ public class DetalleController extends AbstractJpaController {
               sql+= " AND dt.COD_SECCION_INT in (" + seccSelected + " )";
           }
           sql += " AND  UPPER(oa.TIPO_ATENCION) = 'AMBULATORIO'  ";
-          if("".equals(orderBy)) sql+= " ORDER BY oa.NUM_ORDEN_ATENCION,FECHA_PAGO_ORDEN2 ";
-          else {
+          if("".equals(orderBy)) {
+              sql+= " ORDER BY oa.NUM_ORDEN_ATENCION, dt.COD_PRESTACION,FECHA_PAGO_ORDEN2  ";
+          } else {
               orderBy = orderBy.substring(0, orderBy.length()-1);
               sql+= " ORDER BY " + orderBy; 
           }
