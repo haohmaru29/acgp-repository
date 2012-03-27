@@ -1,0 +1,18 @@
+<Titulo>
+Consultores Integral Chile
+</Titulo>
+<font class="textgral"><p align="justify">
+<Imagen>logo_integral.gif</Imagen>
+Para la implantación de nuestro Sistema de Gestión de Calidad contamos con la colaboración de 
+consultores que pertenecen a la empresa Integral Chile, quienes prestan un servicio de asesoria 
+global, actuando como guías, facilitadores, capacitadores y auditores, esto basado en poseer:
+- Consultores con experiencia acreditable en la implementación y además en otros campos de la 
+  gestión empresarial.
+- Auditores formados por organismos internacionales reconocidos.
+- Equipo de trabajo formado por consultores especialistas en actividades productivas de servicio
+  y en procesos de gestión de una empresa. 
+  La contratación de esta empresa fue producto del apoyo de CORFO a través de un FAT, que nos permitió
+  obtener el 50% de financiamiento.
+  Ver presentacion de Integral en www.integralchile.cl
+<Imagen>socios.jpg</Imagen>
+</p></font>

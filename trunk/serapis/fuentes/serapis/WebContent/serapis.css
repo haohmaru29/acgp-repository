@@ -1,0 +1,175 @@
+BODY
+{
+    FONT-SIZE: 8pt;
+    COLOR: #953611;
+    FONT-FAMILY: Tahoma
+}
+INPUT
+{
+    BACKGROUND-COLOR: white;
+    BORDER-COLOR: #DCDCDC; #DCDCDC; #DCDCDC; #DCDCDC
+    
+}
+SELECT
+{
+    FONT-SIZE: 8pt;
+    COLOR: #0D3146;
+    FONT-FAMILY: Tahoma
+}
+TEXTAREA
+{
+    FONT-SIZE: 8pt;
+    COLOR: #953611;
+    FONT-FAMILY: Tahoma
+}
+TABLE
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: medium none;
+    COLOR: #953611;
+    BORDER-BOTTOM: medium none;
+    FONT-FAMILY: Tahoma;
+    BACKGROUND-COLOR: transparent
+}
+a:link              {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #953611; text-decoration: none}
+a:active            {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #953611; text-decoration: none}
+a:hover             {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #953611; text-decoration: underline}
+a:visited           {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color:  #953611; font-weight: bold; text-decoration: none}
+body                {bgcolor: #FFFFFF}
+input               {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal}
+.fondoinput         {background-color: #E5773C; BORDER-COLOR: #B0C4DE; #000080; #000080; #E5773C; width: 110px; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; font-weight: bold}
+textarea            {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px}
+.claseborde         {border-color: #BC6645}
+.textletrachica     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: normal; color: #666666; text-decoration: none }
+.textmenu           {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #9F382D}
+.textbarra          {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FFFFFF; text-decoration: none; line-height: 19px; background-color: #D1967F}
+.textgral           {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none; line-height: 16px}
+.fondotextura       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none; line-height: 16px;}
+.textformbold       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #00679F; text-decoration: none}
+.textcampos         {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #000000; text-decoration: none}
+.texttitulomenu     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #00679F; text-decoration: none ; background-color: #953611; text-indent: 5pt}
+
+.texttituloarea     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #FAE5B9; text-decoration: none ; background-color: #BC6645}
+.texttitulomayor    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #B9552E; text-decoration: none ; background-color: #FFFFFF}
+
+.tituloespecial     {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px; 
+	font-weight: bold; 
+	color: #953611; 
+	text-decoration: none;
+	background-color: #FEEB9D;
+}
+.tituloborde      {
+	background-image: url(images/doblez_borde01.jpg); 
+	background-repeat: no-repeat;
+}
+.logotipo      {
+	width: 300px;
+	height: 90px;
+	background-image: url(images/logo.jpg); 
+	background-repeat: no-repeat;
+	background-position: center center;	
+	border: 0px solid lightgrey;
+}
+
+
+.titulonoticia      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #FFFFFF; text-decoration: none ; background-image: url(images/pestana_roja.gif); background-repeat: no-repeat}
+.texttablaarea      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FFFFFF; text-decoration: none ; background-color: #B9552E}
+.textalerta         {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; text-decoration: none ; background-color: #FF0000; text-indent: 5pt}
+
+.texttitulotabla    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold;   color: #953611; text-decoration: none ; background-color: #FAE5B9;border-color: #FAE5B9 ; border-style:solid}
+.textdesttabla      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none;border-color: #FAE5B9 ; border-style:solid}
+.textdesttabla2     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none}
+.textdesttabla3     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold;   color: #953611; text-decoration: none;border-color: #FAE5B9 ; border-style:solid}
+.textpietabla       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none}
+
+.texttitulotablarojo     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #953611; text-decoration: none ; background-color: #FF0000; border-color: #FAE5B9 ; border-style:solid}
+.texttitulotablaamarillo {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #953611; text-decoration: none ; background-color: #FFFF00; border-color: #FAE5B9 ; border-style:solid}
+.texttitulotablaverde    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #953611; text-decoration: none ; background-color: #00FF00; border-color: #FAE5B9 ; border-style:solid}
+
+.textdesttablarojo      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none; background-color: #FF0000;border-color: #FAE5B9 ; border-style:solid}
+.textdesttablaamarillo      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none; background-color: #FFFF00;border-color: #FAE5B9 ; border-style:solid}
+.textdesttablaverde      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none; background-color: #00FF00;border-color: #FAE5B9 ; border-style:solid}
+
+.nombreuser         {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #953611; text-decoration: none}
+.tituloespecial     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #953611; text-decoration: none}
+
+.contenidoespecial  {
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 12px;  
+	color: #953611; 
+	text-decoration: none;
+  background-color: #F9F2D4;
+  border: 0px solid red;
+}
+
+.contenidoespecial1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; color: #953611; text-decoration: none; line-height: 19px}
+.contenidopie       {FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 16px; TEXT-ALIGN: justify}
+.texttituloerror    {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #FF0000; text-decoration: none}
+.textoazul          {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #555FA4; text-decoration: none}
+.textgris           {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #666666; text-decoration: none}
+.textlink           {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #00679F; text-decoration: none; background-color: #ffffff;}
+.textpiepag         {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #999999; text-decoration: none; line-height: 19px }
+.campoproceso       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #999999; text-decoration: none}
+.texttitulos        {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #00679F; text-decoration: none}
+.textasterisco      {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #CC0033; text-decoration: none}
+.textproducto       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #A23802; text-decoration: none}
+.textdescrip        {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #999999; text-decoration: none; line-height: 19px }
+.textsubtitulos     {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #00679F; text-decoration: none }
+.textsubtitulosbold {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #00679F; text-decoration: none }
+.textsubtitulosdest {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #00679F; text-decoration: none }
+.texttituloventana  {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #00679F; text-decoration: none ; background-color: #D1967F }
+.textbusqueda       {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FFFFFF; text-decoration: none}
+.fondomenu          {background-color: #D1967F}
+.fondobarra         {background-image: url(diagonal_largo.jpg); background-color: #D1967F}
+.fondolinea         {background-image: url(images/linea_horiz.gif); background-repeat:   repeat-x; background-color: #FFFFFF}
+.fondoencabezado3   {background-image: url(images/encabezado_derecho.jpg); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #FFFFFF; text-decoration: none; line-height: 19px}
+.campoancho         {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; width:400px}
+
+.tituloarea  {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #894212;
+  text-decoration: none;
+  background-image: url(images/menu_repet.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+.fondogris {
+  background-image: url(images/menu_repet.jpg);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+.fondoencabezado {
+  background-image: url(images/encabezado_fondo.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+.fondoencabserapis {
+  background-image: url(images/encabezado_est.jpg);
+	background-repeat: repeat-x;
+	background-position: right top;
+}
+
+.fondoencabserapisp1 {
+  background-image: url(images/encab_parte01.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.lineapunteada {
+  background-image: url(images/linea_punteada.jpg);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+.bordeempresa {
+	border: 3px solid #f9e7c1;
+}

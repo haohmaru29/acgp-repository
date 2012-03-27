@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>SERAPIS - Ayuda</title>	
+<link href="ayuda.css" rel="stylesheet" type="text/css">
+<body>		
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="middle" class="titulos" colspan='3'>Documentos Flujo</td>
+  </tr>
+  <tr> 
+    <td align="left" class="textogral" colspan='3'> <p>
+    Esta opción permite ver aquellos documentos que se encuentran en espera de ser aprobados, es decir, 
+    <B>En Flujo</B>. Estos documentos están asociados a WorkFlows de aprobación que están compuestos por una 
+    serie de pasos, estos pasos permiten ir avanzando en la aprobación, pero no sólo se aprueba, 
+    sino que también se puede rechazar o redireccionar el documento lo que hace que el proceso pueda 
+    ser más largo del normal, por lo que además de indicar que documentos están se encuentran en este 
+    estado, se debe indicar la historia que ha ocurrido con ellos con respecto del flujo que tienen asociado. 
+      </p>
+  </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/006_01_documentos_flujo.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>La opción entrega un listado de los documentos que están en Flujo, especificando:</P>
+    <P>
+    <B>Tipo del Documento</B>. Especifica el tipo del documento asociado al archivo que esta en espera de aprobación.
+	 <BR>
+	 <B>Nombre del Documento</B>. Nombre del documento.
+	 <BR>
+	 <B>Encargado</B>. Encargado de realizar la aprobación en el nivel que se encuentra el documento respecto del flujo que tiene asociado.
+	 <BR>
+	 <B>Paso</B>. Número y descripción del paso del WorkFlow en el que se encuentra el documento.
+	 <BR>
+	 <B>Fecha</B>. Fecha de solicitud de aprobación del documento.
+    </P>
+    <BR>
+    <P>Al costado de cada documento de la lista, existe una imagen que al hacer clic permite acceder al detalle del flujo del workflow 
+    para el documento. La imagen de la Figura 10 muestra un ejemplo con el detalle de un flujo</P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/006_02_documentos_flujo.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>Cada bloque corresponde a un paso del WorkFlow, están ordenados de manera histórica, es decir, aparece primero el último paso realizado o solicitado. Para cada paso aparece la siguiente información:
+    </P>
+    <P>
+    <B>Paso</B>. Especifica el número y descripción del paso del flujo.
+	 <BR><B>Detalle</B>. Detalle de la solicitud realizada.
+	 <BR><B>Estado</B>. Estado del paso. Los posibles estados son Realizado (cuando el encargado de autorizar tomo una decisión acerca de la aprobación) y Pendiente (cuando no se ha tomado una decisión acerca de la aprobación).
+	 <BR><B>Encargado</B>. Encargado de realizar la acción de aprobación para el paso del flujo.
+	 <BR><B>Fecha</B>. Fecha de solicitud de la autorización de aprobación.
+	 <BR><B>Hora</B>. Hora de solicitud de la autorización de aprobación.
+	 <BR><B>Decisión Tomada</B>. Si el estado del paso es Realizado este campo posee la decisión tomada, la que puede ser:
+	<ul>
+	<li><B>Aprobada.</B> Especifica que fue aprobado sin comentarios el documento.</li>
+	<li><B>Aprobada con Modificaciones.</B> El documento fue aprobado, pero este fue modificado y cargado nuevamente en el sistema.</li>
+	<li><B>Rechazado.</B> El documento se rechazó definitivamente.</li>
+	<li><B>Redirección.</B> Indica que el documento se redireccionó a un paso anterior.</li>
+	<li><B>Fecha/Hora.</B> Si el estado del paso es Realizado este campo posee la Fecha y Hora de la decisión.</li>
+	</ul>
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

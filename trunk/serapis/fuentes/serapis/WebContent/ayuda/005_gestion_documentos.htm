@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>SERAPIS - Ayuda</title>	
+<link href="ayuda.css" rel="stylesheet" type="text/css">
+<body>		
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="middle" class="titulos" colspan='3'>Gestión de Documentos</td>
+  </tr>
+  <tr> 
+    <td align="left" class="textogral" colspan='3'> <p>
+    Esta opción se encarga del control de los documentos, al iniciar la opción se aprecian tres secciones, 
+    al costado derecho aparece un menú con todas las opciones posibles para gestionar los documentos, 
+    al costado superior derecho aparece el menú SERAPIS que permite acceder a cualquiera de las opciones de SERAPIS; 
+    finalmente, en la zona central se desplegarán las páginas correspondientes a las opciones de Gestión de Documentos. 
+      </p>      
+  </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/005_01_gestion_documentos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P><B>Estado Documento</B></P>
+    <P>
+    Esta opción del menú de Gestión de Documento agrupa todas las acciones que son posibles realizar con los documentos.
+    </P>
+    <P><B>Documentos Aprobados</B></P>
+    <P>
+    Despliega los documentos que se encuentran aprobados, es decir que finalizaron exitosamente el flujo de aprobación. 
+    Para la búsqueda de los documentos se debe seleccionar el proceso y el tipo de Documento; para esto, 
+    al seleccionar Documentos Aprobados se desplegarán todos los procesos definidos, al seleccionar el proceso 
+    aparecerán como submenú los tipos de documentos, y al seleccionar este en el costado derecho aparecerá la lista 
+    de los documentos del tipo y proceso seleccionado.
+    </P>
+    <P>
+    Nota.<BR>
+    El menú lateral es dinámico, es decir las opciones que aparecen dependerán de la opción seleccionada. 
+    Al costado de cada opción aparece un icono que indica si la opción esta seleccionada (+) o no (-). 
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/005_02_gestion_documentos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Al seleccionar una opción del menú lateral, al costado derecho de este aparecerá la información solicitada, 
+    que para el caso de Documentos Aprobados es el listado de documentos asociados a la selección realizada.
+	 <BR>El listado de dichos documentos esta compuesto por el nombre del archivo, la descripción dada y la 
+	 fecha de publicación, además y como referencia aparece un ícono que indica la aplicación que esta 
+	 asociada al documento.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/005_03_gestion_documentos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P><B>Detalle del Documento</B></P>
+    <P>
+    Además de ver el listado de los documentos, SERAPIS ofrece la posibilidad de ver el detalle del documento, 
+    para esto en el icono asociado a cada documento existe un link que lleva al detalle del documento, 
+    para esto sólo basta con hacer clic sobre la imagen.
+	 Como se aprecia en la imagen siguiente, el detalle de cada documento esta compuesto por:
+	 <ul>
+	<li><B>Proceso.</B>Proceso al que pertenece.</li>
+	<li><B>Tipo de Documento.</B>Tipo de documento.</li>
+	<li><B>Nombre.</B> Indica que la clave nueva no cumple con los requisitos de seguridad de clave que contempla el sistema.</li>
+	<li><B>Versión Plantilla.</B>Versión del documento.</li>
+	<li><B>Nombre del Archivo.</B> Nombre asignado por SERAPIS al documento.</li>
+	<li><B>Descripción.</B> Descripción adicional dada al documento al momento de publicarlo.</li>
+	</ul>
+    </P>
+    </td>
+  </tr>  
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/005_04_gestion_documentos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Una serie de botones aparecen en cuando se muestra el detalle, esta botonera es dinámica y dependerá de 
+    los permisos y atributos que tenga el usuario si aparecen o no.
+    </P>
+    <P>
+	 <B>Pasar a Histórico</B>. Permite pasar los documentos publicados a Histórico, es decir ya no están vigentes. 
+	 Esta acción esta sólo reservada a los usuarios que poseen permisos de escritura sobre el proceso asociado al 
+	 Documento. Al pasar a histórico el documento es trasladado de directorio y no esta al alcance de todos los usuarios. 
+	 Los documentos históricos son recuperables desde el listado de documentos del proceso y tipo de documento. 
+	 Los documentos históricos sólo es posible descargarlos.
+	<BR><B>Eliminar</B>. Permite eliminar el documento del sistema SERAPIS. Esta acción sólo esta permitida 
+	para los usuarios con privilegios de escritura sobre el proceso.
+	<BR>Al solicitar eliminar, se consultará previamente y a modo de seguridad si se desea realmente eliminar, 
+	para luego proceder a la eliminación.
+	<BR><B>Grabar</B>. Permite modificar la descripción del documento, esta permitido hacerlo sólo a los usuarios 
+	con permisos de escritura.
+	<BR><B>Descargar</B>. Esta es una opción para todos los usuarios y permite bajar el documento que esta en 
+	SERAPIS y almacenarlo en el PC del cliente o abrirlo. Al presionar sobre este botón se abrirá una ventana 
+	pop-up, la que permite bajar o abrir el documento seleccionado. La opción de abrir dependerá sólo de la 
+	existencia del aplicativo adecuado para abrir dicho documento
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/005_05_gestion_documentos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+  	En la ventana de descarga, al seleccionar el link se podrá guardar el archivo en un disco magnético o bien 
+  	abrir el archivo en la misma ventana del browser.
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

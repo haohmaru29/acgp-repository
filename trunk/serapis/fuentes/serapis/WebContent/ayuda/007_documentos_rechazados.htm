@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>SERAPIS - Ayuda</title>	
+<link href="ayuda.css" rel="stylesheet" type="text/css">
+<body>		
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="middle" class="titulos" colspan='3'>Documentos Rechazados</td>
+  </tr>
+  <tr> 
+    <td align="left" class="textogral" colspan='3'> <p>
+    Esta opción despliega los documentos que fueron rechazados en alguno de los pasos del WorkFlow que tiene asociado. 
+      </p>
+  </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/007_01_documentos_rechazados.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    En la lista para cada documento se especifica el Tipo de Documento, Nombre y Descripción. 
+    Cada archivo de la lista posee un icono con un link para ver el detalle del documento rechazado, 
+    este detalle se puede apreciar en la siguiente figura y contempla:
+    </P>
+    <BR>
+    <ul>
+     <li><B>Proceso.</B> Proceso al que pertenece.</li>
+     <li><B>Tipo de Documento.</B> Tipo de documento.</li>
+     <li><B>Nombre.</B> Nombre del documento.</li>
+     <li><B>Versión Plantilla.</B> Versión del documento.</li>
+     <li><B>Nombre del Archivo.</B> Nombre asignado por SERAPIS al documento.</li>
+     <li><B>Descripción</B> Descripción adicional dada al documento al momento de publicarlo.</li>
+   </ul>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/007_02_documentos_rechazados.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Existen además dos botones los que permiten lo siguiente:
+    <BR>
+    <B>WorkFlow.</B> Accede directamente al histórico del WorkFlow asociado al documento, ver Detalle WorkFlow.
+	 <BR><B>Descargar.</B> Permite bajar el documento desde SERAPIS a una unidad de disco magnético.
+
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Detalle WorkFlow</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    <BR>
+    Muestra el detalle del workflow asociado al documento rechazado. El detalle incluye todos los pasos 
+    considerando las redirecciones que pudiesen existir. Los pasos se muestra en orden histórico, 
+    es decir el último paso realizado o solicitado es el que aparece primero.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/007_03_documentos_rechazados.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>Cada paso esta compuesto por:
+    </P>
+    <P>
+    <B>Paso</B>. Especifica el número y descripción del paso del flujo.
+	 <BR><B>Detalle</B>. Detalle de la solicitud realizada.
+	 <BR><B>Estado</B>. Estado del paso. Los posibles estados son Realizado (cuando el encargado de autorizar tomo una decisión acerca de la aprobación) y Pendiente (cuando no se ha tomado una decisión acerca de la aprobación).
+	 <BR><B>Encargado</B>. Encargado de realizar la acción de aprobación para el paso del flujo.
+	 <BR><B>Fecha</B>. Fecha de solicitud de la autorización de aprobación.
+	 <BR><B>Hora</B>. Hora de solicitud de la autorización de aprobación.
+	 <BR><B>Decisión Tomada</B>. Si el estado del paso es Realizado este campo posee la decisión tomada, la que puede ser:
+	<ul>
+	<li><B>Aprobada.</B> Especifica que fue aprobado sin comentarios el documento.</li>
+	<li><B>Aprobada con Modificaciones.</B> El documento fue aprobado, pero este fue modificado y cargado nuevamente en el sistema.</li>
+	<li><B>Rechazado.</B> El documento se rechazó definitivamente.</li>
+	<li><B>Redirección.</B> Indica que el documento se redireccionó a un paso anterior.</li>
+	<li><B>Fecha/Hora.</B> Si el estado del paso es Realizado este campo posee la Fecha y Hora de la decisión.</li>
+	</ul>
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+  
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

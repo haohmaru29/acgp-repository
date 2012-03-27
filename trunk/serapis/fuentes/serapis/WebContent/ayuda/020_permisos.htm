@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>SERAPIS - Ayuda</title>	
+<link href="ayuda.css" rel="stylesheet" type="text/css">
+<body>		
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="middle" class="titulos" colspan='3'>Permisos</td>
+  </tr>
+  <tr> 
+    <td align="left" class="textogral" colspan='3'> <p>
+    El almacenamiento de registros en ocasiones involucra información sensible y estratégica que es 
+    conveniente manejar de forma reservada, es por esto que este módulo del sistema contempla un 
+    sistema de autorizaciones que va más allá de la simple definición de usuarios y encargados de 
+    procesos, sino que se pueden dar detalles a un nivel más atómico. Los permisos se otorgan de dos 
+    formas, para procesos y proyectos.
+      </p>
+  </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Permisos por Proceso</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    <BR>
+    Un usuario definido como líder de proceso o backup habilitado es el único que puede dar permisos 
+    a los registros de su proceso, los permisos pueden ser dados a un usuario en particular o grupo 
+    de usuarios. Los usuarios que tengan permisos sólo podrán ver los registros, y los que no lo tengan, 
+    el sistema informará que no poseen los privilegios al momento de solicitar la documentación.
+    <BR><BR>
+    <B>Nota.</B>El líder debe darse permisos a si mismo para ver los registros de su área si desea ver sus registros.
+    <BR><BR>
+    Al seleccionar la opción de permisos por proceso, el sistema desplegará una lista con las autorizaciones 
+    asignadas ordenadas por proceso, bajo la lista existe un botón Nuevo que permite el ingreso de un nuevo permiso.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/020_01_permisos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>Cada acceso posee un link en el nombre para ver el detalle del permiso asignado.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Editar Permiso</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    La edición permite modificar o eliminar el permiso asignado. Como se mencionó es posible dar 
+    permisos a un usuario o grupo de usuarios, estos grupos de usuarios denominados perfiles están 
+    creados previamente. La edición de cada permiso contempla:
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/020_02_permisos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P><B>Proceso</B>. Proceso al que se asignó el permiso
+		<B>Tipo</B>. Si es a un Usuario o Perfil.
+		<B>Usuario</B>. Si tipo es Usuario, aparece el nombre del usuario al que se dio permiso, si es Perfil, 
+		el nombre del perfil.
+		<B>Acceso</B>. Acceso asignado, el que puede ser:
+		<ul>
+	   <li><B>Control Total</B>. Tendrá acceso total a los registros del proceso.</li>
+	   <li><B>Escritura</B>. Podrá descargar los documentos y modificar su descripción.</li>
+	   <li><B>Sólo lectura</B>. Podrá descargar los documentos.</li>
+	   <li><B>Eliminación</B>. El usuario podrá eliminar registros.</li>
+	   <li><B>Sin Acceso</B>. No puede acceder a los documentos del proceso.</li>
+	</ul>
+	<BR>
+	Al presionar sobre el botón Modificar se modificará el acceso, para eliminar se debe presionar sobre el 
+	botón Eliminar.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Nuevo Permiso</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Permite crear un nuevo acceso para el proceso, el formulario que permite crear el acceso consta de:
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/020_03_permisos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <p>
+    <B>Proceso</B>. Proceso al que se asignó el permiso, el listado de procesos corresponde a los que el 
+    usuario actual es lider o backup habilitado.
+    <BR>
+	 <B>Perfil</B>. Especifica el grupo de usuarios a los que se dará el mismo permiso.
+	 <BR>
+	 <B>Usuario</B>. Especifica el usuario al que se dará el permiso. Si se ha seleccionado un perfil, 
+	 el sistema no considera el usuario, por lo tanto, es válido sólo si no hay seleccionado un perfil.
+	 <BR>
+	 <B>Acceso</B>. Acceso asignado, el que puede ser:
+	 <BR>
+	 <BR>
+	 <ul>
+	   <li><B>Control Total</B>. Tendrá acceso total a los registros del proceso.</li>
+	   <li><B>Escritura</B>. Podrá descargar los documentos y modificar su descripción.</li>
+	   <li><B>Sólo lectura</B>. Podrá descargar los documentos (por defecto).</li>
+	   <li><B>Eliminación</B>. El usuario podrá eliminar registros.</li>
+	   <li><B>Sin Acceso</B>. No puede acceder a los documentos del proceso.</li>
+	</ul>
+	<BR>
+	Para grabar el permiso, se debe presionar sobre el botón Aceptar.
+    </p>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Permisos por Proyecto</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Permite asignar los permisos de los registros asociados a Clientes/Proyectos, 
+    la opción permite buscar el permiso o permisos por proyecto, cliente o jefe de proyecto.
+	 <BR>
+	 Esta opción de seguridad esta restringido a los usuarios que son jefes de proyecto o backup 
+	 habilitado de los proyectos de los clientes.
+	 </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/020_04_permisos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Se debe buscar necesariamente el proyecto al que se asignará el permiso, la búsqueda se puede 
+    realizar por Proyecto, Cliente o Jefe de Proyecto (sólo 1 de los tres). Al buscar el sistema desplegará 
+    los proyectos asociados a la búsqueda.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/020_05_permisos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Para cada proyecto se desplegarán los permisos asociados, al seleccionar el permiso este se 
+    podrá editar, al final de la lista de permisos además se podrán crear nuevos permisos por 
+    medio del botón Nuevo. 
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/020_06_permisos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Editar Permiso</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    La edición permite modificar o eliminar el permiso asignado. Como se mencionó es posible dar 
+    permisos a un usuario o grupo de usuarios, estos grupos de usuarios denominados perfiles están 
+    creados previamente. La edición de cada permiso contempla:
+	 </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/020_07_permisos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    <B>Cliente</B>. Cliente al que esta asociado el proyecto.
+	 <B>Proyecto</B>. Proyecto asociado al cliente al que se da permiso.
+	 <B>Usuario</B>. Si tipo es Usuario, aparece el nombre del usuario al que se dio permiso, si es Perfil, el nombre del perfil.
+	 <B>Acceso</B>. Acceso asignado, el que puede ser:
+	 <BR>
+	 <ul>
+	   <li><B>Control Total</B>. Tendrá acceso total a los registros del proceso.</li>
+	   <li><B>Escritura</B>. Podrá descargar los documentos y modificar su descripción.</li>
+	   <li><B>Sólo lectura</B>. Podrá descargar los documentos.</li>
+	   <li><B>Eliminación</B>. El usuario podrá eliminar registros.</li>
+	   <li><B>Sin Acceso</B>. No puede acceder a los documentos del proceso.</li>
+	</ul>
+	<BR>
+	Al presionar sobre el botón Modificar se modificará el acceso, para eliminar se debe presionar sobre 
+	el botón Eliminar.
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Nuevo Permiso</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Permite crear un nuevo acceso para el proyecto, el formulario que permite crear el acceso consta de:
+	 </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/020_08_permisos.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    <B>Cliente</B>. Cliente al que pertenece el proyecto.
+	 <B>Proyecto</B>. Proyecto asociado al cliente al que se da autorización.
+	 <B>Perfil</B>. Especifica el grupo de usuarios a los que se dará el mismo permiso.
+	 <B>Usuario</B>. Especifica el usuario al que se dará el permiso. Si se ha seleccionado un perfil, el sistema no considera el usuario, por lo tanto, es válido sólo si no hay seleccionado un perfil.
+	 <B>Acceso</B>. Acceso asignado, el que puede ser:
+	 <ul>
+	   <li><B>Control Total</B>. Tendrá acceso total a los registros del proceso.</li>
+	   <li><B>Escritura</B>. Podrá descargar los documentos y modificar su descripción.</li>
+	   <li><B>Sólo lectura</B>. Podrá descargar los documentos (por defecto).</li>
+	   <li><B>Eliminación</B>. El usuario podrá eliminar registros.</li>
+	   <li><B>Sin Acceso</B>. No puede acceder a los documentos del proceso.</li>
+	</ul>
+	<BR>
+	Para grabar el permiso, se debe presionar sobre el botón Aceptar.
+	 </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

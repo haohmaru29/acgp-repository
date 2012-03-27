@@ -1,0 +1,43 @@
+.titulos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #953611;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	height: 25px;
+	vertical-align: middle;
+	background-color: #FAE5B9;
+	text-indent: 10pt;
+}
+.subtitulos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #953611;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	height: 20px;
+	vertical-align: middle;
+	background-color: #FAE5B9;
+	text-indent: 10pt;
+}
+.textogral {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;
+	text-align: justify;
+
+}
+.textogralbold {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #953611;
+}
+
+.lineapunteada {
+  background-image: url(images/linea_punteada.jpg);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}

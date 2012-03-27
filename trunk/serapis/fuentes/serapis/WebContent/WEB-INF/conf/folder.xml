@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Download4J/Folder sample - JavaZOOM -->
+<!DOCTYPE DOWNLOAD SYSTEM "download.dtd">
+<DOWNLOAD>
+    <FOLDER PATH="">
+        <PROPERTIES CONTENT-TYPE-FILE="conf/mimes-type.xml"/>
+        <FILE NAME="protectedtest.pdf" CONTENT-DISPOSITION="attachment" MAXDOWNLOAD="3" LOGIN="logintest" PASSWORD="passwordtest"/>
+        <FILE NAME="ziptest.html" URLMAPPING="ziptest.zip" ZIP="enabled"/>
+    </FOLDER>
+</DOWNLOAD>
