@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>SERAPIS - Ayuda</title>	
+<link href="ayuda.css" rel="stylesheet" type="text/css">
+<body>		
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="middle" class="titulos" colspan='3'>Registros en Flujo</td>
+  </tr>
+  <tr> 
+    <td align="left" class="textogral" colspan='3'> <p>
+    Esta opción permite ver aquellos registros que se encuentran en espera de ser aprobados, es decir, 
+    En Flujo. Estos registros están asociados a WorkFlows de ejecución que están compuestos por una serie 
+    de pasos, estos pasos permiten ir avanzando en la aprobación, pero no sólo se aprueba, sino que también 
+    se puede rechazar o redireccionar el registro lo que hace que el proceso pueda ser más largo del normal, 
+    por lo que además de indicar que registros se encuentran en este estado, se debe indicar la historia que ha 
+    ocurrido con ellos con respecto del flujo que tienen asociado.
+      </p>
+  </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/014_01_registros_flujo.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    La opción entrega un listado de los registros que están en Flujo, especificando:
+	 <BR>
+	 <B>Tipo del Documento</B>. Especifica el tipo del documento asociado al archivo que esta en espera de aprobación.
+	 <BR>
+	 <B>Nombre</B>. Nombre del registro.
+	 <BR>
+	 <B>Encargado</B>. Encargado de realizar la aprobación en el nivel que se encuentra el registro respecto del flujo que tiene asociado.
+	 <BR>
+	 <B>Paso</B>. Número y descripción del paso del WorkFlow en el que se encuentra el registro.
+	 <BR>
+	 <B>Fecha</B>. Fecha de solicitud de aprobación del registro.
+	 <BR>
+	 <BR>
+	 Al costado de cada documento de la lista, existe una imagen que al hacer clic permite acceder 
+	 al detalle del flujo del workflow para el registro. La imagen de la Figura siguiente muestra un ejemplo 
+	 con el detalle de un flujo.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/014_02_registros_flujo.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Cada bloque corresponde a un paso del WorkFlow, están ordenados de manera histórica, es decir, 
+    aparece primero el último paso realizado o solicitado. Para cada paso aparece la siguiente información:
+	 <BR>
+	 <B>Paso</B>. Especifica el número y descripción del paso del flujo.
+	 <B>Detalle</B>. Detalle de la solicitud realizada.
+	 <B>Estado</B>. Estado del paso. Los posibles estados son Realizado (cuando el encargado de autorizar tomo 
+	 una decisión acerca de la aprobación) y Pendiente (cuando no se ha tomado una decisión acerca de la aprobación).
+	 <B>Encargado</B>. Encargado de realizar la acción de aprobación para el paso del flujo.
+	 <B>Fecha</B>. Fecha de solicitud de la autorización de aprobación.
+	 <B>Hora</B>. Hora de solicitud de la autorización de aprobación.
+	 <B>Decisión Tomada</B>. Si el estado del paso es Realizado este campo posee la decisión tomada, la que puede ser:
+	 <BR>
+	 <ul>
+	   <li><B>Proceso.</B> que fue aprobado sin comentarios el registro.</li>
+	   <li><B>Tipo de Documento.</B> El registro fue aprobado, pero este fue modificado y cargado nuevamente en el sistema.</li>
+	   <li><B>Nombre.</B> El registro se rechazó definitivamente.</li>
+	   <li><B>Versión Plantilla.</B> Indica que el registro se redireccionó a un paso anterior.</li>
+	   <li><B>Cliente.</B> Si el estado del paso es Realizado este campo posee la Fecha y Hora de la decisión.</li>
+	</ul>
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

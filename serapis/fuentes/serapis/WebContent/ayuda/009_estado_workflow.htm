@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>SERAPIS - Ayuda</title>	
+<link href="ayuda.css" rel="stylesheet" type="text/css">
+<body>		
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="middle" class="titulos" colspan='3'>Estado WorkFlow</td>
+  </tr>
+  <tr> 
+    <td align="left" class="textogral" colspan='3'> <p>
+    WorkFlow es un flujo de trabajo que se puede asociar a los documentos y registros de SERAPIS. 
+    Hay dos tipos de WorkFlow de Aprobación y Ejecución. WorkFlow de Aprobación se asocia a los 
+    documentos y WorkFlow de ejecución con los registros. Cada WorkFlow debe tener mínimo un Paso no 
+    existiendo límites para el número de pasos máximos. 
+    <BR>
+    Al seleccionar la opción se muestra un listado con los WorkFlow existentes, además permite crear un 
+    WorkFlow a través del botón Nuevo ubicado al final de la lista e imprimir el listado al presionar 
+    el botón Imprimir. Para editar un WorkFlow debe hacer clic en el link ubicado en el 
+    nombre del workflow.
+      </p>
+  </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/009_01_estado_workflow.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Los WorkFlows pueden estar Cerrado o En Construcción. Sólo los con estado Cerrado se pueden asociar 
+    a los documentos o registros y estos no pueden ser modificados en el flujo, en cambio los que se 
+    encuentren En Construcción se pueden modificar completamente.
+    </P>
+    </td>
+  </tr>
+
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Crear WorkFlow</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    <BR>
+    Un WorkFlow esta compuesto de un nombre y tipo, además de una serie de pasos que componen el flujo, 
+    cada paso posee un nombre, un encargado de autorización y las opciones de autorización para el caso 
+    de aprobación y redirección.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/009_02_estado_workflow.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>Para crear el WorkFlow primeramente se debe asignar un nombre y tipo (especifica si el WorkFlow 
+    esta asociado a documentos (WorkFlow de Aprobación) o registros (WorkFlow de Ejecución)), 
+    luego se debe especificar la información del paso 1 del workflow, esta información consiste 
+    en dar un nombre al paso, seleccionar un encargado de autorizar, este encargado será quien resuelva 
+    que hacer ante la aprobación de un documento o registro que requiera ser autorizado; además de lo 
+    anterior se requiere especificar que hacer en caso que la decisión tomada sea una aprobación o 
+    redirección.
+    <BR>
+    <ul>
+	<li><B>Aprobación.</B> Ocurre cuando el encargado de autorizar aprueba el paso, cuando esto ocurre el WorkFlow debe avanzar 
+	necesariamente al siguiente paso.</li>
+	<li><B>Redirecciona.</B> Especifica si es posible redireccionar a un paso anterior, esto es, volver atrás en el flujo, por lo tanto 
+	las únivas opciones existentes son:
+	<BR>
+	<B>No Aplica.</B> No esta permitido redireccionar
+	<BR>
+	<B>Paso Anterior.</B> Seleccionar algún paso anterior
+	</li>
+	</ul>
+	<BR>
+	Una vez realizado y seleccionado todo, se presiona sobre el botón Aceptar para crear el paso siguiente.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/009_03_estado_workflow.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Como se muestra en la Figura, el siguiente paso esta compuesto nuevamente por la cabecera del workflow 
+    (la que se puede modificar), el detalle del paso, y un detalle de los pasos anteriores al actual. 
+    Desde el paso 2 en adelante para cada paso aparece un campo denominado Paso Final que tiene las opciones 
+    de Si y No. En caso de ser Sí, se indica que este es el último paso del WorkFlow, y al grabarlo el WorkFlow 
+    se cerrará y no se podrá modificar su flujo. En caso de ser No al presionar sobre el botón Aceptar se podrá 
+    crear un nuevo paso.
+    <BR>
+    También existe la posibilidad de eliminar el WorkFlow que se esta creando, mediante el botón Eliminar WorkFlow.
+	 <BR>
+	 Al indicar que el paso creado es Paso Final el sistema realizará la advertencia que al cerrar el WorkFlow este no podrá ser modificado posteriormente.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/009_04_estado_workflow.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Al Aceptar el WorkFlow será almacenado y estará disponible para ser asociado a los documentos o registros.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Editar WorkFlow</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    La edición de los WorkFlows se pueden especificar de dos formas, si el WorkFlow esta Cerrado 
+    el sistema desplegará el encabezado y los pasos del WorkFlow donde lo único que es posible de 
+    realizar es Modificar el nombre de este o eliminar el WorkFlow.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/009_05_estado_workflow.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    <B>Modificar Nombre</B>. Basta con modificar el nombre y presionar sobre Aceptar para que los cambios tengan efecto.
+	 <BR>
+	 <B>Eliminar WorkFlow</B>. Un WorkFlow es posible eliminarlo sólo si este no esta en uso, es decir, 
+	 no esta asociado a ningún documento o registro. Si el WorkFlow esta asociado, SERAPIS lo dejará 
+	 invisible para todos los efectos pero los documentos o registros que tengan asociados este WorkFlow 
+	 seguirán rigiéndose bajo estas reglas y aquellos documentos o registros que están en flujo deberán 
+	 finalizar para que no lo sigan utilizando, por lo tanto, al eliminar el WorkFlow también se deben eliminar 
+	 las asociaciones existentes con él.
+	 <BR>
+	 Si el WorkFlow esta en construcción, es posible modificar tanto la cabecera como los pasos que lo 
+	 componen, además de eliminar el WorkFlow.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/009_06_estado_workflow.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Para modificar el Nombre o Tipo del WorkFlow basta con realizar el cambio y presionar sobre el botón Aceptar, 
+    de igual manera si se desea eliminar, basta con presionar sobre el botón Eliminar.
+    <BR>
+	 Para modificar los pasos, se debe seleccionar el nombre del paso para realizar la modificación, 
+	 tanto del nombre, encargado y opciones de autorización. Si se decido que un paso intermedio es el final 
+	 del WorkFlow, SERAPIS eliminará automáticamente los pasos restantes antes de cerrar el WorkFlow.
+	 <BR>
+	 Para agregar más pasos al WorkFlow, se debe presionar sobre el botón Agregar Paso, el nuevo paso será 
+	 posterior al último existente
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

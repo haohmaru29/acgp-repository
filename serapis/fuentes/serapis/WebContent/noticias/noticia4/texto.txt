@@ -1,0 +1,20 @@
+<Titulo>
+ACGP y el Futuro
+</Titulo>
+<font class="textgral"><p align="justify">
+En este primer semestre del año, para ACGP ha sido de cambios. Primero llegamos a nuestra
+nueva oficina en el Edificio Torre Alameda, lo que nos dio un mejor ambiente ya que ahora estamos 
+todos en la misma planta, es una oficina más espaciosa, con nuevo amoblado y con nuevos equipos
+también (producto de una exitosa negociacion del año pasado (2003)). Otra de las "gracias" de nuestra 
+nueva oficina es la vista, privilegiada por el hecho de estar en el 24 piso, lo que contribuye a hacer
+más grato el ambiente de trabajo.
+Otro cambio significativo en este semestre es la independencia de ACCP de nuestra empresa filial
+Byte ACGP, que a partir de Julio de este año trabajarán en forma separada.
+Enfrentamos este segundo semestre del año con grandes expectativas, tenemos ad portas un proyecto 
+muy interesante con uno de nuestros principales clientes, como es el ABN Amro Bank. Tambien durante
+este semestre esperamos terminar los trabajos en el Banco Popular de Costa Rica, que dará a conocer
+a nuestro producto estrella Web-Banco, como una plataforma Web para la aplicación de cajas.
+En fin, las expectativas están, sin embargo debemos seguir buscando oportunidades para hacer surgir
+a nuestra querida empresa en el mediano plazo. 
+<Imagen>img_01.jpg</Imagen> 
+</p></font>

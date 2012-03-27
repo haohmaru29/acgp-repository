@@ -1,0 +1,17 @@
+<Titulo>
+Sistema de Gestión de Calidad según norma ISO 9001:2000
+</Titulo>
+<font class="textgral"><p align="justify">
+En nuestro esfuerzo por implantar un Sistema de Gestión de Calidad, ACGP ha realizado
+la definición de sus procesos y ha preparado un sitio web dedicado a la Gestión y Administración
+de los documentos que forman parte del Sistema, se espera que con esta innovación la 
+implantación del sistema sea mas sencilla.
+La finalidad del trabajo que se ha estado desarrollando corresponden a tres puntos a destacar:
+1. Disponer de un SGC desarrollado, documentado e implantado a fin de proceder con la 
+   certificación.
+2. Adquirir la sistematización que permita a todo el personal de ACGP, dar continuidad
+   al sistema, es decir, mantenimiento del sistema en el largo plazo.
+3. Que todo el personal de la empresa desarrolle las habilidades para aplicar la metodología
+   del Mejoramiento continuo
+<Imagen>personal.jpg</Imagen>
+</p></font>

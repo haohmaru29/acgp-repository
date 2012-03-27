@@ -1,0 +1,6 @@
+Serapis GC es un sistema de Gestión de Calidad en ambiente web que permite la Gestión y Administración
+de los documentos definidos en el Sistema de Gestión de Calidad de cualquier empresa. Permite además 
+ser el portal para publicación de noticias e información de la empresa. 
+<BR><BR>
+Su principal finalidad está 		dada a través de sus distintos menues y opciones que permiten gestionar y 
+administrar ordenadamente y univocamente los documentos generados por los distintos procesos de la organización.

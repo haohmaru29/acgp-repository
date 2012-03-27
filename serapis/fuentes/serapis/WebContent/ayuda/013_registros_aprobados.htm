@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>SERAPIS - Ayuda</title>	
+<link href="ayuda.css" rel="stylesheet" type="text/css">
+<body>		
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="middle" class="titulos" colspan='3'>Registros Aprobados</td>
+  </tr>
+  <tr> 
+    <td align="left" class="textogral" colspan='3'> <p>
+    Despliega los registros que se encuentran aprobados, es decir que finalizaron exitosamente el flujo 
+    de aprobación. Para la búsqueda de los registros se debe seleccionar el proceso y el tipo de Documento; 
+    para esto, al seleccionar Registros Aprobados se desplegarán todos los procesos definidos, al seleccionar 
+    el proceso aparecerán como submenú los tipos de documentos, luego como rama final del árbol aparecerá el 
+    listado de registros asociados a la selección. Al seleccionar se desplegarán los registros buscados.
+	 <BR>
+	 Para el manejo de registros y de manera de ordenar eficientemente la información SERAPIS es capaz de 
+	 almacenar los registros de dos modos, por Procesos y por Proyectos.
+    <BR>
+	 <B>Procesos.</B> Los registros se asocian al proceso que corresponde, y por lo tanto la navegación de 
+	 búsqueda será Proceso, Tipo y Registro.
+	 <BR>
+	<B>Proyecto.</B> Esta modalidad permite asignar los documentos asociándolos a la dupla Clientes/proyectos, 
+	lo que permite una búsqueda más rápida y el almacenamiento de los registros queda ordenado de mejor forma. 
+	Esta característica permite por ejemplo dejar registros que son enviados a clientes en lugares diferentes 
+	al de los procesos internos, permitiendo no mezclar información.
+	<BR>
+	El modo de funcionamiento anterior significa que en el menú lateral se debe especificar si se 
+	buscará por Proceso o Proyecto.
+   <BR><BR>
+	Nota. El menú lateral es dinámico, es decir las opciones que aparecen dependerán de la opción seleccionada. 
+	Al costado de cada opción aparece un icono que indica si la opción esta seleccionada (+) o no (-). 
+      </p>
+  </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/013_01_registros_aprobados.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Al seleccionar una opción del menú lateral, al costado derecho de este aparecerá la información solicitada, 
+    que para el caso de Registros Aprobados es el listado de archivos asociados a la selección realizada.
+	 <BR>
+	 El listado de dichos registros esta compuesto por el nombre del archivo, la descripción dada, el usuario 
+	 que subió el archivo y la fecha de publicación, además y como referencia aparece un icono que indica la 
+	 aplicación que esta asociada al documento.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/013_02_registros_aprobados.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Detalle Registro</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Además de ver el listado de los registros, SERAPIS ofrece la posibilidad de ver el detalle del archivo, 
+    para esto en el icono asociado a cada registro existe un link que lleva al detalle del registro, 
+    para esto sólo basta con hacer clic sobre la imagen.
+	 <BR>
+	 Como se aprecia en la imagen siguiente, el detalle de cada registro esta compuesto por:
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/013_03_registros_aprobados.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    <ul>
+	   <li><B>Proceso.</B> Proceso al que pertenece.</li>
+	   <li><B>Tipo de Documento.</B> Tipo de registro.</li>
+	   <li><B>Nombre.</B> Nombre del registro.</li>
+	   <li><B>Versión Plantilla.</B> Versión del registro.</li>
+	   <li><B>Cliente.</B> Cliente al que se asoció el registro.</li>
+	   <li><B>Adicional.</B> Información adicional que identifica el registro.</li>
+	   <li><B>Número Correlativo.</B> Número correlativo de registro correspondiente a la misma versión.</li>
+	   <li><B>Descripción.</B> Descripción adicional dada al documento al momento de publicarlo.</li>
+	   <li><B>Comentario Adicional.</B> Comentario ingresado por quien sube el registro.</li>
+	   <li><B>Usuario.</B> Usuario que subió el registro.</li>
+	   <li><B>Fecha Publicación.</B> Fecha de publicación del registro.</li>
+	   <li><B>Fecha Retención</B> Fecha de término de la publicación. (Sólo referencial)</li>
+	</ul>
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Una serie de botones aparecen cuando se muestra el detalle, esta botonera es dinámica y dependerá de los 
+    permisos y atributos que tenga el usuario si aparecen o no.
+    <BR>
+    <B>Eliminar</B>. Permite eliminar el registro del sistema SERAPIS. Esta acción sólo esta permitida para 
+    los usuarios con privilegios de escritura sobre el proceso o sobre el proyecto según corresponda.
+    <BR>
+	 Al solicitar eliminar, se consultará previamente y a modo de seguridad si se desea realmente eliminar, 
+	 para luego proceder a la eliminación.
+	 <BR>
+	 <B>Grabar</B>. Permite modificar la descripción del registro, esta permitido hacerlo sólo a los usuarios 
+	 con permisos de escritura sobre el proceso o el proyecto
+	 <BR>
+	 <B>Descargar</B>. Esta opción permite bajar el archivo que esta en SERAPIS y almacenarlo en el PC del 
+	 cliente o abrirlo. Al presionar sobre este botón se abrirá una ventana pop-up, la que permite bajar o 
+	 abrir el registro seleccionado. La opción de abrir dependerá sólo de la existencia del aplicativo 
+	 adecuado para abrir dicho archivo.
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/013_04_registros_aprobados.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    En la ventana de descarga, al seleccionar el link se podrá guardar el archivo en un disco magnético o 
+    bien abrir el archivo en la misma ventana del browser.
+    </P></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

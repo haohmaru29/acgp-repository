@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>SERAPIS - Ayuda</title>	
+<link href="ayuda.css" rel="stylesheet" type="text/css">
+<body>		
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="middle" class="titulos" colspan='3'>Publicar</td>
+  </tr>
+  <tr> 
+    <td align="left" class="textogral" colspan='3'> <p>
+    Esta opción permite publicar los documentos o “subir” los documentos desde el equipo local a SERAPIS, 
+    para lograr esto SERAPIS presenta una página con un formulario que permite publicar el documento, 
+    este formulario esta compuesto por: 
+    <BR>
+    <ul>
+     <li><B>Proceso.</B> la selección del proceso al cual pertenece el documento que se subirá.</li>
+     <li><B>Tipo de Documento.</B> Establece el tipo de documento que se subirá.</li>
+     <li><B>Nombre.</B> Permite la selección del nombre del documento, los nombres de los documentos aparecerán dependiendo de la selección de las opciones realizadas 
+     	para Proceso y Tipo de Documento.</li>
+     <li><B>Versión Plantilla.</B> Permite que se ingrese la versión del documento, este es un número que va desde 01 a 99. Siempre se deben ingresar los dos dígitos.</li>
+     <li><B>Descripción</B> Es un comentario que se puede agregar al documento y que sirve de descripción para este.</li>
+     <li><B>Archivo</B> Es la ubicación del archivo. Con el botón Examinar se puede ubicar el archivo que se subirá a SERAPIS.</li>
+   </ul>
+      </p>
+  </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/008_01_publicar.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Una vez que se ingresan todos los campos anteriores, por medio del botón Subir se agregará el 
+    documento al Sistema, al subir se realizarán una serie de validaciones, si estas se cumplen en su 
+    totalidad el documento estará disponible. Si existiese un documento que corresponde al Proceso, 
+    Tipo de documento, Nombre y Versión Plantilla, se avisará que el documento no es posible subirlo 
+    ya que existe uno previo con las mismas características.
+    <br>
+    Una vez que el archivo ya se cargue, se mostrará una página especificando que el archivo 
+    se copio directamente al Sistema.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/008_02_publicar.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Asignación de WorkFlow</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    <BR>
+    Todos los documentos que es posible que maneje SERAPIS están previamente definidos, uno de los 
+    componentes de la definición corresponde a un WorkFlow, el que permite realizar la autorización del 
+    documento en “n” pasos donde existen diferentes usuarios involucrados. Si el documento que se publica 
+    tiene asociado un WorkFlow el documento queda en estado En Flujo lo que significa que el documento 
+    esta en espera de aprobación, cuando este es el caso, SERAPIS informa que el archivo se copio 
+    exitosamente al sistema, pero que ha ingresado a un flujo de aprobación. Un ejemplo del aviso 
+    entregado de aprecia en la siguiente figura.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/008_03_publicar.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>Como se aprecia, el aviso incluye el nombre del WorkFlow y el encargado de realizar el primer 
+    paso del WorkFlow, este usuario es notificado de manera electrónica (E-Mail) para que realice la 
+    acción que corresponda para realizar la aprobación final del documento.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td valign="middle" class="subtitulos" colspan='3'>Notificación Electrónica</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>
+    Cuando un documento que se publica esta asociado a un WorkFlow de Aprobación, SERAPIS envía un Mail 
+    al encargado del primer paso del WorkFlow informado que posee un documento pendiente de aprobación. 
+    Un ejemplo de notificación se puede ver en figura siguiente.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td height="277" align="center" colspan='3'><img src="Images/008_04_publicar.jpg"></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="textogral" colspan='3'>
+    <P>El documento que se sube, como se especificó queda con estado En Flujo, 
+    para mayor referencia acerca de esto ver Documentos Flujo.
+    </P>
+    </td>
+  </tr>
+  <tr> 
+    <td align="center" valign="bottom" class="lineapunteada" colspan='3'>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
