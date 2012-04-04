@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.Vector;
 
 public class AccDataBase {
@@ -66,6 +67,10 @@ public class AccDataBase {
 				while (k <= j) {
 					int i = resultsetmetadata.getColumnType(k);
 					switch (i) {
+					case -5: 
+						Integer integer3 = new Integer(resultset.getInt(k));
+						result.addElement(integer3);
+						break;
 					case -1:
 					case 1: // '\001'
 					case 12: // '\f'

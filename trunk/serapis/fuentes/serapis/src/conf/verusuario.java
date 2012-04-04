@@ -53,8 +53,7 @@ public class verusuario extends HttpServlet {
             printwriter.println("</script>");
             printwriter.println("</body>");
             printwriter.println("</html>");
-        } else
-        {
+        } else {
             AFunc.reindex(httpservletrequest, printwriter, 1, "CONF", 6);
         }
     }
@@ -231,7 +230,10 @@ public class verusuario extends HttpServlet {
             s = "select count(*) from sgc.perfilusuario where idperfil = " + integer1.toString() + " and usuario='" + Usuario + "'";
             l = ADatos.ConsultaDB(s);
             rs = ADatos.getResult();
-            Integer integer4 = (Integer)rs.elementAt(0);
+            Integer integer4 = new Integer(0); 
+            try {
+            	integer4 =(Integer)rs.elementAt(0);
+            }catch(ClassCastException e) {}
             if(integer4.intValue() == 0)
                 printwriter.println("<option value='" + integer1.toString() + "'>" + s7.toString() + "</option>");
         }

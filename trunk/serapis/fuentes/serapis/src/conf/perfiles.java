@@ -17,8 +17,7 @@ public class perfiles extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
-        throws IOException, ServletException
-    {
+        throws IOException, ServletException {
         httpservletresponse.setContentType("text/html");
         PrintWriter printwriter = httpservletresponse.getWriter();
         HttpSession httpsession = httpservletrequest.getSession(true);

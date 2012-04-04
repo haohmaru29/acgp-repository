@@ -5,13 +5,18 @@
 
 package sad;
 
-import Acc.AccDataBase;
-import Acc.funciones;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Vector;
+
 import javax.servlet.ServletException;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import Acc.AccDataBase;
+import Acc.funciones;
 
 public class publicararea extends HttpServlet
 {
@@ -351,6 +356,17 @@ public class publicararea extends HttpServlet
         printwriter.println("<td class='textdesttabla'><B>Archivo</B></td>");
         printwriter.println("<td class='textdesttabla'><input type='file' class='btnNormal' name='fichero' style='WIDTH: 250px'></td>");
         printwriter.println("</tr>");
+        printwriter.println("<tr>");
+        printwriter.println("<td class='textdesttabla'><B>Usuario</B></td>");
+        printwriter.println("<td class='textdesttabla'><select name='usuarioAsig'><option value='-1'>Seleccione campo</option>");
+        i = ADatos.ConsultaDB("select rut,nombre from sgc.usuarios order by nombre");
+        rs = ADatos.getResult();
+        for(int i1 = 0; i1 < rs.size(); i1 += 2) {
+        	System.out.println("<option value='" + (String)rs.elementAt(i1) + "'>" + (String)rs.elementAt(i1 + 1) + "</option>");
+            printwriter.println("<option value='" + (String)rs.elementAt(i1) + "'>" + (String)rs.elementAt(i1 + 1) + "</option>");
+        }
+        printwriter.println("</select></td></tr>");
+        
         printwriter.println("</TABLE>");
         printwriter.println("<BR>");
         printwriter.println("<TABLE border='0' width='80%'  align='center'>");

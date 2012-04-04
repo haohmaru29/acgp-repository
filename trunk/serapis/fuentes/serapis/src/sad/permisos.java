@@ -42,9 +42,11 @@ public class permisos extends HttpServlet
             String s = "select COUNT(*) from gdc.procesos where lider='" + s6 + "' or (backuplider = '" + s6 + "' and validobackup = 'S')";
             int j = ADatos.ConsultaDB(s);
             rs = ADatos.getResult();
-            Integer integer1 = (Integer)rs.elementAt(0);
-            if(integer1.intValue() > 0)
-            {
+            Integer integer1 = new Integer(0); 
+            try {
+            	integer1 = (Integer)rs.elementAt(0);
+            } catch(ClassCastException e ) { }
+            if(integer1.intValue() > 0) {
                 String s7 = httpservletrequest.getParameter("TIPO");
                 String s8 = httpservletrequest.getParameter("SUBTIPO");
                 printwriter.println("<html>");
@@ -191,8 +193,7 @@ public class permisos extends HttpServlet
     }
 
     public void doPost(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
-        throws IOException, ServletException
-    {
+        throws IOException, ServletException {
         doGet(httpservletrequest, httpservletresponse);
     }
 

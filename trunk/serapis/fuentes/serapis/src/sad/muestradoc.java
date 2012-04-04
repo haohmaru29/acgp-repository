@@ -1,8 +1,3 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3)
-// Source File Name:   muestradoc.java
-
 package sad;
 
 import Acc.AccDataBase;
@@ -13,13 +8,13 @@ import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-public class muestradoc extends HttpServlet
-{
-
-    public muestradoc()
+public class muestradoc extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	public muestradoc()
     {
         ADatos = new AccDataBase();
         AFunc = new funciones();
+        rutUsuario="";
         Tipo = "";
         SubTipo = "";
         Proceso = "";
@@ -50,6 +45,7 @@ public class muestradoc extends HttpServlet
         HttpSession httpsession = httpservletrequest.getSession(true);
         UserReg = (String)httpsession.getValue("SerapisUser");
         GlosaProy = (String)httpsession.getValue("SerapisGlosa");
+        rutUsuario = httpsession.getAttribute("SerapisRut").toString();
         if(GlosaProy != null && GlosaProy.length() > 0)
             GlosaProy = AFunc.desencripta(GlosaProy);
         else
@@ -175,8 +171,7 @@ public class muestradoc extends HttpServlet
         return s9;
     }
 
-    void ObtieneDocumentos(String s, PrintWriter printwriter)
-    {
+    void ObtieneDocumentos(String s, PrintWriter printwriter) {
         String s1 = "";
         String s3 = "";
         String s5 = "";
@@ -195,67 +190,72 @@ public class muestradoc extends HttpServlet
         s7 = "select tipodocumento,proceso,descripcion from gdc.documentoscalidad where id = " + s;
         int j = ADatos.ConsultaDB(s7);
         rs = ADatos.getResult();
-        if(rs.size() > 0)
-        {
+        if(rs.size() > 0) {
             String s2 = (String)rs.elementAt(0);
             String s4 = (String)rs.elementAt(1);
             String s6 = (String)rs.elementAt(2);
             String s10 = TieneAcceso(printwriter, "PROCESO", s4, 0L, UserReg);
-            if(s10.compareTo("00000") != 0 && s10.compareTo("00001") != 0)
-            {
-                String s8 = "select r.tipodoc,r.proceso,r.version,r.descripcion,r.cliente,r.adicional,r.verdoc,r.nombrearchivo,r.extension,r.comentario,r.id,r.usuario,p.descripcion, r.fechapublica ";
+            if(s10.compareTo("00000") != 0 && s10.compareTo("00001") != 0) {
+                String s8 = "select r.tipodoc,r.proceso,r.version,r.descripcion,r.cliente,r.adicional,r.verdoc," +
+                		"r.nombrearchivo,r.extension,r.comentario,r.id,r.usuario,p.descripcion, r.fechapublica , " +
+                		"r.rut_usuario ";
                 s8 = s8 + " from sad.documentos r, gdc.procesos p ";
                 s8 = s8 + " where p.sigla = r.proceso and r.tipodoc = '" + s2 + "' and r.proceso = '" + s4 + "' and  r.descripcion = '" + s6 + "' and r.estado = 'A'";
-                s8 = s8 + " order by r.verdoc desc,p.descripcion,r.tipodoc,r.version,r.descripcion";
+                              
+                s8 = s8 + " order by r.verdoc desc,p.descripcion,r.tipodoc,r.version,r.descripcion ";
                 int k = ADatos.ConsultaDB(s8);
                 rs = ADatos.getResult();
-                if(rs.size() > 0)
-                {
-                    for(int l = 0; l < rs.size(); l += 14)
-                    {
+                if(rs.size() > 0) {
+                    for(int l = 0; l < rs.size(); l += 15) {
                         String s12 = (String)rs.elementAt(7 + l);
                         String s14 = (String)rs.elementAt(8 + l);
                         String s16 = (String)rs.elementAt(9 + l);
                         Integer integer1 = (Integer)rs.elementAt(10 + l);
                         String s18 = (String)rs.elementAt(11 + l);
-                        String s21 = (String)rs.elementAt(12 + l);
+                        String s21 = rs.elementAt(12 + l) + "";
                         Integer integer3 = (Integer)rs.elementAt(13 + l);
-                        if(s21.compareTo(s19) != 0)
-                        {
-                            if(s19.length() > 0)
-                            {
+                        String rutUsuarioDB = rs.elementAt(14 + l) + "";
+                        if("null".equals(rutUsuarioDB ) || rutUsuario.equals(rutUsuarioDB) || "10000".equals(s10)) {
+                        	if(s21.compareTo(s19) != 0) {
+                                if(s19.length() > 0) {
+                                    printwriter.println("</table>");
+                                    printwriter.println("<BR>");
+                                }
+                                printwriter.println("<table border='1' width='95%' align='center'>");
+                                printwriter.println("<tr>");
+                                printwriter.println("<td class='texttitulotabla' align='center'>Archivos</td>");
+                                printwriter.println("</tr>");
                                 printwriter.println("</table>");
-                                printwriter.println("<BR>");
+                                printwriter.println("<table border='1' width='90%' align='center'>");
+                                printwriter.println("<tr><td class='texttituloarea' align='left' colspan='5'>" + s21 + "</td></tr>");
+                                printwriter.println("<tr>");
+                                printwriter.println("<td class='texttitulotabla' align='center' width='8%'>Tipo</td>");
+                                printwriter.println("<td class='texttitulotabla' align='center' width='35%'>Archivo</td>");
+                                printwriter.println("<td class='texttitulotabla' align='center' width='25%'>Descripci\363n</td>");
+                                printwriter.println("<td class='texttitulotabla' align='center' width='20%'>Usuario</td>");
+                                printwriter.println("<td class='texttitulotabla' align='center' width='12%'>Fecha Publicaci\363n</td>");
+                                printwriter.println("</tr>");
+                                s19 = s21;
                             }
-                            printwriter.println("<table border='1' width='95%' align='center'>");
                             printwriter.println("<tr>");
-                            printwriter.println("<td class='texttitulotabla' align='center'>Archivos</td>");
+                            if(AFunc.ExisteArchivo(sPath + "\\images\\ext_" + s14 + ".gif") == 1)
+                                printwriter.println("<td class='textdesttabla'> <a href='verarchivo.jsp?SUBTIPO=N&TIPO=A&ID=" + integer1.toString() + "&PERMISO=" + s10 + "','datos'><IMG src=../images/ext_" + s14 + ".gif width=32 height=32 border=0></a> </td>");
+                            else
+                                printwriter.println("<td class='textdesttabla'> <a href='verarchivo.jsp?SUBTIPO=N&TIPO=A&ID=" + integer1.toString() + "&PERMISO=" + s10 + "','datos'><IMG src=../images/extdefault.gif width=32 height=32 border=0></a> </td>");
+                            printwriter.println("<td class='textdesttabla'> " + s12 + "</td>");
+                            if(s16.length() > 0)
+                                printwriter.println("<td class='textdesttabla'>" + s16 + "</td>");
+                            else
+                                printwriter.println("<td class='textdesttabla'>&nbsp;</td>");
+                            printwriter.println("<td class='textdesttabla'>" + s18 + "</td>");
+                            printwriter.println("<td class='textdesttabla'>" + AFunc.ConstruyeFecha(integer3.toString(), "/", "dmy") + "</td>");
                             printwriter.println("</tr>");
-                            printwriter.println("</table>");
-                            printwriter.println("<table border='1' width='90%' align='center'>");
-                            printwriter.println("<tr><td class='texttituloarea' align='left' colspan='5'>" + s21 + "</td></tr>");
-                            printwriter.println("<tr>");
-                            printwriter.println("<td class='texttitulotabla' align='center' width='8%'>Tipo</td>");
-                            printwriter.println("<td class='texttitulotabla' align='center' width='35%'>Archivo</td>");
-                            printwriter.println("<td class='texttitulotabla' align='center' width='25%'>Descripci\363n</td>");
-                            printwriter.println("<td class='texttitulotabla' align='center' width='20%'>Usuario</td>");
-                            printwriter.println("<td class='texttitulotabla' align='center' width='12%'>Fecha Publicaci\363n</td>");
-                            printwriter.println("</tr>");
-                            s19 = s21;
+                        } else {
+                        	System.out.println("-------------> " + rutUsuarioDB);
+                        	
                         }
-                        printwriter.println("<tr>");
-                        if(AFunc.ExisteArchivo(sPath + "\\images\\ext_" + s14 + ".gif") == 1)
-                            printwriter.println("<td class='textdesttabla'> <a href='verarchivo.jsp?SUBTIPO=N&TIPO=A&ID=" + integer1.toString() + "&PERMISO=" + s10 + "','datos'><IMG src=../images/ext_" + s14 + ".gif width=32 height=32 border=0></a> </td>");
-                        else
-                            printwriter.println("<td class='textdesttabla'> <a href='verarchivo.jsp?SUBTIPO=N&TIPO=A&ID=" + integer1.toString() + "&PERMISO=" + s10 + "','datos'><IMG src=../images/extdefault.gif width=32 height=32 border=0></a> </td>");
-                        printwriter.println("<td class='textdesttabla'> " + s12 + "</td>");
-                        if(s16.length() > 0)
-                            printwriter.println("<td class='textdesttabla'>" + s16 + "</td>");
-                        else
-                            printwriter.println("<td class='textdesttabla'>&nbsp;</td>");
-                        printwriter.println("<td class='textdesttabla'>" + s18 + "</td>");
-                        printwriter.println("<td class='textdesttabla'>" + AFunc.ConstruyeFecha(integer3.toString(), "/", "dmy") + "</td>");
-                        printwriter.println("</tr>");
+                        
+                        
                         i++;
                     }
 
@@ -428,4 +428,5 @@ public class muestradoc extends HttpServlet
     String UserReg;
     String GlosaProy;
     String sPath;
+    private String rutUsuario;
 }
