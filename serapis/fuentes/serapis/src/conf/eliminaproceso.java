@@ -37,19 +37,23 @@ public class eliminaproceso extends HttpServlet
             vector = ADatos.getResult();
             if(vector.size() > 0)
             {
-                Integer integer1 = (Integer)vector.elementAt(0);
-                if(integer1.longValue() > 0L)
-                {
+                Integer integer1 = new Integer(0);
+                try {
+                	integer1 = (Integer)vector.elementAt(0);
+                }catch(ClassCastException e ) {}
+                if(integer1.longValue() > 0L) {
                     byte0 = -1;
-                } else
-                {
+                } else {
                     vector.clear();
                     String s2 = "select count(*) from gdc.documentos where proceso = '" + s10 + "'";
                     ADatos.ConsultaDB(s2);
                     vector = ADatos.getResult();
                     if(vector.size() > 0)
                     {
-                        Integer integer2 = (Integer)vector.elementAt(0);
+                        Integer integer2 = new Integer(0);
+                        try {
+                        	integer2 = (Integer)vector.elementAt(0);
+                        }catch(ClassCastException e ) { }
                         if(integer2.longValue() > 0L)
                         {
                             byte0 = -2;
@@ -59,9 +63,11 @@ public class eliminaproceso extends HttpServlet
                             String s3 = "select count(*) from sad.documentos where proceso = '" + s10 + "'";
                             ADatos.ConsultaDB(s3);
                             vector = ADatos.getResult();
-                            if(vector.size() > 0)
-                            {
-                                Integer integer3 = (Integer)vector.elementAt(0);
+                            if(vector.size() > 0) {
+                                Integer integer3 = new Integer(0);
+                                try {
+                                	integer3 = (Integer)vector.elementAt(0);
+                                }catch(ClassCastException e ) { }
                                 if(integer3.longValue() > 0L)
                                 {
                                     byte0 = -3;
@@ -73,7 +79,10 @@ public class eliminaproceso extends HttpServlet
                                     vector = ADatos.getResult();
                                     if(vector.size() > 0)
                                     {
-                                        Integer integer4 = (Integer)vector.elementAt(0);
+                                        Integer integer4 = new Integer(0);
+                                        try {
+                                        	integer4 = (Integer)vector.elementAt(0);
+                                        }catch(ClassCastException e ) {} 
                                         if(integer4.longValue() > 0L)
                                         {
                                             byte0 = -4;
@@ -85,7 +94,10 @@ public class eliminaproceso extends HttpServlet
                                             vector = ADatos.getResult();
                                             if(vector.size() > 0)
                                             {
-                                                Integer integer5 = (Integer)vector.elementAt(0);
+                                                Integer integer5 = new Integer(0);
+                                                try {
+                                                	integer5 = (Integer)vector.elementAt(0);
+                                                } catch(ClassCastException e ) {}
                                                 if(integer5.longValue() > 0L)
                                                 {
                                                     byte0 = -5;
@@ -97,7 +109,10 @@ public class eliminaproceso extends HttpServlet
                                                     vector = ADatos.getResult();
                                                     if(vector.size() > 0)
                                                     {
-                                                        Integer integer6 = (Integer)vector.elementAt(0);
+                                                        Integer integer6 = new Integer(0); 
+                                                        try {
+                                                        	integer6 = (Integer)vector.elementAt(0);
+                                                        } catch(ClassCastException e ) {} 
                                                         if(integer6.longValue() > 0L)
                                                         {
                                                             byte0 = -6;
@@ -109,7 +124,7 @@ public class eliminaproceso extends HttpServlet
                                                             vector = ADatos.getResult();
                                                             if(vector.size() > 0)
                                                             {
-                                                                String s8 = "insert into gdc.HIS_procesos (sigla,descripcion,definicion) values ('";
+                                                                String s8 = "insert into gdc.his_procesos (sigla,descripcion,definicion) values ('";
                                                                 s8 = s8 + (String)vector.elementAt(0) + "','";
                                                                 s8 = s8 + (String)vector.elementAt(1) + "','";
                                                                 s8 = s8 + (String)vector.elementAt(2) + "')";

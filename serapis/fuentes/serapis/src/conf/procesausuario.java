@@ -39,8 +39,7 @@ public class procesausuario extends HttpServlet {
             String s36 = httpservletrequest.getParameter("tipoadmin");
             String s37 = httpservletrequest.getParameter("opcionsel");
             String s38 = httpservletrequest.getParameter("alias");
-            if(s37.compareTo("G") == 0)
-            {
+            if(s37.compareTo("G") == 0) {
                 String s4 = "insert into sgc.usuarios(login,nombre,idcargo,rut,password,fechapass,mail,fechanac,estado,alias) values (";
                 s4 = s4 + "'" + s24 + "',";
                 s4 = s4 + "'" + s28 + "',";
@@ -290,8 +289,7 @@ public class procesausuario extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
-        throws IOException, ServletException
-    {
+        throws IOException, ServletException {
         doGet(httpservletrequest, httpservletresponse);
     }
 

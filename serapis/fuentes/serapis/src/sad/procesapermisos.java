@@ -1,8 +1,3 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3)
-// Source File Name:   procesapermisos.java
-
 package sad;
 
 import Acc.AccDataBase;
@@ -12,19 +7,17 @@ import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-public class procesapermisos extends HttpServlet
-{
-
-    public procesapermisos()
-    {
+public class procesapermisos extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	public procesapermisos() {
         ADatos = new AccDataBase();
         AFunc = new funciones();
         Tipo = "";
     }
 
     public void doGet(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
-        throws IOException, ServletException
-    {
+        throws IOException, ServletException {
         String s = "";
         String s3 = "";
         String s4 = "";
@@ -35,8 +28,7 @@ public class procesapermisos extends HttpServlet
             Tipo = "1";
         HttpSession httpsession = httpservletrequest.getSession(true);
         UserReg = (String)httpsession.getValue("SerapisUser");
-        if(UserReg != null && UserReg.length() > 0)
-        {
+        if(UserReg != null && UserReg.length() > 0) {
             ADatos.connect();
             rs = new Vector();
             if(Tipo.compareTo("1") == 0)

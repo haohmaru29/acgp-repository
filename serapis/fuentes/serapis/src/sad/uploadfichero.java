@@ -112,14 +112,15 @@ public class uploadfichero extends HttpServlet
             if(rs.size() > 0){
             	DriveTemporal = (String)rs.elementAt(0);
             	//DriveTemporal = DriveTemporal.substring(0,1);
-            	DriveTemporal = "/home/haoh";
+            	DriveTemporal = "/home/haoh/pruebas/";
             } else
             	DriveTemporal = "C";
             
             DiskFileUpload diskfileupload = new DiskFileUpload();
             diskfileupload.setSizeMax(0x1000000L);
             diskfileupload.setSizeThreshold(4096);
-            diskfileupload.setRepositoryPath(DriveTemporal + ":\\");
+            //diskfileupload.setRepositoryPath(DriveTemporal + ":\\");
+            diskfileupload.setRepositoryPath(DriveTemporal);
             List list = diskfileupload.parseRequest(httpservletrequest);
             Iterator iterator = list.iterator();
             FileItem fileitem = null;
@@ -146,10 +147,12 @@ public class uploadfichero extends HttpServlet
                     tipoextension = fileitem.getString();
                 if(fileitem.getFieldName().equals("comentario"))
                     comentario = fileitem.getString();
-                if(fileitem.getFieldName().equals("comadicional"))
-                {
+                if(fileitem.getFieldName().equals("comadicional")) {
                     ComentarioAdicional = fileitem.getString();
                     ComentarioAdicional = AFunc.encripta(ComentarioAdicional);
+                } 
+                if(fileitem.getFieldName().equals("usuarioAsig")) {
+                	nombreUsuario =  fileitem.getString();
                 }
                 if(fileitem.getFieldName().equals("fichero"))
                     s = fileitem.getName();
@@ -177,8 +180,11 @@ public class uploadfichero extends HttpServlet
                 s6 = s6 + " and adicional = '" + adicional + "'";
             long l = ADatos.ConsultaDB(s6);
             rs = ADatos.getResult();
-            if(l == 1L)
-                integer = (Integer)rs.elementAt(0);
+            if(l == 1L) {
+            	try {
+            		integer = (Integer)rs.elementAt(0);
+            	}catch(ClassCastException e) { }
+            }
             if(integer.intValue() == 0)
             {
             	           		
@@ -218,7 +224,11 @@ public class uploadfichero extends HttpServlet
                 {
                     integer3 = new Integer(0x5f5e0ff);
                 }
-                s7 = "insert into sad.documentos (tipodoc,proceso,version,descripcion,cliente,adicional,verdoc,nombrearchivo,nombreorigen,extension,comentario,usuario,fechapublica,fechacaducidad,comentarioadicional,idwf,estado)";
+                s7 = "insert into sad.documentos (tipodoc,proceso,version,descripcion,cliente,adicional,verdoc,nombrearchivo,nombreorigen,extension,comentario,usuario,fechapublica,fechacaducidad,comentarioadicional,idwf,estado ";
+        		if(!"-1".equals(nombreUsuario) ) {
+        			s7+=",rut_usuario";
+        		}
+                s7 += ")";
                 s7 = s7 + "values(";
                 s7 = s7 + "'" + tipodocumentos + "',";
                 s7 = s7 + "'" + tipoprocesos + "',";
@@ -237,9 +247,14 @@ public class uploadfichero extends HttpServlet
                 s7 = s7 + "'" + ComentarioAdicional + "',";
                 s7 = s7 + integer8.toString() + ",";
                 if(integer8.intValue() > 0)
-                    s7 = s7 + "'E')";
+                    s7 = s7 + "'E'";
                 else
-                    s7 = s7 + "'A')";
+                    s7 = s7 + "'A'";
+                
+                if(!"-1".equals(nombreUsuario) ) {
+        			s7+=",'" + nombreUsuario +"'";
+        		}
+                s7+=")";
                 int i = ADatos.ModificaDB(s7);
                 printwriter.println("<TABLE border='1' align='center' width='80%'>");
                 printwriter.println("<tr>");
@@ -388,4 +403,5 @@ public class uploadfichero extends HttpServlet
     AccDataBase ADatos;
     funciones AFunc;
     correo EnvMail;
+    private String nombreUsuario;
 }

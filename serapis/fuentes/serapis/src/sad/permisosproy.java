@@ -1,8 +1,3 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3)
-// Source File Name:   permisosproy.java
-
 package sad;
 
 import Acc.AccDataBase;
@@ -13,11 +8,10 @@ import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-public class permisosproy extends HttpServlet
-{
-
-    public permisosproy()
-    {
+public class permisosproy extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	public permisosproy() {
         ADatos = new AccDataBase();
         AFunc = new funciones();
         RutaSitio = "";
@@ -25,8 +19,7 @@ public class permisosproy extends HttpServlet
     }
 
     public void doGet(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
-        throws IOException, ServletException
-    {
+        throws IOException, ServletException {
         String s2 = "";
         String s4 = "";
         String s6 = "";
@@ -39,15 +32,16 @@ public class permisosproy extends HttpServlet
         PrintWriter printwriter = httpservletresponse.getWriter();
         HttpSession httpsession = httpservletrequest.getSession(true);
         String s12 = (String)httpsession.getValue("SerapisUser");
-        if(s12 != null && s12.length() > 0)
-        {
+        if(s12 != null && s12.length() > 0) {
             String s13 = httpservletrequest.getParameter("IDPROY");
             String s = "select COUNT(*) from gdc.proyectos where id = " + s13 + " and jefeproyecto = '" + s12 + "' or (id = " + s13 + " and jpbackup = '" + s12 + "' and validobackup = 'S')";
             int i = ADatos.ConsultaDB(s);
             rs = ADatos.getResult();
-            Integer integer3 = (Integer)rs.elementAt(0);
-            if(integer3.intValue() > 0)
-            {
+            Integer integer3 = new Integer(0);
+            try {
+            	integer3 = (Integer)rs.elementAt(0);
+            }catch(ClassCastException e ) { }
+            if(integer3.intValue() > 0) {
                 printwriter.println("<html>");
                 printwriter.println("<head>");
                 printwriter.println("</head>");

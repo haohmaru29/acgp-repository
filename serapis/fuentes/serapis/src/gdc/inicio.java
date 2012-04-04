@@ -1,8 +1,3 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3)
-// Source File Name:   inicio.java
-
 package gdc;
 
 import Acc.AccDataBase;
@@ -13,11 +8,10 @@ import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-public class inicio extends HttpServlet
-{
-
-    public inicio()
-    {
+public class inicio extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	public inicio() {
         ADatos = new AccDataBase();
         AFunc = new funciones();
         Licencia = "0";
@@ -26,8 +20,7 @@ public class inicio extends HttpServlet
     }
 
     public void doGet(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
-        throws IOException, ServletException
-    {
+        throws IOException, ServletException {
         httpservletresponse.setContentType("text/html");
         PrintWriter printwriter = httpservletresponse.getWriter();
         HttpSession httpsession = httpservletrequest.getSession(true);

@@ -1,8 +1,3 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3)
-// Source File Name:   nuevopermiso.java
-
 package sad;
 
 import Acc.AccDataBase;
@@ -13,18 +8,16 @@ import java.util.Vector;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-public class nuevopermiso extends HttpServlet
-{
-
-    public nuevopermiso()
-    {
+public class nuevopermiso extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	public nuevopermiso() {
         ADatos = new AccDataBase();
         AFunc = new funciones();
     }
 
     public void doGet(HttpServletRequest httpservletrequest, HttpServletResponse httpservletresponse)
-        throws IOException, ServletException
-    {
+        throws IOException, ServletException {
         String s1 = "";
         String s3 = "";
         Integer integer = new Integer(0);
@@ -125,8 +118,7 @@ public class nuevopermiso extends HttpServlet
         }
     }
 
-    void CargaScript(PrintWriter printwriter)
-    {
+    void CargaScript(PrintWriter printwriter) {
         printwriter.println("function GrabarProceso()");
         printwriter.println("{");
         printwriter.println("if (document.frmpermisos.lstprocesos.value != \"\")");

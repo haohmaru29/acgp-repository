@@ -1,8 +1,3 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3)
-// Source File Name:   validaclave.java
-
 import Acc.AccDataBase;
 import Acc.funciones;
 import java.io.IOException;
@@ -52,6 +47,7 @@ public class validaclave extends HttpServlet
             httpsession.putValue("SerapisPass", s);
             httpsession.putValue("SerapisNombre", Alias);
             httpsession.putValue("SerapisLic", "1");
+            httpsession.setAttribute("SerapisRut", rutUsuario );
             String s1 = (String)httpsession.getValue("SerapisSis");
             printwriter.println("window.open(\"inicializa.jsp\",\"_top\");");
             if(TieneAviso == 1)
@@ -109,7 +105,7 @@ public class validaclave extends HttpServlet
         Integer integer2 = new Integer(0);
         Vector vector = new Vector();
         Vector vector1 = new Vector();
-        String s3 = "select nombre,password,fechapass,estado,alias from sgc.usuarios where login='" + s + "'";
+        String s3 = "select nombre,password, fechapass,estado,alias,rut from sgc.usuarios where login='" + s + "'";
         ADatos.connect();
         int i = ADatos.ConsultaDB(s3);
         rs = ADatos.getResult();
@@ -121,6 +117,7 @@ public class validaclave extends HttpServlet
                 NombreUsuario = (String)rs.elementAt(0);
                 Alias = (String)rs.elementAt(4);
                 String s5 = (String)rs.elementAt(1);
+                rutUsuario = (String)rs.elementAt(5);
                 if(s5.length() > 0)
                 {
                     s5 = func.desencripta(s5);
@@ -186,4 +183,5 @@ public class validaclave extends HttpServlet
     String NombreUsuario;
     String login;
     String Alias;
+    private String rutUsuario;
 }
