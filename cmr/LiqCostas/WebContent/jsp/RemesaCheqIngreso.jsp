@@ -10,7 +10,8 @@
 	
 	RequestDispatcher dispatcher;
 	HttpSession sesion = request.getSession(false);
-	if(session != null ) {
+	System.out.println("Session: " + sesion); 
+	if(sesion != null ) {
     Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();

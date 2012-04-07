@@ -1,17 +1,19 @@
 package Config;
-import javax.xml.parsers.*;
-import org.w3c.dom.*;
 
-import java.io.*;
+import java.io.File;
+import java.io.InputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
 
 public class DOMXML {
 	
-	public DOMXML() {
-	}
+	private static final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 	
-	static protected Document getDocument(String sFile) {
+	protected static Document getDocument(String sFile) {
 		  try {
-		  	DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		  	DocumentBuilder db=dbf.newDocumentBuilder();
 		  	Document doc = db.parse(new File(sFile));
 		  	return doc;
@@ -19,9 +21,9 @@ public class DOMXML {
 		  	return null;
 		  }
 	}
-	static protected Document getDocument(InputStream in) {
+	
+	protected static Document getDocument(InputStream in) {
 		  try {
-		  	DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		  	DocumentBuilder db=dbf.newDocumentBuilder();
 		  	Document doc = db.parse(in);
 		  	return doc;

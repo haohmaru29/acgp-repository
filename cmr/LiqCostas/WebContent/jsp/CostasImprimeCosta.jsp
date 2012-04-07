@@ -6,6 +6,7 @@
 <%@page import='Proc.Costas'%>
 <%  	
 	HttpSession sesion = request.getSession(true);
+	if(sesion != null ) {
     Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -175,5 +176,5 @@
 </BODY>
 </HTML>
 
-
+<%} %>
     

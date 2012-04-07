@@ -23,9 +23,6 @@ public class ConfigXMLHandler {
 	}
 	
 	public void parseXML() {
-		//ClassLoader loader = Thread.currentThread().getContextClassLoader();
-		//InputStream in = loader.getResourceAsStream("/error.properties");	    	
-		
 		Document doc = DOMXML.getDocument(this.sFile);
 		traverseTree(doc);
 	}

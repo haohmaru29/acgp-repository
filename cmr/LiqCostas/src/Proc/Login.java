@@ -1,32 +1,35 @@
 package Proc;
 
-import java.util.*;
-import java.io.*; 
-import javax.naming.*; 
+import java.io.IOException;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.naming.NamingException;
+
+import oracle.jdbc.OracleTypes;
 
 import org.jboss.logging.Logger;
 
-import java.sql.*;
-
 import bd.DBAcceso;
-import oracle.jdbc.OracleTypes;
-import utils.LoggerInstance;
 
 public class Login {
 
-	 CallableStatement cStmt = null;
-	 ResultSet rs = null;
-	 Connection conn = null;
-	 String nomPaquete="";
-	 private static final Logger logger = Logger.getLogger(Login.class);
+	private static String nomPaquete="PaqLogin";
+	private static final Logger logger = Logger.getLogger(Login.class); 
+	private CallableStatement cStmt = null;
+	private ResultSet rs = null;
+	private Connection conn = null;
+	 
 	    
-	 public Login(){
-		 cStmt = null;
-	     rs = null;
-	     nomPaquete="PaqLogin";
+	public Login(){
+		cStmt = null;
+		rs = null;
 	}
 	 
-	public boolean ObtieneUsuario(String Usuario, ArrayList resultado) 
+	public boolean ObtieneUsuario(String Usuario, ArrayList<ArrayList<String>> resultado) 
 		throws SQLException, IOException, NamingException {
     	boolean ret = false;    	    	       
         try {
@@ -43,7 +46,7 @@ public class Login {
 	            //obtenemos la data
 	            if (rs != null) {
 		    		while (rs.next()) {
-		    			ArrayList aux = new ArrayList();
+		    			ArrayList<String> aux = new ArrayList<String>();
 		    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 		    				String valor = rs.getString(j);
 		    	            if (rs.wasNull())
@@ -59,7 +62,6 @@ public class Login {
 	    		} 
         	}        	
         } catch (Exception e) {
-        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
         	logger.error(" [LiqCostas] " , e);
         } finally {
         	DBAcceso.close(rs, cStmt, conn);
@@ -67,8 +69,7 @@ public class Login {
         return ret;
       }
   
-	public boolean ObtieneMenuUsuario(String Usuario, ArrayList resultado) 
-		throws SQLException, IOException, NamingException {
+	public boolean ObtieneMenuUsuario(String Usuario, ArrayList<ArrayList<String>> resultado) throws SQLException, IOException, NamingException {
     	boolean ret = false;    	    	       
         try {
         	DBAcceso ObjBD = DBAcceso.getInstance();        	
@@ -84,7 +85,7 @@ public class Login {
 	            //obtenemos la data
 	            if (rs != null) {
 		    		while (rs.next()) {
-		    			ArrayList aux = new ArrayList();
+		    			ArrayList<String> aux = new ArrayList<String>();
 		    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 		    				String valor = rs.getString(j);
 		    	            if (rs.wasNull())
@@ -100,7 +101,6 @@ public class Login {
 	    		} 
         	}
         } catch (Exception e) {
-        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
         	logger.error(" [LiqCostas] " , e);
         } finally {
         	DBAcceso.close(rs, cStmt, conn);
@@ -126,7 +126,6 @@ public class Login {
 	        		ret=true;	        	
         	}        	
         } catch (Exception e) {
-        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
         	logger.error(" [LiqCostas] " , e);
         } finally {
         	DBAcceso.close(rs, cStmt, conn);

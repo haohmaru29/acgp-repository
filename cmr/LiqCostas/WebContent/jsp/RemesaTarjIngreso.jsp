@@ -14,20 +14,21 @@
 	
 	RequestDispatcher dispatcher;
 	HttpSession sesion = request.getSession(false);
+	System.out.println(sesion);
 	if(sesion != null) {
-    Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
+    	Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
-	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
-	unusualSymbols.setDecimalSeparator(',');
-	unusualSymbols.setGroupingSeparator('.');
+		DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
+		unusualSymbols.setDecimalSeparator(',');
+		unusualSymbols.setGroupingSeparator('.');
 		
-	DecimalFormat df = new DecimalFormat("###,###,###,###,###,###,##0;(###,###,###,###,###,###,##0)",unusualSymbols);	
+		DecimalFormat df = new DecimalFormat("###,###,###,###,###,###,##0;(###,###,###,###,###,###,##0)",unusualSymbols);	
 
-	String iAno = new java.text.SimpleDateFormat("yyyy").format(new java.util.Date());
-	String iDia = new java.text.SimpleDateFormat("dd").format(new java.util.Date());
-	String iMes = new java.text.SimpleDateFormat("MM").format(new java.util.Date());
+		String iAno = new java.text.SimpleDateFormat("yyyy").format(new java.util.Date());
+		String iDia = new java.text.SimpleDateFormat("dd").format(new java.util.Date());
+		String iMes = new java.text.SimpleDateFormat("MM").format(new java.util.Date());
 				
-	String DescripEstado="En Ingreso";
+		String DescripEstado="En Ingreso";
 	
 	String Origen = request.getParameter("HDDORIGEN")!=null?request.getParameter("HDDORIGEN").trim():"INGRESO";
 	String Titulo= request.getParameter("HDDTITULO")!=null?request.getParameter("HDDTITULO").trim():"";	
