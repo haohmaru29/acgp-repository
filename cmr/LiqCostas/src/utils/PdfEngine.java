@@ -5,9 +5,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 public class PdfEngine extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	private static final Logger logger = Logger.getLogger(PdfEngine.class);
+	
 	
 	public PdfEngine() {
 		super();
@@ -27,10 +31,11 @@ public class PdfEngine extends HttpServlet {
 
 	public void proccessRequest(HttpServletRequest request, HttpServletResponse response ) {
 		try {
-			cl.acgp.pdf.PdfEngine pdf = new cl.acgp.pdf.PdfEngine(request, response);
-			pdf.openerDocument();
+			logger.info("[ LiqCosas ][ Creando PDF ]");
+			Engine pdf = new Engine(request, response);
+			pdf.openerDocument("");
 		} catch(Exception e) {
-			e.printStackTrace();
+			logger.error("[LiqCostas]", e );
 		}
 	}
 	

@@ -13,7 +13,7 @@
 	int TipoProducto=5;
 	
 	RequestDispatcher dispatcher;
-	HttpSession sesion = request.getSession(true);
+	HttpSession sesion = request.getSession(false);
     Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();

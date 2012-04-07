@@ -3,24 +3,24 @@ package Proc;
 import java.io.IOException;
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.naming.NamingException;
 
+import oracle.jdbc.OracleTypes;
+
 import org.jboss.logging.Logger;
 
-import java.sql.PreparedStatement;
-import oracle.jdbc.OracleTypes;
-import utils.LoggerInstance;
 import bd.DBAcceso;
 
 public class Costas {
 
-	 CallableStatement cStmt = null;
-	 Connection conn = null;
-	 String NomPaqueteCosta="";
+	 private CallableStatement cStmt = null;
+	 private Connection conn = null;
+	 private String NomPaqueteCosta="";
 	 private static Costas instance;
 	 private static final Logger logger = Logger.getLogger(Costas.class);
 	    
@@ -59,7 +59,6 @@ public class Costas {
 		            Sret=(String) cStmt.getObject(10);
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -81,7 +80,6 @@ public class Costas {
 				 Sret = "1";
 			 }
 		 } catch(Exception e) {
-			 //LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 			 logger.error(" [LiqCostas] " , e);
 			 ObjBD.rollback(conn);
 		 } finally {
@@ -117,7 +115,6 @@ public class Costas {
 		            Sret=(String) cStmt.getObject(13);	            
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -184,7 +181,6 @@ public class Costas {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsEnc, rsDet,cStmt, conn);
@@ -263,7 +259,6 @@ public class Costas {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -288,7 +283,6 @@ public class Costas {
 		            Sret=(String) cStmt.getObject(4);
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -335,7 +329,6 @@ public class Costas {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(e.getStackTrace()[1] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -390,7 +383,6 @@ public class Costas {
 	        	} else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);	        	
@@ -421,7 +413,6 @@ public class Costas {
 		            Sret=(String) cStmt.getObject(4);
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
