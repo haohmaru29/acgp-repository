@@ -6,6 +6,7 @@
 <%@page import='Proc.Remesa'%>
 <%  	
 	HttpSession sesion = request.getSession(true);
+	if(sesion != null ) {
     Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -228,6 +229,4 @@
 </FORM>
 </BODY>
 </HTML>
-
-
-    
+<%}%>

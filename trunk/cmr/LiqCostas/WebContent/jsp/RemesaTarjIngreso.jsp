@@ -13,7 +13,8 @@
 	int TipoProducto=1;
 	
 	RequestDispatcher dispatcher;
-	HttpSession sesion = request.getSession(true);
+	HttpSession sesion = request.getSession(false);
+	if(sesion != null) {
     Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -1688,3 +1689,4 @@
 </SCRIPT>
 </BODY>
 </HTML>
+<%}%>

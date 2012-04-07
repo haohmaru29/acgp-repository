@@ -29,8 +29,10 @@
 	if (msgError.trim().equals("")) 
 		msgError = "Se ha producido un problema!";
 %>
-<jsp:include page="<%=sMenu%>" flush="true"/>		
 
+<%if(res==0) { %>
+<jsp:include page="<%=sMenu%>" flush="true"/>		
+<%} %>
 <HTML>
 	<HEAD>
 		<TITLE><%=com.Errores.getDescription("VAR.TITULO")%></TITLE>
@@ -84,14 +86,6 @@
 						<%
 						if (exception!=null) {
 							out.println(exception.toString());
-							out.println("<!--");
-							java.io.StringWriter sw = new java.io.StringWriter();
-							java.io.PrintWriter pw = new java.io.PrintWriter(sw);
-							exception.printStackTrace(pw);
-							out.print(sw);
-							sw.close();
-							pw.close();
-							out.println("-->");
 						}
 						%>
 					</TD>

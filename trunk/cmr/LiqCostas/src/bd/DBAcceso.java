@@ -21,7 +21,6 @@ public class DBAcceso {
     		//ds = (DataSource) context.lookup("java:comp/env/jdbc/cyber8");
     		ds = (DataSource) context.lookup("jdbc/cyber8");
     	} catch(Exception e) {
-    		//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
     		logger.error(" [LiqCostas] " , e);
     	}
     }
@@ -39,7 +38,6 @@ public class DBAcceso {
   			logger.info("GET CONNECTION");
   			conn = ds.getConnection();
   		} catch (Exception e){
-  			//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
   			logger.error(" [LiqCostas] " , e);
   			return null;
   		}
@@ -59,7 +57,6 @@ public class DBAcceso {
     	try {
     		conn.rollback();
     	} catch(SQLException e) {
-    		//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
     		logger.error(" [LiqCostas] " , e);
     	}
     }

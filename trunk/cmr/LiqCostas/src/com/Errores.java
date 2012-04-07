@@ -4,8 +4,9 @@ import java.util.Properties;
 import java.io.*;
 
 public final class Errores implements java.io.Serializable{
+	private static final long serialVersionUID = 1L;
 
-   	public Errores(){
+	public Errores(){
 	}
    	
    	public static final String getDescription(String Error) {
