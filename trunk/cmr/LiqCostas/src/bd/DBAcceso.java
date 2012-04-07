@@ -18,7 +18,6 @@ public class DBAcceso {
     	conn = null;
     	try {
     		Context context =(Context) new InitialContext().lookup("java:comp/env");
-    		//ds = (DataSource) context.lookup("java:comp/env/jdbc/cyber8");
     		ds = (DataSource) context.lookup("jdbc/cyber8");
     	} catch(Exception e) {
     		logger.error(" [LiqCostas] " , e);
@@ -35,7 +34,6 @@ public class DBAcceso {
 
     public Connection connect() throws SQLException, IOException, NamingException {
   		try {
-  			logger.info("GET CONNECTION");
   			conn = ds.getConnection();
   		} catch (Exception e){
   			logger.error(" [LiqCostas] " , e);

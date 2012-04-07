@@ -15,12 +15,8 @@ public class ConfigItem {
   	}
 	
   	public ConfigItem(String sNombre) {
-  		this();
   		this.sNombre = sNombre;
-  		this.sDescripcion = sDescripcion;
   	}
-  	
-  	
   	
   	public void setNombre(String sNombre) { 		
   		this.sNombre = sNombre;

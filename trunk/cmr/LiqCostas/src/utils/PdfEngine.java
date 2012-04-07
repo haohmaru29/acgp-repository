@@ -34,6 +34,7 @@ public class PdfEngine extends HttpServlet {
 			logger.info("[ LiqCosas ][ Creando PDF ]");
 			Engine pdf = new Engine(request, response);
 			pdf.openerDocument("");
+			logger.info("[ LiqCosas ][ Generado PDF ]");
 		} catch(Exception e) {
 			logger.error("[LiqCostas]", e );
 		}

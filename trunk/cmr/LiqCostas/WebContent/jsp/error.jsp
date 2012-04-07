@@ -24,8 +24,6 @@
   }
 
 	String msgError = Errores.getDescription(sErr);
-	//out.println("msgError=" + msgError);
-	//out.println("sMenu=" + sMenu);
 	if (msgError.trim().equals("")) 
 		msgError = "Se ha producido un problema!";
 %>
@@ -42,8 +40,8 @@
 		<META HTTP-EQUIV="Expires" CONTENT="0">
 
 		<LINK REL="stylesheet" TYPE="text/css" HREF="../style/Liquidacion.css">
-		<SCRIPT type='text/javascript' language='JavaScript1.2' src='../js/funciones.js'></SCRIPT>
-		<SCRIPT LANGUAGE="JavaScript">
+		<SCRIPT type='text/javascript' src='../js/funciones.js'></SCRIPT>
+		<SCRIPT type="text/javascript">
 			function goInicio(){
 				window.document.FRMERROR.action = "<%=sVolver%>";
 				window.document.FRMERROR.target = "_self";
