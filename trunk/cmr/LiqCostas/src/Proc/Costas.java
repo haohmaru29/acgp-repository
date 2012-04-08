@@ -20,16 +20,15 @@ public class Costas {
 
 	 private CallableStatement cStmt = null;
 	 private Connection conn = null;
-	 private String NomPaqueteCosta="";
+	 private static final String NomPaqueteCosta="PaqCostas";
 	 private static Costas instance;
 	 private static final Logger logger = Logger.getLogger(Costas.class);
 	    
 	 private Costas(){
 		cStmt = null;
-	    NomPaqueteCosta="PaqCostas";
 	}
 	 
-	public static synchronized Costas getInstance() {
+	public static Costas getInstance() {
 		if(instance==null) {
 			instance = new Costas();
 		}
@@ -69,12 +68,13 @@ public class Costas {
 	 public String actualizaEncCostas(String idSec) {
 		 String Sret ="-1";
 		 String sql = "UPDATE LIQ_ENCLIQCOSTAS SET CODESTADO=2 WHERE IDSEC=" + idSec;
-		 DBAcceso ObjBD = DBAcceso.getInstance();  
+		 DBAcceso ObjBD = DBAcceso.getInstance();
+		 PreparedStatement ps = null;
 		 try {
 			 conn = ObjBD.connect();
 			 if (conn!= null) {
 				 conn.setAutoCommit(false);
-				 PreparedStatement ps = conn.prepareStatement(sql);
+				 ps = conn.prepareStatement(sql);
 				 ps.executeUpdate();
 				 conn.commit();
 				 Sret = "1";
@@ -83,7 +83,7 @@ public class Costas {
 			 logger.error(" [LiqCostas] " , e);
 			 ObjBD.rollback(conn);
 		 } finally {
-			 DBAcceso.close(cStmt, conn);
+			 DBAcceso.close(cStmt, conn, ps);
 		 }
 		 
 		 return Sret;

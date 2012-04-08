@@ -23,6 +23,7 @@ public class Menu {
 			in = Thread.currentThread().getContextClassLoader().getResourceAsStream("/Menu.xml");
 			ConfigXMLHandler oHand = new ConfigXMLHandler();
 			oHand.parseXML(in);
+			in.close();
 			return oHand.getObjectConfig();
 		} catch (Exception e) {
 			logger.error("[ LiqCostas ]", e);

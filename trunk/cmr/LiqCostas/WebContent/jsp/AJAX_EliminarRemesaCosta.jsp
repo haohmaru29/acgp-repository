@@ -1,5 +1,6 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="Proc.Remesa"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%
 	String Resp="-1";
 	Seguridad.ValidaSesion val = new Seguridad.ValidaSesion();			
@@ -13,11 +14,11 @@
 			String sNumRemesa = request.getParameter("NUMREMESA")!=null?request.getParameter("NUMREMESA").toString().trim():"";
 			String sAbogado= request.getParameter("ABO")!=null?request.getParameter("ABO").toString().trim():"";
 			
-			Proc.Remesa objRemesa = new Proc.Remesa();
+			Proc.Remesa objRemesa = Remesa.getInstance();
 			Resp = objRemesa.EliminarRemesaCosta(sNumRemesa,Integer.parseInt(sTipoProd),sAbogado);
 						
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);	
+			Logger.getLogger("AJAX_EliminarRemesaCosta").error(" [LiqCostas] " , ex);
 		}		
 	}	
  %> 

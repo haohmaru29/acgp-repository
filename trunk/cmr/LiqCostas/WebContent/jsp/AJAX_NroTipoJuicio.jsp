@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%@page import='java.util.ArrayList'%>
 <%@page import='Proc.General'%>
 
@@ -23,7 +23,7 @@
 			sRut = request.getParameter("RUT")!=null?request.getParameter("RUT").toString().trim():"";
 			ret = objGeneral.ObtenerJuicio(sRut, arrRes);	
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);
+			Logger.getLogger("AJAX_NroTipoJuicio").error(" [LiqCostas] " , ex);
 		}		
 		
 		total = arrRes.size();	

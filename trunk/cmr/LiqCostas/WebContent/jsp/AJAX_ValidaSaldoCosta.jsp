@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%@page import='Proc.General'%>
 <%
 	String Resp="-1";
@@ -17,7 +17,7 @@
 			Resp = objRemesa.validarSaldoCosta(codAbogado, rutCliente, codProducto);
 						
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);
+			Logger.getLogger("AJAX_ValidaSaldoCosta").error(" [LiqCostas] " , ex);
 		}	
 	}	
  %> 

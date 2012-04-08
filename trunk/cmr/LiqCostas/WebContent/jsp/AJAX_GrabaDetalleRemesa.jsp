@@ -1,6 +1,6 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
-<%@page import='Proc.Remesa'%>
+<%@page import="Proc.Remesa"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%
 	String Resp="-1";
 	Seguridad.ValidaSesion val = new Seguridad.ValidaSesion();			
@@ -22,11 +22,11 @@
 			String sBoleta = request.getParameter("BOLETA")!=null?request.getParameter("BOLETA").toString().trim():"0";
 			String sTotal = request.getParameter("TOTAL")!=null?request.getParameter("TOTAL").toString().trim():"0";
 			
-			Remesa objRemesa = new Remesa();
+			Remesa objRemesa = Remesa.getInstance();
 			Resp = objRemesa.IngresarDetRemesa(sNumRemesa,Integer.parseInt(sTipoProd),sAbogado,sRutCliente,sOperacion,sCaptital,sInteres,sCosta,sHonorario,sBoleta,sTotal);
 						
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);
+			Logger.getLogger("AJAXGrabaDetalleRemesa").error(" [LiqCostas] " , ex);
 		}
 		
 	}	

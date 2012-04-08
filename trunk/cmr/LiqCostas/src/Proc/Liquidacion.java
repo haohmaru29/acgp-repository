@@ -18,12 +18,11 @@ public class Liquidacion {
 
 	 CallableStatement cStmt = null;
 	 Connection conn = null;
-	 String NomPaquete="";
+	 private static final String NomPaquete="PaqLiquidacion";
 	 private static final Logger logger = Logger.getLogger(Liquidacion.class);
 	    
 	 public Liquidacion(){
 		 cStmt = null;
-		 NomPaquete="PaqLiquidacion";
 	}
 	
 	 public String IngresarLiqEncTarjeta(String User,String CodAbogado,String NumLiq,String Moneda,String MontoLiq, int Estado,int TipoProducto, int SubTipoProd) throws SQLException, IOException, NamingException 
@@ -52,7 +51,6 @@ public class Liquidacion {
 		            Sret=(String) cStmt.getObject(9);
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -127,7 +125,6 @@ public class Liquidacion {
 			    	}		            
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -198,7 +195,6 @@ public class Liquidacion {
 			    	}		            
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -246,7 +242,6 @@ public class Liquidacion {
 			    	}		            
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -329,7 +324,6 @@ public class Liquidacion {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsEnc, rsDet,cStmt, conn);
@@ -382,7 +376,6 @@ public class Liquidacion {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -459,7 +452,6 @@ public class Liquidacion {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -529,7 +521,6 @@ public class Liquidacion {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -601,7 +592,6 @@ public class Liquidacion {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -628,7 +618,6 @@ public class Liquidacion {
 		    	} 	
 	       
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -654,7 +643,6 @@ public class Liquidacion {
 			            Sret=(String) cStmt.getObject(2);
 		        	}
 		        } catch (Exception e) {
-		        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 		        	logger.error(" [LiqCostas] " , e);
 		        } finally {
 		        	DBAcceso.close(cStmt, conn);

@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%
 	String NumCosta="-1";
 	Seguridad.ValidaSesion val = new Seguridad.ValidaSesion();			
@@ -22,7 +22,7 @@
 			NumCosta = objCostas.IngresarEncCostas(sUsuario,sAbo,sPrestador,sMoneda,sMonto,sTipoDoc,sNumDoc,Integer.parseInt(sTipoProd),Integer.parseInt(sGrupo));
 			
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);	
+			Logger.getLogger("AJAX_GrabaEncabezadoCosta").error(" [LiqCostas] " , ex);	
 		}	
 	}	
  %> 

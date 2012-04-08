@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%@page import='java.util.ArrayList'%>
 <%@page import='Proc.General'%>
 <%
@@ -24,7 +24,7 @@
 			iSubProd = request.getParameter("SUBPROD")!=null?Integer.parseInt(request.getParameter("SUBPROD").toString().trim()):-1;
 			ret = objGeneral.ObtenerSubProductosCostas(sRut, sAbo, iSubProd, arrRes);	
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);
+			Logger.getLogger("AJAX_NroCuentasCLienteCostas").error(" [LiqCostas] " , ex);
 		}
 		
 		total = arrRes.size();	

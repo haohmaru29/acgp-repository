@@ -76,4 +76,10 @@ public class DBAcceso {
         try { if (s != null) s.close(); } catch (Exception e) {}
         try { if (c != null) c.close(); } catch (Exception e) {}
     }
+    
+    public static void close(Statement s, Connection c, PreparedStatement pst) {
+        try { if (s != null) s.close(); } catch (Exception e) {}
+        try { if (c != null) c.close(); } catch (Exception e) {}
+        try { if (pst != null) pst.close(); } catch (Exception e) {}
+    }
 }

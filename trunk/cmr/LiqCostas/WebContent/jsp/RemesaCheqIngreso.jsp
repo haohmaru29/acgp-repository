@@ -4,6 +4,7 @@
 <%@page import='java.text.DecimalFormat'%>
 <%@page import='java.text.DecimalFormatSymbols'%>
 <%@page import='Proc.General' %>
+<%@page import='Proc.Remesa' %>
 <%  
 	int Grupo=5;
 	int TipoProducto=2;
@@ -86,7 +87,7 @@
 		if (IdEntrada.equals("GRABAREMESA"))
 		{
 			//obtener el detalle
-			Proc.Remesa objRemesa = new Proc.Remesa();			
+			Remesa objRemesa = Remesa.getInstance();			
 			int Iret = objRemesa.ObtieneEncDetRemesa(NumRemesa,TipoProducto,resEncRemesa,resDetRemesa);
 			//colocar encabezado
 			resAux = new ArrayList();

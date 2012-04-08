@@ -4,18 +4,19 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import javax.naming.NamingException;
-import javax.servlet.http.*;
-
-import utils.LoggerInstance;
-
 import java.util.Properties;
-import java.util.logging.Level;
+
+import javax.naming.NamingException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
 
 import Proc.Login;
 
 public class Acceso {
 
+	private static final Logger logger = Logger.getLogger(Acceso.class);
     boolean result;
     ArrayList arrMenu = new ArrayList();
     HttpServletRequest request;
@@ -40,10 +41,11 @@ public class Acceso {
 	}
 	
 	public boolean tieneAcceso() {
+		InputStream in = null;
 		try {
    			ClassLoader loader = Thread.currentThread().getContextClassLoader();
-   			InputStream in = loader.getResourceAsStream("/menus.properties");
-			Properties props = new Properties(); 
+   			in = loader.getResourceAsStream("/menus.properties");
+			Properties props = new Properties();			
    			props.load(in);
 			HttpSession sesion = request.getSession(false);
 	
@@ -65,8 +67,21 @@ public class Acceso {
 						return true;
 				} 
 			 }			 
-		}catch(Exception e){} 
+		}catch(Exception e){
+			logger.error(" [LiqCostas] " , e);
+		} finally {
+			closeInput(in);
+		}
 		return false;
+	}
+	
+	private void closeInput(InputStream in) {
+		try {
+			if(in != null)
+			in.close();
+		} catch (IOException e) {
+			logger.error(" [LiqCostas] " , e);
+		}
 	}
 	
 	public boolean obtieneMenuUsuario(ArrayList resultado) throws SQLException, IOException, NamingException 
@@ -88,7 +103,7 @@ public class Acceso {
                 
     		} 
         } catch (Exception e){
-        	LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
+        	logger.error(" [LiqCostas] " , e);
         }    
         return false;
     }

@@ -18,36 +18,42 @@ import bd.DBAcceso;
 
 public class Remesa {
 
-	 CallableStatement cStmt = null;
-	 Connection conn = null;
-	 String NomPaqueteRemesa="";
-	 private static final Logger logger = Logger.getLogger(Remesa.class);
-	    
-	 public Remesa() {
-		 cStmt = null;
-		 NomPaqueteRemesa="PaqRemesa";
-	 }
+	private static final String NomPaqueteRemesa="PaqRemesa";
+	private static final Logger logger = Logger.getLogger(Remesa.class);
+	private static Remesa instance;
+	private CallableStatement cStmt = null;
+	private Connection conn = null;
 	
-	 public String actualizaEncRemesas(String idSec) {
+	public static Remesa getInstance() {
+		if(instance == null) {
+			instance = new Remesa();
+		}
+		return instance;
+	} 
+	    
+	private Remesa() {
+	}
+	
+	public String actualizaEncRemesas(String idSec) {
 		 String Sret ="-1";
 		 String sql = "UPDATE LIQ_ENCLIQCOSTAS SET CODESTADO=2 WHERE IDSEC=" + idSec;
-		 DBAcceso ObjBD = DBAcceso.getInstance();  
+		 DBAcceso ObjBD = DBAcceso.getInstance();
+		 PreparedStatement ps = null;
 		 try {
 			 System.out.println("Actualizando : " + idSec);
 			 conn = ObjBD.connect();
 			 if (conn!= null) {
 				 conn.setAutoCommit(false);
-				 PreparedStatement ps = conn.prepareStatement(sql);
+				 ps = conn.prepareStatement(sql);
 				 ps.executeUpdate();
 				 conn.commit();
 				 Sret = "1";
 			 }
 		 } catch(Exception e) {
-			 //LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 			 logger.error(" [LiqCostas] " , e);
 			 ObjBD.rollback(conn);
 		 } finally {
-			 DBAcceso.close(cStmt, conn);
+			 DBAcceso.close(cStmt, conn, ps);
 		 }
 		 
 		 return Sret;
@@ -75,7 +81,6 @@ public class Remesa {
 		            Sret=(String) cStmt.getObject(9);
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -108,7 +113,6 @@ public class Remesa {
 		            Sret=(String) cStmt.getObject(12);
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -176,7 +180,6 @@ public class Remesa {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsEnc, rsDet,cStmt, conn);
@@ -243,7 +246,6 @@ public class Remesa {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -308,7 +310,6 @@ public class Remesa {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -372,7 +373,6 @@ public class Remesa {
 	        	else
 	        		ret=-2; //error base de datos
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rsDet,cStmt, conn);
@@ -397,7 +397,6 @@ public class Remesa {
 		            Sret=(String) cStmt.getObject(4);
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);

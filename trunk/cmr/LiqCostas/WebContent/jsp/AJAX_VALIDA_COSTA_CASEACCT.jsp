@@ -1,6 +1,5 @@
-
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%@page import='Proc.General'%>
 <%
 	String Subtipo="";
@@ -11,7 +10,7 @@
 		Subtipo = objRemesa.getJuicioProducto(codProducto);			
 		
 	} catch(Exception ex) {
-		LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);
+		Logger.getLogger("AJAX_VALIDA_COSTA_CASEACCT").error(" [LiqCostas] " , ex);
 	}
  %>
 {"total":"<%=Subtipo%>"}

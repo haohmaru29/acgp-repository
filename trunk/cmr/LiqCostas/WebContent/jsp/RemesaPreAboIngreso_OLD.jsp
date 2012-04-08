@@ -87,7 +87,7 @@
 		if (IdEntrada.equals("GRABAREMESA"))
 		{
 			//obtener el detalle
-			Proc.Remesa objRemesa = new Proc.Remesa();			
+			Remesa objRemesa = Remesa.getInstance();			
 			int Iret = objRemesa.ObtieneEncDetRemesa(NumRemesa,TipoProducto,resEncRemesa,resDetRemesa);
 			//colocar encabezado
 			resAux = new ArrayList();
