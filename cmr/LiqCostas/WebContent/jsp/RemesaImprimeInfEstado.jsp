@@ -24,7 +24,7 @@
 	String EstadoRem = request.getParameter("CESTADO")!=null?request.getParameter("CESTADO").trim():"0";
 	String CodProducto = request.getParameter("CPRODUCTO")!=null?request.getParameter("CPRODUCTO").trim():"0";
 		
-	Proc.Remesa objRemesa = new Proc.Remesa();
+	Remesa objRemesa = Remesa.getInstance();
 
 	
 	ArrayList resInfRem = new ArrayList();

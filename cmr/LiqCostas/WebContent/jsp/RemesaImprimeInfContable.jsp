@@ -25,7 +25,7 @@
 	String MenorA = request.getParameter("TxtHMenor")!=null?request.getParameter("TxtHMenor").trim():"0";
 	
 		
-	Proc.Remesa objRemesa = new Proc.Remesa();
+	Remesa objRemesa = Remesa.getInstance();
 
 	
 	ArrayList resInfLiq = new ArrayList();

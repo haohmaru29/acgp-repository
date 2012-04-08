@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%@page import='java.util.ArrayList'%>
 <%@page import='Proc.General'%>
 <%
@@ -26,7 +26,7 @@
 			ret = objGeneral.ObtenerSubProductos(sRut, sAbo, iSubProd, arrRes);	
 			
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);	
+			Logger.getLogger("AJAX_NroCuentasCliente").error(" [LiqCostas] " , ex);	
 		}	
 		
 		total = arrRes.size();	

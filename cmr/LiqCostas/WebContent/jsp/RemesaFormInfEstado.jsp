@@ -31,7 +31,7 @@
 	//out.println("EstadoRem=" + EstadoRem);
 	
 	Proc.General objGeneral = Proc.General.getInstance();
-	Proc.Remesa objRemesa = new Proc.Remesa();
+	Remesa objRemesa = Remesa.getInstance();
 
 	ArrayList resAux = new ArrayList();
 	ArrayList resInfRem = new ArrayList();

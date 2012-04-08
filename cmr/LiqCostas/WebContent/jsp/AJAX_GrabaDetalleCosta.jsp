@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%@page import='Proc.Costas'%>
 
 <%
@@ -9,8 +9,7 @@
 	if (res != 0) {
 		Resp="-2";
 	}
-	else
-	{	
+	else {	
 	    try {
 			String sTipoProd = request.getParameter("TIPOPROD")!=null?request.getParameter("TIPOPROD").toString().trim():"3";
 			String sNumCosta = request.getParameter("NUMCOSTA")!=null?request.getParameter("NUMCOSTA").toString().trim():"";
@@ -30,7 +29,7 @@
 			Resp = objCostas.IngresarDetCosta(sNumCosta,Integer.parseInt(sTipoProd),sAbogado,sRutCliente,sOperacion,sMonto,sTipoCargo,sSubTipoCargo,sNumJuicio,sTipoJuicio,oSes.getUsuario().toString(),oSes.getSupv().toString());
 						
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);	
+			Logger.getLogger("AJAX_GrabaDetalleCosta").error(" [LiqCostas] " , ex);
 		}	
 	}	
  %> 

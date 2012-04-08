@@ -29,7 +29,7 @@
 	String hddNumRemesa =request.getParameter("HDDNumRemesa")!=null?request.getParameter("HDDNumRemesa").trim():"0";
 			
 	
-	Proc.Remesa objRemesa = new Proc.Remesa();
+	Remesa objRemesa = Remesa.getInstance();
 	
 	ArrayList resEncCosta = new ArrayList();
 	ArrayList resAux = new ArrayList();

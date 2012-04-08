@@ -17,7 +17,7 @@ import bd.DBAcceso;
 
 public class Login {
 
-	private static String nomPaquete="PaqLogin";
+	private static final String nomPaquete="PaqLogin";
 	private static final Logger logger = Logger.getLogger(Login.class); 
 	private CallableStatement cStmt = null;
 	private ResultSet rs = null;

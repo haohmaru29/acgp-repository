@@ -7,12 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import javax.naming.NamingException;
+
+import oracle.jdbc.OracleTypes;
 
 import org.jboss.logging.Logger;
 
-import oracle.jdbc.OracleTypes;
-import utils.LoggerInstance;
 import bd.DBAcceso;
 
 public class General {
@@ -20,7 +21,7 @@ public class General {
 	 CallableStatement cStmt = null;
 	 ResultSet rs = null;
 	 Connection conn = null;
-	 String nomPaquete="";
+	 private static final String nomPaquete="PaqGeneral";
 	 private String producto="";
 	 private String juicioProducto;
 	 private ArrayList listaTipoCargo;
@@ -33,7 +34,6 @@ public class General {
 	 private General(){
 		 cStmt = null;
 	     rs = null;
-	     nomPaquete="PaqGeneral";
 	 }
 	 
 	 public static General getInstance(){
@@ -80,7 +80,6 @@ public class General {
 		            }
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -129,7 +128,6 @@ public class General {
 		            }
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -175,7 +173,6 @@ public class General {
 		            }
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -204,10 +201,9 @@ public class General {
 		            }
 	        	} 	
 	        	else
-	        		ret=-3; //error de conexión
+	        		ret=-3; //error de conexiï¿½n
 	       
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -252,7 +248,6 @@ public class General {
 		    		} 
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -294,7 +289,6 @@ public class General {
 		    		}
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -338,12 +332,10 @@ public class General {
 		    		}
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
 	        }
-	        System.out.println(resultado);
 	        
 	        return ret;
 	      }
@@ -376,7 +368,6 @@ public class General {
 		            }
 	        	}
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -417,7 +408,6 @@ public class General {
 		    		}
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -460,7 +450,6 @@ public class General {
 		    		} 
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -484,7 +473,6 @@ public class General {
 		    	} 	
 	       
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
@@ -560,7 +548,6 @@ public class General {
 	    	
 	     		
 	     } catch (Exception e) {
-	    	 //LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	    	 logger.error(" [LiqCostas] " , e);
 	     } finally {
 	     	DBAcceso.close(rs, cStmt, conn);
@@ -624,14 +611,14 @@ public class General {
 			
 			   for (int i=0;i<SNumCheque.length();i++) {
 					if (n.indexOf(SNumCheque.charAt(i)) < 0 ) {
-						Valor="-2"; //n° unico debe ser numerico
+						Valor="-2"; //nï¿½ unico debe ser numerico
 						break;
 					}	
 			   }
 				
 			   if (Valor.equals("0")) {
 				   if (SNumCheque.length() != 10)
-					   Valor="-3"; //Número de Cheque debe ser de largo 10
+					   Valor="-3"; //Nï¿½mero de Cheque debe ser de largo 10
 			   	   else {
 				   		float valdigito=Float.parseFloat(SNumCheque);
 				   		if ((valdigito >= Float.parseFloat(RangoChequeIni)) && (valdigito <= Float.parseFloat(RangoChequeFin))) {
@@ -639,12 +626,11 @@ public class General {
 								Valor="-4"; // Digito verificador del Cheque es incorrecto.
 						}
 						else
-							Valor="-5"; // Número de Cheque no se encuentra dentro de los rangos definidos.
+							Valor="-5"; // Nï¿½mero de Cheque no se encuentra dentro de los rangos definidos.
 						
 				   }	
 			   }   
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } 
 	        return Valor;
@@ -682,7 +668,6 @@ public class General {
 		    		}
 	        	}   	
 	        } catch (Exception e) {
-	        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
@@ -745,7 +730,6 @@ public class General {
 			            } 
 		        	}
 		        } catch (Exception e) {
-		        	//LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
 		        	logger.error(" [LiqCostas] " , e);
 		        } finally {
 		        	DBAcceso.close(rs, cStmt, conn);

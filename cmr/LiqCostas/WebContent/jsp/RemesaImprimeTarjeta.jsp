@@ -28,7 +28,7 @@
 	ArrayList resEncRemesa = new ArrayList();
 	ArrayList resDetRemesa = new ArrayList();	
 	
-	Proc.Remesa objRemesa = new Proc.Remesa();
+	Remesa objRemesa = Remesa.getInstance();
 		
 	int Iret = objRemesa.ObtieneEncDetRemesa(NumRemesa,Integer.parseInt(TipoProducto),resEncRemesa,resDetRemesa);
 	//colocar encabezado

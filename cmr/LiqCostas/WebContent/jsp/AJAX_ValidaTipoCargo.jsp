@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%@page import='Proc.Costas'%>
 <%
 	String Subtipo="";
@@ -17,7 +17,7 @@
 			Subtipo = objCosta.ValidaTipoCargo(Integer.parseInt(sTipoProd),sTipoCosta,sJuicio);			
 			
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);
+			Logger.getLogger("AJAX_ValidaTipoCargo").error(" [LiqCostas] " , ex);
 		}
 		Subtipo=Subtipo + "";		
 	}	

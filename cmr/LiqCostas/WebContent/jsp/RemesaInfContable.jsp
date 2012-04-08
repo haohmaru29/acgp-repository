@@ -46,7 +46,7 @@
 	
 		
 	General objGeneral = General.getInstance();
-	Proc.Remesa objRemesa = new Proc.Remesa();
+	Remesa objRemesa = Remesa.getInstance();
 
 	ArrayList resAbogado = new ArrayList();
 	ArrayList resAux = new ArrayList();
