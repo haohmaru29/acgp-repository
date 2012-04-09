@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="utils.LoggerInstance"%>
+<%@page import="org.jboss.logging.Logger" %>
 <%@page import="Proc.Costas" %>
 <%
 	String NumCosta="-1";
@@ -10,12 +10,10 @@
 	} else {	
 	    try {
 			String idSec = request.getParameter("idSec");
-			
 			Costas objCostas = Costas.getInstance();
 			NumCosta = objCostas.actualizaEncCostas(idSec);
-			
 		} catch(Exception ex) {
-			LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , ex);	
+			Logger.getLogger("AJAX_ActualizaEncabezadoRemesa").error(" [LiqCostas] " , ex);
 		}	
 	}	
  %> 

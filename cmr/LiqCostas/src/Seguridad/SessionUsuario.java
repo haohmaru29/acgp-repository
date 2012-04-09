@@ -1,6 +1,10 @@
 package Seguridad;
 
-public class SessionUsuario implements java.io.Serializable{
+import java.io.Serializable;
+
+public class SessionUsuario implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
 	String sUsuario;
 	String sNombre;
 	String sCodAgencia;

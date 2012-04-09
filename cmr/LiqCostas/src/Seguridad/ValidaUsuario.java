@@ -3,15 +3,19 @@ package Seguridad;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
 
-import utils.LoggerInstance;
-import Proc.Login;
 import javax.naming.NamingException;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
-public class ValidaUsuario
-{
+import org.apache.log4j.Logger;
+
+import Proc.Login;
+
+public class ValidaUsuario {
+	
+	private static final Logger logger = Logger.getLogger(ValidaUsuario.class);
+	
     public ValidaUsuario(){
     }
 
@@ -60,8 +64,6 @@ public class ValidaUsuario
 		            		else
 		            			StrUsuario=sesion.getAttribute("usuario").toString();
 		            		
-		            		System.out.println("StrUsuario:"+StrUsuario+"");
-		            		
 		            		sesion.setAttribute("usuario",new SessionUsuario((String)aux.get(0),(String)aux.get(1),(String)aux.get(3),(String)aux.get(4),(String)aux.get(5),(String)aux.get(6),String.valueOf(request.getRemoteAddr()),(String)aux.get(7)));
 			            	Menu oMenu = new Menu();
 			            	String sMenu =oMenu.genMenu(oMenu.getAccesoMenu(usuario));
@@ -82,12 +84,12 @@ public class ValidaUsuario
 		        }
 	        }
 	        else {
-	        	arrErr.add("Error de Conexión a la base de datos. Consulte con su Administrador.");
+	        	arrErr.add("Error de Conexiï¿½n a la base de datos. Consulte con su Administrador.");
 	        	res = -4;
 	        }
 	        
 	        } catch (Exception e){
-	        	LoggerInstance.error(Thread.currentThread().getStackTrace()[2] , e);
+	        	logger.error("[LiqCostas]", e);
 	            res = -1;
 	        }
 	        

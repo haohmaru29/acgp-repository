@@ -24,7 +24,7 @@ public class Remesa {
 	private CallableStatement cStmt = null;
 	private Connection conn = null;
 	
-	public static Remesa getInstance() {
+	public static synchronized Remesa getInstance() {
 		if(instance == null) {
 			instance = new Remesa();
 		}
