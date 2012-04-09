@@ -36,7 +36,7 @@ public class General {
 	     rs = null;
 	 }
 	 
-	 public static General getInstance(){
+	 public static synchronized General getInstance(){
 		 if(instance==null) 
 			 instance = new General();
 		

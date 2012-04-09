@@ -28,7 +28,7 @@ public class Costas {
 		cStmt = null;
 	}
 	 
-	public static Costas getInstance() {
+	public static synchronized Costas getInstance() {
 		if(instance==null) {
 			instance = new Costas();
 		}

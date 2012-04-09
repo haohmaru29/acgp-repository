@@ -1,19 +1,16 @@
 package com;
 
+import java.io.InputStream;
+import java.io.Serializable;
 import java.util.Properties;
-import java.io.*;
 
-public final class Errores implements java.io.Serializable{
+public final class Errores implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	public Errores(){
 	}
    	
    	public static final String getDescription(String Error) {
-   		/*Properties props = (Properties)context.getAttribute("APPLICATION_ERROR");
-   		if (props.containsKey(Error.trim())) {
-   			return props.get(Error).toString().trim();
-   		}*/
    		String [] s = {""};
    		return getDescription(Error,s) ;
    	}
@@ -30,7 +27,6 @@ public final class Errores implements java.io.Serializable{
    						
    			Properties props = new Properties(); 
    			props.load(in);   		
-   			//Properties props = (Properties)context.getAttribute("APPLICATION_ERROR");
    			if (props.containsKey(Error.trim())) {
    				String msg = props.get(Error.trim()).toString();
    				String [] sValor = msg.split("<\\d>");

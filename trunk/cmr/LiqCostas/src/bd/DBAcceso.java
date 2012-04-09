@@ -15,7 +15,6 @@ public class DBAcceso {
     private static final Logger logger = Logger.getLogger(DBAcceso.class);
     
     private DBAcceso() {
-    	conn = null;
     	try {
     		Context context =(Context) new InitialContext().lookup("java:comp/env");
     		ds = (DataSource) context.lookup("jdbc/cyber8");

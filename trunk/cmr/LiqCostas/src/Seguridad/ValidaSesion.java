@@ -21,9 +21,8 @@ public class ValidaSesion {
 
     public String getMenu(HttpServletRequest request) {
     	HttpSession sesion = request.getSession(false);
-    	System.out.println("session id -------->" + sesion.getId());
     	String value = (sesion.getAttribute("menu")==null)?"": sesion.getAttribute("menu").toString();
-    	System.out.println(value);
+    	
     	return value;
     }
 }
