@@ -10,11 +10,17 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
+import utils.AppenderUtils;
+
 import Proc.Login;
 
 public class ValidaUsuario {
 	
 	private static final Logger logger = Logger.getLogger(ValidaUsuario.class);
+	
+	static {
+		AppenderUtils.getInstance(logger);
+	}
 	
     public ValidaUsuario(){
     }

@@ -5,10 +5,6 @@
 <%@page import='java.text.DecimalFormatSymbols'%>
 <%@page import='Proc.Remesa'%>
 <%  	
-	HttpSession sesion = request.getSession(true);
-	if(sesion != null ) {
-    Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
-	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
 	unusualSymbols.setDecimalSeparator(',');
 	unusualSymbols.setGroupingSeparator('.');
@@ -57,13 +53,14 @@
 <META HTTP-EQUIV="Expires" CONTENT="0">
 <LINK REL="stylesheet" TYPE="text/css" HREF="../style/imprimir.css">
 
-<script language="javascript">
+<script type="text/javascript">
   function InicioPag() {
-		window.parent.printPageDetalle(window.parent.frames['printInforme'])		
+		window.parent.printPageDetalle(window.parent.frames['printInforme']);	
+		return false;
 	}
 </script>
 </head>
-<body onload="javascript:InicioPag()">
+<body onload="javascript:InicioPag(); return false;">
 <FORM METHOD="POST" NAME="FRMINGRESOCOS">		
 <INPUT TYPE="HIDDEN" NAME="HDDENTRADA" VALUE="">
 <INPUT TYPE="HIDDEN" NAME="HDDORIGEN" VALUE="">
@@ -229,4 +226,3 @@
 </FORM>
 </BODY>
 </HTML>
-<%}%>

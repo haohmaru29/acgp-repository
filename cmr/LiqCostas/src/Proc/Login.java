@@ -9,9 +9,10 @@ import java.util.ArrayList;
 
 import javax.naming.NamingException;
 
-import oracle.jdbc.OracleTypes;
+import org.apache.log4j.Logger;
 
-import org.jboss.logging.Logger;
+import oracle.jdbc.OracleTypes;
+import utils.AppenderUtils;
 
 import bd.DBAcceso;
 
@@ -25,6 +26,7 @@ public class Login {
 	 
 	    
 	public Login(){
+		AppenderUtils.getInstance(logger);
 		cStmt = null;
 		rs = null;
 	}

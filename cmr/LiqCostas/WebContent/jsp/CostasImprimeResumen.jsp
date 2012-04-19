@@ -40,13 +40,13 @@
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
 <META HTTP-EQUIV="Expires" CONTENT="0">
 <LINK REL="stylesheet" TYPE="text/css" HREF="../style/imprimir.css">
-<script language="javascript">
-  function InicioPag() {  	
-		window.parent.printPage(window.parent.frames['printInforme'])
+<script type="text/javascript">
+  	function InicioPag() {  	
+		window.parent.printPage(window.parent.frames['printInforme']);
 	}
 </script>
 </head>
-<body class="body02" onload="javascript:InicioPag()">
+<body class="body02" onload="javascript:InicioPag();return false;">
 <table width="994px" border="0" cellspacing="0" cellpadding="0" class="tablaprincipal">
   <tr>
     <td valign="top">

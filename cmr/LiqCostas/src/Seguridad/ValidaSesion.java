@@ -1,6 +1,7 @@
 package Seguridad;
 
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 public class ValidaSesion {
     

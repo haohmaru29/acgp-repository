@@ -15,6 +15,7 @@ public class PdfEngine extends HttpServlet {
 	
 	public PdfEngine() {
 		super();
+		AppenderUtils.getInstance(logger);
 	}
 
 	public void destroy() {

@@ -13,7 +13,6 @@
 		
 	RequestDispatcher dispatcher;
 	HttpSession sesion = request.getSession(false);
-	if(sesion != null) {
     SessionUsuario  oSes =(SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -1034,7 +1033,7 @@
 							        });
 								
 									if (confirm("Desea Imprimir Costa Procesal?"))
-										ImprimirDetalle(1)  
+										ImprimirDetalle(1);  
 									else {	
 										f.action = "CostasTarjIngreso.jsp";
 										f.target = "_self";
@@ -1621,4 +1620,3 @@
 </SCRIPT>	
 </BODY>
 </HTML>
-<%}%>

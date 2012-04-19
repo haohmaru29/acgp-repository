@@ -1,12 +1,20 @@
 package bd;
 
-import java.io.*; 
-import javax.naming.*; 
-import javax.sql.*;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-import org.jboss.logging.Logger;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
-import java.sql.*;
+import org.apache.log4j.Logger;
+
+import utils.AppenderUtils;
 
 public class DBAcceso {
     private Connection conn = null;
@@ -16,6 +24,7 @@ public class DBAcceso {
     
     private DBAcceso() {
     	try {
+    		AppenderUtils.getInstance(logger);
     		Context context =(Context) new InitialContext().lookup("java:comp/env");
     		ds = (DataSource) context.lookup("jdbc/cyber8");
     	} catch(Exception e) {

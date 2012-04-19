@@ -8,12 +8,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
 
-public class DOMXML {
-	
-	private static final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-	
+public class DOMXML {	
 	protected static Document getDocument(String sFile) {
 		  try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		  	DocumentBuilder db=dbf.newDocumentBuilder();
 		  	Document doc = db.parse(new File(sFile));
 		  	return doc;
@@ -24,6 +22,7 @@ public class DOMXML {
 	
 	protected static Document getDocument(InputStream in) {
 		  try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		  	DocumentBuilder db=dbf.newDocumentBuilder();
 		  	Document doc = db.parse(in);
 		  	return doc;

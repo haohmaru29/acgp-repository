@@ -6,7 +6,6 @@
 <%@page import='Proc.Costas'%>
 <%  	
 	HttpSession sesion = request.getSession(true);
-	if(sesion != null ) {
     Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -64,13 +63,12 @@
 			document.FRMINGRESOCOS.HDDORIGEN.value="";
 			document.FRMINGRESOCOS.HDDENTRADA.value="GRABACOSTA";
 			document.FRMINGRESOCOS.content.value= document.getElementsByTagName('body').innerHTML;			
-			document.FRMINGRESOCOS.submit();	
-			
+			document.FRMINGRESOCOS.submit();
 		}
 	}
 </script>
 </head>
-<body onload="javascript:InicioPag()">
+<body onload="javascript:InicioPag(); return false;">
 <FORM METHOD="POST" NAME="FRMINGRESOCOS">
 <INPUT TYPE="HIDDEN" NAME="content" VALUE="">		
 <INPUT TYPE="HIDDEN" NAME="HDDENTRADA" VALUE="">
@@ -175,6 +173,3 @@
 </FORM>
 </BODY>
 </HTML>
-
-<%} %>
-    

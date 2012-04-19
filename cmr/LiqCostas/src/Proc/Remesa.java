@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 import javax.naming.NamingException;
 
-import org.jboss.logging.Logger;
+import org.apache.log4j.Logger;
 
 import oracle.jdbc.OracleTypes;
-//import utils.LoggerInstance;
+import utils.AppenderUtils;
 import bd.DBAcceso;
 
 public class Remesa {
@@ -32,6 +32,7 @@ public class Remesa {
 	} 
 	    
 	private Remesa() {
+		AppenderUtils.getInstance(logger);
 	}
 	
 	public String actualizaEncRemesas(String idSec) {
@@ -40,7 +41,6 @@ public class Remesa {
 		 DBAcceso ObjBD = DBAcceso.getInstance();
 		 PreparedStatement ps = null;
 		 try {
-			 System.out.println("Actualizando : " + idSec);
 			 conn = ObjBD.connect();
 			 if (conn!= null) {
 				 conn.setAutoCommit(false);
