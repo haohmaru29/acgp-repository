@@ -12,6 +12,8 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
+import utils.AppenderUtils;
+
 import Proc.Login;
 
 public class Acceso {
@@ -20,9 +22,11 @@ public class Acceso {
     boolean result;
     ArrayList arrMenu = new ArrayList();
     HttpServletRequest request;
+    static {
+    	AppenderUtils.getInstance(logger);
+    }
     
     public Acceso(HttpServletRequest request) {
-
 	    this.request = request;
 	    try {
 	    	obtieneMenuUsuario(arrMenu);
@@ -69,9 +73,7 @@ public class Acceso {
 			 }			 
 		}catch(Exception e){
 			logger.error(" [LiqCostas] " , e);
-		} finally {
-			closeInput(in);
-		}
+		} 
 		return false;
 	}
 	

@@ -11,8 +11,6 @@
 	
 	RequestDispatcher dispatcher;
 	HttpSession sesion = request.getSession(false);
-	System.out.println("Session: " + sesion); 
-	if(sesion != null ) {
     Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -483,13 +481,14 @@
 			f.submit();								
 		}
 		
-	    function ImprimirDetalle(flag)  
-  		{ 
+	    function ImprimirDetalle(flag) { 
 			f.RESPBD.value=flag;
 			f.TxtMensajeError.value="";
 	  		f.target = "printInforme";
 			f.action = "RemesaImprimeTarjeta.jsp";			
-			f.submit();		
+			f.submit();	
+			
+			return false;
 		}
 		
 		function printPageCuponPDF(ifr) {
@@ -507,9 +506,10 @@
 				var result=window.showModalDialog(url, "", "dialogWidth:900px;dialogHeight:800px;resizable:no;toolbar:no;menubar:no;scrollbars:yes;help:no");
 			}
 			if (f.RESPBD.value=="1") {
-				if (confirm("Desea Imprimir Remesa?"))
+				if (confirm("Desea Imprimir Remesa?")) {
 					ImprimirDetalle(1);  
-				else {
+					return false;
+				} else {
 					f.action = "RemesaCheqIngreso.jsp";
 					f.target = "_self";
 					f.HDDORIGEN.value="";
@@ -1098,14 +1098,13 @@
 				
 				if (flagsigue)
 				{
-					f.NOMBREOBJETO.value==""	
-					var total=mygrid.validarDatosGrilla(event);	
-					if (total!=-1)
-					{
+					f.NOMBREOBJETO.value=="";	
+					var total = 0;
+					total=mygrid.validarDatosGrilla(event);	
+					if (total!=-1) {
 						var MontoDoc=obj.TxtMonto.value;
 						MontoDoc=valJS.quitaMask(MontoDoc);
-						if(MontoDoc==total)
-						{
+						if(MontoDoc==total) {
 							mygrid.GrabarRemesa(event,'<%=Grupo%>');	
 							var respcosta=parseFloat(f.RESPBD.value);
 							if(respcosta>0)
@@ -1140,11 +1139,11 @@
 							        });
 							
 									if (confirm("Desea Imprimir Cupón de Pago?"))
-										ImprimirCupon(1)  
+										ImprimirCupon(1)  ;
 									else
 									{
 										if (confirm("Desea Imprimir Remesa?"))
-											ImprimirDetalle(1)  
+											ImprimirDetalle(1);  
 										else
 										{
 											f.action = "RemesaCheqIngreso.jsp";
@@ -1172,7 +1171,7 @@
 							document.getElementById("TipoGrilla").value="EDITABLE";
 							document.getElementById("noeditable").style.display='none';
 							document.getElementById("editable").style.display='';
-							MontoDoc=MontoDoc -total
+							MontoDoc=MontoDoc -total;
 							f.TxtMensajeError.value="Total del detalle debe ser igual al Monto Total de la Remesa. Diferencia $ " + valJS.Mask(MontoDoc + '',"999.999.999.999");
 							InhabilitarCampos("disabled");	
 							SeleccionarPrimerRegGrilla();
@@ -1710,4 +1709,3 @@
 </SCRIPT>	
 </BODY>
 </HTML>
-<%}%>

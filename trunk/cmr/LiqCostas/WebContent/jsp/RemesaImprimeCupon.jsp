@@ -6,7 +6,6 @@
 	String NomAbogado = request.getParameter("HDDNOMABO") != null? request.getParameter("HDDNOMABO").trim(): "";
 	String sFechaIng = request.getParameter("HDDFechaIng") != null? request.getParameter("HDDFechaIng").trim(): "";
 	String MontoRemesa = request.getParameter("HDDMonto") != null? request.getParameter("HDDMonto").trim(): "0";
-	System.out.println("-----> " + TipoProducto);
 	response.setHeader("Cache-Control", "no-store"); //HTTP 1.0
 	response.setHeader("Pragma", "no-cache"); //HTTP 1.1
 	response.setDateHeader("Expires", 0);
@@ -32,10 +31,11 @@
 	function InicioPag() {
 		//window.parent.printPageCupon(window.parent.frames['printInforme']);
 		window.parent.printPageCuponPDF(window.parent.frames['printInforme']);
+		return false;
 	}
 </script>
 </head>
-<body class="body02" onload="javascript:InicioPag();">
+<body class="body02" onload="javascript:InicioPag(); return false;">
 	<input type="hidden" value="<%=NumRemesa%>" name="numeroRemesa" id="numeroRemesa">
 	<input type="hidden" value="<%=MontoRemesa%>" name="montoRemesa" id="montoRemesa">
 	<input type="hidden" value="<%=NomAbogado%>" name="nombreRemesa" id="nombreRemesa">

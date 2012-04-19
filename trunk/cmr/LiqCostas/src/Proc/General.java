@@ -10,9 +10,10 @@ import java.util.Iterator;
 
 import javax.naming.NamingException;
 
-import oracle.jdbc.OracleTypes;
+import org.apache.log4j.Logger;
 
-import org.jboss.logging.Logger;
+import oracle.jdbc.OracleTypes;
+import utils.AppenderUtils;
 
 import bd.DBAcceso;
 
@@ -32,13 +33,15 @@ public class General {
 	 private static final Logger logger = Logger.getLogger(General.class);
 	 	    
 	 private General(){
+		 AppenderUtils.getInstance(logger);
 		 cStmt = null;
 	     rs = null;
 	 }
 	 
 	 public static synchronized General getInstance(){
-		 if(instance==null) 
+		 if(instance==null) {
 			 instance = new General();
+		 }
 		
 		 return instance;
 	 }
@@ -293,7 +296,6 @@ public class General {
 	        } finally {
 	        	DBAcceso.close(rs, cStmt, conn);
 	        }
-	        System.out.println(resultado);
 	        
 	        return ret;
 	 }
@@ -357,9 +359,8 @@ public class General {
 		            cStmt.registerOutParameter(4, OracleTypes.CURSOR);
 		            
 		            cStmt.execute();
-		            ResultSet rs = (ResultSet) cStmt.getObject(4);
+		            rs = (ResultSet) cStmt.getObject(4);
 		            if(rs.next()) {	
-		            	System.out.println(rs.getInt("dmcurbal"));
 		            	if(rs.getInt("dmcurbal")>0) {
 		            		Sret= "1";
 		            	} else {
@@ -683,25 +684,20 @@ public class General {
 	       
 	        DataToEncode = DataToEncode.trim();
 	        
-	        //System.out.println("DataToEncode:" + DataToEncode );
-	        			
 	        for( i = 1; i <= DataToEncode.length(); i += 2 )
 	        {
 	           //Get the value of each number pair (ex: 5 and 6 = 5*10+6 =56)
 	           CurrentChar = ((((int)DataToEncode.charAt(i-1))-48)*10) + (((int)DataToEncode.charAt(i))-48);
 	           //Get the ASCII value of CurrentChar according to chart by adding to the value
 	           // (old process) DataToPrint = DataToPrint + (char)(CurrentChar + 130);
-	           //System.out.println("CurrentChar:" + CurrentChar );
 	           if( CurrentChar < 50 )
 	              DataToPrint = DataToPrint + (char)(CurrentChar + 48);
 	           else
-	         	  DataToPrint = DataToPrint + (char)(CurrentChar + 142); 
-	           //System.out.println("DataToPrint:" + DataToPrint );
+	         	  DataToPrint = DataToPrint + (char)(CurrentChar + 142);
 	         }
 
 	         //Get PrintableString
 	         Printable_string = (char)(40) + DataToPrint + (char)(41);
-	         //System.out.println("Printable_string:" + DataToPrint );	
 	         //Return PrintableString
 	         return Printable_string;
 	    }

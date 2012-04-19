@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import javax.naming.NamingException;
 
 import org.apache.log4j.Logger;
+
+import utils.AppenderUtils;
 import Config.ConfigItem;
 import Config.ConfigXMLHandler;
 import Proc.Login;
@@ -16,14 +18,17 @@ public class Menu {
 
 	private static final Logger logger = Logger.getLogger(Menu.class);
 	private ArrayList<String> hm = new ArrayList<String>();
-	private static InputStream in;
 
+	static {
+		AppenderUtils.getInstance(logger);
+	}
+	
 	public ConfigItem ProcesaXml() {
 		try {
-			in = Thread.currentThread().getContextClassLoader().getResourceAsStream("/Menu.xml");
+			InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("/Menu.xml");
 			ConfigXMLHandler oHand = new ConfigXMLHandler();
 			oHand.parseXML(in);
-			in.close();
+			
 			return oHand.getObjectConfig();
 		} catch (Exception e) {
 			logger.error("[ LiqCostas ]", e);

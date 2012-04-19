@@ -36,6 +36,9 @@ public class Engine {
 	private HttpServletRequest request;
 	private HttpServletResponse response;
 	private static final Logger logger = Logger.getLogger(Engine.class);
+	static {
+    	AppenderUtils.getInstance(logger);
+    }
 
 	public Engine(HttpServletRequest request, HttpServletResponse response) {
 		this.urlBuffer = new StringBuilder();
@@ -60,7 +63,7 @@ public class Engine {
 				renderer.createPDF(out, false);
 				renderer.finishPDF();
 			} catch (DocumentException e) {
-				e.printStackTrace();
+				logger.error("[LIQCOSTAS]", e);
 			}
 		} catch (ParserConfigurationException e) {
 			logger.error("[LIQCOSTAS]", e);

@@ -1,5 +1,6 @@
 <%@ page language='java' isErrorPage="true" contentType="text/html" autoFlush="false"%>
 <%@page import='com.Errores'%>
+<%@page import='Seguridad.ValidaSesion'%>
 <%
 
 	//para desplegar la traza del error
@@ -7,7 +8,7 @@
 	boolean bTrazaError = true;
 	//*****************************
 
-  Seguridad.ValidaSesion val = new Seguridad.ValidaSesion();
+  ValidaSesion val = new ValidaSesion();
   int res = val.valida(request);
   String sVolver = "login.jsp";
   String sMenu = "../Menu/principalsinmenu.jsp";
@@ -27,10 +28,7 @@
 	if (msgError.trim().equals("")) 
 		msgError = "Se ha producido un problema!";
 %>
-
-<%if(res==0) { %>
-<jsp:include page="<%=sMenu%>" flush="true"/>		
-<%} %>
+<jsp:include page="<%=sMenu%>" flush="true"/>
 <HTML>
 	<HEAD>
 		<TITLE><%=com.Errores.getDescription("VAR.TITULO")%></TITLE>

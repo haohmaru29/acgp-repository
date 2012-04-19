@@ -45,11 +45,11 @@
 <LINK REL="stylesheet" TYPE="text/css" HREF="../style/imprimir.css">
 <script language="javascript">
   function InicioPag() {  	
-		window.parent.printPage(window.parent.frames['printInforme'])
+		window.parent.printPage(window.parent.frames['printInforme']);
 	}
 </script>
 </head>
-<body class="body02" onload="javascript:InicioPag()">
+<body class="body02" onload="javascript:InicioPag();return false;">
 <table width="994px" border="0" cellspacing="0" cellpadding="0" class="tablaprincipal">
   <tr>
     <td valign="top">

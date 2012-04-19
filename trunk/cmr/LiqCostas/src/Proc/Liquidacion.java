@@ -9,9 +9,10 @@ import java.util.ArrayList;
 
 import javax.naming.NamingException;
 
-import org.jboss.logging.Logger;
+import org.apache.log4j.Logger;
 
 import oracle.jdbc.OracleTypes;
+import utils.AppenderUtils;
 import bd.DBAcceso;
 
 public class Liquidacion {
@@ -21,6 +22,10 @@ public class Liquidacion {
 	 private static final String NomPaquete="PaqLiquidacion";
 	 private static final Logger logger = Logger.getLogger(Liquidacion.class);
 	    
+	 static {
+		 AppenderUtils.getInstance(logger);
+	 }
+	 
 	 public Liquidacion(){
 		 cStmt = null;
 	}

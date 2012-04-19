@@ -14,7 +14,6 @@
 	
 	RequestDispatcher dispatcher;
 	HttpSession sesion = request.getSession(false);
-	if(sesion != null) {
     Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -517,10 +516,10 @@
 			
 			if (f.RESPBD.value=="1")
 			{
-				if (confirm("Desea Imprimir Remesa?"))
-					ImprimirDetalle(1);  
-				else
-				{
+				if (confirm("Desea Imprimir Remesa?")) {
+					ImprimirDetalle(1); 
+					return false;
+				} else {
 					f.action = "RemesaPreAboIngreso.jsp";
 					f.target = "_self";
 					f.HDDORIGEN.value="";
@@ -943,8 +942,9 @@
 				
 				if (flagsigue)
 				{
-					f.NOMBREOBJETO.value==""	
-					var total=mygrid.validarDatosGrilla(event);	
+					f.NOMBREOBJETO.value=="";	
+					var total= 0;
+					total=mygrid.validarDatosGrilla(event);	
 					if (total!=-1)
 					{
 						var MontoDoc=obj.TxtMonto.value;
@@ -985,11 +985,11 @@
 							        });
 							
 									if (confirm("Desea Imprimir Cupón de Pago?"))
-										ImprimirCupon(1)  
+										ImprimirCupon(1);  
 									else
 									{
 										if (confirm("Desea Imprimir Remesa?"))
-											ImprimirDetalle(1)  
+											ImprimirDetalle(1);  
 										else
 										{
 											f.action = "RemesaPreAboIngreso.jsp";
@@ -1570,4 +1570,3 @@
 </SCRIPT>	
 </BODY>
 </HTML>
-<%}%>

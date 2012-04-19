@@ -1531,29 +1531,22 @@ validarDatosGrilla : function(event) {
 	var flagsigue=true;
 	var TipoProd=document.getElementById("TIPOPROD");
 	var total=0;
-	
 	for (var k=0,len=rows.length; k<len; k++) 
 	{
 		var row=rows[k];
 		var recordN=grid.getRecordByRow(row);
-		
-		if (recordN)		
-		{ //validar datos			
+		if (recordN) { //validar datos			
 			flagsigue=false;
-			if (TipoProd.value=="3" || TipoProd.value=="4")
-			{
+			if (TipoProd.value=="3" || TipoProd.value=="4") {
 				if (recordN[1]!="" || recordN[2]!="" || recordN[3]!="0" || recordN[4]!="")
 					flagsigue=true;				
 			}
-			else
-			{
-				if (TipoProd.value=="1" || TipoProd.value=="2")
-				{
+			else {
+				if (TipoProd.value=="1" || TipoProd.value=="2") {
 					if (recordN[1]!="" || recordN[2]!="" || recordN[3]!="0" || recordN[4]!="0" || recordN[5]!="0" || recordN[6]!="0" || recordN[7]!="")
 						flagsigue=true;				
 				}	
-				else
-				{
+				else {
 					if (TipoProd.value=="5") 
 						if (recordN[1]!="" || recordN[2]!="" || recordN[3]!="0" || recordN[4]!="0")
 							flagsigue=true;	
@@ -1915,7 +1908,7 @@ validarDatosEntrada : function(event,filaactiva,numfilavalidar) {
 	if (valJS.isRutValido(recordN[1])==false)
 	{
 		flagsigue=false;
-		objMen.value="Rut no válido, favor digite nuevamente.";
+		objMen.value="Rut no vï¿½lido, favor digite nuevamente.";
 		grid.SeleccionaCampoGrilla(valorfilaactiva,1);
 	}
 	else
@@ -1927,7 +1920,7 @@ validarDatosEntrada : function(event,filaactiva,numfilavalidar) {
 			if (recordN[2]=="")
 			{
 				flagsigue=false;
-				objMen.value="Debe seleccionar N°operación.";
+				objMen.value="Debe seleccionar Nï¿½operaciï¿½n.";
 				grid.SeleccionaCampoGrilla(valorfilaactiva,2);
 			}						  											  				
 		}	
@@ -1936,7 +1929,7 @@ validarDatosEntrada : function(event,filaactiva,numfilavalidar) {
 			if (recordN[2]=="")
 			{
 				flagsigue=false;
-				objMen.value="Debe ingresar N° Unico.";
+				objMen.value="Debe ingresar Nï¿½ Unico.";
 				grid.SeleccionaCampoGrilla(valorfilaactiva,2);
 			}						  			
 			else
@@ -1964,16 +1957,16 @@ validarDatosEntrada : function(event,filaactiva,numfilavalidar) {
 						switch (respcosta)
 						{
 							case -2:
-								objMen.value="N° Unico debe ser numérico.";
+								objMen.value="Nï¿½ Unico debe ser numï¿½rico.";
 								break;
 							case -3:
-								objMen.value="N° Unico debe ser de largo 10.";
+								objMen.value="Nï¿½ Unico debe ser de largo 10.";
 								break;
 							case -4:
-								objMen.value="Digito verificador de N° Unico es incorrecto.";
+								objMen.value="Digito verificador de Nï¿½ Unico es incorrecto.";
 								break;
 							case -5:
-								objMen.value="N° Unico no se encuentra dentro de los rangos definidos.";
+								objMen.value="Nï¿½ Unico no se encuentra dentro de los rangos definidos.";
 								break;		
 						}
 						flagsigue=false;
@@ -1984,7 +1977,7 @@ validarDatosEntrada : function(event,filaactiva,numfilavalidar) {
 				{
 					if (!mygrid.ValidarNumeroCheque(event,recordN[0],recordN[2]))
 					{
-						objMen.value="N° Unico ya se encuentra ingresado.";
+						objMen.value="Nï¿½ Unico ya se encuentra ingresado.";
 						flagsigue=false;
 						grid.SeleccionaCampoGrilla(valorfilaactiva,2);
 					}					
@@ -1997,7 +1990,7 @@ validarDatosEntrada : function(event,filaactiva,numfilavalidar) {
 			if (((recordN[7]!=0) && (recordN[7]!='')) && ((recordN[6]==0) || (recordN[6]=='')))
 			{
 				flagsigue=false;
-			    objMen.value="Debe ingresar Honorario Abogado para N° Boleta ingresado.";
+			    objMen.value="Debe ingresar Honorario Abogado para Nï¿½ Boleta ingresado.";
 				grid.SeleccionaCampoGrilla(valorfilaactiva,6);	
 			}			 
 		}
@@ -2007,7 +2000,7 @@ validarDatosEntrada : function(event,filaactiva,numfilavalidar) {
 			if (((recordN[6]!=0) && (recordN[6]!='')) && ((recordN[7]==0) || (recordN[7]=='')))
 			{
 				flagsigue=false;
-			    objMen.value="Debe ingresar N° Boleta para Honorario Abogado Ingresado.";
+			    objMen.value="Debe ingresar Nï¿½ Boleta para Honorario Abogado Ingresado.";
 				grid.SeleccionaCampoGrilla(valorfilaactiva,7);	
 			}			 
 		}
@@ -2274,7 +2267,7 @@ while ((new Date().getTime() - inicio) < millisegundos);
 							if (this.activeColumn==null)
 								Sigma.U.stopEvent(event);
 							else			
-								if (this.activeColumn.id=="operacion") // es N° OPERACION
+								if (this.activeColumn.id=="operacion") // es Nï¿½ OPERACION
 									Sigma.U.stopEvent(event);			
 							break;	
 						case Sigma.Const.Key.ASTE: 	
@@ -2326,7 +2319,7 @@ while ((new Date().getTime() - inicio) < millisegundos);
 												}
 												grid.deleteRow(filaactiva);
 											    //NumFila.value="0"; //primera fila	
-												NumFila.value=eval(i-1); //última fila
+												NumFila.value=eval(i-1); //ï¿½ltima fila
 												NumReg.value="1";	
 												grid.refresh(ARREGLO_DATA);		
 												grid.refreshGrid(grid);	
@@ -2359,13 +2352,13 @@ while ((new Date().getTime() - inicio) < millisegundos);
 							  //alert("activeColumndesp=" + this.activeColumn.fieldIndex); //numero columna activa
 							  //alert("activeCell=" + this.activeRow.rowIndex);	//numero fila activa
 						      //es la columna del rut				      
-						     /* if (ColumActivaAnte==1 && document.getElementById("TxtMensajeError").value!="Rut no válido, favor digite nuevamente.")
+						     /* if (ColumActivaAnte==1 && document.getElementById("TxtMensajeError").value!="Rut no vï¿½lido, favor digite nuevamente.")
 						      {
 						      	var recordN=grid.getRecordByRow(this.activeRow);
 							    var Abogado=document.getElementById("ABOGADO").value;
 						        var IndiceSub=document.getElementById("LISTASUB");
 						        var SubProd=IndiceSub[IndiceSub.selectedIndex].value;	
-						      	// validar que RUT sea válido en la base de datos
+						      	// validar que RUT sea vï¿½lido en la base de datos
 						      	grid.NroCuentasCliente(recordN[1],Abogado,SubProd);
 							  	
 							  	if (document.getElementById("TxtMensajeError").value!="")
@@ -2395,7 +2388,7 @@ while ((new Date().getTime() - inicio) < millisegundos);
 											if (rows.length+1 >TopeFilas.value)
 											{
 												//NO ES POSIBLE COLOCAR MAS lineas en la grilla
-												document.getElementById("TxtMensajeError").value="No es posible agregar más líneas, el total se encuentra en su tope máximo.";
+												document.getElementById("TxtMensajeError").value="No es posible agregar mï¿½s lï¿½neas, el total se encuentra en su tope mï¿½ximo.";
 												grid.SeleccionaCampoGrilla(rows.length-1,1);
 											}
 											else
@@ -2768,7 +2761,7 @@ ValidaTipoCargo : function (sTipoProducto,sTipoCosta,sJuicio) {
 			            	    //alert("obj.total=" + obj.total);
 			              		if (obj.total=='-2' || obj.total=='-10' || obj.total=='-11') {  
 				            	   	if (obj.total=='-2' || obj.total=='-10')
-				            	   		validResult=[].concat("Tipo de Cargo no válido");   
+				            	   		validResult=[].concat("Tipo de Cargo no vï¿½lido");   
 				            	   	else   
 				            	   		if (obj.total=='-11')      
 				            	   			validResult=[].concat("No existen Etapas definidas para el Tipo de Cargo Ingresado.");    
@@ -2805,7 +2798,7 @@ ValidaTipoCargo : function (sTipoProducto,sTipoCosta,sJuicio, sNroOperacion) {
 			            	    //alert("obj.total=" + obj.total);
 			              		if (obj.total=='-2' || obj.total=='-10' || obj.total=='-11') {  
 				            	   	if (obj.total=='-2' || obj.total=='-10')
-				            	   		validResult=[].concat("Tipo de Cargo no válido");   
+				            	   		validResult=[].concat("Tipo de Cargo no vï¿½lido");   
 				            	   	else   
 				            	   		if (obj.total=='-11')      
 				            	   			validResult=[].concat("No existen Etapas definidas para el Tipo de Cargo Ingresado.");    
@@ -4840,7 +4833,7 @@ startEdit : function(){
 		 	}
 		 	
 		 	
-			//NumFila.value=eval(i-1); //última fila
+			//NumFila.value=eval(i-1); //ï¿½ltima fila
 			//NumReg.value="1";	
 			//mygrid.refresh(record);		
 			//mygrid.refreshGrid(mygrid);	

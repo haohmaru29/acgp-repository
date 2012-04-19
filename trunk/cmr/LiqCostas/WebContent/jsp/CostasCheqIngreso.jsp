@@ -13,7 +13,6 @@
 		
 	RequestDispatcher dispatcher;
 	HttpSession sesion = request.getSession(false);
-	if(sesion != null) {
     SessionUsuario  oSes =(SessionUsuario)sesion.getAttribute("usuario");
 	
 	DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -424,8 +423,8 @@
 	    function ImprimirDetalle(flag) { 
 			f.RESPBD.value=flag;
 			f.TxtMensajeError.value="";
-	  		f.target = "printInforme"
-			f.action = "CostasImprimeCosta.jsp"			
+	  		f.target = "printInforme";
+			f.action = "CostasImprimeCosta.jsp";			
 			f.submit();		
 		}
   		
@@ -855,9 +854,9 @@
 							            }, 
 							            cache:false
 							        });
-									if (confirm("Desea Imprimir Costa Procesal?"))
-										ImprimirDetalle(1)  
-									else
+									if (confirm("Desea Imprimir Costa Procesal?")) {
+										ImprimirDetalle(1);
+									}else
 									{	
 										f.action = "CostasCheqIngreso.jsp";
 										f.target = "_self";
@@ -1429,4 +1428,3 @@
 </SCRIPT>	
 </BODY>
 </HTML>
-<%}%>

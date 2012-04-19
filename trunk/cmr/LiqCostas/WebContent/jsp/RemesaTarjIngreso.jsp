@@ -14,8 +14,6 @@
 	
 	RequestDispatcher dispatcher;
 	HttpSession sesion = request.getSession(false);
-	System.out.println(sesion);
-	if(sesion != null) {
     	Seguridad.SessionUsuario  oSes =(Seguridad.SessionUsuario)sesion.getAttribute("usuario");
 	
 		DecimalFormatSymbols unusualSymbols = new DecimalFormatSymbols();
@@ -486,13 +484,13 @@
 			f.submit();								
 		}
 		
-	    function ImprimirDetalle(flag)  
-  		{ 
+	    function ImprimirDetalle(flag) { 
 			f.RESPBD.value=flag;
 			f.TxtMensajeError.value="";
 	  		f.target = "printInforme";
 			f.action = "RemesaImprimeTarjeta.jsp";			
 			f.submit();		
+			return false;
 		}
   		
   		function printPageCupon(ifr) 
@@ -503,19 +501,19 @@
 	   		 ifr.print();	   		
 			}
 			
-			if (f.RESPBD.value=="1")
-			{
+			if (f.RESPBD.value=="1") {
 				if (confirm("Desea Imprimir Remesa?"))
 					ImprimirDetalle(1);
-				else
-				{
+				else {
 					f.action = "RemesaTarjIngreso.jsp";
 					f.target = "_self";
 					f.HDDORIGEN.value="";
 					f.HDDENTRADA.value="GRABAREMESA";
 					f.submit();
 				}
-			}				
+			}
+			
+			return false;
   		}
   		
   		function printPageCuponPDF(ifr) {
@@ -528,7 +526,7 @@
 	   		 	var nombreRemesa = ifr.document.getElementById("nombreRemesa").value;
 	   		 	var montoRemesa = ifr.document.getElementById("montoRemesa").value;
 	   		 	var tipoProducto = ifr.document.getElementById("tipoProducto").value;
-	   		 	var url = "pdf/open.jsp?content=" + obj + "&numOperacion=" + numRemesa + "&fechaRemesa=" + fechaRemesa;
+	   		 	var url = "pdf/open.jsp?numOperacion=" + numRemesa + "&fechaRemesa=" + fechaRemesa;
 	   		 	url+= "&nombreRemesa=" + nombreRemesa + "&montoRemesa=" +montoRemesa + "&tipoProducto=" +tipoProducto;
 				var result=window.showModalDialog(url, "", "dialogWidth:900px;dialogHeight:800px;resizable:no;toolbar:no;menubar:no;scrollbars:yes;help:no");
 			}
@@ -541,8 +539,10 @@
 					f.HDDORIGEN.value="";
 					f.HDDENTRADA.value="GRABAREMESA";
 					f.submit();
+					return false;
 				}
-			} 
+			}
+			return false;
   		}
   		
   		function printPageDetalle(ifr) 
@@ -1061,29 +1061,26 @@
 				}
 			}
 		
-			function GrabarRemesa(obj,event)
-			{
-				//Sigma.U.stopEvent(event);
+			function GrabarRemesa(obj,event) {
+				
 				var flagsigue=true;				
 				if (ValidaCabecera(f,true))
 					flagsigue=true;						
 				else
 					flagsigue=false;
 				
-				if (flagsigue)
-				{
-					f.NOMBREOBJETO.value==""	
-					var total=mygrid.validarDatosGrilla(event);	
-					if (total!=-1)
-					{
+				if (flagsigue) {
+					f.NOMBREOBJETO.value=="";
+					var total = 0;
+					total=mygrid.validarDatosGrilla(event);
+					if (total!=-1) {
 						var MontoDoc=obj.TxtMonto.value;
 						MontoDoc=valJS.quitaMask(MontoDoc);
 						if(MontoDoc==total)
 						{
 							mygrid.GrabarRemesa(event,'<%=Grupo%>');	
 							var respcosta=parseFloat(f.RESPBD.value);
-							if(respcosta>0)
-							{
+							if(respcosta>0) {
 								f.TxtNumRemesa.value=respcosta;
 								f.HDDNumRemesa.value=respcosta;
 								f.HDDFechaRemesa.value=f.TxtFechaRemesa.value;
@@ -1094,7 +1091,6 @@
 								if(MontoDoc!=mygrid.validarDatosGrilla(event) ) {
 									alert('Total Remesas ingresada es distinto al total de el detalle, favor vuelva a ingresar');
 								} else {
-									//alert('antes');
 									var data = "idSec=" + f.TxtNumRemesa.value;  
 									jQuery.ajax({ 								
 										timeout: 10000,
@@ -1690,4 +1686,3 @@
 </SCRIPT>
 </BODY>
 </HTML>
-<%}%>
