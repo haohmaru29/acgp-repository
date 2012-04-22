@@ -994,7 +994,13 @@
 				{
 					//mygrid.printGrid();
 					f.NOMBREOBJETO.value=="";	
-					var total=mygrid.validarDatosGrilla(event);
+					var total= 0;
+					if(mygrid.validarDatosGrillaRemesa(event) == -1 ){
+						SeleccionarPrimerRegGrilla();
+						return false;
+					}
+					
+					total=mygrid.validarDatosGrilla(event);
 					if (total!=-1)
 					{
 						var MontoDoc=obj.TxtMonto.value;

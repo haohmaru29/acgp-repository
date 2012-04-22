@@ -848,8 +848,12 @@
 				     		  	if (valor>0)
 				     		  		record[4]=valJS.Mask (value,TypeMaskNum,1);	
 				     		  	else
-				     		  		record[4]="0";		
+				     		  		record[4]="0";	
+
+				     		  	record[5] = parseInt(valJS.quitaMask(record[3] + '')) + parseInt(valJS.quitaMask(record[4] + ''));
+				     		  	
 				     		  }		
+				     		  
 				  	  			return flag;
 				  	  		}
 				  	  		else
@@ -940,13 +944,16 @@
 				else
 					flagsigue=false;
 				
-				if (flagsigue)
-				{
+				if (flagsigue) {
 					f.NOMBREOBJETO.value=="";	
 					var total= 0;
+					if(mygrid.validarDatosGrillaRemesa(event) == -1 ){
+						SeleccionarPrimerRegGrilla();
+						return false;
+					}
+					
 					total=mygrid.validarDatosGrilla(event);	
-					if (total!=-1)
-					{
+					if (total!=-1) {
 						var MontoDoc=obj.TxtMonto.value;
 						MontoDoc=valJS.quitaMask(MontoDoc);
 						if(MontoDoc==total)
@@ -1020,8 +1027,10 @@
 							document.getElementById("TipoGrilla").value="EDITABLE";
 							document.getElementById("noeditable").style.display='none';
 							document.getElementById("editable").style.display='';
-							MontoDoc=MontoDoc -total
-							f.TxtMensajeError.value="Total del detalle debe ser igual al Monto Total de la Remesa. Diferencia $ " + valJS.Mask(MontoDoc + '',"999.999.999.999");
+							var montoDocOld2 = MontoDoc;
+							MontoDoc=MontoDoc -total;
+							
+							f.TxtMensajeError.value="Total del detalle ( " + total + " ) debe ser igual al Monto Total de la Remesa ( " + montoDocOld2 + " ). Diferencia $ " + valJS.Mask(MontoDoc + '',"999.999.999.999");
 							InhabilitarCampos("disabled");	
 							SeleccionarPrimerRegGrilla();
 						}

@@ -1525,7 +1525,6 @@ CalculoTotalGrilla : function(event) {
 },
 
 validarDatosGrilla : function(event) {
-
 	var grid=this;
 	var rows=grid.getRows();
 	var flagsigue=true;
@@ -1579,6 +1578,61 @@ validarDatosGrilla : function(event) {
 			}		
 		}	
 	}
+	return total;
+},
+
+validarDatosGrillaRemesa : function(event) {
+	var grid=this;
+	var rows=grid.getRows();
+	var flagsigue=true;
+	var TipoProd=document.getElementById("TIPOPROD");
+	var total=0;
+	for (var k=0,len=rows.length; k<len; k++) {
+		var row=rows[k];
+		var recordN=grid.getRecordByRow(row);
+		if (recordN) { //validar datos			
+			flagsigue=false;
+			if (TipoProd.value=="3" || TipoProd.value=="4") {
+				if (recordN[1]!="" || recordN[2]!="" || recordN[3]!="0" || recordN[4]!="") {
+					if(!isNaN(valJS.quitaMask(recordN[3] + '')) ) {
+						flagsigue=true;
+						total=1;
+					} else {
+						flagsigue=false;
+						total=-1;
+					}
+				}
+			}
+			else {
+				if (TipoProd.value=="1" || TipoProd.value=="2") {
+					if (recordN[1]!="" || recordN[2]!="" || recordN[3]!="0" || recordN[4]!="0" || recordN[5]!="0" || recordN[6]!="0" || recordN[7]!="") {
+						if(!isNaN(recordN[3]) && !isNaN(valJS.quitaMask(recordN[4] + '')) && !isNaN(valJS.quitaMask(recordN[5] + ''))
+								 && !isNaN(valJS.quitaMask(recordN[6] + '')) && !isNaN(valJS.quitaMask(recordN[7] + ''))) {
+							 flagsigue=true;	
+							 total=1;
+						 } else {
+							 total =-1;
+							 flagsigue=false;
+						 }
+					}
+				}	
+				else {
+					if (TipoProd.value=="5") {
+						if (recordN[1]!="" || recordN[2]!="" || recordN[3]!="0" || recordN[4]!="0") {
+							 if(!isNaN(valJS.quitaMask(recordN[3] + '')) && !isNaN(valJS.quitaMask(recordN[4] + '')) ) {
+								 flagsigue=true;	
+								 total=1;
+							 } else {
+								 total =-1;
+								 flagsigue=false;
+							 }
+						}
+					}
+				}			
+			}
+		}	
+	}
+	
 	return total;
 },
 
