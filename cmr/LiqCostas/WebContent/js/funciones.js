@@ -44,13 +44,13 @@ valJS.ValidaCaracter=function(tipo,key) {
 		n= "1234567890.";
 		break;
 	case 1: //solo letras y numeros
-		n= "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890.";
+		n= "ABCDEFGHIJKLMNï¿½OPQRSTUVWXYZabcdefghijklmnï¿½opqrstuvwxyz1234567890.";
 		break;
 	case 2: //para dv rut
 		n = "1234567890kK";
 		break;
 	case 3: //solo letras
-		n= "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz "
+		n= "ABCDEFGHIJKLMNï¿½OPQRSTUVWXYZabcdefghijklmnï¿½opqrstuvwxyz "
 		break;
 	case 4: //fecha
 		n = "1234567890";
@@ -65,16 +65,16 @@ valJS.ValidaCaracter=function(tipo,key) {
 		n="1234567890-";
 		break;
 	case 8://para TEXTO
-		n=" ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú1234567890_@.-+¿?/*¡!$#(),; {}";
+		n=" ABCDEFGHIJKLMNï¿½OPQRSTUVWXYZï¿½ï¿½ï¿½ï¿½ï¿½abcdefghijklmnï¿½opqrstuvwxyzï¿½ï¿½ï¿½ï¿½ï¿½1234567890_@.-+ï¿½?/*ï¿½!$#(),; {}";
 		break;
 	case 9: //numerica con negativos
 		n= "1234567890.-";
 		break;
 	case 10: //expresion matematica
-		n= " ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890+-/*^(){}.%#";
+		n= " ABCDEFGHIJKLMNï¿½OPQRSTUVWXYZabcdefghijklmnï¿½opqrstuvwxyz1234567890+-/*^(){}.%#";
 		break;	
 	case 11:
-		n= " ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890+-/*^().";
+		n= " ABCDEFGHIJKLMNï¿½OPQRSTUVWXYZabcdefghijklmnï¿½opqrstuvwxyz1234567890+-/*^().";
 	}
 
 	if (n.indexOf(key) >= 0) {
@@ -464,7 +464,7 @@ valJS.ComparaFecha=function(FechaI,FechaF,formato)
 
 valJS.Mascara = function(mask,dato) {
 	
-	var n = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz";
+	var n = "ABCDEFGHIJKLMNï¿½OPQRSTUVWXYZabcdefghijklmnï¿½opqrstuvwxyz";
 	var a = "1234567890";
 	var outSalida="";
 	var j;
@@ -1045,14 +1045,11 @@ valJS.isNumeric = function(valor,bDec,sepMiles,sepDec,signo)
 		return monto.match(  /^(-)?((\d+){0,1}(\,\d{3})*)$/  )? true:false;	
 }
 
-valJS.Mask = function(valor, mask, orden){
-	//alert("Mask valor=" + valor);
-	//alert("Mask mask=" + mask);
-	//alert("Mask orden=" + orden);
+valJS.Mask = function(valor, mask, orden) {
 	var i=0;
 	if (!orden) orden=1;
-	var n="0123456789"
-	var carac = "0Zz9"
+	var n="0123456789";
+	var carac = "0Zz9";
 	if (!valor) return "";
 	if (!mask) return valor;
 	if (valor.length=="") return "";
@@ -1333,8 +1330,8 @@ valJS.ValidarRut= function(obj,objMensaje)
 	else
 	{
 		obj.value="";
-		//alert("Rut no válido, favor digite nuevamente.");		
-		objMensaje.value="Rut no válido, favor digite nuevamente.";
+		//alert("Rut no vï¿½lido, favor digite nuevamente.");		
+		objMensaje.value="Rut no vï¿½lido, favor digite nuevamente.";
 		obj.focus();
 		return false;
 	}	
