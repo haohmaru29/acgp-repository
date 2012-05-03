@@ -53,11 +53,14 @@
 <META HTTP-EQUIV="Expires" CONTENT="0">
 <LINK REL="stylesheet" TYPE="text/css" HREF="../style/imprimir.css">
 
-<script type="text/javascript">
-  function InicioPag() {
+<script lenguaje="javascript" >
+  	function InicioPag() {
 		window.parent.printPageDetalle(window.parent.frames['printInforme']);	
+		setTimeout(function() {  },1000);
+		window.stop();
+		
 		return false;
-	}
+ 	}
 </script>
 </head>
 <body onload="javascript:InicioPag(); return false;">
