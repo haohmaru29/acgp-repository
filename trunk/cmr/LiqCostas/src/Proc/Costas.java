@@ -19,18 +19,15 @@ import bd.DBAcceso;
 
 public class Costas {
 
-	 private CallableStatement cStmt = null;
-	 private Connection conn = null;
 	 private static final String NomPaqueteCosta="PaqCostas";
 	 private static Costas instance;
 	 private static final Logger logger = Logger.getLogger(Costas.class);
 	    
 	 private Costas(){
 		AppenderUtils.getInstance(logger);
-		cStmt = null;
 	}
 	 
-	public static synchronized Costas getInstance() {
+	public static Costas getInstance() {
 		if(instance==null) {
 			instance = new Costas();
 		}
@@ -40,6 +37,8 @@ public class Costas {
 	
 	 public String IngresarEncCostas(String User,String CodAbogado,String RutPrestador,String Moneda,String MontoCosta,String TipoDoc, String NumDoc,int TipoProducto, int Grupo) throws SQLException, IOException, NamingException {
 		    String Sret ="-1";
+		    CallableStatement cStmt = null;
+    		Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();        	
 	        	conn = ObjBD.connect();       
@@ -72,6 +71,8 @@ public class Costas {
 		 String sql = "UPDATE LIQ_ENCLIQCOSTAS SET CODESTADO=2 WHERE IDSEC=" + idSec;
 		 DBAcceso ObjBD = DBAcceso.getInstance();
 		 PreparedStatement ps = null;
+		 CallableStatement cStmt = null;
+ 		 Connection conn = null;
 		 try {
 			 conn = ObjBD.connect();
 			 if (conn!= null) {
@@ -94,6 +95,8 @@ public class Costas {
 	 public String IngresarDetCosta(String NumCosta,int TipoProducto,String CodAbogado, String RutCliente,String Operacion,String Monto, String TipoCargo,String SubTipoCargo, String NumJuicio, String TipoJuicio,String Usuario, String Supervisor) 
 	 	throws SQLException, IOException, NamingException {
 		    String Sret ="-1";
+		    CallableStatement cStmt = null;
+    		Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();       	
 	        	conn = ObjBD.connect();       
@@ -128,6 +131,8 @@ public class Costas {
 	    	int ret = 0;   //ok
 	    	ResultSet rsEnc = null;
 	    	ResultSet rsDet = null;
+	    	CallableStatement cStmt = null;
+    		Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();
@@ -194,6 +199,8 @@ public class Costas {
 	 	throws SQLException, IOException, NamingException {
 	    	int ret = 0;   //ok
 	    	ResultSet rsDet = null;
+	    	CallableStatement cStmt = null;
+    		Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();
@@ -270,6 +277,8 @@ public class Costas {
 	 
 	 public String IngresarCostasCEXPNS(String User,String SupUsers,String NumCosta) 
 	 	throws SQLException, IOException, NamingException {
+		 	CallableStatement cStmt = null;
+ 			Connection conn = null;
 		    String Sret ="-2";
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();       	
@@ -296,6 +305,8 @@ public class Costas {
 	 	throws SQLException, IOException, NamingException {
 	    	int ret = 0;   //ok
 	    	ResultSet rsDet = null;
+	    	CallableStatement cStmt = null;
+    		Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();       	
 	        	conn = ObjBD.connect();
@@ -343,6 +354,8 @@ public class Costas {
 	 	throws SQLException, IOException, NamingException {
 	    	int ret = 0;   //ok
 	    	ResultSet rsDet = null;
+	    	CallableStatement cStmt = null;
+    		Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();        	
 	        	conn = ObjBD.connect();   
@@ -395,6 +408,8 @@ public class Costas {
 	 public String ValidaTipoCargo(int TipoProducto,String TipoCosta,String TipoJuicio) 
 	 	throws SQLException, IOException, NamingException {
 		    String Sret ="-2";
+		    CallableStatement cStmt = null;
+    		Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();       	
 	        	conn = ObjBD.connect();       

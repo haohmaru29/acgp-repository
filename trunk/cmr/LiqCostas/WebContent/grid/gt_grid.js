@@ -1606,7 +1606,7 @@ validarDatosGrillaRemesa : function(event) {
 			else {
 				if (TipoProd.value=="1" || TipoProd.value=="2") {
 					if (recordN[1]!="" || recordN[2]!="" || recordN[3]!="0" || recordN[4]!="0" || recordN[5]!="0" || recordN[6]!="0" || recordN[7]!="") {
-						if(!isNaN(recordN[3]) && !isNaN(valJS.quitaMask(recordN[4] + '')) && !isNaN(valJS.quitaMask(recordN[5] + ''))
+						if(!isNaN(valJS.quitaMask(recordN[3] + '')) && !isNaN(valJS.quitaMask(recordN[4] + '')) && !isNaN(valJS.quitaMask(recordN[5] + ''))
 								 && !isNaN(valJS.quitaMask(recordN[6] + '')) && !isNaN(valJS.quitaMask(recordN[7] + ''))) {
 							 flagsigue=true;	
 							 total=1;

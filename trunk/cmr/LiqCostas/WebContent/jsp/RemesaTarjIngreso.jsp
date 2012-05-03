@@ -561,6 +561,8 @@
 				f.HDDENTRADA.value="GRABAREMESA";
 				f.submit();
 			}	
+			
+			return false;
   		}
 		//fin imprimir		
 		
@@ -1065,7 +1067,7 @@
 			}
 		
 			function GrabarRemesa(obj,event) {
-				
+				SeleccionarPrimerRegGrilla();
 				var flagsigue=true;				
 				if (ValidaCabecera(f,true))
 					flagsigue=true;						

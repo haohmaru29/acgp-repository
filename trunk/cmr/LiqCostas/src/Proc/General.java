@@ -6,39 +6,27 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import javax.naming.NamingException;
 
+import oracle.jdbc.OracleTypes;
+
 import org.apache.log4j.Logger;
 
-import oracle.jdbc.OracleTypes;
 import utils.AppenderUtils;
-
 import bd.DBAcceso;
 
 public class General {
 
-	 CallableStatement cStmt = null;
-	 ResultSet rs = null;
-	 Connection conn = null;
 	 private static final String nomPaquete="PaqGeneral";
-	 private String producto="";
-	 private String juicioProducto;
-	 private ArrayList listaTipoCargo;
-	 private String tipoJuicio="";
-	 private String sTipoCosta=""; 
-	 private String sDescrip="";
 	 private static General instance;
 	 private static final Logger logger = Logger.getLogger(General.class);
 	 	    
 	 private General(){
 		 AppenderUtils.getInstance(logger);
-		 cStmt = null;
-	     rs = null;
 	 }
 	 
-	 public static synchronized General getInstance(){
+	 public static General getInstance(){
 		 if(instance==null) {
 			 instance = new General();
 		 }
@@ -48,7 +36,10 @@ public class General {
 	 
 	 public boolean ObtieneElemLista(String nomLista,String Elemento,ArrayList resultado) 
 	 		throws SQLException, IOException, NamingException {
-	    	boolean ret = false;    	    	       
+	    	boolean ret = false;    	    	
+	    	CallableStatement cStmt = null;
+	   	 	ResultSet rs = null;
+	   	 	Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect(); 
@@ -93,7 +84,10 @@ public class General {
 	
 	 public boolean ObtieneElemListaRem(String nomLista,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
-	    	boolean ret = false;    	    	       
+	    	boolean ret = false;    	    	      
+	    	CallableStatement cStmt = null;
+	   	 	ResultSet rs = null;
+	   	 	Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();       	
 	        	conn = ObjBD.connect();   
@@ -140,7 +134,10 @@ public class General {
 	 
 	 public boolean ObtieneElemListaCosta(String nomLista,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
-	    	boolean ret = false;    	    	       
+	    	boolean ret = false;    	    	
+	    	CallableStatement cStmt = null;
+		   	ResultSet rs = null;
+		   	Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();        	
 	        	conn = ObjBD.connect();
@@ -186,6 +183,9 @@ public class General {
 	 public int ObtenerAbogado(String nomPaquete,String nomSP,String CodAbogado,String NomAbogado, String SucAbogado) 
 	 	throws SQLException, IOException, NamingException {
 		    int ret =-2;
+		    CallableStatement cStmt = null;
+			ResultSet rs = null;
+			Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();        	
 	        	conn = ObjBD.connect();       
@@ -216,7 +216,10 @@ public class General {
 	    	
 	 public boolean ObtenerListaAbogados(int TipoProducto,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
-	    	boolean ret = false;    	    	       
+	    	boolean ret = false;    	    	    
+	    	CallableStatement cStmt = null;
+	   	 	ResultSet rs = null;
+	   	 	Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();
@@ -260,7 +263,10 @@ public class General {
 	
 	 public int ObtenerSubProductos(String RutCliente,String CodAbogado,int Subprod,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
-	    	int ret = -1;    	    	       
+	    	int ret = -1;    
+	    	CallableStatement cStmt = null;
+	   	 	ResultSet rs = null;
+	   	 	Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();
@@ -302,7 +308,10 @@ public class General {
 	 
 	 public int ObtenerSubProductosCostas(String RutCliente,String CodAbogado,int Subprod,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
-	    	int ret = -1;    	    	       
+	    	int ret = -1;  
+	    	CallableStatement cStmt = null;
+	   	 	ResultSet rs = null;
+	   	 	Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();        	
 	        	conn = ObjBD.connect();
@@ -347,6 +356,9 @@ public class General {
 		    String Sret ="-2";
 		    RutCliente = RutCliente.replace(".", "").replace("-", "");
 		    RutCliente = RutCliente.substring(0, RutCliente.length()-1);
+		    CallableStatement cStmt = null;
+			ResultSet rs = null;
+			Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();       
@@ -378,6 +390,9 @@ public class General {
 	 
 	 public int ObtenerSubProductosPreAbo(String RutCliente,int Subprod,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
+		 	CallableStatement cStmt = null;
+		 	ResultSet rs = null;
+		 	Connection conn = null;
 	    	int ret = -1;    	    	       
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
@@ -418,6 +433,9 @@ public class General {
 	 
 	 public boolean ObtieneElemEstado(String nomLista,String Codigo,String Elemento,String ElementoSacar,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
+		 	CallableStatement cStmt = null;
+		 	ResultSet rs = null;
+		 	Connection conn = null;
 	    	boolean ret = false;    	    	       
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
@@ -461,6 +479,9 @@ public class General {
 	 public String ObtenerParametro(String NomParametro) 
 	 	throws SQLException, IOException, NamingException {
 		   String Valor="";
+		   CallableStatement cStmt = null;
+		   ResultSet rs = null;
+		   Connection conn = null;
 		   try {			   
 			   	DBAcceso ObjBD = DBAcceso.getInstance();       	
 	        	conn = ObjBD.connect();       
@@ -483,17 +504,11 @@ public class General {
 	
 	 public boolean obtieneListaTipoCargo(String TipoJuicio,String sTipoCosta, String sDescrip,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
-	     boolean ret = false;    	    	       
+	     boolean ret = false;    	    
+	     CallableStatement cStmt = null;
+		 ResultSet rs = null;
+		 Connection conn = null;
 	     try { 
-	    	 if (resultado==null)  resultado=new ArrayList();
-	    	if(listaTipoCargo==null || !this.tipoJuicio.equals(TipoJuicio) 
-	    			|| !this.sTipoCosta.equals(sTipoCosta) || !this.sDescrip.equals(sDescrip)) {
-	    		
-	    		this.tipoJuicio=TipoJuicio;
-	    		this.sTipoCosta=sTipoCosta;
-	    		this.sDescrip=sDescrip;
-	    		listaTipoCargo = new ArrayList();
-	    		
 	    		DBAcceso ObjBD = DBAcceso.getInstance();         	
 		     	conn = ObjBD.connect();   
 		     	
@@ -534,20 +549,11 @@ public class General {
 		 	    	        }
 		 	    			ret = true;
 		 	    			resultado.add(aux);
-		 	    			listaTipoCargo.add(aux);
+		 	    			//listaTipoCargo.add(aux);
 		 	    		} 	
 		     		} 
 		            
-		     	}   
-	    		
-	    	} else {
-	    		Iterator it = listaTipoCargo.listIterator();
-	    		while(it.hasNext()) {
-	    			resultado.add((ArrayList)it.next());
-	    		}
-	    	}
-	    	
-	     		
+		     	} 
 	     } catch (Exception e) {
 	    	 logger.error(" [LiqCostas] " , e);
 	     } finally {
@@ -639,6 +645,9 @@ public class General {
 	 
 	 public int ObtenerJuicio(String RutCliente,ArrayList resultado) 
 	 	throws SQLException, IOException, NamingException {
+		 	CallableStatement cStmt = null;
+		 	ResultSet rs = null;
+		 	Connection conn = null;
 	    	int ret = -1;    	    	       
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();        	
@@ -704,41 +713,30 @@ public class General {
 	 
 	 public String getJuicioProducto(String producto) 
 	 	throws SQLException, IOException, NamingException {
-		 	if(this.producto == null ) {
-		 		this.producto=producto;
-		 	} 
-		 	
-		 	if(!this.producto.equals(producto)) {
-		 		this.producto=producto;
-			 	juicioProducto ="-2";
-		    	try {
-		    		DBAcceso ObjBD = DBAcceso.getInstance();       	
-		        	conn = ObjBD.connect();    
-		        	if (conn!= null) {
-			        	String LineaComando=DBAcceso.buildProcedureCall(nomPaquete,"juicioPorProducto",2);
-			        	cStmt = conn.prepareCall(LineaComando);
-			        	cStmt.setString(1, producto.toString());
-			        	cStmt.registerOutParameter(2, OracleTypes.CURSOR);
-			            cStmt.execute();
-			            rs = (ResultSet) cStmt.getObject(2);
-			            if(rs.next() ) {
-			            	juicioProducto = rs.getString("cetype");
-			            } 
-		        	}
-		        } catch (Exception e) {
-		        	logger.error(" [LiqCostas] " , e);
-		        } finally {
-		        	DBAcceso.close(rs, cStmt, conn);
-		        }
-		 	}
+		 	CallableStatement cStmt = null;
+			String juicioProducto="-2";
+		 	ResultSet rs = null;
+		 	Connection conn = null;
+	    	try {
+	    		DBAcceso ObjBD = DBAcceso.getInstance();       	
+	        	conn = ObjBD.connect();    
+	        	if (conn!= null) {
+		        	String LineaComando=DBAcceso.buildProcedureCall(nomPaquete,"juicioPorProducto",2);
+		        	cStmt = conn.prepareCall(LineaComando);
+		        	cStmt.setString(1, producto.toString());
+		        	cStmt.registerOutParameter(2, OracleTypes.CURSOR);
+		            cStmt.execute();
+		            rs = (ResultSet) cStmt.getObject(2);
+		            if(rs.next() ) {
+		            	juicioProducto = rs.getString("cetype");
+		            } 
+	        	}
+	        } catch (Exception e) {
+	        	logger.error(" [LiqCostas] " , e);
+	        } finally {
+	        	DBAcceso.close(rs, cStmt, conn);
+	        }
 	        return juicioProducto;
 	 }
 
-	public ArrayList getListaTipoCargo() {
-		return listaTipoCargo;
-	}
-
-	public void setListaTipoCargo(ArrayList listaTipoCargo) {
-		this.listaTipoCargo = listaTipoCargo;
-	}
 }

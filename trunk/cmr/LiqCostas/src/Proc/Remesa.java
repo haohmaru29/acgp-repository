@@ -21,10 +21,9 @@ public class Remesa {
 	private static final String NomPaqueteRemesa="PaqRemesa";
 	private static final Logger logger = Logger.getLogger(Remesa.class);
 	private static Remesa instance;
-	private CallableStatement cStmt = null;
-	private Connection conn = null;
 	
-	public static synchronized Remesa getInstance() {
+	
+	public static Remesa getInstance() {
 		if(instance == null) {
 			instance = new Remesa();
 		}
@@ -36,6 +35,8 @@ public class Remesa {
 	}
 	
 	public String actualizaEncRemesas(String idSec) {
+		 CallableStatement cStmt = null;
+		 Connection conn = null;
 		 String Sret ="-1";
 		 String sql = "UPDATE LIQ_ENCLIQCOSTAS SET CODESTADO=2 WHERE IDSEC=" + idSec;
 		 DBAcceso ObjBD = DBAcceso.getInstance();
@@ -62,6 +63,8 @@ public class Remesa {
 	 public String IngresarEncRemesa(String User,String CodAbogado,String FechaRemesa,String NumInterno,String Moneda,String MontoCosta,int TipoProducto, int Grupo) 
 	 	throws SQLException, IOException, NamingException {
 		    String Sret ="-1";
+		    CallableStatement cStmt = null;
+			 Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();       
@@ -91,6 +94,8 @@ public class Remesa {
 	 public String IngresarDetRemesa(String NumRemesa,int TipoProducto,String CodAbogado, String RutCliente,String Operacion,String Capital, String Interes,String Costa,String Honorario,String Boleta,String Total) 
 	 	throws SQLException, IOException, NamingException {
 		    String Sret ="-1";
+		    CallableStatement cStmt = null;
+			 Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();       
@@ -125,6 +130,8 @@ public class Remesa {
 	    	int ret = 0;   //ok
 	    	ResultSet rsEnc = null;
 	    	ResultSet rsDet = null;
+	    	CallableStatement cStmt = null;
+			 Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();
@@ -191,6 +198,8 @@ public class Remesa {
 	 	throws SQLException, IOException, NamingException {
 	    	int ret = 0;   //ok
 	    	ResultSet rsDet = null;
+	    	CallableStatement cStmt = null;
+			 Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();        	
 	        	conn = ObjBD.connect();
@@ -257,6 +266,8 @@ public class Remesa {
 	 	throws SQLException, IOException, NamingException {
 	    	int ret = 0;   //ok
 	    	ResultSet rsDet = null;
+	    	CallableStatement cStmt = null;
+			 Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();
@@ -321,6 +332,8 @@ public class Remesa {
 	 	throws SQLException, IOException, NamingException {
 	    	int ret = 0;   //ok
 	    	ResultSet rsDet = null;
+	    	CallableStatement cStmt = null;
+			 Connection conn = null;
 	        try {
 	        	DBAcceso ObjBD = DBAcceso.getInstance();         	
 	        	conn = ObjBD.connect();   
@@ -382,6 +395,8 @@ public class Remesa {
 	 
 	 public String EliminarRemesaCosta(String NumRemesaCosta,int TipoProducto,String CodAbogado) 
 	 	throws SQLException, IOException, NamingException {
+		 CallableStatement cStmt = null;
+		 Connection conn = null;
 		    String Sret ="-1";
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();         	
