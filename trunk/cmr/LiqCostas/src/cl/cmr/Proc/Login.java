@@ -26,7 +26,7 @@ public class Login {
 	 
 	    
 	public Login(){
-		AppenderUtils.getInstance(logger);
+		AppenderUtils.getInstance().setParams(logger);
 		cStmt = null;
 		rs = null;
 	}

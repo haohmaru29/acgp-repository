@@ -22,7 +22,7 @@ public class Acceso {
     ArrayList arrMenu = new ArrayList();
     HttpServletRequest request;
     static {
-    	AppenderUtils.getInstance(logger);
+    	AppenderUtils.getInstance().setParams(logger);
     }
     
     public Acceso(HttpServletRequest request) {

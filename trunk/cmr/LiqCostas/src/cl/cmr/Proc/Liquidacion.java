@@ -24,7 +24,7 @@ public class Liquidacion {
 	 private static final Logger logger = Logger.getLogger(Liquidacion.class);
 	    
 	 static {
-		 AppenderUtils.getInstance(logger);
+		 AppenderUtils.getInstance().setParams(logger);
 	 }
 	 
 	 public Liquidacion(){

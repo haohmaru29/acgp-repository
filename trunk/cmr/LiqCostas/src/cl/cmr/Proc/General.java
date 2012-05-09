@@ -23,7 +23,7 @@ public class General {
 	 private static final Logger logger = Logger.getLogger(General.class);
 	 	    
 	 private General(){
-		 AppenderUtils.getInstance(logger);
+		 AppenderUtils.getInstance().setParams(logger);
 	 }
 	 
 	 public static General getInstance(){
@@ -34,7 +34,7 @@ public class General {
 		 return instance;
 	 }
 	 
-	 public boolean ObtieneElemLista(String nomLista,String Elemento,ArrayList resultado) 
+	 public boolean ObtieneElemLista(String nomLista,String Elemento,ArrayList<ArrayList<String>> resultado) 
 	 		throws SQLException, IOException, NamingException {
 	    	boolean ret = false;    	    	
 	    	CallableStatement cStmt = null;
@@ -54,7 +54,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())
@@ -69,7 +69,7 @@ public class General {
 			    		} 			    		
 		    		} 
 		            if (ret==false) {
-		            	ArrayList aux = new ArrayList();
+		            	ArrayList<String> aux = new ArrayList<String>();
 		            	resultado.add(aux);
 		            }
 	        	}   	
@@ -82,7 +82,7 @@ public class General {
 	      }
 	 
 	
-	 public boolean ObtieneElemListaRem(String nomLista,ArrayList resultado) 
+	 public boolean ObtieneElemListaRem(String nomLista,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 	    	boolean ret = false;    	    	      
 	    	CallableStatement cStmt = null;
@@ -105,7 +105,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())
@@ -120,7 +120,7 @@ public class General {
 			    		} 			    		
 		    		} 
 		            if (ret==false) {
-		            	ArrayList aux = new ArrayList();
+		            	ArrayList<String> aux = new ArrayList<String>();
 		            	resultado.add(aux);
 		            }
 	        	}   	
@@ -132,7 +132,7 @@ public class General {
 	        return ret;
 	 }
 	 
-	 public boolean ObtieneElemListaCosta(String nomLista,ArrayList resultado) 
+	 public boolean ObtieneElemListaCosta(String nomLista,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 	    	boolean ret = false;    	    	
 	    	CallableStatement cStmt = null;
@@ -153,7 +153,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())
@@ -168,7 +168,7 @@ public class General {
 			    		} 			    		
 		    		} 
 		            if (ret==false) {
-		            	ArrayList aux = new ArrayList();
+		            	ArrayList<String> aux = new ArrayList<String>();
 		            	resultado.add(aux);
 		            }
 	        	}   	
@@ -184,7 +184,6 @@ public class General {
 	 	throws SQLException, IOException, NamingException {
 		    int ret =-2;
 		    CallableStatement cStmt = null;
-			ResultSet rs = null;
 			Connection conn = null;
 	    	try {
 	    		DBAcceso ObjBD = DBAcceso.getInstance();        	
@@ -214,7 +213,7 @@ public class General {
 	        return ret;
 	      }
 	    	
-	 public boolean ObtenerListaAbogados(int TipoProducto,ArrayList resultado) 
+	 public boolean ObtenerListaAbogados(int TipoProducto,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 	    	boolean ret = false;    	    	    
 	    	CallableStatement cStmt = null;
@@ -238,7 +237,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())
@@ -261,7 +260,7 @@ public class General {
 	        return ret;
 	      }
 	
-	 public int ObtenerSubProductos(String RutCliente,String CodAbogado,int Subprod,ArrayList resultado) 
+	 public int ObtenerSubProductos(String RutCliente,String CodAbogado,int Subprod,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 	    	int ret = -1;    
 	    	CallableStatement cStmt = null;
@@ -282,7 +281,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())
@@ -306,7 +305,7 @@ public class General {
 	        return ret;
 	 }
 	 
-	 public int ObtenerSubProductosCostas(String RutCliente,String CodAbogado,int Subprod,ArrayList resultado) 
+	 public int ObtenerSubProductosCostas(String RutCliente,String CodAbogado,int Subprod,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 	    	int ret = -1;  
 	    	CallableStatement cStmt = null;
@@ -327,7 +326,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())
@@ -388,7 +387,7 @@ public class General {
 	        return Sret;
 	 }
 	 
-	 public int ObtenerSubProductosPreAbo(String RutCliente,int Subprod,ArrayList resultado) 
+	 public int ObtenerSubProductosPreAbo(String RutCliente,int Subprod,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 		 	CallableStatement cStmt = null;
 		 	ResultSet rs = null;
@@ -408,7 +407,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())
@@ -431,7 +430,7 @@ public class General {
 	        return ret;
 	      }
 	 
-	 public boolean ObtieneElemEstado(String nomLista,String Codigo,String Elemento,String ElementoSacar,ArrayList resultado) 
+	 public boolean ObtieneElemEstado(String nomLista,String Codigo,String Elemento,String ElementoSacar,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 		 	CallableStatement cStmt = null;
 		 	ResultSet rs = null;
@@ -453,7 +452,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())
@@ -480,7 +479,6 @@ public class General {
 	 	throws SQLException, IOException, NamingException {
 		   String Valor="";
 		   CallableStatement cStmt = null;
-		   ResultSet rs = null;
 		   Connection conn = null;
 		   try {			   
 			   	DBAcceso ObjBD = DBAcceso.getInstance();       	
@@ -502,7 +500,7 @@ public class General {
 	        return Valor;
 	      }
 	
-	 public boolean obtieneListaTipoCargo(String TipoJuicio,String sTipoCosta, String sDescrip,ArrayList resultado) 
+	 public boolean obtieneListaTipoCargo(String TipoJuicio,String sTipoCosta, String sDescrip,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 	     boolean ret = false;    	    
 	     CallableStatement cStmt = null;
@@ -537,7 +535,7 @@ public class General {
 		             //obtenemos la data
 		             if (rs != null) {
 		 	    		while (rs.next()) {
-		 	    			ArrayList aux = new ArrayList();
+		 	    			ArrayList<String> aux = new ArrayList<String>();
 		 	    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 		 	    				String valor = rs.getString(j);
 		 	    	            if (rs.wasNull())
@@ -643,7 +641,7 @@ public class General {
 	        return Valor;
 	      }
 	 
-	 public int ObtenerJuicio(String RutCliente,ArrayList resultado) 
+	 public int ObtenerJuicio(String RutCliente,ArrayList<ArrayList<String>> resultado) 
 	 	throws SQLException, IOException, NamingException {
 		 	CallableStatement cStmt = null;
 		 	ResultSet rs = null;
@@ -662,7 +660,7 @@ public class General {
 		            //obtenemos la data
 		            if (rs != null) {
 			    		while (rs.next()) {
-			    			ArrayList aux = new ArrayList();
+			    			ArrayList<String> aux = new ArrayList<String>();
 			    			for (int j = 1; j <= rs.getMetaData().getColumnCount(); j++) {
 			    				String valor = rs.getString(j);
 			    	            if (rs.wasNull())

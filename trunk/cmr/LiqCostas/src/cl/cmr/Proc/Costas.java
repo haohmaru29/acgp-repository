@@ -24,7 +24,7 @@ public class Costas {
 	 private static final Logger logger = Logger.getLogger(Costas.class);
 	    
 	 private Costas(){
-		AppenderUtils.getInstance(logger);
+		 AppenderUtils.getInstance().setParams(logger);
 	}
 	 
 	public static Costas getInstance() {
