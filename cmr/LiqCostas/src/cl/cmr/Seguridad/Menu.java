@@ -20,7 +20,7 @@ public class Menu {
 	private ArrayList<String> hm = new ArrayList<String>();
 
 	static {
-		AppenderUtils.getInstance(logger);
+		AppenderUtils.getInstance().setParams(logger);
 	}
 	
 	public ConfigItem ProcesaXml() {

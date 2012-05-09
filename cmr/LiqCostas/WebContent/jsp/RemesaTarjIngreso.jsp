@@ -549,7 +549,6 @@
 				f.action = "RemesaTarjIngreso.jsp";
 				f.target = "_self";
 				f.HDDORIGEN.value="";
-				alert(3);
 				f.HDDENTRADA.value="GRABAREMESA";
 				f.submit();
 			}

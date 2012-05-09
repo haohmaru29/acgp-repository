@@ -24,7 +24,7 @@ public class DBAcceso {
     
     private DBAcceso() {
     	try {
-    		AppenderUtils.getInstance(logger);
+    		AppenderUtils.getInstance().setParams(logger);
     		Context context =(Context) new InitialContext().lookup("java:comp/env");
     		ds = (DataSource) context.lookup("jdbc/cyber8");
     	} catch(Exception e) {

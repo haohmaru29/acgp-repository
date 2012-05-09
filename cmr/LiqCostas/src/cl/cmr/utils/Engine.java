@@ -37,7 +37,7 @@ public class Engine {
 	private HttpServletResponse response;
 	private static final Logger logger = Logger.getLogger(Engine.class);
 	static {
-    	AppenderUtils.getInstance(logger);
+		AppenderUtils.getInstance().setParams(logger);
     }
 
 	public Engine(HttpServletRequest request, HttpServletResponse response) {

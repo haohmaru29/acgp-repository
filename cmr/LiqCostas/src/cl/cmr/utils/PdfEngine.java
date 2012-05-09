@@ -11,11 +11,12 @@ public class PdfEngine extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private static final Logger logger = Logger.getLogger(PdfEngine.class);
-	
+	static {
+		AppenderUtils.getInstance().setParams(logger);
+	}
 	
 	public PdfEngine() {
 		super();
-		AppenderUtils.getInstance(logger);
 	}
 
 	public void destroy() {
@@ -32,10 +33,10 @@ public class PdfEngine extends HttpServlet {
 
 	public void proccessRequest(HttpServletRequest request, HttpServletResponse response ) {
 		try {
-			logger.info("[ LiqCosas ][ Creando PDF ]");
+			logger.info("[ LiqCosas ][ Creando PDF Remesa: " + request.getParameter("numeroOperacion") + "]");
 			Engine pdf = new Engine(request, response);
 			pdf.openerDocument("");
-			logger.info("[ LiqCosas ][ PDF Generado]");
+			logger.info("[ LiqCosas ][ PDF Generado con exito]");
 		} catch(Exception e) {
 			logger.error("[LiqCostas]", e );
 		}
