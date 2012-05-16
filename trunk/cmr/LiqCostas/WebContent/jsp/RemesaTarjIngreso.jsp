@@ -722,7 +722,7 @@
 			     			var flag=true;
 			     		    if (valJS.isRutValido(value)==false)
 			     			{		
-									validResult=[].concat("Rut no válido, favor digite nuevamente."); 
+									validResult=[].concat("Rut no v\xE1lido, favor digite nuevamente."); 
 									obj.value=validResult.join('\n');	
 									//record[1]="";
 									f.NOMBREOBJETO.value="";
@@ -1067,7 +1067,7 @@
 					f.NOMBREOBJETO.value=="";
 					var total = 0;
 					if(mygrid.validarDatosGrillaRemesa(event) == -1 ){
-						SeleccionarPrimerRegGrilla();
+						//SeleccionarPrimerRegGrilla();
 						return false;
 					}
 					
@@ -1144,9 +1144,9 @@
 							document.getElementById("editable").style.display='';
 							var montoDocOld2 = MontoDoc;
 							MontoDoc=MontoDoc -total;
-							f.TxtMensajeError.value="Total del detalle ( " + total + " ) debe ser igual al Monto Total de la Remesa ( " + montoDocOld2 + " ). Diferencia $ " + valJS.Mask(MontoDoc + '',"999.999.999.999");
+							f.TxtMensajeError.value="Total del detalle ( " + total + " ) debe ser igual al Monto Total de la Remesa ( " + valJS.Mask(montoDocOld2, "999.999.999.999" ) + " ). Diferencia $ " + valJS.Mask(MontoDoc + '',"999.999.999.999");
 							InhabilitarCampos("disabled");	
-							SeleccionarPrimerRegGrilla();
+							//SeleccionarPrimerRegGrilla();
 						}
 					} 
 				}				
@@ -1322,7 +1322,7 @@
 				jQuery("#TxtFechaRemesa").bind($.browser.opera ? "keypress" : "keydown" , function(event){
 					if (event.keyCode==Sigma.Const.Key.ENTER || event.keyCode==Sigma.Const.Key.RIGHT || event.keyCode==Sigma.Const.Key.DOWN || event.keyCode==Sigma.Const.Key.TAB ) 
 					{
-						ValidarFechaRemesa(f,true)						
+						ValidarFechaRemesa(f,true);						
 						event.preventDefault();
 					}
 				});
