@@ -21,10 +21,12 @@ public class DBAcceso {
     private static DBAcceso instance;
     private DataSource ds;
     private static final Logger logger = Logger.getLogger(DBAcceso.class);
+    static {
+    	AppenderUtils.getInstance().setParams(logger);
+    }
     
     private DBAcceso() {
     	try {
-    		AppenderUtils.getInstance().setParams(logger);
     		Context context =(Context) new InitialContext().lookup("java:comp/env");
     		ds = (DataSource) context.lookup("jdbc/cyber8");
     	} catch(Exception e) {

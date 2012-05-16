@@ -1528,6 +1528,7 @@ validarDatosGrilla : function(event) {
 	var grid=this;
 	var rows=grid.getRows();
 	var flagsigue=true;
+	//var concatenados = "";
 	var TipoProd=document.getElementById("TIPOPROD");
 	var total=0;
 	for (var k=0,len=rows.length; k<len; k++) 
@@ -1561,13 +1562,26 @@ validarDatosGrilla : function(event) {
 				}
 				else {
 					//sumo valores
+					
 					var IntTipoProd=parseInt(TipoProd.value);
-					var NumReg=document.getElementById("NUMREGTOTAL");
+					//var NumReg=document.getElementById("NUMREGTOTAL");
+					//alert(IntTipoProd);
 					switch (IntTipoProd){
 						case 1:
+							total = total +  parseFloat(valJS.quitaMask(recordN[parseInt(3)] + '')) +  parseFloat(valJS.quitaMask(recordN[parseInt(4)] + ''));
+							total = total +  parseFloat(valJS.quitaMask(recordN[parseInt(5)] + '')) +  parseFloat(valJS.quitaMask(recordN[parseInt(6)] + ''));
+							//total=total + parseFloat(valJS.quitaMask(recordN[parseInt(NumReg.value)] + ''));
+							//concatenados += " - (" + recordN[3] + ") " + recordN[parseInt(NumReg.value)];
+							break;
 						case 2:
+							total = total +  parseFloat(valJS.quitaMask(recordN[parseInt(3)] + '')) +  parseFloat(valJS.quitaMask(recordN[parseInt(4)] + ''));
+							total = total +  parseFloat(valJS.quitaMask(recordN[parseInt(5)] + '')) +  parseFloat(valJS.quitaMask(recordN[parseInt(6)] + ''));
+							//concatenados += " - (" + recordN[3] + ") " + recordN[parseInt(NumReg.value)];
+							break;
 						case 5:
-							total=total + parseFloat(valJS.quitaMask(recordN[parseInt(NumReg.value)] + ''));
+							//total=total + parseFloat(valJS.quitaMask(recordN[parseInt(NumReg.value)] + ''));
+							total = total +  parseFloat(valJS.quitaMask(recordN[parseInt(3)] + '')) +  parseFloat(valJS.quitaMask(recordN[parseInt(4)] + ''));
+							//concatenados += " - (" + recordN[3] + ") " + recordN[parseInt(NumReg.value)];
 							break;
 						case 3:
 						case 4:
@@ -1578,6 +1592,8 @@ validarDatosGrilla : function(event) {
 			}		
 		}	
 	}
+	//alert(total);
+	//alert(concatenados);
 	return total;
 },
 

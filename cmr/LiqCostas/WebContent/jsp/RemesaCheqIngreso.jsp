@@ -1162,8 +1162,7 @@
 								else
 									SeleccionarPrimerRegGrilla();
 							}				
-						}
-						else {
+						} else {
 							document.getElementById("TipoGrilla").value="EDITABLE";
 							document.getElementById("noeditable").style.display='none';
 							document.getElementById("editable").style.display='';
