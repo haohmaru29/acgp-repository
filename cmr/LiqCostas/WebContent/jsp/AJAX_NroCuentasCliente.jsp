@@ -1,5 +1,5 @@
 <%@ page language='java' contentType="text/html"%>
-<%@page import="org.jboss.logging.Logger" %>
+<%@page import="org.apache.log4j.Logger" %>
 <%@page import='java.util.ArrayList'%>
 <%@page import="cl.cmr.Seguridad.ValidaSesion"%>
 <%@page import='cl.cmr.Proc.General'%>

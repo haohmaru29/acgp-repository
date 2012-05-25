@@ -17,9 +17,6 @@ public class ValidaUsuario {
 	
 	private static final Logger logger = Logger.getLogger(ValidaUsuario.class);
 	
-	static {
-		AppenderUtils.getInstance().setParams(logger);
-	}
 	
     public ValidaUsuario(){
     }

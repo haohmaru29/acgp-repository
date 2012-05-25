@@ -36,9 +36,7 @@ public class Engine {
 	private HttpServletRequest request;
 	private HttpServletResponse response;
 	private static final Logger logger = Logger.getLogger(Engine.class);
-	static {
-		AppenderUtils.getInstance().setParams(logger);
-    }
+	
 
 	public Engine(HttpServletRequest request, HttpServletResponse response) {
 		this.urlBuffer = new StringBuilder();

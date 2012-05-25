@@ -14,16 +14,11 @@ import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
 
-import cl.cmr.utils.AppenderUtils;
-
 public class DBAcceso {
     private Connection conn = null;
     private static DBAcceso instance;
     private DataSource ds;
     private static final Logger logger = Logger.getLogger(DBAcceso.class);
-    static {
-    	AppenderUtils.getInstance().setParams(logger);
-    }
     
     private DBAcceso() {
     	try {
@@ -44,11 +39,13 @@ public class DBAcceso {
 
     public Connection connect() throws SQLException, IOException, NamingException {
   		try {
+  			logger.info(" [LiqCostas][Build conection] ");
   			conn = ds.getConnection();
   		} catch (Exception e){
   			logger.error(" [LiqCostas] " , e);
   			return null;
   		}
+  		
         return conn;
     }
     

@@ -23,9 +23,6 @@ public class Liquidacion {
 	 private static final String NomPaquete="PaqLiquidacion";
 	 private static final Logger logger = Logger.getLogger(Liquidacion.class);
 	    
-	 static {
-		 AppenderUtils.getInstance().setParams(logger);
-	 }
 	 
 	 public Liquidacion(){
 		 cStmt = null;

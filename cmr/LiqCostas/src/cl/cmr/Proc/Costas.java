@@ -22,11 +22,7 @@ public class Costas {
 	 private static final String NomPaqueteCosta="PaqCostas";
 	 private static Costas instance;
 	 private static final Logger logger = Logger.getLogger(Costas.class);
-	    
-	 private Costas(){
-		 AppenderUtils.getInstance().setParams(logger);
-	}
-	 
+		 
 	public static Costas getInstance() {
 		if(instance==null) {
 			instance = new Costas();

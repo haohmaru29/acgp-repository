@@ -10,9 +10,7 @@ import cl.cmr.utils.AppenderUtils;
 public class ValidaSesion {
 	
 	private static final Logger logger = Logger.getLogger(ValidaSesion.class);
-	static {
-		AppenderUtils.getInstance().setParams(logger);
-	}
+	
 	
     public int valida(HttpServletRequest request) {
         int ret = 1;
