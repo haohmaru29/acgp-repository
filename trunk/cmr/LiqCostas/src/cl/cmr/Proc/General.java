@@ -22,10 +22,6 @@ public class General {
 	 private static General instance;
 	 private static final Logger logger = Logger.getLogger(General.class);
 	 	    
-	 private General(){
-		 AppenderUtils.getInstance().setParams(logger);
-	 }
-	 
 	 public static General getInstance(){
 		 if(instance==null) {
 			 instance = new General();

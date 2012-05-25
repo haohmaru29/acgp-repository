@@ -32,7 +32,6 @@ public class Remesa {
 	} 
 	    
 	private Remesa() {
-		AppenderUtils.getInstance().setParams(logger);
 	}
 	
 	public String actualizaEncRemesas(String idSec) {

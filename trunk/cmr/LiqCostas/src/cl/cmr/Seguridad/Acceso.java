@@ -13,17 +13,13 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import cl.cmr.Proc.Login;
-import cl.cmr.utils.AppenderUtils;
 
 public class Acceso {
 
 	private static final Logger logger = Logger.getLogger(Acceso.class);
     boolean result;
-    ArrayList arrMenu = new ArrayList();
+    ArrayList<ArrayList<String>> arrMenu = new ArrayList<ArrayList<String>>();
     HttpServletRequest request;
-    static {
-    	AppenderUtils.getInstance().setParams(logger);
-    }
     
     public Acceso(HttpServletRequest request) {
 	    this.request = request;
@@ -109,7 +105,7 @@ public class Acceso {
 		return false;
 	}
 	
-	public boolean obtieneMenuUsuario(ArrayList resultado) throws SQLException, IOException, NamingException {
+	public boolean obtieneMenuUsuario(ArrayList<ArrayList<String>> resultado) throws SQLException, IOException, NamingException {
         try {
     		HttpSession sesion = request.getSession(false);
     		if (sesion!=null) {

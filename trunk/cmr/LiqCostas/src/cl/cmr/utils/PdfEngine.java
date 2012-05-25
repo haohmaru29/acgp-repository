@@ -11,9 +11,7 @@ public class PdfEngine extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private static final Logger logger = Logger.getLogger(PdfEngine.class);
-	static {
-		AppenderUtils.getInstance().setParams(logger);
-	}
+	
 	
 	public PdfEngine() {
 		super();

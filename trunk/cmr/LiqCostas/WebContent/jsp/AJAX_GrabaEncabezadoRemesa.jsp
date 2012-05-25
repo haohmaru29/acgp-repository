@@ -1,7 +1,7 @@
 <%@ page language='java' contentType="text/html"%>
 <%@page import="cl.cmr.Proc.Remesa"%>
 <%@page import="cl.cmr.Seguridad.ValidaSesion"%>
-<%@page import="org.jboss.logging.Logger" %>
+<%@page import="org.apache.log4j.Logger" %>
 <%
 	String NumRemesa="-1";
 	ValidaSesion val = new ValidaSesion();			

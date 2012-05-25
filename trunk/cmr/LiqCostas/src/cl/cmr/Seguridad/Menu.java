@@ -19,9 +19,6 @@ public class Menu {
 	private static final Logger logger = Logger.getLogger(Menu.class);
 	private ArrayList<String> hm = new ArrayList<String>();
 
-	static {
-		AppenderUtils.getInstance().setParams(logger);
-	}
 	
 	public ConfigItem ProcesaXml() {
 		try {
