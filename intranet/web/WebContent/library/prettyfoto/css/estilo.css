@@ -1,0 +1,19 @@
+			* { margin: 0; padding: 0; }
+	
+			p { font-size: 1.2em; }
+			
+			ul li { display: inline; border:0px;}
+			
+			.wide {
+				border-bottom: 1px #000 solid;
+				width: 4000px;
+			}
+			
+			.fleft { float: left; margin: 0 20px 0 0; }
+			
+			.cboth { clear: both; }
+			
+			#main {
+				margin: 0 auto;
+				padding: 30px;
+				}

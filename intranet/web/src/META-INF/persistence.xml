@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="intranet">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<non-jta-data-source>java:comp/env/jdbc/intranet</non-jta-data-source>
+		<class>cl.intranet.domain.Categoria</class>
+		<class>cl.intranet.domain.CategoriasTipopublicacion</class>
+		<class>cl.intranet.domain.Imagene</class>
+		<class>cl.intranet.domain.Menu</class>
+		<class>cl.intranet.domain.Perfil</class>
+		<class>cl.intranet.domain.PerfilMenu</class>
+		<class>cl.intranet.domain.Publicacion</class>
+		<class>cl.intranet.domain.PublicTemporal</class>
+		<class>cl.intranet.domain.TipoPublicacion</class>
+		<class>cl.intranet.domain.Usuario</class>
+		<properties>
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+		</properties>
+	</persistence-unit>
+</persistence>
