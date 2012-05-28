@@ -1,0 +1,209 @@
+/* Login Container (default to float:right) */
+.container{
+float:right;
+width:auto; height:auto;
+margin:16px 20px 0 0;
+_position:absolute;
+_right:3px;
+}
+#loginContainer {
+	position:relative;
+    float:right;
+    font-size:11px;
+	width:350px;
+	_width:160px;/*IE*/
+}
+
+/* Login Button */
+#loginButton { 
+    display:inline-block;
+    float:right;
+    background:#31508E; 
+    border:1px solid #d2e0ea; 
+    border-radius:3px;
+    -moz-border-radius:3px;
+    position:relative;
+    z-index:30;
+    cursor:pointer;
+}
+
+/* Login Button Text */
+#loginButton span {
+    color:#FFFFFF; 
+    font-size:14px; 
+    font-weight:normal; 
+    padding:7px 35px 9px 10px;
+    background:url(../img/icon/loginArrow_2.png) no-repeat 68px 25px;
+	background-position:90% 8px;
+	display:block;
+	}
+#loginButton:hover {
+    background-color:#cccccc;
+}
+/* Login Box */
+#loginBox {
+    position:absolute;
+    top:34px;
+    right:0;
+    display:none;
+    z-index:29;
+}
+
+/* If the Login Button has been clicked */    
+#loginButton.active {
+    border-radius:3px 3px 0 0;
+}
+#loginButton.active span {
+    background-position:112px -76px;
+	background-color:#CCCCCC;
+}
+/* A Line added to overlap the border */
+#loginButton.active em {
+    position:absolute;
+    width:96%;
+    height:1px;
+    background:#cccccc;
+    bottom:-1px;
+}
+/* Login Form */
+#loginForm {
+    width:197px; 
+    border:1px solid #D2E0EA;
+    border-radius:3px 0 3px 3px;
+    -moz-border-radius:3px 0 3px 3px;
+    margin-top:-1px;
+    background:#cccccc;
+    padding:6px;
+}
+
+#loginForm fieldset {
+    margin:0 0 8px 0;
+    display:block;
+    border:0;
+    padding:0;
+	width:180px;
+}
+
+fieldset#body {
+    background:#ffffff;
+    border:1px solid #778899;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    padding:10px 8px;
+    margin:0;
+}
+
+#loginForm #checkbox {
+    width:auto;
+    margin:1px 9px 0 0;
+    float:left;
+    padding:0;
+    border:0;
+    *margin:-3px 9px 0 0; /* IE7 Fix */
+}
+
+#body label {
+    color:#3a454d;
+    margin:9px 0 0 0;
+    display:block;
+    float:left;
+	width:80px;
+}
+
+#loginForm #body fieldset label {
+    display:block;
+    float:none;
+    margin:0 0 6px 0;
+}
+
+/* Default Input */
+#loginForm input {
+    width:85%;
+    border:1px solid #31508E;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    color:#3a454d;
+    font-weight:bold;
+    padding:6px 6px;
+    box-shadow:inset 0px 1px 3px #BBBBBB;
+    -webkit-box-shadow:inset 0px 1px 3px #bbb;
+    -moz-box-shadow:inset 0px 1px 3px #bbb;
+    font-size:12px;
+}
+#registrar-b{	width:100px !important;	height:30px!important;
+				margin-left:15px;
+				font-weight:bolder; color:#FFFFFF !important;
+				text-shadow:1px 1px 1px #999999 !important;
+				background-color:#339CDF;
+				border:1px solid #31508E;
+/*				background-image:-moz-linear-gradient(center top , #8AC7EF, #339CDF); */
+				padding:5px 15px;
+				border-radius:3px;
+			    -moz-border-radius:3px;
+			}
+/* Sign In Button */
+#loginForm #login {
+    width:auto;
+    float:left;
+    background-color:#339cdf ;
+    color:#ffffff;
+    padding:4px 10px 5px 10px;
+    text-shadow:0px -1px #999999;
+    border:1px solid #31508E; 
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    margin:0 12px 0 0;
+    cursor:pointer;
+    *padding:6px 2px 7px 2px; /* IE7 Fix */
+}
+
+/* Forgot your password */
+#loginForm span {
+    text-align:center;
+    display:block;
+	padding:7px 0px 4px 25px;
+	width:150px;
+}
+
+#loginForm span a {
+    color:#31508E;
+    text-shadow:1px 1px 1px #fff;
+    font-size:12px; font-weight:bold;
+    text-decoration: none;
+}
+
+input:focus {
+    outline:none;
+}
+/*************************LOGIN Aparte **********************************/
+.login{
+	margin: 5% 0 8% 28%;
+	width:320px;
+	height:250px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#001648; text-indent:10px;
+
+}
+.login input{
+height:18px; width:180px;
+}
+#submit{ margin:3px; height:25px;}
+#lock-user{
+background-image:url(../img/icon/user.png);
+background-repeat:no-repeat;
+width:80px; height:90px;
+margin-top:5px;
+margin-left:36%;
+}
+/************************DIV BIENVENIDA*****************************************/
+.bienvenida{ 	FLOAT:left;
+				width:70%; height:20px;
+				margin: 1px 5px 0 10px;
+
+				font-size:13px; color:#FFFFFF;
+				font-weight:bold;
+				padding:7px 0px 5px 5px;
+}
+span{ font-weight:normal;}

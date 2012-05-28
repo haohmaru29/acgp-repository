@@ -1,0 +1,109 @@
+body{
+    line-height: 1em;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color:#001648;
+}
+.div_cuerpo{
+margin-left: auto;
+margin-right: auto;
+width: 1100px; height:100%;
+background:#fff;
+}
+.div_cuerpo2{
+margin-left: auto;
+margin-right: auto;
+width: 1250px; height:100%;
+background:#fff;
+}
+.header{
+height:90px;
+}
+#logo{
+background-image:url(../img/hlc-logo.jpg);
+width:285px; height:65px;
+margin-top:1%;
+margin-left:10px;
+float:left;
+}
+#logo a{ display:block; height:60px; width:285px; outline:none;}
+.contenido{
+position:relative;
+height:100%; width:1100px;
+}
+.login{
+	margin: 5% 0 18% 33%;
+	width:370px;
+	height:200px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#001648; text-indent:10px;
+}
+.login input{
+height:18px; width:150px;
+}
+#submit{
+margin:3px;
+height:25px;}
+#cel{
+	background-color:#999999;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight: bold;
+}
+#table{
+width:1180px;
+margin:2% 0 0 3%;
+padding:10px 5px 10px 25px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#001648;
+border:1px solid; 
+border-color:#001648;
+}
+#celdas{
+	height:10px;
+	background-color:#cccccc;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.table2{
+width:1225px;
+margin:3% 0 10% 1%;
+border:1px solid; 
+border-color:#BDBDBD;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#001648;
+text-align:center;
+}
+#titulo { 
+margin:1% 0 0 1%; 
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:16px;
+font-weight:bold;
+color:#001648;
+
+}
+/*******Inputs*************/
+#input-1{ width:85px;}
+#input-2{ width:150px;}
+#input-3{ width:200px;}
+/*************SELECT*******************/
+#select{width:150px;}
+/*************IMAGENES******************************/
+.users{
+background-image:url(../img/ing_user.jpg);
+height:80px; width:770px;
+float:right;
+margin:5px 10px 0 0;
+}
+#lock-user{
+background-image:url(../img/user.png);
+background-repeat:no-repeat;
+width:80px; height:90px;
+margin-top:5px;
+margin-left:36%;
+}
+.banner{ width:621px;}
