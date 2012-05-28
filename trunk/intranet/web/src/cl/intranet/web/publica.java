@@ -96,8 +96,8 @@ public class publica {
 
 		return this.model;
 	}
-
-	@RequestMapping(value = { "separate" }, method = {RequestMethod.POST,RequestMethod.GET })
+  
+	@RequestMapping(value = { "separate" }, method = {RequestMethod.POST,RequestMethod.GET } )
 	public ModelAndView separate(HttpServletRequest request, HttpServletResponse response) {
 		this.model = new ModelAndView();
 		int tipo = request.getParameter("opcion") == null ? 0 : Integer.parseInt(request.getParameter("opcion"));
