@@ -116,6 +116,35 @@ function agregar() {
 		});
 }
 
+function loadPagina(pagina) {
+	$( "#tabla_usuario").mask('Cargando, espere por favor...');
+	$( "#tabla_usuario").html('');
+	$.ajax({
+	  url: 'usuario/load',
+	  type: 'POST',
+	  data: {page: pagina},
+	  success: function(data) {
+		  	$( "#tabla_usuario").html(data);
+		  	$( "#tabla_usuario" ).unmask(); 
+	  }, 
+	  failure: function(data) {
+		  $( "#tabla_usuario").unmask();
+	  }
+	});
+	
+	$.ajax({
+		  url: 'usuario/paginacion',
+		  type: 'POST',
+		  data: {page: pagina},
+		  success: function(data) {
+			  	$("#paginacion").html(data);
+		  }, 
+		  failure: function(data) {
+			  $("#paginacion").html(data);
+		  }
+	});
+}
+
 function mostrar(idUsuario) {
 	$( "#form_registro").mask('Cargando, espere por favor...');
 	$( "#form_registro").html('');

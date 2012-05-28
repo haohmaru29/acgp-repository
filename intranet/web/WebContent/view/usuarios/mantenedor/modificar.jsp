@@ -147,6 +147,7 @@
 			<c:if test="${usuarios.idusuario!=null }">
 				<input type="hidden" name="idusuario" value="${usuarios.idusuario }">
 			</c:if>
+			<input type="hidden" name="fechaCreacion" id="fechaCreacion" value="<fmt:formatDate value="${usuarios.fechaCreacion}" pattern="dd/MM/yyyy" />">
 		</form>
 	</div>
 </div>
