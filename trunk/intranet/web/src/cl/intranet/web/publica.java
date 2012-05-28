@@ -35,19 +35,19 @@ public class publica {
 
 	@RequestMapping(value = { "show" }, method = {RequestMethod.GET,RequestMethod.POST })
 	public ModelAndView show(HttpServletRequest request, HttpServletResponse response) {
-		this.model = new ModelAndView();
+		model = new ModelAndView();
 		int limit = Integer.parseInt(ResourceBundle.getBundle("module").getString("module.pageSize"));
 		int start = Integer.parseInt(ResourceBundle.getBundle("module").getString("module.pageIndex"));
-		this.model.addObject("anuncios", this.publicaManager.findPublicacionTipo(2, start, limit));
-		this.model.addObject("noticias", this.publicaManager.findPublicacionTipo(1, start, limit));
-		this.model.addObject("paginacion", Integer.valueOf(getPaginacion(limit)));
+		model.addObject("anuncios", publicaManager.findPublicacionTipo(2, start, limit));
+		model.addObject("noticias", publicaManager.findPublicacionTipo(1, start, limit));
+		model.addObject("paginacion", Integer.valueOf(getPaginacion(limit)));
 		if (request.getSession(false).getAttribute("usuario") != null) {
-			this.model.addObject("tipoPublicacion", this.tipoPublicacionManager.findAll());
-			this.model.addObject("categorias", this.categoriaManager.findAll());
+			model.addObject("tipoPublicacion", tipoPublicacionManager.findAll());
+			model.addObject("categorias", categoriaManager.findAll());
 		}
-		this.model.setViewName("publica/show");
+		model.setViewName("publica/show");
 
-		return this.model;
+		return model;
 	}
 
 	@RequestMapping(value = { "categorias" }, method = {RequestMethod.POST,RequestMethod.GET })
@@ -120,6 +120,52 @@ public class publica {
 
 		return this.model;
 	}
+	
+	@RequestMapping(value ="load", method = {RequestMethod.GET, RequestMethod.POST })
+	public ModelAndView load(HttpServletRequest request, HttpServletResponse response) {
+		model = new ModelAndView();
+		try {
+			int limit = Integer.parseInt(ResourceBundle.getBundle("module").getString("module.mantenedor.size"));
+			int pageSelected = (request.getParameter("page") == null)?0: Integer.parseInt(request.getParameter("page"));
+			String fecha = request.getParameter("fecha");
+			int tipoPublicacion = (request.getParameter("tipoPublicacion")==null)?-1:Integer.parseInt(request.getParameter("tipoPublicacion") );
+			model.addObject("pagina", pageSelected);
+			model.addObject("paginacion", getPaginacion(limit) );
+			if(pageSelected==0) {
+				model.addObject("publicacion", publicaManager.findPaginacion(tipoPublicacion, fecha, pageSelected, limit));
+			} else {
+				if(pageSelected == 2) {
+					model.addObject("publicacion", publicaManager.findPaginacion(tipoPublicacion, fecha,  pageSelected * limit- limit, limit));
+				} else {
+					model.addObject("publicacion", publicaManager.findPaginacion(tipoPublicacion, fecha,  pageSelected * limit- limit, pageSelected * limit));
+				}
+			}
+			
+			model.setViewName("publica/mantenedor/tabla");
+		} catch (Exception e) {
+			model.addObject("message", e);
+			model.setViewName("global/message");
+		}
+
+		return this.model;
+	}
+	
+	@RequestMapping(value ="paginacion", method = {RequestMethod.GET, RequestMethod.POST })
+	public ModelAndView paginacion(HttpServletRequest request, HttpServletResponse response) {
+		model = new ModelAndView();
+		try {
+			int limit = Integer.parseInt(ResourceBundle.getBundle("module").getString("module.mantenedor.size"));
+			int pageSelected = (request.getParameter("page") == null)?0: Integer.parseInt(request.getParameter("page"));
+			model.addObject("pagina", pageSelected);
+			model.addObject("paginacion", getPaginacion(limit) );
+			model.setViewName("publica/mantenedor/paginacion");
+		} catch (Exception e) {
+			model.addObject("message", e);
+			model.setViewName("global/message");
+		}
+
+		return this.model;
+	}
 
 	@RequestMapping(value = { "mostrar" }, method = {RequestMethod.POST,RequestMethod.GET })
 	public ModelAndView mostrar(HttpServletRequest request,HttpServletResponse response) {
@@ -130,9 +176,7 @@ public class publica {
 		return this.model;
 	}
 
-	@RequestMapping(value = { "delete" }, method = {
-			org.springframework.web.bind.annotation.RequestMethod.POST,
-			org.springframework.web.bind.annotation.RequestMethod.GET })
+	@RequestMapping(value = "delete" , method = {RequestMethod.POST, RequestMethod.GET })
 	public ModelAndView delete(HttpServletRequest request, HttpServletResponse response) {
 		this.model = new ModelAndView();
 		String options = request.getParameter("options");
@@ -152,19 +196,62 @@ public class publica {
 		return this.model;
 	}
 
-	@RequestMapping(value = { "mantenedor" }, method = {RequestMethod.POST,RequestMethod.GET })
-	public ModelAndView mantenedorPublicacion(HttpServletRequest request, HttpServletResponse response) {
+	@RequestMapping(value = "propias" , method = {RequestMethod.POST,RequestMethod.GET })
+	public ModelAndView propias(HttpServletRequest request, HttpServletResponse response) {
 		model = new ModelAndView();
 		try {
 			Usuario usuario = (Usuario) request.getSession(false).getAttribute("usuario");
 			String fecha = request.getParameter("fecha");
 			int tipoPublicacion = request.getParameter("tipoPublicacion") == null ? 0: Integer.parseInt(request.getParameter("tipoPublicacion"));
-			model.addObject("publicacion", this.publicaManager.findByUser(usuario.getIdusuario(), tipoPublicacion, fecha));
+			model.addObject("publicacion", publicaManager.findByUser(usuario.getIdusuario(), tipoPublicacion, fecha));
+			int limit = Integer.parseInt(ResourceBundle.getBundle("module").getString("module.mantenedor.size"));
+			int pageSelected = (request.getParameter("page") == null)?1: Integer.parseInt(request.getParameter("page"));
+			model.addObject("pagina", pageSelected);
+			model.addObject("paginacion", getPaginacion(limit) );
+			
 			if (tipoPublicacion == 0) {
-				this.model.addObject("tipoPublicacion",this.tipoPublicacionManager.findAll());
-				this.model.setViewName("publica/mantenedor/include");
+				model.addObject("tipoPublicacion", tipoPublicacionManager.findAll());
+				model.setViewName("publica/mantenedor/include");
 			} else {
-				this.model.setViewName("publica/mantenedor/tabla");
+				model.setViewName("publica/mantenedor/tabla");
+			}
+		} catch (Exception e) {
+			logger.error("[Intranet]", e);
+			this.model.addObject("message", e);
+			this.model.setViewName("global/message");
+		}
+
+		return this.model;
+	}
+	
+	@RequestMapping(value = "mantenedor" , method = {RequestMethod.POST,RequestMethod.GET })
+	public ModelAndView mantenedorPublicacion(HttpServletRequest request, HttpServletResponse response) {
+		model = new ModelAndView();
+		try {
+			String fecha = request.getParameter("fecha");
+			int tipoPublicacion = request.getParameter("tipoPublicacion") == null ? 0: Integer.parseInt(request.getParameter("tipoPublicacion"));
+			
+			int limit = Integer.parseInt(ResourceBundle.getBundle("module").getString("module.mantenedor.size"));
+			int pageSelected = (request.getParameter("page") == null)?1: Integer.parseInt(request.getParameter("page"));
+			if(pageSelected==0) {
+				model.addObject("publicacion", publicaManager.findPaginacion(tipoPublicacion, fecha, pageSelected, limit));
+			} else {
+				if(pageSelected == 2) {
+					model.addObject("publicacion", publicaManager.findPaginacion(tipoPublicacion, fecha,  pageSelected * limit- limit, limit));
+				} else {
+					model.addObject("publicacion", publicaManager.findPaginacion(tipoPublicacion, fecha,  pageSelected * limit- limit, pageSelected * limit));
+				}
+				
+			}
+			
+			model.addObject("pagina", pageSelected);
+			model.addObject("paginacion", getPaginacion(limit) );
+			
+			if (tipoPublicacion == 0) {
+				model.addObject("tipoPublicacion", tipoPublicacionManager.findAll());
+				model.setViewName("publica/mantenedor/include");
+			} else {
+				model.setViewName("publica/mantenedor/tabla");
 			}
 		} catch (Exception e) {
 			logger.error("[Intranet]", e);
@@ -202,15 +289,13 @@ public class publica {
 		model = new ModelAndView();
 		Usuario usuario = (Usuario) request.getSession(false).getAttribute("usuario");
 		int id = request.getParameter("idNoticia") == null ? 0 : Integer.parseInt(request.getParameter("idNoticia"));
-
-		Publicacion publica = (Publicacion) this.publicaManager.findById(Integer.valueOf(id));
-
-		List<?> list = this.catTipoPublicManager.findByTipoPublicacion(publica.getTipoPublicacion().getIdtipoPublicacion());
-		this.model.addObject("publica", publica);
-		this.model.addObject("perfil", Integer.valueOf(usuario.getPerfil().getIdperfil()));
-		this.model.addObject("tipoPublicacion", this.tipoPublicacionManager.findAll());
-		this.model.addObject("categorias", list);
-		this.model.setViewName("publica/mantenedor/editar");
+		Publicacion publica = (Publicacion) publicaManager.findById(Integer.valueOf(id));
+		List<?> list = catTipoPublicManager.findByTipoPublicacion(publica.getTipoPublicacion().getIdtipoPublicacion());
+		model.addObject("publica", publica);
+		model.addObject("perfil", Integer.valueOf(usuario.getPerfil().getIdperfil()));
+		model.addObject("tipoPublicacion", tipoPublicacionManager.findAll());
+		model.addObject("categorias", list);
+		model.setViewName("publica/mantenedor/editar");
 
 		return model;
 	}

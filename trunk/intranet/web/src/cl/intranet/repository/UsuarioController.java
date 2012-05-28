@@ -26,23 +26,20 @@ public class UsuarioController extends AbstractJpaController<Usuario> {
 		return usuario;
 	}
 
-	public List<?> findByParams(String fecha, int idUsuario, int start,
-			int limit) {
-		String query = "SELECT u FROM Usuario u ";
+	public List<?> findByParams(String fecha, int idUsuario, int start, int limit) {
+		String query = "SELECT * FROM USUARIO ";
 		if ((fecha != null) && (!"".equals(fecha))) {
-			query = query + " WHERE u.fechaCreacion  like '%"
-					+ DateUtils.DateToString(DateUtils.stringToDate(fecha))
-					+ "%'";
+			query = query + " WHERE FECHA_CREACION  like '%"+ DateUtils.DateToString(DateUtils.stringToDate(fecha))+ "%'";
 		}
-		query = query + " ORDER BY u.fechaCreacion DESC";
+		query = query + " ORDER BY FECHA_CREACION DESC";
 		query = query + " LIMIT " + start + ", " + limit;
-		Query q = this.jpaConnection.createQuery(query);
+		Query q = this.jpaConnection.getEntityManager().createNativeQuery(query, Usuario.class) ;
+	
 		return q.getResultList();
 	}
 
 	public int countAll() {
-		Query q = this.jpaConnection.getEntityManager().createNativeQuery(
-				"select COUNT(IDUSUARIO) as total from USUARIO ");
+		Query q = this.jpaConnection.getEntityManager().createNativeQuery("select COUNT(IDUSUARIO) as total from USUARIO ");
 		int result = Integer.parseInt(q.getSingleResult().toString());
 
 		return result;

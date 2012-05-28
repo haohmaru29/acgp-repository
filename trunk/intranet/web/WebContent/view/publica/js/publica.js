@@ -80,7 +80,7 @@ $("#input-buscar").datepicker({
 $('#idtipoPublicacion').change(function() {
 	$("#testingMantenedor").mask("Cargando datos, espere...");
 	$.ajax({
-		url : 'publica/publicacion?tipoPublicacion='+ $('#idtipoPublicacion').val(),
+		url : 'publica/mantenedor?tipoPublicacion='+ $('#idtipoPublicacion').val(),
 		success : function(data) {
 			$('#testingMantenedor').html(data);
 			$("#testingMantenedor").unmask();
@@ -140,3 +140,32 @@ System.show = function(id, url, div) {
 		}
 	});
 };
+
+
+function loadPagina(pagina) {
+	$( "#testingMantenedor").mask('Cargando, espere por favor...');
+	$.ajax({
+	  url: 'publica/load',
+	  type: 'POST',
+	  data: {page: pagina, tipoPublicacion:$('#idtipoPublicacion').val(), fecha: $("#input-buscar").val()},
+	  success: function(data) {
+		  	$( "#testingMantenedor").html(data);
+		  	$( "#testingMantenedor" ).unmask(); 
+	  }, 
+	  failure: function(data) {
+		  $( "#testingMantenedor").unmask();
+	  }
+	});
+	
+	$.ajax({
+		  url: 'publica/paginacion',
+		  type: 'POST',
+		  data: {page: pagina},
+		  success: function(data) {
+			  	$("#paginacion").html(data);
+		  }, 
+		  failure: function(data) {
+			  $("#paginacion").html(data);
+		  }
+	});
+}

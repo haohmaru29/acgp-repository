@@ -70,8 +70,7 @@
 			</div>
 		</div>
 		<div id="paginacion">
-			<a href="#"> << </a> <a href="#" id="link">1</a>- <a href="#">2</a>-
-			<a href="#">3</a> <a href="#"> >> </a>
+			<jsp:include page="paginacion.jsp"></jsp:include>
 		</div>
 	</div>
 </div>

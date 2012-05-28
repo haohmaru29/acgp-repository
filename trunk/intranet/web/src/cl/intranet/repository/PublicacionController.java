@@ -84,4 +84,22 @@ public class PublicacionController extends AbstractJpaController<Publicacion> {
 		Query q = this.jpaConnection.createQuery(query);
 		return q.getResultList();
 	}
+	
+	public List<?> findPaginacion(int idTipoPublicacion, String fecha, int start, int limit) {
+		String query = "SELECT * FROM PUBLICACION ";
+		if ((idTipoPublicacion != 0) && (idTipoPublicacion != -1)) {
+			query = query + " WHERE IDPUBLICACION=" + idTipoPublicacion;
+		}
+		if ((fecha != null) && (!"".equals(fecha))) {
+			if ((idTipoPublicacion != 0) && (idTipoPublicacion != -1))
+				query = query + "AND FECHA_INGRESO  like '%" + DateUtils.DateToString(DateUtils.stringToDate(fecha)) + "%'";
+			else {
+				query = query + "WHERE FECHA_INGRESO  like '%" + DateUtils.DateToString(DateUtils.stringToDate(fecha)) + "%'";
+			}
+		}
+		query = query + " ORDER BY FECHA_INGRESO DESC LIMIT " + start + ", " + limit;
+		Query q = this.jpaConnection.getEntityManager().createNativeQuery(query, Publicacion.class);
+		return q.getResultList();
+	}
+	
 }
