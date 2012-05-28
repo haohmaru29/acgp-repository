@@ -15,6 +15,7 @@ public class TipoPublicacion implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="IDTIPO_PUBLICACION")
 	private int idtipoPublicacion;
 

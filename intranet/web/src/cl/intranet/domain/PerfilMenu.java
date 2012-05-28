@@ -14,18 +14,19 @@ public class PerfilMenu implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="IDPERFIL_MENU")
 	private int idperfilMenu;
-
-	//bi-directional many-to-one association to Perfil
-    @ManyToOne
-	@JoinColumn(name="IDPERFIL")
-	private Perfil perfil;
 
 	//bi-directional many-to-one association to Menu
     @ManyToOne
 	@JoinColumn(name="IDMENU")
 	private Menu menu;
+
+	//bi-directional many-to-one association to Perfil
+    @ManyToOne
+	@JoinColumn(name="IDPERFIL")
+	private Perfil perfil;
 
     public PerfilMenu() {
     }
@@ -38,20 +39,20 @@ public class PerfilMenu implements Serializable {
 		this.idperfilMenu = idperfilMenu;
 	}
 
-	public Perfil getPerfil() {
-		return this.perfil;
-	}
-
-	public void setPerfil(Perfil perfil) {
-		this.perfil = perfil;
-	}
-	
 	public Menu getMenu() {
 		return this.menu;
 	}
 
 	public void setMenu(Menu menu) {
 		this.menu = menu;
+	}
+	
+	public Perfil getPerfil() {
+		return this.perfil;
+	}
+
+	public void setPerfil(Perfil perfil) {
+		this.perfil = perfil;
 	}
 	
 }
