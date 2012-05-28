@@ -16,6 +16,7 @@ public class Publicacion implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int idpublicacion;
 
     @Lob()
@@ -41,20 +42,20 @@ public class Publicacion implements Serializable {
 	@JoinColumn(name="IDCATEGORIA")
 	private Categoria categoria;
 
-	//bi-directional many-to-one association to Usuario
+	//bi-directional many-to-one association to PublicTemporal
     @ManyToOne
-	@JoinColumn(name="IDUSUARIO")
-	private Usuario usuario;
+	@JoinColumn(name="IDPUBLIC_TEMPORAL")
+	private PublicTemporal publicTemporal;
 
 	//bi-directional many-to-one association to TipoPublicacion
     @ManyToOne
 	@JoinColumn(name="IDTIPO_PUBLICACION")
 	private TipoPublicacion tipoPublicacion;
 
-	//bi-directional many-to-one association to PublicTemporal
+	//bi-directional many-to-one association to Usuario
     @ManyToOne
-	@JoinColumn(name="IDPUBLIC_TEMPORAL")
-	private PublicTemporal publicTemporal;
+	@JoinColumn(name="IDUSUARIO")
+	private Usuario usuario;
 
     public Publicacion() {
     }
@@ -115,12 +116,12 @@ public class Publicacion implements Serializable {
 		this.categoria = categoria;
 	}
 	
-	public Usuario getUsuario() {
-		return this.usuario;
+	public PublicTemporal getPublicTemporal() {
+		return this.publicTemporal;
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setPublicTemporal(PublicTemporal publicTemporal) {
+		this.publicTemporal = publicTemporal;
 	}
 	
 	public TipoPublicacion getTipoPublicacion() {
@@ -131,12 +132,12 @@ public class Publicacion implements Serializable {
 		this.tipoPublicacion = tipoPublicacion;
 	}
 	
-	public PublicTemporal getPublicTemporal() {
-		return this.publicTemporal;
+	public Usuario getUsuario() {
+		return this.usuario;
 	}
 
-	public void setPublicTemporal(PublicTemporal publicTemporal) {
-		this.publicTemporal = publicTemporal;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 }

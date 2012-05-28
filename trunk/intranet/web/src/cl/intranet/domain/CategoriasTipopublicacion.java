@@ -14,18 +14,19 @@ public class CategoriasTipopublicacion implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="IDCAREGORIAS_TIPOPUBLICACION")
 	private int idcaregoriasTipopublicacion;
-
-	//bi-directional many-to-one association to TipoPublicacion
-    @ManyToOne
-	@JoinColumn(name="IDTIPO_PUBLICACION")
-	private TipoPublicacion tipoPublicacion;
 
 	//bi-directional many-to-one association to Categoria
     @ManyToOne
 	@JoinColumn(name="IDCATEGORIA")
 	private Categoria categoria;
+
+	//bi-directional many-to-one association to TipoPublicacion
+    @ManyToOne
+	@JoinColumn(name="IDTIPO_PUBLICACION")
+	private TipoPublicacion tipoPublicacion;
 
     public CategoriasTipopublicacion() {
     }
@@ -38,20 +39,20 @@ public class CategoriasTipopublicacion implements Serializable {
 		this.idcaregoriasTipopublicacion = idcaregoriasTipopublicacion;
 	}
 
-	public TipoPublicacion getTipoPublicacion() {
-		return this.tipoPublicacion;
-	}
-
-	public void setTipoPublicacion(TipoPublicacion tipoPublicacion) {
-		this.tipoPublicacion = tipoPublicacion;
-	}
-	
 	public Categoria getCategoria() {
 		return this.categoria;
 	}
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+	
+	public TipoPublicacion getTipoPublicacion() {
+		return this.tipoPublicacion;
+	}
+
+	public void setTipoPublicacion(TipoPublicacion tipoPublicacion) {
+		this.tipoPublicacion = tipoPublicacion;
 	}
 	
 }
