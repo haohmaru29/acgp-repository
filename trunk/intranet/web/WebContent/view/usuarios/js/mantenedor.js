@@ -1,7 +1,7 @@
 setTimeout("clearInterval(" + Anuncio.timer + ")", 0);
 
 $(function(){
-	$("#input-buscar").datepicker({
+	$("#input-buscar_mant_us").datepicker({
 	    changeMonth: true,
 	    changeYear: true,
 	    monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio', 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
@@ -22,7 +22,7 @@ function actualizar() {
 	$("#tabla_usuario").mask("Cargando datos, espere...");
 	$.ajax({
 		url : 'usuario/load',
-		data: {fecha: $("#input-buscar").val()},
+		data: {fecha: $("#input-buscar_mant_us").val()},
 		success : function(data) {
 			$('#tabla_usuario').html(data);
 			$("#tabla_usuario").unmask();
@@ -82,8 +82,9 @@ function editar(idUsuario) {
 	
 	$( "#form_registro").dialog({
 		autoOpen: true,
-		height: 466,
-		width: 700,
+		height: 490,
+		width: 690,
+		resizable: false,
 		modal: true,
 		close: function() {
 			
@@ -107,8 +108,9 @@ function agregar() {
 		
 		$( "#form_registro").dialog({
 			autoOpen: true,
-			height: 466,
-			width: 700,
+			height: 490,
+			width: 690,
+			resizable: false,
 			modal: true,
 			close: function() {
 				
@@ -137,10 +139,10 @@ function loadPagina(pagina) {
 		  type: 'POST',
 		  data: {page: pagina},
 		  success: function(data) {
-			  	$("#paginacion").html(data);
+			  	$("#paginacion_mant_us").html(data);
 		  }, 
 		  failure: function(data) {
-			  $("#paginacion").html(data);
+			  $("#paginacion_mant_us").html(data);
 		  }
 	});
 }

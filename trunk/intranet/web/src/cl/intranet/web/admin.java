@@ -38,6 +38,29 @@ public class admin {
 
 		return this.model;
 	}
+	
+	@SuppressWarnings("unchecked")
+	@RequestMapping(value = { "update" }, method = {RequestMethod.POST, RequestMethod.GET })
+	public ModelAndView update(HttpServletRequest request, HttpServletResponse response) {
+		this.model = new ModelAndView();
+		try {
+			String controller = request.getParameter("mngr");
+			Map<Object, Object> params = new HashMap<Object, Object>(request.getParameterMap());
+			params.remove("mngr");
+			params.remove("id");
+			logger.info("ID a actualizar: " + request.getParameter("id") );
+			AbstractServiceManager<?> admin = ServiceManager.factory(controller+ "Manager");
+			admin.update(request.getParameter("id"), params);
+			this.model.addObject("message", "1");
+			this.model.setViewName("global/message");
+		} catch (Exception e) {
+			this.model.addObject("message", "Problemas: " + e);
+			this.model.setViewName("global/message");
+			logger.error("[Intranet]", e);
+		}
+
+		return this.model;
+	}
 
 	@SuppressWarnings("unchecked")
 	public ModelAndView delete(HttpServletRequest request, HttpServletResponse response) {

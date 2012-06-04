@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
-
+<%response.setContentType("text/html; charset=UTF-8"); %>
 <link rel="stylesheet" type="text/css" href="public/css/anuncios.css" />
 
 <script type="text/javascript">
@@ -47,20 +47,20 @@
 	
 </script>
 
-<div id="content">
-	<div id="principal">
+<div id="content_anuncios">
+	<div id="principal_anuncios">
 		<div id="anunciosBusqueda">
 			<div id="titulo_anuncios">Anuncios</div>
-			<div id="volver">
+			<div id="volver_anuncios">
 				<a href="javascript:void(0);" onclick="System.loadContent('publica/show');">
-				<div id="volver-img"></div>
-				<div id="volver-text">Volver</div>
+				<div id="volver-img_anuncios"></div>
+				<div id="volver-text_anuncios">Volver</div>
 				</a>
 			</div>
-			<div id="contenedor">
+			<div id="contenedor_anuncios">	
 				<c:forEach items="${publicacion}" var="publica" varStatus="galleria">
-					<div id="anuncio">
-						<div id="foto_thumb" align="center">
+					<div id="cuadro_anuncios">
+						<div id="img-thumb_anuncios">
 							<c:choose>
 								<c:when test="${publica.imagenes != null }">
 									<ul class="gallery clearfix">
@@ -83,19 +83,22 @@
 							</c:choose>
 						</div>
 					
-						<div id="ti_anuncio">${publica.tituloPublicacion }</div>
-						<div id="info_anuncio">
+						<div id="ti_anuncios">${publica.tituloPublicacion }</div>
+						<div id="info_anuncios">
 							<p>
 								${publica.contenidoPublicacion } 
 							</p>
 						</div>
-						<div id="linea">
-							<div id="autor-img"></div>
-							<div id="autor">Autor:</div>
-							<div id="autor_a">${publica.usuario.nickname }</div>
-							<div id="fecha_a"><fmt:formatDate value="${publica.fechaIngreso}"  pattern="dd/MM/yyyy h:mm "/></div>
-							<div id="fecha">Fecha:</div>
-							<div id="fecha-img"></div>
+						<div id="linea_anuncios">
+						
+							<div id="categoria-anuncios">
+									<div id="cat-img-anuncios"></div>
+									<div id="cat-titulo-anuncios">Categoria:</div> <div id="categoria_a-anuncios">${publica.categoria.nombreCategoria }</div>
+							</div>
+					  	   	<div id="autor-img-anuncios"></div>
+						   	<div id="autor-anuncios">Autor:</div> <div id="autor_a-anuncios">${publica.usuario.nickname }</div>
+						   	<div id="fecha_a-anuncios"><fmt:formatDate value="${publica.fechaIngreso}"  pattern="dd/MM/yyyy h:mm "/></div><div id="fecha-anuncios">Fecha: </div>
+						   	<div id="fecha-img-anuncios"></div>					
 						</div>
 					</div>
 				</c:forEach>
@@ -104,17 +107,18 @@
 	</div>
 	
 	
-	<div class="busqueda">
-		<div id="contenido-demo">
+	<div class="busqueda_anuncios">
+		<div id="contenido-demo_anuncios">
 			<div id="titulo_anuncios">Buscar</div>
 			<div id="icon-buscar"></div>
-			<div id="buscar">Buscar anuncios por fecha</div>
-			<label id="buscar"> Seleccione Fecha:</label> 
+			<div id="buscar_anuncios">Buscar anuncios por fecha</div>
+			<label id="buscar_anuncios"> Seleccionar Fecha:</label>
 			<input name="datepicker" type="text" id="datepicker" size="13"  /> 
-			<input type="button" value="Buscar" id="input-calendario" onclick="javascript:buscarAnuncio();" />
-			<div id="bcategorias">
+			<input type="button" value="Buscar" id="input-calendario_anuncios" onclick="javascript:buscarAnuncio();" />
+			<div id="bcategorias_anuncios">
 				<c:forEach items="${categorias }" var="categorias">
-					<input type="checkbox" name="checkbox" value="${categorias.categoria.idcategoria }" id="check"><div id="cat">${categorias.categoria.nombreCategoria }</div>	
+					<input type="checkbox" name="checkbox" value="${categorias.categoria.idcategoria }" id="check_anuncios">
+					<div id="cat_anuncios">${categorias.categoria.nombreCategoria }</div>	
 				</c:forEach>
 			</div>
 		</div>

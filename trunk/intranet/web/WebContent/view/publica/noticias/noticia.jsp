@@ -1,3 +1,7 @@
+<%
+	response.setContentType("text/html; charset=UTF-8");
+%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
@@ -8,7 +12,7 @@
 %>
 <div id="insertar">
 	<a href="javascript:void(0);" onclick="javascript:System.loadContent('publica/add');">
-	<div id="anuncio_mas"></div><div id="agregar">Agregar</div></a>
+	<div id="anuncio_mas_prin"></div><div id="agregar_prin">Agregar</div></a>
 </div>
 <div id="publicacion">
 	<a href="javascript:void(0);" onclick="javascript:System.loadContent('publica/mantenedor');">
@@ -23,7 +27,7 @@
 				 <div id="noticias_id">
 					<div id="foto_thumb">
 						<div align="center">
-							<a href="contenido/noticias.php">
+							<a href="javascript:void(0);" onclick="javascript:System.loadContent('publica/mostrar?idNoticia=${noticias.idpublicacion }');">
 								<c:choose>
 									<c:when test="${noticias.imagenes!=null }">
 										<c:forEach items="${noticias.imagenes}" var="imagenes" varStatus="imagenesCount">
@@ -69,7 +73,7 @@
 				   				<div id="autor-titulo"><spring:message code="message.noticias.autor"></spring:message>:</div> 
 				   				<div id="autor_a">${noticias.usuario.nickname }</div>
 			   			 </div>
-			  			 <div id="space"></div>
+			  			 
 			  			 <div id="fecha">
 								<div id="fecha-img"></div>
 				  				<div id="fecha-titulo-1"><spring:message code="message.noticias.fecha"></spring:message>:</div>
@@ -94,10 +98,10 @@
 				
 				<c:forEach  varStatus="paginacionCount" begin="1" end="${pagi }">
 					<c:if test="${pagina==null && paginacionCount.count==1}">
-						<a href="javascript:void(0);" style="color:#DF6800;"> ${paginacionCount.count } </a>
+						<a href="javascript:void(0);" id="link" style="color:#DF6800;"> ${paginacionCount.count } </a>
 					</c:if>
 					<c:if test="${pagina!=null && paginacionCount.count==pagina }">
-						<a href="javascript:void(0);" style="color:#DF6800;"> ${paginacionCount.count } </a>
+						<a href="javascript:void(0);" id="link" style="color:#DF6800;"> ${paginacionCount.count } </a>
 					</c:if>
 					<c:if test="${pagina==null && paginacionCount.count!=1 }">
 						<a href="javascript:void(0);" onclick="loadNoticias(${paginacionCount.count });"> ${paginacionCount.count } </a>

@@ -2,6 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %> 
 <%
+	response.setContentType("text/html; charset=UTF-8");
 	String url =request.getRequestURL().toString();
 	url = url.substring(0, url.indexOf(request.getContextPath()) + request.getContextPath().length());
 %>
@@ -16,17 +17,17 @@ $(function() {
 
 </script>
 
-<div id="content_noticia">
-	<div id="principal_noticia">
-	  	<div id="titulo"><c:out value="${publicacion.tituloPublicacion }"></c:out>  </div>
-	  	<div id="volver">
+<div id="content_noticias">
+	<div id="principal_noticias">
+	  	<div id="titulo_noticias"><c:out value="${publicacion.tituloPublicacion }"></c:out>  </div>
+	  	<div id="volver_noticias">
 			<a href="javascript:void(0);" onclick="System.loadContent('publica/show');">
-				<div id="volver-img"></div>
-				<div id="volver-text">Volver</div>
+				<div id="volver-img_noticias"></div>
+  				<div id="volver-text_noticias">Volver</div>
 			</a>
 		</div>
-	  	<div id="cuadro">
-		  	<div id="seccion-img">
+	  	<div id="cuadro_noticias">
+		  	<div id="seccion-img_noticias">
 				<ul class="gallery clearfix">
 					<c:forEach items="${publicacion.imagenes }" var="imagenes2" varStatus="imagenesCount2">
 						<c:choose>
@@ -42,7 +43,7 @@ $(function() {
 					</c:forEach>
 				</ul>
 			  
-			  <div align="center" id="galeria">
+			  <div align="center" id="galeria_noticias">
 			  		<ul class="gallery clearfix">
 			  			<c:forEach items="${publicacion.imagenes }" var="imagenes" varStatus="imagenesCount">
 							<c:choose>
@@ -61,27 +62,28 @@ $(function() {
 			  </div>
 			  
 		    </div>
-	        <div id="info_not">
+	        <div id="info_noticias">
 			    <p>
 			    	<c:out value="${publicacion.contenidoPublicacion }"></c:out> 
 			    </p>
 	        </div> 
 		
-		  <div id="linea">
-		  	<div id="categoria">
-					<div id="cat-img"></div>
-					<div id="cat-titulo">Categoria:</div> <div id="categoria_a">${publicacion.categoria.nombreCategoria }</div>
+		  <div id="linea_noticias">
+		  	<div id="categoria-noticias">
+					<div id="cat-img-noticias"></div>
+					<div id="cat-titulo-noticias">Categoria:</div> 
+					<div id="categoria_a-noticias">${publicacion.categoria.nombreCategoria }</div>
 			</div>
-		  	  <div id="autor-img-noticia"></div>
-			  <div id="autor-noticia">Autor:</div> 
-			  		<div id="autor_a-noticia">
+		  	  <div id="autor-img-noticias"></div>
+			   <div id="autor-noticias">Autor:</div> 
+			  	<div id="autor_a-noticias">
 			  			<c:out value="${publicacion.usuario.nickname }"></c:out> 	
-			  		</div>
-			  <div id="fecha_a-noticia">
+			  	</div>
+			  <div id="fecha_a-noticias">
 			  		<fmt:formatDate value="${publicacion.fechaIngreso }"  pattern="dd/MM/yyyy"/>
 			  </div>
-			  <div id="fecha_noticia">Fecha: </div>
-			  <div id="fecha-img_noticia"></div>
+			  <div id="fecha-noticias">Fecha: </div>
+			  <div id="fecha-img-noticias"></div>
 		  </div>
 		</div>	  
 	</div>

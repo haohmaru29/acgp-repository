@@ -13,11 +13,11 @@
 
 		<c:forEach varStatus="paginacionCount" begin="1" end="${pagi }">
 			<c:if test="${pagina==null && paginacionCount.count==1}">
-				<a href="javascript:void(0);" style="color: #DF6800;" id="link">
+				<a href="javascript:void(0);" style="color: #DF6800;" id="link_mant_us">
 					${paginacionCount.count } </a>
 			</c:if>
 			<c:if test="${pagina!=null && paginacionCount.count==pagina }">
-				<a href="javascript:void(0);" id="link" style="color: #DF6800;">
+				<a href="javascript:void(0);" id="link_mant_us" style="color: #DF6800;">
 					${paginacionCount.count } </a>
 			</c:if>
 			<c:if test="${pagina==null && paginacionCount.count!=1 }">

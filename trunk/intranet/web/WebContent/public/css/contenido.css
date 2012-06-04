@@ -9,14 +9,15 @@
    min-width:1024px;
 }
 #principal{	float:left;
-			width:72%; height:107%; 
+			width:72%; height:107%;
+			width:71.6%\9; 
 			min-width:500px;
-			height:350px\9;
+			height:354px\9;
 			background-color:#ffffff;
 			border-radius:4px;
 			-moz-border-radius:4px;
 			margin:1% 0% 1% 1%;
-			margin:0.5% 1% 0 1%\9;
+			margin:1% 1% 0 1%\9;
 			border:1px solid #000099;
 		}
 #contenedor{	overflow:auto; 
@@ -34,18 +35,16 @@
 #paginacion a:active{font-size:14px; font-weight:bold; border:1px dotted #cccccc; }
 #link{font-size:14px; font-weight:bold; color:#DF6800; padding-left: 5px;}
 #anuncios{height:92%}
-#cont_anuncios {	
-					clear:both;
+#cont_anuncios {	clear:both;height:42px;
 				    background-color:#EBEBEB;
 					border:1px solid #d2e0ea; 
 				    border-radius:4px;
 				    -moz-border-radius:4px;
 					margin:7px 5px 5px 5px;
-	
-				    padding:6px 7px;
-					height:37px;
-		
-				}
+					margin:7px 5px 5px 5px\9;
+					width:91.2%\9;
+					min-width:100px\9;
+				    padding:6px 7px;}
 #titulo_anuncio{ 	
 					font-family:Arial, Helvetica, sans-serif;
 					font-size:15px; color:#df6800;
@@ -58,7 +57,7 @@
 					text-decoration:none; outline:none;	
 				}
 #todos{			float:right;
-				margin:3px 10px 5px 0;
+				margin:9px 10px 5px 0;
 				font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#31508E;
 				text-decoration:none;	
 		}
@@ -67,9 +66,13 @@
 				font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#31508E;
 				text-decoration:none;	outline:none;}
 #agregar{		float:left;
-				margin:3px 10px 5px 3px;
+				margin:9px 10px 5px 3px;
 				font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#31508E;
 				text-decoration:none;	}
+#agregar_prin{	float:left;
+				margin:3px 10px 5px 3px;
+				font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#31508E;
+				text-decoration:none;	}				
 #agregar a{		font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#31508E;
 				text-decoration:none;	outline:none;}
 #insertar{		float:right; margin:7px 10px 0px 10px;}
@@ -83,13 +86,18 @@
 				margin:3px 0 0 0 ;}
 #publicacion_texto{		width:90px; float:left; margin:4px 0 0 3px ;	}				
 #anuncio_mas {			float:left;
-						margin:2px 3px 5px 8px;
+						margin:7px 3px 5px 8px;
 						background-image:url(../img/icon/agregar.png);
 						background-repeat:no-repeat;
 						width:20px; height:18px;
-		}								
+		}
+#anuncio_mas_prin {		float:left;
+						margin:2px 3px 5px 8px;
+						background-image:url(../img/icon/agregar.png);
+						background-repeat:no-repeat;
+						width:20px; height:18px;}										
 #ver{			float:right;
-				margin:3px 5px 5px 0;
+				margin:8px 5px 5px 0;
 				background-image:url(../img/icon/ver.png);
 				background-repeat:no-repeat;
 				width:16px; height:16px;
@@ -129,7 +137,6 @@
 					width:100px;
 					height:100px;
 					margin:10px 5px 10px 1.5%;
-	
 					background-color:#181818;	}
 #ti_noticias{	font-family:Arial, Helvetica, sans-serif;
 				font-size:16px; font-weight:bold;
@@ -150,8 +157,9 @@
 				font-size:14px;
 				color:#333333;
 				background-color:#FFFFFF;
-				height:56px;
-				overflow: hidden;
+				height:40px;
+				overflow:hidden;
+				
 			  }			
 #cuadro-leer{ 	margin-right:1%;	
 				height:15px;	}
@@ -169,7 +177,7 @@
 				text-decoration:none;	
 				outline: none;}
 #more{			float:right;
-				background-image:url(../img/icon/more.png);
+				background-image:url(../imagenes/icon/more.png);
 				background-repeat:no-repeat;
 				width:13px; height:13px;
 				}
@@ -198,7 +206,7 @@
 				margin-right:5px; 
 		}
 #cat-titulo{	float:left; margin:2px 0 0 2px; width:50px; } 		
-#categoria_a{	float:left; margin:2px 0 0 3px; width:90px;
+#categoria_a{	float:left; margin:2px 0 0 3px; width:100px;
 				font-family:arial; color:#6283c4; }						  
 #fecha{ 		margin:1px 0px 5px 1%;  width:25%; height:15px; float:left; padding: 5px 0 0 16%;}
 #fecha-2{ 		margin:1px 1px 0px 1px;  width:60%; height:13px; float:left; }
@@ -213,7 +221,7 @@
 				font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#333333;
 				margin:0px 5px 0px 5px;	}
 
-#fecha_a{ 		width:60%; float:left;
+#fecha_a{ 		width:50%; float:left;
 			    font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#6283C4;
  		        margin: 0px 3px 2px 2px; outline:none;	}	  
 #linea{  	clear:both;

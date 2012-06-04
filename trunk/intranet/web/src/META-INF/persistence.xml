@@ -13,6 +13,7 @@
 		<class>cl.intranet.domain.PublicTemporal</class>
 		<class>cl.intranet.domain.TipoPublicacion</class>
 		<class>cl.intranet.domain.Usuario</class>
+		<class>cl.intranet.domain.EstadoUsuario</class>
 		<properties>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>

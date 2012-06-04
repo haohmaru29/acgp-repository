@@ -48,5 +48,32 @@
 		
 		</center> 
 	</div>	
+
+	<div style="display:none;" id="en_construccion">
+			<style>
+				.mensaje_1{width:565px; height:280px;
+						 border:1px solid #31508E;
+						 border-radius:4px;}
+				#img_mantn_1{	background-image:url(public/img/mantencion.png);
+						   	background-repeat:no-repeat;
+							width:245px; height:230px;
+							float:left; margin:25px 0 25px 0 ;
+							}
+				#mensaje_mantn_1{float:right;	font-size:14px;
+							   font-family:Verdana, Arial, Helvetica, sans-serif;
+							   color:#31508E; font-weight:bold;
+							   text-align:center; line-height:28px;
+							   width:285px; margin:90px 15px 10px 5px;
+							   text-shadow: 3px 2px 3px #cccccc; }			
+			</style>
+			<div class="mensaje_1">
+				<div id="img_mantn_1"></div>
+				<div id="mensaje_mantn_1">
+					Esta p&aacute;gina se encuentra en construcci&oacute;n.
+					Disculpe las molestias.
+				</div>
+			</div>	
+	
+	</div>
 </body>
 </html>

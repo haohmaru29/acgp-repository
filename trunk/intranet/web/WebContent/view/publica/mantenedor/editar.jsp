@@ -1,11 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
+<%response.setContentType("text/html; charset=UTF-8"); %>
 <link rel="stylesheet" type="text/css" href="public/css/mod_publicaciones.css" />
 
 <script type="text/javascript">
-
 $(function() {
 	var contador = 0;
 	$('#fileupload').fileupload({
@@ -44,6 +43,25 @@ $(function() {
 				$('#idCategoria').html(html);
 		});
 	});
+	
+	$('#update_publica_form').ajaxForm({ 
+		url: 'admin/update',
+	    success: function(responseText, statusText, xhr, $form) {
+	    	if(responseText==1) {
+	    		actualizar();
+	    		$("#editPublicacion").dialog("close");
+	    		System.info('Publicacion actualizada con exito');
+	    	} else {
+	    		System.info(responseText);
+	    	} 
+	    	$("#principal_modifica_public").unmask();
+	    },
+	    beforeSubmit:  function (formData, jqForm, options) { 
+    	 	$("#principal_modifica_public").mask("Actualizando datos, espere por favor...");
+    	}
+	    //timeout:   3000 
+	}); 
+	
 	setTimeout("clearInterval("+Anuncio.timer+")",0);
 });
 
@@ -54,18 +72,23 @@ $(function() {
   		<div id="titulo">Modificar Publicaci&oacute;n </div>
 				  <div id="cuadro">
 				  	<div id="marco">
-					  <form action="" method="get" enctype="multipart/form-data" >
+					  <form method="POST" id="update_publica_form" >
+					  	<input type="hidden" name="id"  value="${publica.idpublicacion }">
+					  	<input type="hidden" name="mngr"  value="Publicacion">
+					  	<input type="hidden" name="fechaModificacion"  value="${fechaModificacion}">
+					  	<input type="hidden" name="usuario"  value="${publica.usuario.idusuario }">
+					  	<input type="hidden" name="publicTemporal"  value="${publica.publicTemporal.idpublicTemporal }">
 					  	<div id="t_titulo">
 					     	<p id="campos2">Titulo:</p>
-					   		<input id="input_titulo" type="text" value="${publica.tituloPublicacion }" name="textfield" size"40"/>
+					   		<input id="input_titulo" type="text" value="${publica.tituloPublicacion }" name="tituloPublicacion" size"40"/>
 					    </div>
 					    <div id="t_contenido"> 
 					    	 <p id="campos2">Contenido:</p>
-					    	 <textarea  id="text_area" name="textarea">${publica.contenidoPublicacion }</textarea>
+					    	 <textarea  id="text_area" name=contenidoPublicacion>${publica.contenidoPublicacion }</textarea>
 					    </div>
 					    <div id="t_entrada">
 							<p id="campos2"> Tipo de Entrada:</p>
-							<select class="option2" name="idtipoPublicacion" id="idtipoPublicacion" >
+							<select class="option2" name="tipoPublicacion" id="idtipoPublicacion" >
 								<option value=''>Seleccione publicaci&oacute;n</option>
 								<c:forEach items="${tipoPublicacion}" var="tipoPublicacion">
 									<c:choose>
@@ -82,7 +105,7 @@ $(function() {
 						<div id="t_categoria">	
 							<p id="campos2">Categor&iacute;a:</p>
 							<p>
-								<select name="idCategoria" id="idCategoria" class="option2">
+								<select name="categoria" id="idCategoria" class="option2">
 									<c:forEach items="${categorias }" var="categorias">
 										<c:choose>
 											<c:when test="${categorias.categoria.idcategoria==publica.categoria.idcategoria }">
@@ -105,7 +128,7 @@ $(function() {
        <div class="row fileupload-buttonbar">
             <div class="botones">
                 <!-- The fileinput-button span is used to style the file input field as button -->
-                <button type="submit" class="btn btn-primary start">
+                <button type="submit" class="btn btn-primary start" onclick="$('#update_publica_form').submit();">
                     <i class="icon-refresh icon-white"></i>
                     <span>Actualizar</span>
                 </button>
