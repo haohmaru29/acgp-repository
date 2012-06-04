@@ -51,6 +51,11 @@ public class Usuario implements Serializable {
 	@JoinColumn(name="IDPERFIL")
 	private Perfil perfil;
 
+	//bi-directional many-to-one association to EstadoUsuario
+    @ManyToOne
+	@JoinColumn(name="IDESTADO_USUARIO")
+	private EstadoUsuario estadoUsuario;
+
     public Usuario() {
     }
 
@@ -140,6 +145,14 @@ public class Usuario implements Serializable {
 
 	public void setPerfil(Perfil perfil) {
 		this.perfil = perfil;
+	}
+	
+	public EstadoUsuario getEstadoUsuario() {
+		return this.estadoUsuario;
+	}
+
+	public void setEstadoUsuario(EstadoUsuario estadoUsuario) {
+		this.estadoUsuario = estadoUsuario;
 	}
 	
 }

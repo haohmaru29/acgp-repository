@@ -27,10 +27,7 @@ $(function() {
 			} 
 		}, 
 		beforeSend: function(xhr) {
-			/*alert(2);
-			try {jqXHR.stop();}catch(e){}
-			alert(3);
-			xhr.stop();*/
+
 		}
 	});
 	$('#idtipoPublicacion').change(function() {
@@ -53,44 +50,47 @@ $(function() {
 </script>
 
 
-<div id="content">
-	<div id="principal">
-		<div id="titulo">A&ntilde;adir nueva entrada</div>
-		<div id="volver">
-			<a href="javascript:void(0);" onclick="System.loadContent('publica/show');">
-				<div id="volver-img"></div>
-				<div id="volver-text">Volver</div>
+<div id="content_mant">
+	<div id="principal_mant">
+		<div id="titulo_mant">A&ntilde;adir nueva entrada</div>
+		<div id="volver_mant">
+			<a href="javascript:void(0);" onclick="System.loadContent('${url}');">
+				<div id="volver-img_mant"></div>
+				<div id="volver-text_mant">Volver</div>
 			</a>
 		</div>
-		<div id="cuadro">
-			<div id="marco">
+		<div id="cuadro_mant">
+			<div id="marco_mant">
 				<form  action="upload/upload" method="post" id="fileupload" enctype="multipart/form-data"  >
 					<input type="hidden" name="idpublicTemporal" id="idpublicTemporal" value="${temporal.idpublicTemporal }">
-					<p id="campos">Titulo:</p>
-					<input id="input_titulo" type="text" name="tituloPublicacion" size="40" />
-			
-					<p id="campos">Contenido:</p>
-					<textarea id="text_area" name="contenidoPublicacion"></textarea>
-					<div id="t_entrada">
-						<p id="campos2">Seleccione Tipo de Entrada:</p>
-						<select name="idtipoPublicacion" id="idtipoPublicacion" class="option">
+					<div id="ti_titulo_mant">
+						<p id="campos_mant">Titulo:</p>
+						<input id="input_titulo_mant" type="text" name="tituloPublicacion" size="40" />
+					</div>
+					<div id="ti_contenido_mant"> 
+						<p id="campos_mant">Contenido:</p>
+						<textarea id="text_area_mant" name="contenidoPublicacion"></textarea>
+					</div>
+					<div id="ti_contenido_mant">
+						<p id="campos_mant">Tipo de Entrada:</p>
+						<select name="idtipoPublicacion" id="idtipoPublicacion" class="option_mant">
 							<option value=''>Seleccione publicaci&oacute;n</option>
 							<c:forEach items="${tipoPublicacion}" var="tipoPublicacion">
 								<option value="${tipoPublicacion.idtipoPublicacion }">${tipoPublicacion.nombreTipopublicacion}</option>
 							</c:forEach>
 						</select>
 					</div>
-					<div id="t_categoria">	
-						<p id="campos2">Seleccione Categor&iacute;a:</p>
+					<div id="ti_categoria_mant">	
+						<p id="campos_mant">Categor&iacute;a:</p>
 						<p>
-							<select name="idCategoria" id="idCategoria" class="option">
+							<select name="idCategoria" id="idCategoria" class="option_mant">
 							</select>
 						</p>
 					</div>
-					<p id="campos">Imagenes:</p>
+					<p id="campo_img_mant">Imagenes:</p>
 			
 					<div class="row fileupload-buttonbar">
-						<div class="span7">
+						<div class="botones_m_mant">
 							<!-- The fileinput-button span is used to style the file input field as button -->
 							<span class="btn btn-success fileinput-button"> <i
 								class="icon-plus icon-white"></i> <span>Agregar</span> 
@@ -169,12 +169,13 @@ $(function() {
             <td>
                 <div class="progress progress-success progress-striped active"><div class="bar" style="width:0%;"></div></div>
             </td>
-            <td class="start">{% if (!o.options.autoUpload) { %}
+            <td class="start">
+				<div style="display:none;">{% if (!o.options.autoUpload) { %}
                 <button class="btn btn-primary">
                     <i class="icon-upload icon-white"></i>
                     <span>{%=locale.fileupload.start%}</span>
                 </button>
-
+				</div>
             {% } %}</td>
         {% } else { %}
             <td colspan="2"></td>

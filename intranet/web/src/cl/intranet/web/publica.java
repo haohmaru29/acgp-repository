@@ -11,6 +11,8 @@ import cl.intranet.service.CategoriasTipopublicacionManager;
 import cl.intranet.service.PublicTemporalManager;
 import cl.intranet.service.PublicacionManager;
 import cl.intranet.service.TipoPublicacionManager;
+
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 import javax.servlet.http.HttpServletRequest;
@@ -50,7 +52,7 @@ public class publica {
 		return model;
 	}
 
-	@RequestMapping(value = { "categorias" }, method = {RequestMethod.POST,RequestMethod.GET })
+	@RequestMapping(value ="categorias", method = {RequestMethod.POST,RequestMethod.GET })
 	@ResponseBody
 	public String categorias(HttpServletRequest request, HttpServletResponse response) {
 		int tipoPublicacion = request.getParameter("tipoPublicacion") == null ? 0 : Integer.parseInt(request.getParameter("tipoPublicacion"));
@@ -58,7 +60,7 @@ public class publica {
 		return JsonParser.parseList(list);
 	}
 
-	@RequestMapping(value = { "anuncio" }, method = {RequestMethod.POST, RequestMethod.GET })
+	@RequestMapping(value = "anuncio" , method = {RequestMethod.POST, RequestMethod.GET })
 	public ModelAndView anuncio(HttpServletRequest request, HttpServletResponse response) {
 		this.model = new ModelAndView();
 		int limit = Integer.parseInt(ResourceBundle.getBundle("module").getString("module.pageSize"));
@@ -68,36 +70,41 @@ public class publica {
 		return this.model;
 	}
 
-	@RequestMapping(value = { "noticia" }, method = {RequestMethod.POST,RequestMethod.GET })
+	@RequestMapping(value = "noticia", method = {RequestMethod.POST,RequestMethod.GET })
 	public ModelAndView noticia(HttpServletRequest request, HttpServletResponse response) {
-		this.model = new ModelAndView();
-
+		model = new ModelAndView();
 		int pageSelected = request.getParameter("page") == null ? 0 : Integer.parseInt(request.getParameter("page"));
 		int limit = Integer.parseInt(ResourceBundle.getBundle("module").getString("module.pageSize"));
-		this.model.addObject("paginacion", Integer.valueOf(getPaginacion(limit)));
-		this.model.addObject("pagina", Integer.valueOf(pageSelected));
+		model.addObject("paginacion", Integer.valueOf(getPaginacion(limit)));
+		model.addObject("pagina", pageSelected);
+		model.addObject("noticias", this.publicaManager.findPublicacionTipo(1, pageSelected * limit- limit, pageSelected * limit));
+		model.setViewName("publica/noticias/noticia");
 
-		this.model.addObject("noticias", this.publicaManager.findPublicacionTipo(1, pageSelected * limit- limit, pageSelected * limit));
-		this.model.setViewName("publica/noticias/noticia");
-
-		return this.model;
+		return model;
 	}
 
 	@RequestMapping(value = { "add" }, method = {RequestMethod.POST,RequestMethod.GET })
 	public ModelAndView add(HttpServletRequest request,HttpServletResponse response) {
-		this.model = new ModelAndView();
-		this.model.addObject("tipoPublicacion",this.tipoPublicacionManager.findAll());
-		this.model.addObject("categorias", this.categoriaManager.findAll());
+		model = new ModelAndView();
+		model.addObject("tipoPublicacion",this.tipoPublicacionManager.findAll());
+		model.addObject("categorias", categoriaManager.findAll());
 		PublicTemporal temp = new PublicTemporal();
 		temp.setEstado("E");
-		temp = (PublicTemporal) this.temporalManager.save(temp);
-		this.model.addObject("temporal", temp);
-		this.model.setViewName("publica/add");
+		temp = (PublicTemporal) temporalManager.save(temp);
+		model.addObject("temporal", temp);
+		
+		if(request.getParameter("option") == null) {
+			model.addObject("url", "publica/show");
+		}else {
+			model.addObject("url", "publica/mantenedor");
+		}
+		
+		model.setViewName("publica/add");
 
-		return this.model;
+		return model;
 	}
   
-	@RequestMapping(value = { "separate" }, method = {RequestMethod.POST,RequestMethod.GET } )
+	@RequestMapping(value ="separate", method = {RequestMethod.POST,RequestMethod.GET } )
 	public ModelAndView separate(HttpServletRequest request, HttpServletResponse response) {
 		this.model = new ModelAndView();
 		int tipo = request.getParameter("opcion") == null ? 0 : Integer.parseInt(request.getParameter("opcion"));
@@ -109,7 +116,7 @@ public class publica {
 		return this.model;
 	}
 
-	@RequestMapping(value = { "buscar" }, method = {RequestMethod.POST,RequestMethod.GET })
+	@RequestMapping(value ="buscar", method = {RequestMethod.POST,RequestMethod.GET })
 	public ModelAndView buscar(HttpServletRequest request,HttpServletResponse response) {
 		this.model = new ModelAndView();
 		int idTipoPublicacion = request.getParameter("opcion") == null ? 0: Integer.parseInt(request.getParameter("opcion"));
@@ -167,7 +174,7 @@ public class publica {
 		return this.model;
 	}
 
-	@RequestMapping(value = { "mostrar" }, method = {RequestMethod.POST,RequestMethod.GET })
+	@RequestMapping(value = "mostrar" , method = {RequestMethod.POST,RequestMethod.GET })
 	public ModelAndView mostrar(HttpServletRequest request,HttpServletResponse response) {
 		this.model = new ModelAndView();
 		int idNoticia = request.getParameter("idNoticia") == null ? 0 : Integer.parseInt(request.getParameter("idNoticia"));
@@ -292,6 +299,7 @@ public class publica {
 		Publicacion publica = (Publicacion) publicaManager.findById(Integer.valueOf(id));
 		List<?> list = catTipoPublicManager.findByTipoPublicacion(publica.getTipoPublicacion().getIdtipoPublicacion());
 		model.addObject("publica", publica);
+		model.addObject("fechaModificacion", DateUtils.DateToString(new Date(), "dd/MM/yyyy"));
 		model.addObject("perfil", Integer.valueOf(usuario.getPerfil().getIdperfil()));
 		model.addObject("tipoPublicacion", tipoPublicacionManager.findAll());
 		model.addObject("categorias", list);

@@ -25,22 +25,20 @@
 			<ul>
 				<c:forEach items="${menu}" var="menu">
 					<li>
-						<a href="${menu.urlMenu }">${menu.nombreMenu }</a>
+						<c:choose>
+							<c:when test="${menu.urlMenu!='' && menu.urlMenu!=null}">
+								<a href="${menu.urlMenu }">${menu.nombreMenu }</a>
+							</c:when>
+							<c:otherwise>
+								<a href="javascript:void(0);">${menu.nombreMenu }</a>
+							</c:otherwise>
+						</c:choose>
 						<c:choose>
 							<c:when test="${child != null }">
 								<ul>
 									<c:forEach items="${child }" var="child">
 										<c:if test="${child.idpadre == menu.idmenu }">
-											<c:choose>
-												<c:when test="${child.urlMenu != null}">
-													<li><a href="javascript:void(0);" onclick="System.loadContent('${child.urlMenu }');return false;">${child.nombreMenu }</a></li>
-												</c:when>
-												<c:otherwise>
-													<li><a href="javascript:void(0);" >${child.nombreMenu }</a></li>
-												</c:otherwise>
-											</c:choose>
-											
-											
+											<li><a href="javascript:void(0);" onclick="System.loadContent('${child.urlMenu }');return false;">${child.nombreMenu }</a></li>
 											
 										</c:if>
 									</c:forEach>

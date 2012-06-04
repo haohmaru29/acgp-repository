@@ -34,9 +34,13 @@ public class security {
 		try {
 			Usuario usuario = this.usuarioManager.login(nickname, clave);
 			if (usuario != null) {
-				HttpSession session = request.getSession(true);
-				session.setAttribute("usuario", usuario);
-				model.addObject("message", "1");
+				if(usuario.getEstadoUsuario().getIdestadoUsuario()!=1) {
+					model.addObject("message", "2");
+				} else {
+					HttpSession session = request.getSession(true);
+					session.setAttribute("usuario", usuario);
+					model.addObject("message", "1");
+				}
 				model.setViewName("global/message");
 			} else {
 				model.addObject("message", "Datos ingresados invalidos, favor vuelva a intentar");

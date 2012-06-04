@@ -24,15 +24,16 @@ ddsmoothmenu.init({
 });
 
 </script>
+<!--
 <div class="examples">
 	<div id="cuerpo">
 			<div id="header">
-				<!-- Login Starts Here -->
+				<!-- Login Starts Here 
 				<div class="container">
 				<div id="loginContainer">		
 				<div class="bienvenida">
-					Bienvenido(a): 
-					<span><%=usuario.getNombreUsuario()%></span>
+					<div id="text_welcome">Bienvenido(a): </div>
+					<span id="span_login"><%=usuario.getNombreUsuario()%></span>
 				</div>
 				<a href="#" id="loginButton" onclick="System.sessionClose();"><span>Salir</span><em></em></a>
 				<div style="clear:both"></div>
@@ -40,8 +41,30 @@ ddsmoothmenu.init({
 						</div>
 				</div>
 				</div>   	
-					<!-- Login Ends Here -->
+					<!-- Login Ends Here 
 					<div class="logo"><a href="index.html"></a></div>
 			</div>
 	</div>
+</div>-->
+
+
+<div class="body">
+<div id="header">
+			<div class="container">
+			<div id="loginContainer">
+			<div class="bienvenida">
+				<div id="text_welcome">Bienvenido(a): </div>
+				<span id="span_login"><%=usuario.getNombreUsuario()%></span>
+			</div>
+			<a href="javascript:void(0);" id="loginButton" onclick="System.sessionClose();">
+				<span>Salir</span><em></em></a>
+				<div style="clear:both"></div>
+				<div id="loginBox"></div>
+			</div>
+			</div>   	
+				<!-- Login Ends Here -->
+			<div class="logo"><a href="index.php"></a></div>	
+	</div>
 </div>
+
+

@@ -4,7 +4,7 @@ function actualizar() {
 	$("#testingMantenedor").mask("Cargando datos, espere...");
 	$.ajax({
 		url : 'publica/mantenedor',
-		data: {tipoPublicacion: $('#idtipoPublicacion').val() , tipoPublicacion:$('#idtipoPublicacion').val(), fecha: $("#input-buscar").val()},
+		data: {tipoPublicacion: $('#idtipoPublicacion').val() , tipoPublicacion:$('#idtipoPublicacion').val(), fecha: $("#input-buscar_mant_pub").val()},
 		success : function(data) {
 			$('#testingMantenedor').html(data);
 			$("#testingMantenedor").unmask();
@@ -16,13 +16,13 @@ function actualizar() {
 }
 
 function buscar() {
-	if($("#input-buscar").val()=='') {
+	if($("#input-buscar_mant_pub").val()=='') {
 		System.info("Debe ingresar una fecha");
 	} else {
 		$("#testingMantenedor").mask("Cargando datos, espere...");
 		$.ajax({
 			url : 'publica/mantenedor',
-			data: {tipoPublicacion: $('#idtipoPublicacion').val() , tipoPublicacion:$('#idtipoPublicacion').val(), fecha: $("#input-buscar").val()},
+			data: {tipoPublicacion: $('#idtipoPublicacion').val() , tipoPublicacion:$('#idtipoPublicacion').val(), fecha: $("#input-buscar_mant_pub").val()},
 			success : function(data) {
 				$('#testingMantenedor').html(data);
 				$("#testingMantenedor").unmask();
@@ -62,7 +62,7 @@ function eliminar() {
 	}
 }
 
-$("#input-buscar").datepicker({
+$("#input-buscar_mant_pub").datepicker({
     changeMonth: true,
     changeYear: true,
     monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio', 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
@@ -147,7 +147,7 @@ function loadPagina(pagina) {
 	$.ajax({
 	  url: 'publica/load',
 	  type: 'POST',
-	  data: {page: pagina, tipoPublicacion:$('#idtipoPublicacion').val(), fecha: $("#input-buscar").val()},
+	  data: {page: pagina, tipoPublicacion:$('#idtipoPublicacion').val(), fecha: $("#input-buscar_mant_pub").val()},
 	  success: function(data) {
 		  	$( "#testingMantenedor").html(data);
 		  	$( "#testingMantenedor" ).unmask(); 

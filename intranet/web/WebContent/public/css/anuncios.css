@@ -1,164 +1,136 @@
-#content {
-   padding-bottom:100px; /* Altura del footer */
-   padding-bottom:50px\9;
-   background-image:url(../img/bg.jpg);
-   background-repeat:repeat-x;
-   height:350px;
-   min-width:1024px;
-}
-#principal{
-width:70%; height:100%;
-float: left;
-margin:1%;
-border:1px solid #000099;
-_margin:13px 0 0 5px;
-background-color:#FFFFFF;
-}
-#volver{ float:right; margin:10px 1% 0 0px; width: 8%; height:20px; }
-#volver-text{ float:left;font-size:14px; color:#2247C6; width:20px;}
-#volver-img{float:left; background-image: url(../img/icon/volver.png); width:16px; height:16px; margin:2px 5px 0 0 ;}
-#contenedor{	overflow:auto; 
-				height:90%;
-				*height:17em;/*IE*/
-				clear:both;	}
-
-#anuncio{
-	clear:both;
-    background:#fff;
-	border:1px solid #d2e0ea; 
-    border-radius:4px;
-    -moz-border-radius:4px;
-	margin:7px 5px 5px 5px;
-	overflow: hidden;
-	height:120px;
-	_width:100%;
-}
-#ti_anuncio{
-	float:right;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:15px; font-weight:bold;
-	color: #DF6800;
-	margin: 7px 13% 3px 5px;
-	width:70%;
-	text-decoration:none;
-	}
-#foto_thumb{
-float:left;
-border:1px solid #31508E;
-width:12.5%;
-height:80px;
-margin:7px 10px 7px 13px;
-_margin: 7px 7px 7px 7px; /*IE*/
-background-color:#181818;
-}
-#titulo_anuncios{
-	float:left;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:18px; font-weight:bold;
-	color: #DF6800;
-	margin: 8px 0px 5px 20px;
-	_margin: 8px 1% 2px 10px;
-	width:65px;
-	}
-#info_anuncio{	font-family:Verdana, Arial, Helvetica, sans-serif;
-				font-size:10px;	color:#333333;
+#content_anuncios {padding-bottom:100px; /* Altura del footer */
+				   padding-bottom:50px\9;
+				   background-image:url(../img/bg.jpg);
+				   background-repeat:repeat-x;
+				   height:350px;
+				   min-width:1024px;
+				   max-width:1370px;}
+#principal_anuncios{width:70%; height:107%;
+					height:103%\9;
+					float: left;margin:1%;
+					border:1px solid #000099;
+					border-radius:4px;
+					-moz-border-radius:4px;
+					background-color:#FFFFFF;
+					min-width:450px;}
+#volver_anuncios{ float:right; margin:10px 0% 0 0px; width:6.3%; height:20px; padding-right:20px; font-family:arial;}
+#volver-text_anuncios{ float:left;font-size:14px; color:#2247C6; width:20px;}
+#volver-img_anuncios{float:left; background-image: url(../img/icon/volver.png); width:16px; height:16px; margin:2px 5px 0 0 ;}
+#contenedor_anuncios{overflow:auto; height:84%;	clear:both;	}
+#titulos_2_anuncios{font-family:Arial, Helvetica, sans-serif;
+					font-size:16px; font-weight:bold;
+					color:#DF6800;
+					margin:10px 0 10px 0px;
+					text-align:center;}
+#cuadro_anuncios{clear:both;height:120px;
+			    background:#fff;
+				border:1px solid #d2e0ea; 
+			    border-radius:4px;
+			    -moz-border-radius:4px;
+				margin:7px 5px 5px 5px;
+			    padding:8px 5px 5px 5px;
+				overflow: hidden;}
+#titulo_anuncios{float:left;width:75%;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:18px; font-weight:bold;
+				color: #DF6800;
+				margin: 10px 5px 5px 20px;}
+#ti_anuncios{float:left;width:70%;
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:15px; font-weight:bold;
+			color: #DF6800;
+			margin: 0px 10px 3px 15px;
+			text-decoration:none;	}	
+#img-thumb_anuncios{float:left;
+					margin:0 0px 5px 9px;
+					width:15%; height:75%;
+					background-color:#000000;
+					border:1px solid #31508E;}
+#galeria_anuncios{	width:100%;	height: 60px;
+					margin:6px 0px 0px 0px;}
+#titulo_anuncios{	float:left;width:65px;
+					font-family:Arial, Helvetica, sans-serif;
+					font-size:18px; font-weight:bold;
+					color: #DF6800;
+					margin: 8px 0px 5px 16px;	}
+#info_anuncios{	float:left; background-color:#EBEBEB; 
+				font-family:Verdana, Arial, Helvetica, sans-serif;
+				text-align:justify; font-size:14px; color:#333333;
 				border:1px solid #ccc; 
 			    border-radius:4px;
 			    -moz-border-radius:4px;
-				background-color:#EBEBEB;
-				margin:0px 5px 5px 9px;
-				_margin:0 0 10px 10px;/*IE*/
-				padding:5px;
-				width:81%;	height:50px;
-				text-align:justify;
-				overflow:hidden;
-			}
-#autor-img{
-float:left;
-background-image:url(../img/icon/1334693771_users.gif);
-background-repeat:no-repeat;
-width:12px; height:12px;
-margin: 5px 0px 3px 5px ;
-}
-#autor{
-float:left; width:30px; 
-font-family:Verdana; font-size:11px; color:#333333;
-margin: 5px 5px 3px 5px ;
-}
-#autor_a{
-float:left; width:20%;
-font-family:Verdana; font-size:11px; color:#6283c4;
-margin: 5px 5px 3px 5px;
-}
-#fecha-img{
-float:right;
-background-image:url(../img/icon/calendar.png);
-background-repeat:no-repeat;
-width:12px; height:12px;
-margin: 5px 0px 3px 5px ;
-}
-#fecha{
-float:right; width:30px;
-font-family:Verdana; font-size:11px; color:#333333;
-margin: 5px 5px 3px 5px ;
-}
-#fecha_a{
-float:right; width:20%;
-font-family:Verdana; font-size:11px; color:#6283C4;
-margin: 5px 5px 3px 5px ;
-}
-#linea{  
-clear:both;
-margin: 0px 5px 5px 5px;
-width:99%;  
-height:0px;/*solo queremos borde*/  
-text-align:left;  
-border-top:20px;/*quita el grosor extra de Opera y FFox*/  
-border-bottom:#DF6800 solid 1px; 
-_border-bottom: 0px;
-_border-top:#DF6800 solid 1px;   
-} 
+				margin:0px 0px 10px 14px;
+				padding:10px;height:45px; width:78%;
+				overflow:hidden;}
+#categoria-anuncios{float:left; padding-top:2px;
+					width:22%; height:15px;
+					font-family: arial; font-size: 11px; color:#333333;
+					margin:1px 0px 5px 1%;}
+#cat-img-anuncios{	float:left;width:16px; height:16px;
+					background-image:url(../img/icon/categoria.png);				
+					margin-right:5px;}
+#cat-titulo-anuncios{	float:left; margin:2px 0 0 2px; width:50px; } 		
+#categoria_a-anuncios{	float:left; margin:2px 0 0 3px; width:70px;
+						font-family:arial; color:#6283c4; }						  
+#autor-img-anuncios{float:left;width:12px; height:12px;
+					background-image:url(../img/icon/1334693771_users.gif);
+					background-repeat:no-repeat;
+					margin: 6px 0px 0px 10px;}
+#autor-anuncios{float:left; width:30px;margin: 5px;
+				font-family:Arial; font-size:11px; color:#333333;}
+#autor_a-anuncios{float:left; width:20%;
+ 				  font-family:Arial; font-size:11px; color:#6283c4;
+				  margin: 5px 2% 5px 4px;}
+#fecha-img-anuncios{float:right;width:12px; height:12px;
+					background-image:url(../img/icon/calendar.png);
+					background-repeat:no-repeat;
+					margin: 6px 0px 3px 10px;}
+#fecha-anuncios{float:right; width:32px;margin:5px;
+				font-family:Arial; font-size:11px; color:#333333;}
+#fecha_a-anuncios{float:right; width:10%;
+				  font-family:Arial; font-size:11px; color:#6283C4;
+				  margin: 5px 5px 5px 4px;padding-left:1%;}
+#linea_anuncios{ clear:both;width:99%;
+				margin: 0px 5px 5px 5px;  
+				height:0px;/*solo queremos borde*/  
+				text-align:left;  
+				border-top:20px;/*quita el grosor extra de Opera y FFox*/  
+				border-bottom:#DF6800 solid 1px;}
 /*BUSCAR*/
-
-#icon-buscar{
-background-image:url(../img/icon/search.png);
-width:15px; height:15px;
-float:left;
-margin:10px 6% 5px 5px;
-} 
-.busqueda{
-float:right;
-margin:1% 1% 1% 0%;
-_margin:13px 7px 10px 10px; /*IE6*/
-border:1px solid #31508E;
-width:26%; height:270px;
-background-color:#FFFFFF;
-}
-
-#buscar{
-clear:both;
-font-family:Arial, Helvetica, sans-serif;
-font-size:12px;
-color:#333333;
-margin:1% 0% 2% 5%;
-}
+#icon-buscar_anuncios{background-image:url(../img/icon/search.png);
+					  width:15px; height:15px;float:left;
+					  margin:10px 6% 5px 5px;} 
+.busqueda_anuncios{float:right;
+					margin:1% 1% 1% 0%;
+					border:1px solid #31508E;
+					border-radius:4px;
+				   -moz-border-radius:4px;
+					width:26%; height:270px;
+					background-color:#FFFFFF;}
+#buscar_anuncios{clear:both;margin:1% 0% 2% 5%;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:12px;
+				color:#333333;}
 /* FORMULARIO  */	
-#form {  
- font-family:Arial, Helvetica, sans-serif;
- font-size:12px;
- margin-bottom:2%; 
- }
-#input-calendario{
-position:relative;
-width:60px; height:21px;
-margin: 0 0 0 4px;
-_margin:0px 0 0 2px ;
-
-}
-#bcategorias{
-	float:left; width:90%;
-	margin:10px 15px 10px 5%; 
-	font-family:Arial; font-size: 14px; color:#333333;
-}
-#cat{width:120px; margin:3px 5px 0px 20px;}
-#check{float:left;margin:3px 1% 2px 1%;} 
+#form_anuncios { font-family:Arial, Helvetica, sans-serif;
+				 font-size:12px;margin-bottom:2%;}
+#input-calendario_anuncios{position:relative;
+							width:60px; height:21px;
+							margin: 0 0 0 4px;}
+#bcategorias_anuncios{	float:left; width:90%;
+						margin:10px 15px 10px 5%; 
+						font-family:Arial; font-size: 14px; color:#333333;}
+#cat_anuncios{width:94px; margin:3px 5px 0px 20px;}
+#check_anuncios{float:left;margin:3px 1% 2px 1%;}   
+/*********************************PAGINACION**************************/
+#paginacion_anuncios{	width:98%; height:18px; 
+				text-align: right; 
+				font-size:12px; color:#2247C6;
+				letter-spacing:5px; 
+				margin:3px 3px 10px;
+				}
+#paginacion_anuncios a{ outline:none; text-decoration: none; }
+#paginacion_anuncios a:hover{text-decoration: none; text-shadow:0 1px 2px #00ffff, 0 1px 2px #00ffff;}
+#paginacion_anuncios a:active{font-size:14px; font-weight:bold; border:1px dotted #cccccc; }
+#link_anuncios{font-size:14px; font-weight:bold; color:#DF6800; padding-left:5px;}
+a {color:#2247C6;}

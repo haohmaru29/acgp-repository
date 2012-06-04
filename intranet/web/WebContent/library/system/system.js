@@ -87,6 +87,14 @@ System.loadContent = function(url) {
 			  $('#contenido').unmask();
 		  }
 		});		
+	}else {
+		
+		$("#en_construccion").dialog({
+			modal: true,
+			height: 320,
+			width: 590,
+			resizable: false
+		 });
 	}
 };
 

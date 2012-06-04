@@ -1,3 +1,4 @@
+<%response.setContentType("text/html; charset=UTF-8"); %>
 <div class="body">
 	<jsp:include page="html/header.jsp"></jsp:include>
 	<jsp:include page="html/menu.jsp"></jsp:include>	

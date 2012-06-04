@@ -2,6 +2,7 @@ package cl.intranet.web;
 
 import cl.acgp.commons.mvc.service.jpa.ServiceManager;
 import cl.intranet.domain.Usuario;
+import cl.intranet.service.EstadoUsuarioManager;
 import cl.intranet.service.PerfilManager;
 import cl.intranet.service.PublicacionManager;
 import cl.intranet.service.UsuarioManager;
@@ -22,6 +23,7 @@ public class usuario {
 	private UsuarioManager usuarioManager = (UsuarioManager) ServiceManager.factory("UsuarioManager");
 	private PerfilManager perfilManager = (PerfilManager) ServiceManager.factory("PerfilManager");
 	private PublicacionManager publicaManager = (PublicacionManager) ServiceManager.factory("PublicacionManager");
+	private EstadoUsuarioManager estadoManager = (EstadoUsuarioManager) ServiceManager.factory("EstadoUsuarioManager");
 
 	@RequestMapping(value ="form", method = { RequestMethod.GET, RequestMethod.POST })
 	public ModelAndView form(HttpServletRequest request, HttpServletResponse response) {
@@ -109,11 +111,15 @@ public class usuario {
 		model = new ModelAndView();
 		int id = request.getParameter("idUsuario") == null ? 0 : Integer.parseInt(request.getParameter("idUsuario"));
 		if (id != -1) {
-			this.model.addObject("titulo", "Modificar Datos Usuario");
-			this.model.addObject("usuarios", this.usuarioManager.findById(id));
+			model.addObject("titulo", "Modificar Datos Usuario");
+			model.addObject("boton", "Actualizar");
+			model.addObject("usuarios", this.usuarioManager.findById(id));
+			
 		} else {
+			model.addObject("boton", "Registrar");
 			model.addObject("titulo", "Agregar nuevo Usuario");
 		}
+		model.addObject("estado", estadoManager.findAll() );
 		model.addObject("perfiles", this.perfilManager.findAll());
 		model.setViewName("usuarios/mantenedor/modificar");
 
