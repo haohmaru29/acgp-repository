@@ -250,7 +250,7 @@
 
 <jsp:include page="ColocaMenu.jsp" flush="false"/>
 <script type="text/javascript">
-
+/*
 		 $(document).ready(function () {
 		 
 		    	function prev(arr, index) {
@@ -376,7 +376,7 @@
 						event.preventDefault();
 					}
 				});	
-		    }); // $(document).ready(function () {
+		    }); */// $(document).ready(function () {
 		 </script>
 		 		
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -456,7 +456,7 @@
 			<table width="100%" border=0 cellpadding="0" cellspacing="0">
 					  <tr>
 		           	  <td class="BORDEAZUL"><div style="width:230px">Producto</div></td>
-		           	  <td class="BORDEAZUL"><div style="width:110px"">Rut Cliente</div></td>
+		           	  <td class="BORDEAZUL"><div style="width:110px">Rut Cliente</div></td>
 		              <td class="BORDEAZUL"><div style="width:200px">N° Operación</div></td>
 		              <td class="BORDEAZUL"><div style="width:100px">Valor Costa</div></td>
 		              <td class="BORDEAZUL"><div style="width:280px">Tipo Cargo</div></td>
