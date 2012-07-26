@@ -14,8 +14,8 @@
 			String rutCliente = request.getParameter("rutCliente")!=null?request.getParameter("rutCliente").toString().trim():"";
 			String codAbogado = request.getParameter("codAbogado")!=null?request.getParameter("codAbogado").toString().trim():"";
 			String codProducto= request.getParameter("codProducto")!=null?request.getParameter("codProducto").toString().trim():"";
-			General objRemesa = General.getInstance();
-			Resp = objRemesa.validarSaldoCosta(codAbogado, rutCliente, codProducto);
+			General general = General.getInstance();
+			Resp = general.validarSaldoCosta(codAbogado, rutCliente, codProducto);
 						
 		} catch(Exception ex) {
 			Logger.getLogger("AJAX_ValidaSaldoCosta").error(" [LiqCostas] " , ex);
