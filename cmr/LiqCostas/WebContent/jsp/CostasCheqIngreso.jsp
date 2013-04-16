@@ -1090,33 +1090,74 @@
 					
 					if (event.keyCode==Sigma.Const.Key.ENTER || event.keyCode==Sigma.Const.Key.RIGHT || event.keyCode==Sigma.Const.Key.DOWN || event.keyCode==Sigma.Const.Key.TAB ) 
 					{
-						ValidarNumDocumento(f,true)
+						ValidarNumDocumento(f,true);
 						event.preventDefault();
 					}
-				});
+				}).bind("blur", function (){
+						
+						var data = "NUMDOC=" + f.TxtNumDocum.value + '&TIPODOC=' + f.TIPDOC.value 
+	   		   	 		+ '&PRESTADOR=' + f.TxtRutPrestador.value ; 
+		   		   	 	jQuery.ajax({ 								
+							timeout: 60000,
+							dataType: 'JSON',					
+				            url: "../jsp/AJAX_ValidaDocumento.jsp",
+				            data: data,	
+				            async:false,		        
+				            success:function(data){	
+				            	var obj = jQuery.parseJSON(data);
+				            	if ( obj.total>0 ) {			            	    	
+			            	    	validResult=[].concat("Número de documento ("+ f.TxtNumDocum.value +") ya existe para este prestador, favor verificar el ingreso!");   
+			            	    	document.getElementById("TxtMensajeError").value=validResult.join('\n');
+			            	    	//f.TxtNumDocum.value = '';
+			            	    	$('#TxtNumDocum').focus();
+			            	    	return false;
+			            	    } 	
+				            }, 
+				            cache:false
+				        });
+		   		});
 				
 				jQuery("#TxtMonto").bind($.browser.opera ? "keypress" : "keydown" , function(event){
 					if (event.keyCode==Sigma.Const.Key.ENTER || event.keyCode==Sigma.Const.Key.RIGHT  || event.keyCode==Sigma.Const.Key.TAB )
 					{
 						if (event.keyCode==Sigma.Const.Key.ENTER)
 						{
-							if (ValidarMonto(f,true))
-							{
-								event.preventDefault();
-								if (ValidaCabecera(f,true))
-								{			
-									//COLOCO MASCARA DEL MONTO
-									document.getElementById("TipoGrilla").value="EDITABLE";
-									document.getElementById("noeditable").style.display='none';
-									document.getElementById("editable").style.display='';
-									f.TxtMonto.value=valJS.Mask(f.TxtMonto.value,"9.999.999")
-									document.getElementById("NUMFILA").value=0;
-									mygrid.refresh();
-									InhabilitarCampos("disabled");																			
-								}
-							}	
-							else
-								f.TxtMonto.select();
+							var data = "NUMDOC=" + f.TxtNumDocum.value + '&TIPODOC=' + f.TIPDOC.value 
+		   		   	 		+ '&PRESTADOR=' + f.TxtRutPrestador.value ; 
+				   		   	 jQuery.ajax({ 								
+									timeout: 60000,
+									dataType: 'JSON',					
+						            url: "../jsp/AJAX_ValidaDocumento.jsp",
+						            data: data,	
+						            async:false,		        
+						            success:function(data){	
+						            	var obj = jQuery.parseJSON(data);
+						            	if ( obj.total>0 ) {			            	    	
+					            	    	validResult=[].concat("Número de documento ("+ f.TxtNumDocum.value +") ya existe para este prestador, favor verificar el ingreso!");   
+					            	    	document.getElementById("TxtMensajeError").value=validResult.join('\n');
+					            	    	$('#TxtNumDocum').focus();
+					            	    	return false;
+					            	    } else {
+					            	    	if (ValidarMonto(f,true)) {
+												event.preventDefault();
+												if (ValidaCabecera(f,true)) {			
+													//COLOCO MASCARA DEL MONTO
+													document.getElementById("TipoGrilla").value="EDITABLE";
+													document.getElementById("noeditable").style.display='none';
+													document.getElementById("editable").style.display='';
+													f.TxtMonto.value=valJS.Mask(f.TxtMonto.value,"9.999.999")
+													document.getElementById("NUMFILA").value=0;
+													mygrid.refresh();
+													InhabilitarCampos("disabled");																			
+												}
+											}	
+											else
+												f.TxtMonto.select();
+					            	    	
+					            	    } 	
+						            }, 
+						            cache:false
+					         });
 						}
 					}
 				});

@@ -2285,6 +2285,8 @@ while ((new Date().getTime() - inicio) < millisegundos);
 										   cache: false,
 										   success: function(data){
 										    	var obj5 = jQuery.parseJSON(data);
+										    	var t = obj5.total.split(';');
+										    	obj5.total = t[0];
 										    	if(obj5.total!=-2 ) { 
 										    		recordN[7]=obj5.total;
 										    	}
@@ -2815,7 +2817,6 @@ SeleccionTipoCargo : function (sTipoJuicio) {
 ValidaTipoCargo : function (sTipoProducto,sTipoCosta,sJuicio) {
 			try {
 				datastring= "TIPOPROD=" + sTipoProducto + "&TIPOCOSTA=" + sTipoCosta + "&JUICIO=" + sJuicio;
-				
 				jQuery.ajax({ 								
 						timeout: 60000,
 						dataType: 'JSON',					
@@ -2828,10 +2829,10 @@ ValidaTipoCargo : function (sTipoProducto,sTipoCosta,sJuicio) {
 			              		//alert("ValidaTipoCargo=" + objMen.value);
 			              		var objRESPBD=document.getElementById("RESPBD");    
 			            	    var obj = jQuery.parseJSON(data);	
-			            	    //alert("obj.total=" + obj.total);
+			            	    alert("obj.total=" + obj.total);
 			              		if (obj.total=='-2' || obj.total=='-10' || obj.total=='-11') {  
 				            	   	if (obj.total=='-2' || obj.total=='-10')
-				            	   		validResult=[].concat("Tipo de Cargo no vï¿½lido");   
+				            	   		validResult=[].concat("Tipo de Cargo no válido");   
 				            	   	else   
 				            	   		if (obj.total=='-11')      
 				            	   			validResult=[].concat("No existen Etapas definidas para el Tipo de Cargo Ingresado.");    
@@ -2868,7 +2869,7 @@ ValidaTipoCargo : function (sTipoProducto,sTipoCosta,sJuicio, sNroOperacion) {
 			            	    //alert("obj.total=" + obj.total);
 			              		if (obj.total=='-2' || obj.total=='-10' || obj.total=='-11') {  
 				            	   	if (obj.total=='-2' || obj.total=='-10')
-				            	   		validResult=[].concat("Tipo de Cargo no vï¿½lido");   
+				            	   		validResult=[].concat("Tipo de Cargo no válido");   
 				            	   	else   
 				            	   		if (obj.total=='-11')      
 				            	   			validResult=[].concat("No existen Etapas definidas para el Tipo de Cargo Ingresado.");    

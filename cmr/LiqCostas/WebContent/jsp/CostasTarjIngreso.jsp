@@ -670,8 +670,11 @@
 									{
 										//sacar numero y tipo de juicio y colocarlo en el arreglo	
 										//alert("juicio=" + document.getElementById("RESPBD").value);
-										var f1=document.getElementById("RESPBD").value.split(",");
-										record[6]=f1[0];
+										
+										//SE CAMBIA POR VALIDACION SOBRE CASEACCT
+										//var f1=document.getElementById("RESPBD").value.split(",");
+										//record[6]=f1[0];
+										
 										//alert('--->' + f1[1]);
 											//record[7]=f1[1];										
 										//validar que exista en base de datos	
@@ -743,7 +746,12 @@
 									   cache: false,
 									   success: function(data) {
 									    	var objCaseAcct = jQuery.parseJSON(data);
-									    	record[7]=objCaseAcct.total;
+									    	var t = objCaseAcct.total.split(';');
+									    	objCaseAcct.total=t[0];
+									    	try {
+									    		record[7]=objCaseAcct.total;	
+									    		record[6]=t[1];
+									    	}catch(e){}
 									    	if(objCaseAcct.total == '-2') {
 									    		 validResult=[].concat("Relación Cuenta Juicio no existe ( " + value  +" ), validar con Sistemas");
 								  				 obj.value=validResult.join('\n');
@@ -765,6 +773,7 @@
 								  				return false;
 									    		
 									    	} else {
+									    		 record[6]=t[1];	
 									    		 jQuery.ajax({ 	 	
 													   timeout: 60000,
 													   dataType: 'JSON',
@@ -856,6 +865,7 @@
 				   	editor:{type:"text",
 				   	validator : function(value,record,colObj,grid){
 				   	Sigma.tipoCosta = '1';
+				   	
 				   	if (event.keyCode!=Sigma.Const.Key.LEFT) {
 				     	var flag=true;
 				     	if(costaSaldo == 0 ) {
@@ -869,7 +879,8 @@
 			 			}
 			 			else {
 			 				if(value!="" && value!="0") { 		
-				 				mygrid.ValidaTipoCargo('<%=TipoProducto%>',value,record[7]);
+			 					mygrid.ValidaTipoCargo('<%=TipoProducto%>',value,record[7]);
+				 				
 				 				if (document.getElementById("RESPBD").value=="-1") {
 				 					//error de sesion
 									f.action = "CostasTarjIngreso.jsp";
@@ -1279,33 +1290,72 @@
 					
 					if (event.keyCode==Sigma.Const.Key.ENTER || event.keyCode==Sigma.Const.Key.RIGHT || event.keyCode==Sigma.Const.Key.DOWN || event.keyCode==Sigma.Const.Key.TAB ) 
 					{
-						ValidarNumDocumento(f,true)
+						ValidarNumDocumento(f,true);
 						event.preventDefault();
 					}
-				});
+				}).bind("blur", function (){
+	      		   	 var data = "NUMDOC=" + f.TxtNumDocum.value + '&TIPODOC=' + f.TIPDOC.value 
+	      		   	 		+ '&PRESTADOR=' + f.TxtRutPrestador.value ; 
+	      		   	 jQuery.ajax({ 								
+							timeout: 60000,
+							dataType: 'JSON',					
+				            url: "../jsp/AJAX_ValidaDocumento.jsp",
+				            data: data,	
+				            async:false,		        
+				            success:function(data){	
+				            	var obj = jQuery.parseJSON(data);
+				            	if ( obj.total>0 ) {			            	    	
+			            	    	validResult=[].concat("Número de documento ("+ f.TxtNumDocum.value +") ya existe para este prestador, favor verificar el ingreso!");   
+			            	    	document.getElementById("TxtMensajeError").value=validResult.join('\n');
+			            	    	//f.TxtNumDocum.value = '';
+			            	    	$('#TxtNumDocum').focus();
+			            	    	return false;
+			            	    } 	
+				            }, 
+				            cache:false
+			          });
+	      		});
 				
 				jQuery("#TxtMonto").bind($.browser.opera ? "keypress" : "keydown" , function(event){
 					if (event.keyCode==Sigma.Const.Key.ENTER || event.keyCode==Sigma.Const.Key.RIGHT  || event.keyCode==Sigma.Const.Key.TAB )
 					{
-						if (event.keyCode==Sigma.Const.Key.ENTER)
-						{
-							if (ValidarMonto(f,true))
-							{
-								event.preventDefault();
-								if (ValidaCabecera(f,true))
-								{			
-									//COLOCO MASCARA DEL MONTO									
-									document.getElementById("TipoGrilla").value="EDITABLE";
-									document.getElementById("noeditable").style.display='none';
-									document.getElementById("editable").style.display='';
-									f.TxtMonto.value=valJS.Mask(f.TxtMonto.value,"9.999.999")
-									document.getElementById("NUMFILA").value=0;
-									mygrid.refresh();																		
-									InhabilitarCampos("disabled");																			
-								}
-							}	
-							else
-								f.TxtMonto.select();
+						if (event.keyCode==Sigma.Const.Key.ENTER) {
+							var data = "NUMDOC=" + f.TxtNumDocum.value + '&TIPODOC=' + f.TIPDOC.value 
+		   		   	 		+ '&PRESTADOR=' + f.TxtRutPrestador.value ; 
+				   		   	 jQuery.ajax({ 								
+									timeout: 60000,
+									dataType: 'JSON',					
+						            url: "../jsp/AJAX_ValidaDocumento.jsp",
+						            data: data,	
+						            async:false,		        
+						            success:function(data){	
+						            	var obj = jQuery.parseJSON(data);
+						            	if ( obj.total>0 ) {			            	    	
+					            	    	validResult=[].concat("Número de documento ("+ f.TxtNumDocum.value +") ya existe para este prestador, favor verificar el ingreso!");   
+					            	    	document.getElementById("TxtMensajeError").value=validResult.join('\n');
+					            	    	$('#TxtNumDocum').focus();
+					            	    	return false;
+					            	    } else {
+					            	    	if (ValidarMonto(f,true)) {
+												event.preventDefault();
+												if (ValidaCabecera(f,true)) {			
+													//COLOCO MASCARA DEL MONTO									
+													document.getElementById("TipoGrilla").value="EDITABLE";
+													document.getElementById("noeditable").style.display='none';
+													document.getElementById("editable").style.display='';
+													f.TxtMonto.value=valJS.Mask(f.TxtMonto.value,"9.999.999")
+													document.getElementById("NUMFILA").value=0;
+													mygrid.refresh();																		
+													InhabilitarCampos("disabled");																			
+												}
+											}	
+											else
+												f.TxtMonto.select();
+					            	    	
+					            	    } 	
+						            }, 
+						            cache:false
+					         });
 						}
 					}
 				});

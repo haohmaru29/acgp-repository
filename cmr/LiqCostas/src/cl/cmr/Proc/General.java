@@ -14,7 +14,6 @@ import oracle.jdbc.OracleTypes;
 import org.apache.log4j.Logger;
 
 import cl.cmr.bd.DBAcceso;
-import cl.cmr.utils.AppenderUtils;
 
 public class General {
 
@@ -722,7 +721,7 @@ public class General {
 		            cStmt.execute();
 		            rs = (ResultSet) cStmt.getObject(2);
 		            if(rs.next() ) {
-		            	juicioProducto = rs.getString("cetype");
+		            	juicioProducto = rs.getString("cetype") + ";" + rs.getString("cecaseno");
 		            } 
 	        	}
 	        } catch (Exception e) {

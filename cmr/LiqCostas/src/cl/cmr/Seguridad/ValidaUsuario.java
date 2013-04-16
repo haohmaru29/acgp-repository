@@ -11,7 +11,6 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import cl.cmr.Proc.Login;
-import cl.cmr.utils.AppenderUtils;
 
 public class ValidaUsuario {
 	
@@ -41,8 +40,8 @@ public class ValidaUsuario {
 	        clave   = request.getParameter("CLAVE")!=null?request.getParameter("CLAVE").toString().trim():"";
 	        
 	        //encriptar clave obtenida	        
-	        MD5 md = new MD5();
-	        ClaveEncrip=md.EncriptarMD5(clave);
+	        //MD5 md = new MD5();
+	        ClaveEncrip=MD5.EncriptarMD5(clave);
 	        clave=ClaveEncrip;
 	        
 	        boolean rest = ObjProc.ObtieneUsuario(usuario, result);

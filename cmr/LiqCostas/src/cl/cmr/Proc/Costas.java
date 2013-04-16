@@ -42,7 +42,7 @@ public class Costas {
 		        	cStmt = conn.prepareCall(LineaComando);
 		        	cStmt.setString(1, User.toString());
 		            cStmt.setString(2, CodAbogado.toString());
-		            cStmt.setString(3, RutPrestador.toString());
+		            cStmt.setString(3, RutPrestador.toString().toUpperCase());
 		            cStmt.setString(4, Moneda.toString());
 		            cStmt.setString(5, MontoCosta.toString());
 		            cStmt.setString(6, TipoDoc.toString());
@@ -423,12 +423,68 @@ public class Costas {
 		        	cStmt.registerOutParameter(4, OracleTypes.VARCHAR);
 		            cStmt.execute();
 		            Sret=(String) cStmt.getObject(4);
+		            //System.out.println("Descripcion tipo cargo: " + Sret);
+	        	}
+	        } catch (Exception e) {
+	        	logger.error(" [LiqCostas] " , e);
+	        	Sret = "-2";
+	        } finally {
+	        	DBAcceso.close(cStmt, conn);
+	        }
+	        return Sret;
+	 }
+	 
+	 public String ValidaTipoCargoLocal(int TipoProducto,String TipoCosta,String TipoJuicio) 
+	 	throws SQLException, IOException, NamingException {
+		    String Sret ="-2";
+		    //CallableStatement cStmt = null;
+			//Connection conn = null;
+	    	try {
+	    		ArrayList<ArrayList<String>> tiposCargos = new ArrayList<ArrayList<String>>();
+	    		General.getInstance().obtieneListaTipoCargo(TipoJuicio, "0", "0", tiposCargos);
+	    		if(!tiposCargos.isEmpty()) {
+	    			for(ArrayList<String> array : tiposCargos) {
+	    				for(String s : array ) {
+	    					System.out.println("-----> " + s);
+	    					if(s.contains(TipoCosta) && s.toUpperCase().contains(TipoJuicio.toUpperCase())) {
+	    						Sret = s.split(";")[2];
+	    						break;
+	    					}
+	    				}
+	    				if(!"-2".equals(Sret) ) {
+    						break;	
+    					}
+	    			}
+	    		}
+	        } catch (Exception e) {
+	        	logger.error(" [LiqCostas] " , e);
+	        } 
+	        return Sret;
+	 }
+	 
+	 public String validaDocumento(String tipoDocumento, String rutPrestador, String numDocumento) {
+		 String Sret = "-1";
+		 CallableStatement cStmt = null;
+ 		 Connection conn = null;
+         try {
+	    		DBAcceso ObjBD = DBAcceso.getInstance();       	
+	        	conn = ObjBD.connect();       
+	        	if (conn!= null) {
+		        	String LineaComando=DBAcceso.buildProcedureCall(NomPaqueteCosta,"validaDocumento",4);
+		        	cStmt = conn.prepareCall(LineaComando);
+		        	cStmt.setString(1, tipoDocumento);
+		        	cStmt.setString(2, numDocumento );
+		        	cStmt.setString(3, rutPrestador.replace("-", "").replace(".", "").toUpperCase());
+		        	cStmt.registerOutParameter(4, OracleTypes.VARCHAR);
+		            cStmt.execute();
+		            Sret = (String) cStmt.getObject(4);
 	        	}
 	        } catch (Exception e) {
 	        	logger.error(" [LiqCostas] " , e);
 	        } finally {
 	        	DBAcceso.close(cStmt, conn);
 	        }
+         	//logger.info("Existe Documento: " + Sret);
 	        return Sret;
 	 }
 }

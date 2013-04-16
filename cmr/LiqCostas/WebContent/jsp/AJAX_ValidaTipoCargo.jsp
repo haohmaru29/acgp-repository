@@ -16,6 +16,7 @@
 			String sTipoCosta = request.getParameter("TIPOCOSTA")!=null?request.getParameter("TIPOCOSTA").toString().trim():"";
 			String sJuicio = request.getParameter("JUICIO")!=null?request.getParameter("JUICIO").toString().trim():"";
 			Subtipo = objCosta.ValidaTipoCargo(Integer.parseInt(sTipoProd),sTipoCosta,sJuicio);			
+			//Subtipo = objCosta.ValidaTipoCargoLocal(Integer.parseInt(sTipoProd),sTipoCosta,sJuicio);
 			
 		} catch(Exception ex) {
 			Logger.getLogger("AJAX_ValidaTipoCargo").error(" [LiqCostas] " , ex);

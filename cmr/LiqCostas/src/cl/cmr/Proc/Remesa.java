@@ -15,7 +15,6 @@ import oracle.jdbc.OracleTypes;
 import org.apache.log4j.Logger;
 
 import cl.cmr.bd.DBAcceso;
-import cl.cmr.utils.AppenderUtils;
 
 public class Remesa {
 

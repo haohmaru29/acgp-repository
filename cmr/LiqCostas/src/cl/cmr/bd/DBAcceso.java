@@ -39,7 +39,7 @@ public class DBAcceso {
 
     public Connection connect() throws SQLException, IOException, NamingException {
   		try {
-  			logger.info(" [LiqCostas][Build conection] ");
+  			//logger.info(" [LiqCostas][Build conection] ");
   			conn = ds.getConnection();
   		} catch (Exception e){
   			logger.error(" [LiqCostas] " , e);
